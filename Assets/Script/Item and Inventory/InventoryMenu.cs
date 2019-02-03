@@ -11,6 +11,7 @@ public class InventoryMenu : MonoBehaviour
     public float xStartPos, yStartPos, yOffset;
     public GameObject textPrefab;
     List<GameObject> menuFields = new List<GameObject>();
+    public AudioClip audioClip;
 
     int menuIndex = 0;
     int MenuIndex
@@ -81,6 +82,10 @@ public class InventoryMenu : MonoBehaviour
         menuFields[MenuIndex].GetComponent<Text>().color = Color.red;
         ItemDescriptionArea.text = Inventory.instance.items[menuIndex].description;
         image.sprite = Inventory.instance.items[menuIndex].sprite;
+        if (i != 0)
+        {
+            
+        }
     }
 
 
