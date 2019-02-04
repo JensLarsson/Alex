@@ -16,6 +16,7 @@ public class KnappenKnappen : MonoBehaviour {
 		
         if (Input.GetKeyDown(KeyCode.K))
         {
+            AudioManager.instance.StopAllCoroutines();
             Debug.Log("Laddar scen");
             SceneManager.LoadScene("JensAndraTestScene");
         }

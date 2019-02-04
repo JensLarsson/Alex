@@ -15,8 +15,7 @@ public class Interact : MonoBehaviour
             unityEvent.Invoke();
         }
     }
-
-
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

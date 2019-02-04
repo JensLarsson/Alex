@@ -40,11 +40,6 @@ Shader "Hidden/BetterSprites"
 				#pragma multi_compile _ ETC1_EXTERNAL_ALPHA
 				#include "UnitySprites.cginc"
 
-
-			
-
-
-
 		ENDCG
 		}
 		}
