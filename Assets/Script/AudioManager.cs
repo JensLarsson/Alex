@@ -8,11 +8,14 @@ public class AudioManager : MonoBehaviour
     static public AudioManager instance = null;
 
     public enum TargetAudio { A = 0, B };
-    public TargetAudio targetAudio = TargetAudio.A;
+    [HideInInspector] public TargetAudio targetAudio = TargetAudio.A;
 
     public AudioSource[] musicSource = new AudioSource[2];
     public AudioSource sfxSource;
-    public AudioClip sceneMusic;
+    public AudioSource sfxSourcePitch;
+    private AudioClip sceneMusic;
+    [Tooltip("volume change per .01sec")]
+    [Range(0.001f, 1.0f)]
     public float fadeInIncrememnt = 0.1f;
     float volume = 1.0f;
 
@@ -54,7 +57,7 @@ public class AudioManager : MonoBehaviour
         }
     }
     //
-    //Uses secondary AudioSource for soundeffects 
+    //Uses secondary AudioSources for soundeffects 
     //
     public void playSFXClip(AudioClip clip)
     {
@@ -74,6 +77,19 @@ public class AudioManager : MonoBehaviour
         if (stopOtherSFX) sfxSource.Stop();
         sfxSource.PlayOneShot(clip, volume);
     }
+    public void playSFXRandomPitch(AudioClip clip, float randomRange)
+    {
+        sfxSourcePitch.pitch = Random.Range(1 - randomRange, 1 + randomRange);
+        sfxSourcePitch.PlayOneShot(clip);
+    }
+    public void playSFXRandomPitch(AudioClip clip, float randomRange, bool stopOtherSFX, bool stopOtherPitchedSFX)
+    {
+        if (stopOtherSFX) sfxSource.Stop();
+        if (stopOtherSFX) sfxSourcePitch.Stop();
+        sfxSourcePitch.pitch = Random.Range(1 - randomRange, 1 + randomRange);
+        sfxSourcePitch.PlayOneShot(clip);
+    }
+
 
 
     //
@@ -91,16 +107,16 @@ public class AudioManager : MonoBehaviour
     {
         while (musicSource[(int)source].volume > 0.0f)
         {
-            musicSource[(int)source].volume -= fadeInIncrememnt;
-            yield return new WaitForSeconds(0.1f);
+            musicSource[(int)source].volume -= fadeInIncrememnt * 0.1f;
+            yield return new WaitForSeconds(0.01f);
         }
     }
     IEnumerator fadeInC(TargetAudio source)
     {
         while (musicSource[(int)source].volume < volume)
         {
-            musicSource[(int)source].volume += fadeInIncrememnt;
-            yield return new WaitForSeconds(0.1f);
+            musicSource[(int)source].volume += fadeInIncrememnt * 0.1f;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 

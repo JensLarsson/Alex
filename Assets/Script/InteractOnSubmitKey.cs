@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Interact : MonoBehaviour
+public class InteractOnSubmitKey : MonoBehaviour
 {
 
     public UnityEvent unityEvent;
     bool inside = false;
     private void Update()
     {
-        if (inside && Input.GetKeyDown(KeyCode.E))
+        if (inside && Input.GetButtonDown("Submit"))
         {
             unityEvent.Invoke();
         }
