@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [ExecuteInEditMode]
-public class PostEffect : MonoBehaviour
+public class CameraPostEffect : MonoBehaviour
 {
 
     public Material material;

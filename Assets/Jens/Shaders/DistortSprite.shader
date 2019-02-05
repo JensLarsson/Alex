@@ -1,11 +1,14 @@
 
 Shader "Custom/Sprite/Sprite Distortion" {
 	Properties{
-		_MainTex("Base (RGB)", 2D) = "white" {}
-		_Noise("Base (RGB)", 2D) = "white" {}
+		[HideInInspector]_MainTex("Base (RGB)", 2D) = "white" {}
+		_Noise("Noise", 2D) = "white" {}
+		_NoiseTex("Blend Texture", 2D) = "white" {}
+		_BlendLevel("Additive Texture Blend Multiplyer", Range(0,1)) = 1.0
 		_Color("Color", Color) = (1, 1, 1, 1)
 		_Frequency("Frequency", Float) = 1.0
 		_Intensity("Intensity", Float) = 1.0
+		_Speed("Speed", Float) = 1.0
 	}
 		SubShader{
 			Tags {"Queue" = "Transparent" "RenderType" = "Transparent"}
@@ -21,6 +24,7 @@ Shader "Custom/Sprite/Sprite Distortion" {
 
 				sampler2D _MainTex;
 				sampler2D _Noise;
+				sampler2D _NoiseTex;
 
 				struct appdata
 				{
@@ -35,7 +39,7 @@ Shader "Custom/Sprite/Sprite Distortion" {
 
 				v2f vert(appdata v) {
 					v2f o;
-					o.pos = UnityObjectToClipPos(v.vertex * 2);
+					o.pos = UnityObjectToClipPos(v.vertex * 2); //Dubbla storleken av objektet i vardera axel
 					o.uv = v.uv;
 					return o;
 				}
@@ -44,24 +48,30 @@ Shader "Custom/Sprite/Sprite Distortion" {
 				float4 _MainTex_texelSize;
 				float _Frequency;
 				float _Intensity;
+				float _Speed;
+				float _BlendLevel;
 
 
 				fixed4 frag(v2f i) : COLOR
 				{
-					float2 temp = i.uv / 2;
+					//offset för förvridningen av pixlar
+					float2 offset = float2((sin(tex2D(_Noise, float2(0, i.uv.y + _Time[1] * _Speed)*_Frequency).r) - 0.5)*_Intensity, 0.0);
 
-					float2 offset = float2((sin(tex2D(_Noise, float2(0, i.uv.y + _Time[1])*_Frequency).r) - 0.5)*_Intensity, 0.0);
-
-					fixed4 col = tex2D(_MainTex, (i.uv * 2 - .5)+offset);
+					//*2 för att ta texturen till orginalstorlek, -0..5 för att centrera texturen
+					fixed4 col = tex2D(_MainTex, (i.uv * 2 - .5) + offset);
+					fixed4 filt = tex2D(_NoiseTex, (i.uv * 2 - .5) + offset);
 					col.rgb *= col.a;
+					col += filt * _BlendLevel;
 
-					if (i.uv.x * 2+offset.x < 0.5) col.a *= 0;
+
+					//ändrar alphan av de pixlar som är utanför bilden som förväntas visas
+					if (i.uv.x * 2 + offset.x < 0.5) col.a *= 0;
 					if (i.uv.y * 2 < 0.5) col.a *= 0;
 					if (i.uv.x * 2 + offset.x > 1.5) col.a *= 0;
 					if (i.uv.y * 2 > 1.5) col.a *= 0;
 
-					
 
+					//Dödar pixlar med alpha under 0.001
 					clip(col.a - 0.001);
 					 return col;
 				 }
