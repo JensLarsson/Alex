@@ -15,7 +15,6 @@ public class Interact : MonoBehaviour
             unityEvent.Invoke();
         }
     }
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +24,7 @@ public class Interact : MonoBehaviour
             inside = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")

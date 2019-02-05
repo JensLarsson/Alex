@@ -1,4 +1,4 @@
-﻿Shader "CameraAfterEffekts/Distortion"
+﻿Shader "Custom/CameraAfterEffekts/Camera Distortion"
 {
 	Properties
 	{
@@ -28,14 +28,14 @@
 
 			struct v2f
 			{
+				float4 pos : SV_POSITION;
 				float2 uv : TEXCOORD0;
-				float4 vertex : SV_POSITION;
 			};
 
 			v2f vert(appdata v)
 			{
 				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 				return o;
 			}
@@ -50,9 +50,6 @@
 				float2 offset = float2((sin(tex2D(_Noise, float2(0,i.uv.y + _Time[1])*_Frequency).r)- 0.5)*_Intensity,0.0);
 				fixed4 col = tex2D(_MainTex, i.uv + offset);
 
-				//fixed4 col = tex2D(_MainTex, i.uv+float2(sin(i.vertex.y/50 + _Time[1])/30,0));
-				// just invert the colors
-				//col.rgb = 1 - col.rgb;
 				return col;
 			}
 			ENDCG
