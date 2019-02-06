@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
             instance.sceneMusic = this.sceneMusic;
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+
 
 
         if (sceneMusic != null)
