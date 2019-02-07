@@ -9,8 +9,7 @@ public class EventSubscriber : MonoBehaviour {
     public UnityEvent unEvent;
 
     UnityAction action;
-
-    // Use this for initialization
+    
     void Start()
     {
         action += invoke;
