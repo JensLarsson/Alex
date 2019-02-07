@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259843674435148}
   - component: {fileID: 114927596387303802}
+  - component: {fileID: 114039784473289968}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -510,6 +511,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114039784473289968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009423064074272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac28c3ca0fb94c4aa67a34f0db58f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInDialogue: 0
+  dialogTextUI: {fileID: 0}
+  dialogNameTagUI: {fileID: 0}
+  dialogPortraitImageUI: {fileID: 0}
+  activeDialog: []
 --- !u!114 &114828424297210236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,6 +544,7 @@ MonoBehaviour:
   - {fileID: 82974693672044470}
   sfxSource: {fileID: 82344735038715796}
   sfxSourcePitch: {fileID: 82145123957770106}
+  sceneMusic: {fileID: 0}
   fadeInIncrememnt: 0.05
 --- !u!114 &114927596387303802
 MonoBehaviour:
