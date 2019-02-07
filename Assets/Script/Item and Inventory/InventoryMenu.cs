@@ -44,18 +44,20 @@ public class InventoryMenu : MonoBehaviour
         settupMenu();
     }
 
+    //Skapar en ny lista av items som fins i Inventory klassen
     void settupMenu()
     {
-        clearList();
-        menuFields = new List<GameObject>();
+        clearList();   
         foreach (Item item in Inventory.instance.items)
         {
             addText(item);
         }
         moveMenu(0);
     }
+    //Tar bort alla gameobjects som representerar item slots från menyn
     void clearList()
     {
+        menuFields = new List<GameObject>();
         for (int i = menuFields.Count - 1; i >= 0; i--)
         {
             Destroy(menuFields[i]);

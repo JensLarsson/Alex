@@ -22,7 +22,6 @@ public class InteractOnKeyPress : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GetComponent<SpriteRenderer>().color = Color.red;
             inside = true;
         }
     }
@@ -31,7 +30,6 @@ public class InteractOnKeyPress : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GetComponent<SpriteRenderer>().color = Color.white;
             inside = false;
         }
     }

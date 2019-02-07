@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] musicSource = new AudioSource[2];
     public AudioSource sfxSource;
     public AudioSource sfxSourcePitch;
-    private AudioClip sceneMusic;
+    public AudioClip sceneMusic;
     [Tooltip("volume change per .01sec")]
     [Range(0.001f, 1.0f)]
     public float fadeInIncrememnt = 0.1f;
