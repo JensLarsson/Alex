@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using System.Linq;
 
 //This is what a dialog must contain, if player is not be able to respons
 //leave playerResponses empty
 //obs each object in playerResponses must contain a istrigger collider and ContainDialog-Script
 
- 
+
 [System.Serializable]
 
 public class Dialogs
@@ -17,6 +18,9 @@ public class Dialogs
     public Sprite PortraitOfTalkingNPC;
     [Tooltip("antal sekunder det tar för en bokstav att animeras fram")]
     public float AnimationSpeed = 0.05f;
+    public AudioClip[] soundThatPlayDuringDialogue;
+    public float soundPitch;
+    public float soundTimeDelay;
     [TextArea(5, 20)]
     public string Text;
     [Tooltip("svar kommer endast att fungera ifall dem befinner sig i slutet av arrayen (dvs i den sista dialog rutan)")]
@@ -37,7 +41,7 @@ public class DialogManager : MonoBehaviour
     //en bool som håller koll på ifall man kan hoppa över dialogen
     bool skipAnimation = false;
 
-    public bool isInDialogue;
+    [HideInInspector] public bool isInDialogue;
 
 
     //ui element
@@ -68,13 +72,13 @@ public class DialogManager : MonoBehaviour
     public void queNewDialog(List<Dialogs> newDialog, GameObject thisObject)
     {
         quedDialogs.Add(newDialog);
-       // ifInList(thisObject);
-        if (newDialog[newDialog.Count-1].Answers.Length > 0)
+        // ifInList(thisObject);
+        if (newDialog[newDialog.Count - 1].Answers.Length > 0)
         {
-            alexAvailableAnswers.Add(newDialog[newDialog.Count-1].Answers);
+            alexAvailableAnswers.Add(newDialog[newDialog.Count - 1].Answers);
         }
     }
-    
+
     public void createAnswers()
     {
 
@@ -87,7 +91,7 @@ public class DialogManager : MonoBehaviour
                 GameObject newAnswer;
                 for (int i = 0; i < activeDialog[dialogAt].Answers.Length; i++)
                 {
-                    
+
                     newAnswer = Instantiate(activeDialog[dialogAt].Answers[i].gameObject);
                     allAnswers.Add(newAnswer);
                 }
@@ -95,12 +99,10 @@ public class DialogManager : MonoBehaviour
                 {
                     if (thisAnswer.GetComponent<ContaningDialog>().hasBeenRead)
                     {
-                        Debug.Log("true");
                         Destroy(thisAnswer.gameObject);
                     }
                     else
                     {
-                        Debug.Log("false");
                         thisAnswer.GetComponent<ContaningDialog>().siblings = allAnswers;
                     }
                 }
@@ -151,9 +153,9 @@ public class DialogManager : MonoBehaviour
                 dialogNameTagUI.text = activeDialog[dialogAt].NameOfTalkingNPC;
 
                 createAnswers();
-             
+
             }
-           
+
 
             //lettar efter dialog input
             if (Input.GetKeyDown(KeyCode.Space))
@@ -174,24 +176,47 @@ public class DialogManager : MonoBehaviour
                     //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
                     if (dialogAt >= activeDialog.Count)
                     {
-                      
+
                         activeDialog.Clear();
                         dialogTextUI.enabled = false;
                         dialogNameTagUI.enabled = false;
                         dialogPortraitImageUI.enabled = false;
                         quedDialogs.Remove(quedDialogs[0]);
 
-                       
+
                     }
                 }
             }
         }
     }
+
+    IEnumerator playSound()
+    {
+        while (true)
+        {
+            if (activeDialog[dialogAt].soundThatPlayDuringDialogue.Length > 0)
+            {
+                int random = Random.Range(0, activeDialog[dialogAt].soundThatPlayDuringDialogue.Length);
+
+                AudioManager.instance.playSFXRandomPitch(
+                   activeDialog[dialogAt].soundThatPlayDuringDialogue[random],
+                   activeDialog[dialogAt].soundPitch);
+                yield return new WaitForSeconds(
+                    activeDialog[dialogAt].soundTimeDelay +
+                    activeDialog[dialogAt].soundThatPlayDuringDialogue[random].length);
+            }
+        }
+        yield return null;
+    }
+
     //funktion för att ta fram bokstav för bokstav...
     IEnumerator animateText(string TextToDisplay)
     {
+        
         string displayingString = "";
         int letterDisplayed = 0;
+        IEnumerator test = playSound();
+        StartCoroutine(test);
         while (letterDisplayed < TextToDisplay.Length)
         {
             if (skipAnimation)
@@ -199,9 +224,12 @@ public class DialogManager : MonoBehaviour
                 break;
             }
             displayingString += TextToDisplay[letterDisplayed++];
+           
             yield return new WaitForSeconds(activeDialog[dialogAt].AnimationSpeed);
             dialogTextUI.text = displayingString;
         }
+        StopCoroutine(test);
+
         dialogTextUI.text = TextToDisplay;
         callFunctionOnce = true;
         stopRewriteText = true;
@@ -209,5 +237,3 @@ public class DialogManager : MonoBehaviour
         yield return null;
     }
 }
-
-//ljud under tiden symboler dycker upp

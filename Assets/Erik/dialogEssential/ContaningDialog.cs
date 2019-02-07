@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 
 [System.Serializable]
@@ -17,6 +18,11 @@ public class ActivateDialog
 public class ContaningDialog : MonoBehaviour
 {
     [SerializeField] ActivateDialog activateDialogWith;
+
+    [Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
+    [SerializeField] AudioClip[] diffrentStartSounds;
+    [SerializeField] float startSoundPitchRange;
+
     [SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
     [SerializeField] bool canRepeatTheDialog = false;
     [HideInInspector] public bool canBeActivated = true;
@@ -30,6 +36,17 @@ public class ContaningDialog : MonoBehaviour
     {
         delay = activateDialogWith.delay;
     }
+    void startDialogueSounds()
+    {
+        if (diffrentStartSounds.Length > 0)
+        {
+            int random = Random.Range(0, diffrentStartSounds.Length);
+
+            AudioManager.instance.playSFXRandomPitch(
+                diffrentStartSounds[random],
+                startSoundPitchRange);
+        }
+    }
     void OnDestroy()
     {
         for (int x = 0; x < siblings.Count; x++)
@@ -42,11 +59,13 @@ public class ContaningDialog : MonoBehaviour
         if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0)
         {
             DialogManager.Instance.queNewDialog(newDialog, gameObject);
+            startDialogueSounds();
             exitDialogue();
         }
         else if (!activateDialogWith.onFunctionCall)
         {
             DialogManager.Instance.queNewDialog(newDialog, gameObject);
+            startDialogueSounds();
             exitDialogue();
         }
     }
@@ -64,20 +83,9 @@ public class ContaningDialog : MonoBehaviour
             newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = delay;
 
             newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
-
-
-            Destroy(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    void activateDialoge()
-    {
+        Destroy(gameObject);
 
-        if (canBeActivated)
-            startConversation();
     }
     // Update is called once per frame
     void Update()
@@ -115,7 +123,7 @@ public class ContaningDialog : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D col)
     {
-        
+
         if (col.tag == "Player")
         {
             if (activateDialogWith.onCollisionAndKeyDown)
