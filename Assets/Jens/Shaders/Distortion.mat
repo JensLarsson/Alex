@@ -63,11 +63,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 5.77
+    - _Frequency: -0.02
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensity: 0.19
+    - _Intensity: 0.56
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
