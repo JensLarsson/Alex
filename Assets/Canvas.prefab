@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1813032721142742
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +157,8 @@ GameObject:
   - component: {fileID: 223124602896951408}
   - component: {fileID: 114575265388970882}
   - component: {fileID: 114032938534879288}
+  - component: {fileID: 114196013814500076}
+  - component: {fileID: 114745703339157688}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -198,6 +200,22 @@ MonoBehaviour:
   yStartPos: -25
   yOffset: -20
   audioClip: {fileID: 8300000, guid: 6733a34f78b8289469c0f382e9af4154, type: 3}
+--- !u!114 &114196013814500076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813032721142742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac28c3ca0fb94c4aa67a34f0db58f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInDialogue: 0
+  dialogTextUI: {fileID: 114347861353336132}
+  dialogNameTagUI: {fileID: 114965520753284252}
+  dialogPortraitImageUI: {fileID: 114781678697462148}
+  activeDialog: []
 --- !u!114 &114218148721127060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,6 +326,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114745703339157688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813032721142742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe2a10ac952f804ca342923b024f200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114768550573932396
 MonoBehaviour:
   m_ObjectHideFlags: 1

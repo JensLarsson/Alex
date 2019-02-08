@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-
-public class InteractOnKeyPress : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class SceneTrigger : MonoBehaviour
 {
+
+    public string scene;
+
+    [Header("empty for no key press")]
     public string button = "Submit";
-    public UnityEvent unityEvent;
+
     bool inside = false;
 
 
@@ -14,7 +17,7 @@ public class InteractOnKeyPress : MonoBehaviour
     {
         if (inside && Input.GetButtonDown(button))
         {
-            unityEvent.Invoke();
+            SceneController.instance.loadScene(scene);
         }
     }
 
@@ -23,6 +26,10 @@ public class InteractOnKeyPress : MonoBehaviour
         if (collision.tag == "Player")
         {
             inside = true;
+            if (button == "")
+            {
+                SceneController.instance.loadScene(scene);
+            }
         }
     }
 

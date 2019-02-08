@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using System.Linq;
+using UnityEngine.Events;
 
 //This is what a dialog must contain, if player is not be able to respons
 //leave playerResponses empty
@@ -23,12 +24,18 @@ public class Dialogs
     public float soundTimeDelay;
     [TextArea(5, 20)]
     public string Text;
-    [Tooltip("svar kommer endast att fungera ifall dem befinner sig i slutet av arrayen (dvs i den sista dialog rutan)")]
-    public GameObject[] Answers;
+}
+public class CompleteConvesation
+{
+    [HideInInspector] public List<Dialogs> dialogs = new List<Dialogs>();
+    [HideInInspector] public float startConversationDelay;
+    [HideInInspector] public GameObject[] Answers;
+    [HideInInspector] public UnityEvent events;
 }
 
 public class DialogManager : MonoBehaviour
 {
+
     //gör scriptet till en singelton => finns inget behov för gamobjekt.find osv
     //vid behov andvänds DialogManager.Instance  (note, bör dock inte behövas utöver containingdialog scriptet!)
     private static DialogManager instance;
@@ -52,9 +59,11 @@ public class DialogManager : MonoBehaviour
     //(likt en for loop, men variablen "i" är tillgänglig över hela scriptet)
     int dialogAt;
 
-    [SerializeField] List<Dialogs> activeDialog = new List<Dialogs>();
-    [SerializeField] List<List<Dialogs>> quedDialogs = new List<List<Dialogs>>();
-    List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
+    CompleteConvesation newConversation = new CompleteConvesation();
+
+    public CompleteConvesation activeDialog;
+    List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
+    //List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
 
     //säkerställer så att det inte finns flera DialogManager
     void Start()
@@ -67,32 +76,33 @@ public class DialogManager : MonoBehaviour
         {
             Debug.LogError("There is too many dialogManager placed on scene");
         }
+        activeDialog = null;
     }
     //en funktion som kallas vid nya dialoger
-    public void queNewDialog(List<Dialogs> newDialog, GameObject thisObject)
+    public void queNewDialog(List<Dialogs> newDialog, GameObject[] newAnswers, float startConversationClippLength, UnityEvent newEvents)
     {
-        quedDialogs.Add(newDialog);
-        // ifInList(thisObject);
-        if (newDialog[newDialog.Count - 1].Answers.Length > 0)
-        {
-            alexAvailableAnswers.Add(newDialog[newDialog.Count - 1].Answers);
-        }
+        newConversation.dialogs = newDialog;
+        newConversation.Answers = newAnswers;
+        newConversation.startConversationDelay = startConversationClippLength;
+        newConversation.events = newEvents;
+        Debug.Log(startConversationClippLength);
+        quedDialogs.Add(newConversation);
     }
 
     public void createAnswers()
     {
 
         //ifall nya objekt ska skapas efter dialogen görs det här
-        if (activeDialog[dialogAt].Answers.Length > 0)
+        if (activeDialog.Answers.Length > 0)
         {
-            if (dialogAt == activeDialog.Count - 1)
+            if (dialogAt == activeDialog.dialogs.Count - 1)
             {
                 List<GameObject> allAnswers = new List<GameObject>();
                 GameObject newAnswer;
-                for (int i = 0; i < activeDialog[dialogAt].Answers.Length; i++)
+                for (int i = 0; i < activeDialog.Answers.Length; i++)
                 {
 
-                    newAnswer = Instantiate(activeDialog[dialogAt].Answers[i].gameObject);
+                    newAnswer = Instantiate(activeDialog.Answers[i].gameObject);
                     allAnswers.Add(newAnswer);
                 }
                 foreach (GameObject thisAnswer in allAnswers)
@@ -113,7 +123,7 @@ public class DialogManager : MonoBehaviour
     void Update()
     {
 
-        if (activeDialog.Count <= 0)
+        if (activeDialog == null)
         {
             isInDialogue = false;
             //nollställer systemet ifall det inte finns någon dialog i kön
@@ -133,8 +143,12 @@ public class DialogManager : MonoBehaviour
             }
         }
         ///ifall spelaren befinner sig i en dialog
-        if (activeDialog.Count > 0)
+        if (activeDialog != null)
         {
+            if (activeDialog.startConversationDelay >= 0)
+            {
+                activeDialog.startConversationDelay -= Time.deltaTime;
+            }
             isInDialogue = true;
             //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
@@ -144,46 +158,50 @@ public class DialogManager : MonoBehaviour
                 dialogNameTagUI.enabled = true;
                 dialogPortraitImageUI.enabled = true;
 
-                //startar animationen för texten (även ljuded?)
-                StartCoroutine(animateText(activeDialog[dialogAt].Text));
-                //hindrar från återspelning av animation och ljud
-                callFunctionOnce = false;
+                if (activeDialog.startConversationDelay < 0)
+                {
+
+                    //startar animationen för texten (även ljuded?)
+                    StartCoroutine(animateText(activeDialog.dialogs[dialogAt].Text));
+                    //hindrar från återspelning av animation och ljud
+                    callFunctionOnce = false;
+                }
                 //ändrar profilen till hon/han som pratar
-                dialogPortraitImageUI.sprite = activeDialog[dialogAt].PortraitOfTalkingNPC;
-                dialogNameTagUI.text = activeDialog[dialogAt].NameOfTalkingNPC;
+                dialogPortraitImageUI.sprite = activeDialog.dialogs[dialogAt].PortraitOfTalkingNPC;
+                dialogNameTagUI.text = activeDialog.dialogs[dialogAt].NameOfTalkingNPC;
 
                 createAnswers();
-
             }
 
 
-            //lettar efter dialog input
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (activeDialog.startConversationDelay < 0)
             {
-                //ifall man är mitten av en animation kan man hoppa över den
-                if (!callFunctionOnce)
+                //lettar efter dialog input
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    skipAnimation = true;
-                }
-                else
-                {
-                    //om man inte är i en...
-                    dialogAt++;
-                    stopRewriteText = false;
-                    dialogTextUI.text = "";
-                    dialogNameTagUI.text = "";
-
-                    //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
-                    if (dialogAt >= activeDialog.Count)
+                    //ifall man är mitten av en animation kan man hoppa över den
+                    if (!callFunctionOnce)
                     {
+                        skipAnimation = true;
+                    }
+                    else
+                    {
+                        //om man inte är i en...
+                        dialogAt++;
+                        stopRewriteText = false;
+                        dialogTextUI.text = "";
+                        dialogNameTagUI.text = "";
 
-                        activeDialog.Clear();
-                        dialogTextUI.enabled = false;
-                        dialogNameTagUI.enabled = false;
-                        dialogPortraitImageUI.enabled = false;
-                        quedDialogs.Remove(quedDialogs[0]);
-
-
+                        //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
+                        if (dialogAt >= activeDialog.dialogs.Count)
+                        {
+                            activeDialog.events.Invoke();
+                            activeDialog = null;
+                            dialogTextUI.enabled = false;
+                            dialogNameTagUI.enabled = false;
+                            dialogPortraitImageUI.enabled = false;
+                            quedDialogs.Remove(quedDialogs[0]);
+                        }
                     }
                 }
             }
@@ -192,31 +210,29 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator playSound()
     {
-        while (true)
+        if (activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length > 0)
         {
-            if (activeDialog[dialogAt].soundThatPlayDuringDialogue.Length > 0)
+            while (true)
             {
-                int random = Random.Range(0, activeDialog[dialogAt].soundThatPlayDuringDialogue.Length);
+                int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
 
                 AudioManager.instance.playSFXRandomPitch(
-                   activeDialog[dialogAt].soundThatPlayDuringDialogue[random],
-                   activeDialog[dialogAt].soundPitch);
+                   activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random],
+                   activeDialog.dialogs[dialogAt].soundPitch);
                 yield return new WaitForSeconds(
-                    activeDialog[dialogAt].soundTimeDelay +
-                    activeDialog[dialogAt].soundThatPlayDuringDialogue[random].length);
+                    activeDialog.dialogs[dialogAt].soundTimeDelay +
+                    activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random].length);
             }
         }
-        yield return null;
     }
 
     //funktion för att ta fram bokstav för bokstav...
     IEnumerator animateText(string TextToDisplay)
     {
-        
         string displayingString = "";
         int letterDisplayed = 0;
-        IEnumerator test = playSound();
-        StartCoroutine(test);
+        IEnumerator PlaySound = playSound();
+        StartCoroutine(PlaySound);
         while (letterDisplayed < TextToDisplay.Length)
         {
             if (skipAnimation)
@@ -224,11 +240,11 @@ public class DialogManager : MonoBehaviour
                 break;
             }
             displayingString += TextToDisplay[letterDisplayed++];
-           
-            yield return new WaitForSeconds(activeDialog[dialogAt].AnimationSpeed);
+
+            yield return new WaitForSeconds(activeDialog.dialogs[dialogAt].AnimationSpeed);
             dialogTextUI.text = displayingString;
         }
-        StopCoroutine(test);
+        StopCoroutine(PlaySound);
 
         dialogTextUI.text = TextToDisplay;
         callFunctionOnce = true;

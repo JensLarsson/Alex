@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
 
 [System.Serializable]
@@ -28,8 +29,11 @@ public class ContaningDialog : MonoBehaviour
     [HideInInspector] public bool canBeActivated = true;
     public bool hasBeenRead = false;
     [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
+    [SerializeField] GameObject[] answers;
+    [SerializeField] UnityEvent doAfterDialgue; 
     bool isInDialogueTrigger = false;
     float delay;
+    float soundDelay;
 
 
     void Start()
@@ -45,6 +49,8 @@ public class ContaningDialog : MonoBehaviour
             AudioManager.instance.playSFXRandomPitch(
                 diffrentStartSounds[random],
                 startSoundPitchRange);
+
+            soundDelay = diffrentStartSounds[random].length;
         }
     }
     void OnDestroy()
@@ -58,14 +64,14 @@ public class ContaningDialog : MonoBehaviour
     {
         if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0)
         {
-            DialogManager.Instance.queNewDialog(newDialog, gameObject);
             startDialogueSounds();
+            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue);
             exitDialogue();
         }
         else if (!activateDialogWith.onFunctionCall)
         {
-            DialogManager.Instance.queNewDialog(newDialog, gameObject);
             startDialogueSounds();
+            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue);
             exitDialogue();
         }
     }
@@ -74,14 +80,18 @@ public class ContaningDialog : MonoBehaviour
         if (canRepeatTheDialog)
         {
             Vector3 pos = transform.position;
-            Transform parent = transform.parent.transform;
 
             GameObject newDialogue = Instantiate(gameObject);
-            newDialogue.transform.SetParent(parent);
+           
             newDialogue.transform.position = pos;
             newDialogue.name = gameObject.name;
             newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = delay;
-
+           
+            if (transform.parent != null)
+            {
+                Transform parent = transform.parent.transform;
+                newDialogue.transform.SetParent(parent);
+            }
             newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
         }
         Destroy(gameObject);
@@ -92,7 +102,7 @@ public class ContaningDialog : MonoBehaviour
     {
         if (isInDialogueTrigger)
         {
-            if (!DialogManager.Instance.isInDialogue)
+            if (DialogManager.Instance.activeDialog != null)
             {
                 activateDialogWith.delay -= Time.deltaTime;
                 if (activateDialogWith.delay < 0)
