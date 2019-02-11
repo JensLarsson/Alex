@@ -40,6 +40,7 @@ public class ContaningDialog : MonoBehaviour
     {
         delay = activateDialogWith.delay;
     }
+
     void startDialogueSounds()
     {
         if (diffrentStartSounds.Length > 0)
@@ -95,7 +96,6 @@ public class ContaningDialog : MonoBehaviour
             newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
         }
         Destroy(gameObject);
-
     }
     // Update is called once per frame
     void Update()

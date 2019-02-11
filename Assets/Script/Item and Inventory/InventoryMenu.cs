@@ -11,8 +11,9 @@ public class InventoryMenu : MonoBehaviour
     public GameObject textPrefab;
     public float xStartPos, yStartPos, yOffset;
     List<GameObject> menuFields = new List<GameObject>();
-    public AudioClip audioClip;
-
+    public AudioClip moveButtonClip, unusableClip;
+    public float buttonpressForce = 0.8f, buttonpressTime = 0.06f;
+    bool buttonPressed = false;
     int menuIndex = 0;
     int MenuIndex
     {
@@ -47,7 +48,7 @@ public class InventoryMenu : MonoBehaviour
     //Skapar en ny lista av items som fins i Inventory klassen
     void settupMenu()
     {
-        clearList();   
+        clearList();
         foreach (Item item in Inventory.instance.items)
         {
             addText(item);
@@ -63,7 +64,6 @@ public class InventoryMenu : MonoBehaviour
             Destroy(menuFields[i]);
         }
     }
-
 
 
     //Lägger till items i listan av objekt
@@ -85,6 +85,20 @@ public class InventoryMenu : MonoBehaviour
         {
             moveMenu(1);
         }
+
+        if (Input.GetButtonDown("Submit") && !buttonPressed)
+        {
+            StartCoroutine(shake(menuFields[MenuIndex]));
+            foreach (GameObject gObject in CollisionTracking.collisionList)
+            {
+                InteractWithItem iWI = gObject.GetComponent<InteractWithItem>();
+
+                if (iWI != null)
+                {
+                    if (!iWI.useItem(Inventory.instance.items[menuIndex])) AudioManager.instance.playSFXClip(unusableClip);
+                }
+            }
+        }
     }
 
 
@@ -97,9 +111,25 @@ public class InventoryMenu : MonoBehaviour
         menuFields[MenuIndex].GetComponent<Text>().color = Color.red;
         ItemDescriptionArea.text = Inventory.instance.items[menuIndex].description;
         image.sprite = Inventory.instance.items[menuIndex].sprite;
-        if (i != 0 && audioClip != null)
+        if (i != 0 && moveButtonClip != null)
         {
-            AudioManager.instance.playSFXClip(audioClip, true);
+            AudioManager.instance.playSFXClip(moveButtonClip, true);
         }
+    }
+
+    IEnumerator shake(GameObject gObject)
+    {
+        buttonPressed = true;
+        Vector2 pos = gObject.transform.position;
+        Timer timer = new Timer(buttonpressTime);
+        while (!timer.expired)
+        {
+            timer.Time += Time.deltaTime;
+            Vector3 vec = new Vector2(buttonpressForce, 0.0f);
+            gObject.transform.position += vec;
+            yield return new WaitForEndOfFrame();
+        }
+        gObject.transform.position = pos;
+        buttonPressed = false;
     }
 }
