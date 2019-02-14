@@ -14,6 +14,7 @@ public class ChoseDialogue : MonoBehaviour
     int max = 3;
     int current = 2;
 
+    public float xStartPos, yStartPos, ySpacing;
 
 	private static ChoseDialogue instance;
 	public static ChoseDialogue Instance { get { return instance; } }
@@ -21,11 +22,11 @@ public class ChoseDialogue : MonoBehaviour
 	[HideInInspector] public List<Replies> replies = new List<Replies>();
 	Replies newReply = new Replies();
 
-	[SerializeField] GameObject[] choseUI;
+	List<GameObject> choseUI = new List<GameObject>();
 	[SerializeField] float ofset = 0.5f;
 
     [Tooltip("This text ui will determain the position and font/size of the text")]
-	[SerializeField] Text textUIBase;
+	[SerializeField] GameObject textUIBase;
 
     [HideInInspector]  bool canChose = false;
 
@@ -70,8 +71,17 @@ public class ChoseDialogue : MonoBehaviour
     public void UpdateUI(bool changeTo, List<CompleteConvesation> dialogue)
 	{
 		canChose = changeTo;
+        if (canChose) {
+            foreach (CompleteConvesation con in dialogue)
+            {
+                GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
+                newText.GetComponent<Text>().text = con.displayText;
+                newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ySpacing * choseUI.Count);
+                choseUI.Add(newText);
+            }
 
 
+        }
 		
 	}
 
