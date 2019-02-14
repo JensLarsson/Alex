@@ -27,7 +27,9 @@ public class Dialogs
 }
 public class CompleteConvesation
 {
-    [HideInInspector] public List<Dialogs> dialogs = new List<Dialogs>();
+
+	[HideInInspector] public string displayText;
+	[HideInInspector] public List<Dialogs> dialogs = new List<Dialogs>();
     [HideInInspector] public float startConversationDelay;
     [HideInInspector] public GameObject[] Answers;
     [HideInInspector] public UnityEvent events;
@@ -62,7 +64,7 @@ public class DialogManager : MonoBehaviour
     CompleteConvesation newConversation = new CompleteConvesation();
 
     public CompleteConvesation activeDialog;
-    List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
+    public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
     //List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
 
     //säkerställer så att det inte finns flera DialogManager
@@ -77,15 +79,32 @@ public class DialogManager : MonoBehaviour
             Debug.LogError("There is too many dialogManager placed on scene");
         }
         activeDialog = null;
-    }
+
+
+		isInDialogue = false;
+		//nollställer systemet ifall det inte finns någon dialog i kön
+		//obs körs varje frame, oödigt; förbätring?
+		dialogTextUI.text = "";
+		dialogNameTagUI.text = "";
+		dialogTextUI.enabled = false;
+		dialogNameTagUI.enabled = false;
+		dialogPortraitImageUI.enabled = false;
+		dialogAt = 0;
+	}
     //en funktion som kallas vid nya dialoger
-    public void queNewDialog(List<Dialogs> newDialog, GameObject[] newAnswers, float startConversationClippLength, UnityEvent newEvents)
+    public void queNewDialog(
+		List<Dialogs> newDialog,
+		GameObject[] newAnswers,
+		float startConversationClippLength, 
+		UnityEvent newEvents,
+		string textOnChose)
     {
         newConversation.dialogs = newDialog;
         newConversation.Answers = newAnswers;
         newConversation.startConversationDelay = startConversationClippLength;
         newConversation.events = newEvents;
-        Debug.Log(startConversationClippLength);
+		newConversation.displayText = textOnChose;
+        //Debug.Log(startConversationClippLength);
         quedDialogs.Add(newConversation);
     }
 
@@ -123,25 +142,33 @@ public class DialogManager : MonoBehaviour
     void Update()
     {
 
-        if (activeDialog == null)
-        {
-            isInDialogue = false;
-            //nollställer systemet ifall det inte finns någon dialog i kön
-            //obs körs varje frame, oödigt; förbätring?
-            dialogTextUI.text = "";
-            dialogNameTagUI.text = "";
-            dialogTextUI.enabled = false;
-            dialogNameTagUI.enabled = false;
-            dialogPortraitImageUI.enabled = false;
-            dialogAt = 0;
-            //letar efter en ny dialog och ifall det finns en
-            //aktiveras den
-            if (quedDialogs.Count > 0)
-            {
-                activeDialog = quedDialogs[0];
-                callFunctionOnce = true;
-            }
-        }
+		if (activeDialog == null)
+		{
+			if (quedDialogs.Count == 1)
+			{
+				isInDialogue = false;
+				//nollställer systemet ifall det inte finns någon dialog i kön
+				//obs körs varje frame, oödigt; förbätring?
+				dialogTextUI.text = "";
+				dialogNameTagUI.text = "";
+				dialogTextUI.enabled = false;
+				dialogNameTagUI.enabled = false;
+				dialogPortraitImageUI.enabled = false;
+				dialogAt = 0;
+				//letar efter en ny dialog och ifall det finns en
+				//aktiveras den
+				if (quedDialogs.Count > 0)
+				{
+					activeDialog = quedDialogs[0];
+					callFunctionOnce = true;
+				}
+			}
+			else if (quedDialogs.Count >= 2)
+			{
+				ChoseDialogue.Instance.UpdateUI(true, quedDialogs);
+			}
+		}
+		
         ///ifall spelaren befinner sig i en dialog
         if (activeDialog != null)
         {
@@ -153,8 +180,9 @@ public class DialogManager : MonoBehaviour
             //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
             {
-                //aktiverar alla ui-eliment
-                dialogTextUI.enabled = true;
+				ChoseDialogue.Instance.UpdateUI(false, quedDialogs);
+				//aktiverar alla ui-eliment
+				dialogTextUI.enabled = true;
                 dialogNameTagUI.enabled = true;
                 dialogPortraitImageUI.enabled = true;
 

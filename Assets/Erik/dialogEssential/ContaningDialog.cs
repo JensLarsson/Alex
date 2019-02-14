@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.Events;
+using UnityEditor;
+
+
+
 
 
 [System.Serializable]
@@ -16,31 +20,37 @@ public class ActivateDialog
     [Tooltip("ifall ni vill starta dialogen vid ex man går höger använd scriptet 'interactOnKeyPress' ")]
     public bool onFunctionCall;
 }
+public class AllContainingDialogue
+{
+}
 public class ContaningDialog : MonoBehaviour
 {
-    [SerializeField] ActivateDialog activateDialogWith;
+	[SerializeField] string onChoseText;
+	[SerializeField] ActivateDialog activateDialogWith;
 
-    [Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
-    [SerializeField] AudioClip[] diffrentStartSounds;
-    [SerializeField] float startSoundPitchRange;
+	[Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
+	[SerializeField] AudioClip[] diffrentStartSounds;
+	[SerializeField] float startSoundPitchRange;
 
-    [SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
-    [SerializeField] bool canRepeatTheDialog = false;
-    [HideInInspector] public bool canBeActivated = true;
-    public bool hasBeenRead = false;
-    [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
-    [SerializeField] GameObject[] answers;
-    [SerializeField] UnityEvent doAfterDialgue; 
-    bool isInDialogueTrigger = false;
-    float delay;
-    float soundDelay;
+
+	[SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
+	[SerializeField] bool canRepeatTheDialog = false;
+	[HideInInspector] public bool canBeActivated = true;
+	public bool hasBeenRead = false;
+	[HideInInspector] public List<GameObject> siblings = new List<GameObject>();
+	[SerializeField] GameObject[] answers;
+	[SerializeField] UnityEvent doAfterDialgue;
+	bool isInDialogueTrigger = false;
+	float delay;
+	float soundDelay;
+
+	[SerializeField] List<AllContainingDialogue> allDialogue = new List<AllContainingDialogue>();
 
 
     void Start()
     {
         delay = activateDialogWith.delay;
     }
-
     void startDialogueSounds()
     {
         if (diffrentStartSounds.Length > 0)
@@ -66,13 +76,13 @@ public class ContaningDialog : MonoBehaviour
         if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0)
         {
             startDialogueSounds();
-            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue);
+            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText);
             exitDialogue();
         }
         else if (!activateDialogWith.onFunctionCall)
         {
             startDialogueSounds();
-            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue);
+            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText);
             exitDialogue();
         }
     }
@@ -96,6 +106,7 @@ public class ContaningDialog : MonoBehaviour
             newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
         }
         Destroy(gameObject);
+
     }
     // Update is called once per frame
     void Update()
@@ -126,7 +137,13 @@ public class ContaningDialog : MonoBehaviour
             {
                 if (col.tag == "Player")
                 {
-                    startConversation();
+					if (gameObject.GetComponent<StartDialogue>() == null)
+					{
+						startConversation();
+					}
+					else
+					{
+					}
                 }
             }
         }
