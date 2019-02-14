@@ -37,7 +37,6 @@ public class CompleteConvesation
 
 public class DialogManager : MonoBehaviour
 {
-
     //gör scriptet till en singelton => finns inget behov för gamobjekt.find osv
     //vid behov andvänds DialogManager.Instance  (note, bör dock inte behövas utöver containingdialog scriptet!)
     private static DialogManager instance;
@@ -61,7 +60,6 @@ public class DialogManager : MonoBehaviour
     //(likt en for loop, men variablen "i" är tillgänglig över hela scriptet)
     int dialogAt;
 
-    CompleteConvesation newConversation = new CompleteConvesation();
 
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
@@ -99,12 +97,13 @@ public class DialogManager : MonoBehaviour
 		UnityEvent newEvents,
 		string textOnChose)
     {
+        CompleteConvesation newConversation = new CompleteConvesation();
+
         newConversation.dialogs = newDialog;
         newConversation.Answers = newAnswers;
         newConversation.startConversationDelay = startConversationClippLength;
         newConversation.events = newEvents;
 		newConversation.displayText = textOnChose;
-        //Debug.Log(startConversationClippLength);
         quedDialogs.Add(newConversation);
     }
 
@@ -141,32 +140,39 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
 		if (activeDialog == null)
 		{
-			if (quedDialogs.Count == 1)
-			{
-				isInDialogue = false;
-				//nollställer systemet ifall det inte finns någon dialog i kön
-				//obs körs varje frame, oödigt; förbätring?
-				dialogTextUI.text = "";
-				dialogNameTagUI.text = "";
-				dialogTextUI.enabled = false;
-				dialogNameTagUI.enabled = false;
-				dialogPortraitImageUI.enabled = false;
-				dialogAt = 0;
-				//letar efter en ny dialog och ifall det finns en
-				//aktiveras den
-				if (quedDialogs.Count > 0)
-				{
-					activeDialog = quedDialogs[0];
-					callFunctionOnce = true;
-				}
-			}
-			else if (quedDialogs.Count >= 2)
-			{
-				ChoseDialogue.Instance.UpdateUI(true, quedDialogs);
-			}
+            if (!isInDialogue)
+            {
+             
+                if (quedDialogs.Count == 1)
+                {
+                   
+                    //nollställer systemet ifall det inte finns någon dialog i kön
+                    //obs körs varje frame, oödigt; förbätring?
+                    dialogTextUI.text = "";
+                    dialogNameTagUI.text = "";
+                    dialogTextUI.enabled = false;
+                    dialogNameTagUI.enabled = false;
+                    dialogPortraitImageUI.enabled = false;
+                    dialogAt = 0;
+                    //letar efter en ny dialog och ifall det finns en
+                    //aktiveras den
+                    if (quedDialogs.Count > 0)
+                    {
+                        activeDialog = quedDialogs[0];
+                        callFunctionOnce = true;
+                        isInDialogue = true;
+                    }
+                }
+                else if (quedDialogs.Count >= 2)
+                {
+                    ChoseDialogue.Instance.UpdateUI(true, quedDialogs);
+                    callFunctionOnce = true;
+                    isInDialogue = true;
+                }
+               
+            }
 		}
 		
         ///ifall spelaren befinner sig i en dialog
@@ -176,7 +182,7 @@ public class DialogManager : MonoBehaviour
             {
                 activeDialog.startConversationDelay -= Time.deltaTime;
             }
-            isInDialogue = true;
+           
             //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
             {
@@ -228,7 +234,8 @@ public class DialogManager : MonoBehaviour
                             dialogTextUI.enabled = false;
                             dialogNameTagUI.enabled = false;
                             dialogPortraitImageUI.enabled = false;
-                            quedDialogs.Remove(quedDialogs[0]);
+                            isInDialogue = false;
+                           quedDialogs.Remove(quedDialogs[0]);
                         }
                     }
                 }
