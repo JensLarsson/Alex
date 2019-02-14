@@ -137,13 +137,7 @@ public class ContaningDialog : MonoBehaviour
             {
                 if (col.tag == "Player")
                 {
-					if (gameObject.GetComponent<StartDialogue>() == null)
-					{
 						startConversation();
-					}
-					else
-					{
-					}
                 }
             }
         }
