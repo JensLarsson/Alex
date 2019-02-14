@@ -23,13 +23,16 @@ public class SceneTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (inside && !locked && Input.GetButtonDown(button))
+        if (button != "")
         {
-            SceneController.instance.loadScene(scene);
-        }
-        else if (inside && locked && Input.GetButtonDown(button))
-        {
-            //medela att objektet är låst
+            if (inside && !locked && Input.GetButtonDown(button))
+            {
+                SceneController.instance.loadScene(scene);
+            }
+            else if (inside && locked && Input.GetButtonDown(button))
+            {
+                //medela att objektet är låst
+            }
         }
     }
 
@@ -48,6 +51,26 @@ public class SceneTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
+        {
+            inside = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inside = true;
+            if (button == "")
+            {
+                SceneController.instance.loadScene(scene);
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
             inside = false;
         }
