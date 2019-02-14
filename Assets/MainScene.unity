@@ -683,7 +683,7 @@ MonoBehaviour:
   diffrentStartSounds: []
   startSoundPitchRange: 0.1
   newDialog:
-  - NameOfTalkingNPC: nnnnn
+  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
       type: 3}
     AnimationSpeed: 0.05
@@ -692,8 +692,8 @@ MonoBehaviour:
     soundPitch: 0.1
     soundTimeDelay: -0.5
     Text: 1 test test test
-  - NameOfTalkingNPC: nnnnn
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+  - NameOfTalkingNPC: Bert Bertsson
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
       type: 3}
     AnimationSpeed: 0.05
     soundThatPlayDuringDialogue:
@@ -701,7 +701,7 @@ MonoBehaviour:
     soundPitch: 0.1
     soundTimeDelay: -0.5
     Text: 2 test test test
-  - NameOfTalkingNPC: nnnnn
+  - NameOfTalkingNPC: Annabell Annabellsson
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
       type: 3}
     AnimationSpeed: 0.05
@@ -709,7 +709,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
     soundPitch: 0.1
     soundTimeDelay: -0.5
-    Text: 3 test test test
+    Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin
+      lectus purus, a mattis dui bibendum vel. Cras sodales nisi in lacinia pretium.
+      Suspendisse potenti. Praesent quis pellentesque nisl, sit amet gravida diam.
+      Donec lacinia laoreet molestie. Praesent tincidunt sollicitudin faucibus. Suspendisse
+      quis metus scelerisque, sodales orci at, consectetur mauris. Mauris at tincidunt
+      lectus. Nunc euismod turpis ut interdum varius.
   canRepeatTheDialog: 1
   canBeActivated: 1
   hasBeenRead: 0
@@ -1088,6 +1093,56 @@ Prefab:
     - target: {fileID: 1462995623081328, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 84.45499
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 391.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 168.90997
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072687797557898, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953149083905326, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953149083905326, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
