@@ -28,6 +28,9 @@ public class ChoseDialogue : MonoBehaviour
 	[SerializeField] GameObject textUIBase;
 
     [HideInInspector]  bool canChose = false;
+
+    List<CompleteConvesation> allReplies = new List<CompleteConvesation>();
+   
     int menuIndex = 0;
     int MenuIndex
     {
@@ -53,9 +56,13 @@ public class ChoseDialogue : MonoBehaviour
             }
         }
     }
+
+    void Awake()
+    {
+    }
     // Use this for initialization
     void Start () {
-		if (instance == null)
+        if (instance == null)
 		{
 			instance = this;
 		}
@@ -65,24 +72,25 @@ public class ChoseDialogue : MonoBehaviour
 		}
 	}
     #region confirmed Choice
-    void playThisDialogue(CompleteConvesation dialogue)
+    void playThisDialogue()
     {
-        List<CompleteConvesation> queTheRest = DialogManager.Instance.quedDialogs;
-        for(int x = 0; x < queTheRest.Count; x++)
+        for (int x = 0; x < allReplies.Count; x++)
         {
-            if (queTheRest[x] == dialogue)
+            if (x == menuIndex)
             {
-                queTheRest.Remove(queTheRest[x]);
+                DialogManager.Instance.quedDialogs.Add(allReplies[x]);
                 break;
             }
-        }
-       DialogManager.Instance.quedDialogs.Clear();
-       DialogManager.Instance.quedDialogs.Add(dialogue);
-       StartCoroutine(putBackTheDialogue(queTheRest));
+        }      
+       
+        DialogManager.Instance.isInDialogue = false;
+
+        
+        StartCoroutine(putBackTheDialogue(allReplies));
     }
     IEnumerator putBackTheDialogue(List<CompleteConvesation> remainingDialogue)
     {
-        yield return new WaitForSeconds(1);
+       yield return new WaitForSeconds(1);
         for (int i = 0; i < remainingDialogue.Count; i++)
         {
             DialogManager.Instance.quedDialogs.Add(remainingDialogue[i]);
@@ -92,7 +100,7 @@ public class ChoseDialogue : MonoBehaviour
 
     public void UpdateUI(bool changeTo, List<CompleteConvesation> dialogue)
 	{
-		canChose = changeTo;
+        canChose = changeTo;
 
         if (canChose)
         {
@@ -101,12 +109,30 @@ public class ChoseDialogue : MonoBehaviour
             {
                 GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
                 newText.GetComponent<Text>().text = dialogue[x].displayText;
-                Debug.Log(dialogue[x].displayText);
                 newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ySpacing * choseUI.Count);
                 choseUI.Add(newText);
             }
+            for (int y = 0; y < DialogManager.Instance.quedDialogs.Count; y++)
+            {
+                allReplies.Add(DialogManager.Instance.quedDialogs[y]);
+            }
+            
+            DialogManager.Instance.quedDialogs.Clear();
+
             max = dialogue.Count;
             moveMenu(0);
+        }
+        else
+        {
+            allReplies.Clear();
+            for (int i = 0; i < choseUI.Count; i++)
+            {
+                Destroy(choseUI[i].gameObject);
+                if(choseUI[i] == null)
+                {
+                    choseUI.Remove(choseUI[i]);
+                }
+            }
         }
 	}
     
@@ -123,19 +149,22 @@ public class ChoseDialogue : MonoBehaviour
     // Update is called once per frame
     void Update ()
 	{
-        if (Input.GetKeyDown(KeyCode.W))
+        if (canChose)
         {
-            moveMenu(1);
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                moveMenu(1);
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                moveMenu(-1);
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playThisDialogue();
+                UpdateUI(false, null);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            moveMenu(-1);
-        }
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            playThisDialogue(DialogManager.Instance.quedDialogs[menuIndex]);
-        }
-
     }
 }
 

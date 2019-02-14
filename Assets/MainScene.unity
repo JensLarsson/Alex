@@ -210,6 +210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 890612624}
+  - {fileID: 1365428998}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -641,7 +642,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 890612624}
-  - component: {fileID: 890612625}
   - component: {fileID: 890612627}
   - component: {fileID: 890612626}
   m_Layer: 0
@@ -664,69 +664,6 @@ Transform:
   m_Father: {fileID: 46894559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &890612625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890612623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onChoseText: I'm here for the cat.
-  activateDialogWith:
-    onCollision: 1
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  diffrentStartSounds: []
-  startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: 1 test test test
-  - NameOfTalkingNPC: Bert Bertsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: 2 test test test
-  - NameOfTalkingNPC: Annabell Annabellsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin
-      lectus purus, a mattis dui bibendum vel. Cras sodales nisi in lacinia pretium.
-      Suspendisse potenti. Praesent quis pellentesque nisl, sit amet gravida diam.
-      Donec lacinia laoreet molestie. Praesent tincidunt sollicitudin faucibus. Suspendisse
-      quis metus scelerisque, sodales orci at, consectetur mauris. Mauris at tincidunt
-      lectus. Nunc euismod turpis ut interdum varius.
-  canRepeatTheDialog: 0
-  canBeActivated: 1
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!61 &890612626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -780,7 +717,125 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: OGA BOGGA
-  canRepeatTheDialog: 0
+  canRepeatTheDialog: 1
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &1365428997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1365428998}
+  - component: {fileID: 1365429000}
+  - component: {fileID: 1365428999}
+  m_Layer: 0
+  m_Name: Dialog (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1365428998
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365428997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 46894559}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1365428999
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365428997}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1365429000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365428997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChoseText: I'm here for the cat.
+  activateDialogWith:
+    onCollision: 1
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0.1
+  newDialog:
+  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    soundPitch: 0.1
+    soundTimeDelay: -0.5
+    Text: 1 test test test
+  - NameOfTalkingNPC: Bert Bertsson
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    soundPitch: 0.1
+    soundTimeDelay: -0.5
+    Text: 2 test test test
+  - NameOfTalkingNPC: Annabell Annabellsson
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    soundPitch: 0.1
+    soundTimeDelay: -0.5
+    Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin
+      lectus purus, a mattis dui bibendum vel. Cras sodales nisi in lacinia pretium.
+      Suspendisse potenti. Praesent quis pellentesque nisl, sit amet gravida diam.
+      Donec lacinia laoreet molestie. Praesent tincidunt sollicitudin faucibus. Suspendisse
+      quis metus scelerisque, sodales orci at, consectetur mauris. Mauris at tincidunt
+      lectus. Nunc euismod turpis ut interdum varius.
+  canRepeatTheDialog: 1
   canBeActivated: 1
   hasBeenRead: 0
   siblings: []
@@ -889,6 +944,124 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1499133487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1499133488}
+  - component: {fileID: 1499133491}
+  - component: {fileID: 1499133489}
+  m_Layer: 0
+  m_Name: Dialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1499133488
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499133487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1763181773}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1499133489
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499133487}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1499133491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499133487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChoseText: I'm here for the cat.
+  activateDialogWith:
+    onCollision: 1
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0.1
+  newDialog:
+  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    soundPitch: 0.1
+    soundTimeDelay: -0.5
+    Text: 1 test test test
+  - NameOfTalkingNPC: Bert Bertsson
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    soundPitch: 0.1
+    soundTimeDelay: -0.5
+    Text: 2 test test test
+  - NameOfTalkingNPC: Annabell Annabellsson
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    soundPitch: 0.1
+    soundTimeDelay: -0.5
+    Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin
+      lectus purus, a mattis dui bibendum vel. Cras sodales nisi in lacinia pretium.
+      Suspendisse potenti. Praesent quis pellentesque nisl, sit amet gravida diam.
+      Donec lacinia laoreet molestie. Praesent tincidunt sollicitudin faucibus. Suspendisse
+      quis metus scelerisque, sodales orci at, consectetur mauris. Mauris at tincidunt
+      lectus. Nunc euismod turpis ut interdum varius.
+  canRepeatTheDialog: 0
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1619720551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1227,107 @@ MonoBehaviour:
   ySpacing: 40
   ofset: 10
   textUIBase: {fileID: 1009490914401330, guid: fe067c790747ddb4aacf530329f6a27c, type: 2}
+  xsd: 0
+--- !u!1 &1763181770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1763181773}
+  - component: {fileID: 1763181772}
+  - component: {fileID: 1763181771}
+  m_Layer: 0
+  m_Name: NPC (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1763181771
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763181770}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1763181772
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763181770}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 79a322d7a6edeb84b84bb6db692d0a41, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1763181773
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763181770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.85, y: 3.3124604, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1499133488}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1807475609
 Prefab:
   m_ObjectHideFlags: 0

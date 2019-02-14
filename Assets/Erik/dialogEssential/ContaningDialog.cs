@@ -76,17 +76,17 @@ public class ContaningDialog : MonoBehaviour
         if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0)
         {
             startDialogueSounds();
-            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText);
-            exitDialogue();
+            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText,this.gameObject);
+            //exitDialogue();
         }
         else if (!activateDialogWith.onFunctionCall)
         {
             startDialogueSounds();
-            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText);
-            exitDialogue();
+            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText,this.gameObject);
+            //exitDialogue();
         }
     }
-    void exitDialogue()
+   public void exitDialogue()
     {
         if (canRepeatTheDialog)
         {
