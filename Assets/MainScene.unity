@@ -642,6 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 890612624}
   - component: {fileID: 890612625}
+  - component: {fileID: 890612627}
   - component: {fileID: 890612626}
   m_Layer: 0
   m_Name: Dialog
@@ -674,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onChoseText: 
+  onChoseText: I'm here for the cat.
   activateDialogWith:
     onCollision: 1
     onCollisionStayWithDelay: 0
@@ -716,7 +717,7 @@ MonoBehaviour:
       Donec lacinia laoreet molestie. Praesent tincidunt sollicitudin faucibus. Suspendisse
       quis metus scelerisque, sodales orci at, consectetur mauris. Mauris at tincidunt
       lectus. Nunc euismod turpis ut interdum varius.
-  canRepeatTheDialog: 1
+  canRepeatTheDialog: 0
   canBeActivated: 1
   hasBeenRead: 0
   siblings: []
@@ -751,6 +752,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &890612627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890612623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChoseText: I like cheese
+  activateDialogWith:
+    onCollision: 1
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  newDialog:
+  - NameOfTalkingNPC: Bob  Bobsson
+    PortraitOfTalkingNPC: {fileID: 0}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: OGA BOGGA
+  canRepeatTheDialog: 0
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1489659344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,9 +1049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d6299c4c44634408141a21c7f5ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choseUI: []
-  ofset: 0.5
-  textUIBase: {fileID: 0}
+  xStartPos: 0
+  yStartPos: 0
+  ySpacing: 40
+  ofset: 10
+  textUIBase: {fileID: 1009490914401330, guid: fe067c790747ddb4aacf530329f6a27c, type: 2}
 --- !u!1001 &1807475609
 Prefab:
   m_ObjectHideFlags: 0
@@ -1109,6 +1150,26 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.784
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
