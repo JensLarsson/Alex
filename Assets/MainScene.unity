@@ -1234,11 +1234,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1514735700 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1092889690248178, guid: e5fc137eeab416449ae08890eddd5776,
-    type: 2}
-  m_PrefabInternal: {fileID: 276133346}
 --- !u!1 &1619720551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,26 +1378,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: b3112541c2aea3c40b2e8a17d003edf9, type: 2}
---- !u!1 &1654052444 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1577741986943214, guid: 85ee85005c4054740a158dde85e6b323,
-    type: 2}
-  m_PrefabInternal: {fileID: 1807475609}
---- !u!114 &1654052448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1654052444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6299c4c44634408141a21c7f5ab83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xStartPos: 0
-  yStartPos: 0
-  ySpacing: 40
-  textUIBase: {fileID: 1009490914401330, guid: fe067c790747ddb4aacf530329f6a27c, type: 2}
 --- !u!1 &1763181770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,36 +1573,6 @@ Prefab:
     - target: {fileID: 224749547524361682, guid: 85ee85005c4054740a158dde85e6b323,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.784
-      objectReference: {fileID: 0}
-    - target: {fileID: 114830171544378162, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1514735700}
-    - target: {fileID: 114437402466445384, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
