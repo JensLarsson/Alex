@@ -37,6 +37,7 @@ public class CompleteConvesation
 
 public class DialogManager : MonoBehaviour
 {
+
     //gör scriptet till en singelton => finns inget behov för gamobjekt.find osv
     //vid behov andvänds DialogManager.Instance
     private static DialogManager instance;
@@ -68,6 +69,8 @@ public class DialogManager : MonoBehaviour
     //säkerställer så att det inte finns flera DialogManager
     void Start()
     {
+       
+        
         if (instance == null)
         {
             instance = this;
@@ -78,8 +81,8 @@ public class DialogManager : MonoBehaviour
         }
         activeDialog = null;
 
-
-	   isInDialogue = false;
+        InvokeRepeating("lookForNewDialogue", 0, 0.5f);
+        isInDialogue = false;
 		//nollställer systemet ifall det inte finns någon dialog i kön
 		//obs körs varje frame, oödigt; förbätring?
 		dialogTextUI.text = "";
@@ -111,7 +114,6 @@ public class DialogManager : MonoBehaviour
 
     public void createAnswers()
     {
-
         //ifall nya objekt ska skapas efter dialogen görs det här
         if (activeDialog.Answers.Length > 0)
         {
@@ -139,48 +141,51 @@ public class DialogManager : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    void lookForNewDialogue()
     {
-        Debug.Log(quedDialogs.Count);
-		if (activeDialog == null)
-		{
+        if (activeDialog == null)
+        {
             if (!isInDialogue)
             {
+                //nollställer systemet ifall det inte finns någon dialog i kön
+                //obs körs varje frame, oödigt; förbätring?
+                dialogTextUI.text = "";
+                dialogNameTagUI.text = "";
+                dialogTextUI.enabled = false;
+                dialogNameTagUI.enabled = false;
+                dialogPortraitImageUI.enabled = false;
+                dialogAt = 0;
+
                 if (quedDialogs.Count == 1)
                 {
-                   
-                    //nollställer systemet ifall det inte finns någon dialog i kön
-                    //obs körs varje frame, oödigt; förbätring?
-                    dialogTextUI.text = "";
-                    dialogNameTagUI.text = "";
-                    dialogTextUI.enabled = false;
-                    dialogNameTagUI.enabled = false;
-                    dialogPortraitImageUI.enabled = false;
-                    dialogAt = 0;
-                  
                     //letar efter en ny dialog och ifall det finns en
                     //aktiveras den
-                    if (quedDialogs.Count > 0)
-                    {
-                        activeDialog = quedDialogs[0];
-                        callFunctionOnce = true;
-                    }
+
+                    activeDialog = quedDialogs[0];
+                    callFunctionOnce = true;
+                    isInDialogue = true;
+                    ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
+
                 }
                 else if (quedDialogs.Count >= 2)
                 {
-                    ChoseDialogue.Instance.UpdateUI(true, quedDialogs);
+                    ChoseDialogue.Instance.enterMultyChoiceDialogue(quedDialogs);
                     callFunctionOnce = true;
                     isInDialogue = true;
+                    ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
                 }
-               
+
             }
-		}
-		
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
         ///ifall spelaren befinner sig i en dialog
         if (activeDialog != null)
         {
-
             if (activeDialog.startConversationDelay >= 0)
             {
                 activeDialog.startConversationDelay -= Time.deltaTime;
@@ -189,7 +194,6 @@ public class DialogManager : MonoBehaviour
             //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
             {
-                ChoseDialogue.Instance.UpdateUI(false, quedDialogs);
 				//aktiverar alla ui-eliment
 				dialogTextUI.enabled = true;
                 dialogNameTagUI.enabled = true;
@@ -197,8 +201,6 @@ public class DialogManager : MonoBehaviour
 
                 if (activeDialog.startConversationDelay < 0)
                 {
-
-
                     //startar animationen för texten (även ljuded?)
                     StartCoroutine(animateText(activeDialog.dialogs[dialogAt].Text));
                     //hindrar från återspelning av animation och ljud
@@ -239,13 +241,21 @@ public class DialogManager : MonoBehaviour
                             dialogNameTagUI.enabled = false;
                             dialogPortraitImageUI.enabled = false;
                             isInDialogue = false;
-                            quedDialogs[0].holder.GetComponent<ContaningDialog>().exitDialogue();
-                           quedDialogs.Remove(quedDialogs[0]);
+
+                            ChoseDialogue.Instance.leaveMultyChoiceDialogue();
+                            
+
+                            quedDialogs.Clear();
+                            ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = false;
                         }
                     }
                 }
             }
         }
+    }
+    void leaveDialogue()
+    {
+
     }
 
     IEnumerator playSound()
