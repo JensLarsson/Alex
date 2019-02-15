@@ -7,22 +7,17 @@ using UnityEngine.Events;
 using UnityEditor;
 
 
-
-
-
 [System.Serializable]
 public class ActivateDialog
 {
-    public bool onCollision;
+    public bool onCollisionEnter;
     public bool onCollisionStayWithDelay;
     public float delay;
     public bool onCollisionAndKeyDown;
     [Tooltip("ifall ni vill starta dialogen vid ex man går höger använd scriptet 'interactOnKeyPress' ")]
     public bool onFunctionCall;
 }
-public class AllContainingDialogue
-{
-}
+
 public class ContaningDialog : MonoBehaviour
 {
 	[SerializeField] string onChoseText;
@@ -41,15 +36,14 @@ public class ContaningDialog : MonoBehaviour
 	[SerializeField] GameObject[] answers;
 	[SerializeField] UnityEvent doAfterDialgue;
 	bool isInDialogueTrigger = false;
-	float delay;
+    //start delay is the delay from active dialogue at the first frame (a reset)
+	float StartDelay;
 	float soundDelay;
-
-	[SerializeField] List<AllContainingDialogue> allDialogue = new List<AllContainingDialogue>();
 
 
     void Start()
     {
-        delay = activateDialogWith.delay;
+        StartDelay = activateDialogWith.delay;
     }
     void startDialogueSounds()
     {
@@ -73,21 +67,20 @@ public class ContaningDialog : MonoBehaviour
     }
     public void startConversation()
     {
-        if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0)
+        if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0 || !activateDialogWith.onFunctionCall)
         {
-            startDialogueSounds();
-            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText);
-            exitDialogue();
-        }
-        else if (!activateDialogWith.onFunctionCall)
-        {
-            startDialogueSounds();
-            DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText);
-            exitDialogue();
+            if (!DialogManager.Instance.isInDialogue)
+            {
+                startDialogueSounds();
+                DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText, this.gameObject);
+            }
         }
     }
-    void exitDialogue()
+
+   //This function is called in dialogManager once the dialogue is complete
+   public void exitDialogue()
     {
+        //if the dialog is repeteble it will create a new instance of the dialogue
         if (canRepeatTheDialog)
         {
             Vector3 pos = transform.position;
@@ -96,23 +89,49 @@ public class ContaningDialog : MonoBehaviour
            
             newDialogue.transform.position = pos;
             newDialogue.name = gameObject.name;
-            newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = delay;
+            newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = StartDelay;
            
             if (transform.parent != null)
             {
                 Transform parent = transform.parent.transform;
                 newDialogue.transform.SetParent(parent);
             }
-            newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
+            //newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
         }
         Destroy(gameObject);
+    }
+    public void resetDialogue()
+    {
+            Vector3 pos = transform.position;
 
+            GameObject newDialogue = Instantiate(gameObject);
+
+            newDialogue.transform.position = pos;
+            newDialogue.name = gameObject.name;
+            newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = StartDelay;
+
+            if (transform.parent != null)
+            {
+                Transform parent = transform.parent.transform;
+                newDialogue.transform.SetParent(parent);
+            }
+            //newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
+        
+        Destroy(gameObject);
     }
     // Update is called once per frame
     void Update()
     {
         if (isInDialogueTrigger)
         {
+            if (activateDialogWith.onCollisionAndKeyDown)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    startConversation();
+                }
+            }
+
             if (DialogManager.Instance.activeDialog != null)
             {
                 activateDialogWith.delay -= Time.deltaTime;
@@ -120,38 +139,23 @@ public class ContaningDialog : MonoBehaviour
                 {
                     if (activateDialogWith.onCollisionStayWithDelay)
                     {
-                        activateDialogWith.delay = delay;
+                        activateDialogWith.delay = StartDelay;
                         startConversation();
                     }
                 }
             }
         }
-
     }
     void OnTriggerEnter2D(Collider2D col)
     {
         isInDialogueTrigger = true;
         if (canBeActivated)
         {
-            if (activateDialogWith.onCollision)
+            if (activateDialogWith.onCollisionEnter)
             {
                 if (col.tag == "Player")
                 {
 						startConversation();
-                }
-            }
-        }
-    }
-    void OnTriggerStay2D(Collider2D col)
-    {
-
-        if (col.tag == "Player")
-        {
-            if (activateDialogWith.onCollisionAndKeyDown)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    startConversation();
                 }
             }
         }

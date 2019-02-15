@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 224072687797557898}
   - component: {fileID: 222172011218827696}
   - component: {fileID: 114437402466445384}
+  - component: {fileID: 114977994456411782}
   m_Layer: 5
   m_Name: Dilaogue
   m_TagString: Untagged
@@ -938,13 +939,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577741986943214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.784}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1207,6 +1208,21 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114977994456411782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577741986943214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6299c4c44634408141a21c7f5ab83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xStartPos: 0
+  yStartPos: 0
+  ySpacing: 40
+  textUIBase: {fileID: 1009490914401330, guid: fe067c790747ddb4aacf530329f6a27c, type: 2}
 --- !u!114 &114985951260333316
 MonoBehaviour:
   m_ObjectHideFlags: 1
