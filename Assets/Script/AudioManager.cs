@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] musicSource = new AudioSource[2];
     public AudioSource sfxSource;
     public AudioSource sfxSourcePitch;
-    public AudioClip sceneMusic;
+    AudioClip sceneMusic;
     [Tooltip("volume change per .01sec")]
     [Range(0.001f, 1.0f)]
     public float fadeInIncrememnt = 0.1f;
@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    //Replaces current song (if one is playing) with new one
+    //Replaces current song (if one is playing) with new one and fades between the two
     public void changeSong(AudioClip clip)
     {
         fadeOut(targetAudio);
@@ -77,6 +77,9 @@ public class AudioManager : MonoBehaviour
         if (stopOtherSFX) sfxSource.Stop();
         sfxSource.PlayOneShot(clip, volume);
     }
+    //
+    //Ändrar pitch på en egen AudioSource innan clip spelas
+    //
     public void playSFXRandomPitch(AudioClip clip, float randomRange)
     {
         sfxSourcePitch.pitch = Random.Range(1 - randomRange, 1 + randomRange);
@@ -120,6 +123,29 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void playSongs(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
+    {
+        fadeOut(targetAudio);
+        switchAudioEnumTarget();
+        fadeIn(targetAudio);
+        StartCoroutine(playPlaylist(songs, playBeaviour));
+    }
+
+    IEnumerator playPlaylist(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
+    {
+        for (int i = 0; i < songs.Count; i++)
+        {
+            float songTime = songs[i].length;
+            musicSource[(int)targetAudio].clip = songs[i];
+            musicSource[(int)targetAudio].Play();
+            yield return new WaitForSeconds(songTime);
+
+            if (playBeaviour == Playlist.PlayBeaviour.loopPlaylist && i == songs.Count - 1)
+            {
+                i = -1;
+            }
+        }
+    }
 
     //Växlar mellan de två AudioSource enumIndex målen
     void switchAudioEnumTarget()
