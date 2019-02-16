@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerInputController : MonoBehaviour
 {
+    //För att hålla koll på visa externa kontroller states
+    public enum ControllerState { mayMove, inInventory, other };
+    public static ControllerState controllerState = ControllerState.mayMove;
+
 
     private Dictionary<KeyCode, Command> OnKey = new Dictionary<KeyCode, Command>();
 
@@ -29,7 +33,7 @@ public class PlayerInputController : MonoBehaviour
 
         foreach (KeyCode key in OnKey.Keys)
         {
-            if (Input.GetKey(key))
+            if (Input.GetKey(key) && controllerState == ControllerState.mayMove)
             {
                 OnKey[key].Execute();
 

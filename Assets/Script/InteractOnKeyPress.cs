@@ -12,7 +12,7 @@ public class InteractOnKeyPress : MonoBehaviour
 
     private void Update()
     {
-        if (inside && Input.GetButtonDown(button))
+        if (inside && Input.GetButtonDown(button) && PlayerInputController.controllerState == PlayerInputController.ControllerState.mayMove)
         {
             unityEvent.Invoke();
         }

@@ -25,11 +25,11 @@ public class SceneTrigger : MonoBehaviour
     {
         if (button != "")
         {
-            if (inside && !locked && Input.GetButtonDown(button))
+            if (inside && !locked && Input.GetButtonDown(button)&&PlayerInputController.controllerState == PlayerInputController.ControllerState.mayMove)
             {
                 SceneController.instance.loadScene(scene);
             }
-            else if (inside && locked && Input.GetButtonDown(button))
+            else if (inside && locked && Input.GetButtonDown(button) && PlayerInputController.controllerState == PlayerInputController.ControllerState.mayMove)
             {
                 //medela att objektet är låst
             }
