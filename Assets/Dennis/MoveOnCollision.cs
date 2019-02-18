@@ -4,34 +4,51 @@ using UnityEngine;
 
 public class MoveOnCollision : MonoBehaviour
 {
+    private Vector2 startPos;
+    public float timeToDestination = 10f;
+    private float timeToLerp;
+    private Vector2 differenceInPos;
+    private Vector2 travelPos;
+    private bool isLerping = false;
+    public float narmeVarde;
 
-    public GameObject movingBlock;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Start()
     {
-
-        Vector2 movingBlockPos = transform.position;
-        Vector2 playerPos = other.transform.position;
-
-        if (playerPos.y > movingBlockPos.y + movingBlock.transform.localScale.y / 2)
+        differenceInPos = transform.position;
+        travelPos = transform.position;
+    }
+    private void Update()
+    {
+        startPos = transform.position;
+        timeToLerp += Time.deltaTime / timeToDestination;
+        transform.position = Vector2.Lerp(startPos, travelPos, timeToLerp);
+        if(Vector2.Distance(startPos, travelPos) < narmeVarde)
         {
-            transform.position = Vector2.MoveTowards(movingBlockPos, new Vector2(movingBlockPos.x, movingBlockPos.y - 1), 1.0f);
+            isLerping = false;
         }
-        else if (playerPos.y < movingBlockPos.y - movingBlock.transform.localScale.y / 2)
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isLerping == false)
         {
-            transform.position = Vector2.MoveTowards(movingBlockPos, new Vector2(movingBlockPos.x, movingBlockPos.y + 1), 1.0f);
+            if (collision.transform.tag == "Player")
+            {
+                differenceInPos = -collision.transform.position + transform.position;
+                if (Mathf.Abs(differenceInPos.x) > Mathf.Abs(differenceInPos.y))
+                {
+                    differenceInPos.y = 0;
+                    travelPos = new Vector2(transform.position.x + differenceInPos.x, transform.position.y);
 
+                }
+                else
+                {
+                    differenceInPos.x = 0;
+                    travelPos = new Vector2(transform.position.x, transform.position.y + differenceInPos.y);
+                }
+            }
+            
         }
-        else if (playerPos.x > movingBlockPos.x)
-        {
-            transform.position = Vector2.MoveTowards(movingBlockPos, new Vector2(movingBlockPos.x - 1, movingBlockPos.y), 1.0f);
-
-        }
-        else if (playerPos.x < movingBlockPos.x)
-        {
-            transform.position = Vector2.MoveTowards(movingBlockPos, new Vector2(movingBlockPos.x + 1, movingBlockPos.y + 1), 1.0f);
-
-        }
-
+        isLerping = true;
     }
 }

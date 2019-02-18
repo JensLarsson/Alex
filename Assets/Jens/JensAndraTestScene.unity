@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 757151564}
   - component: {fileID: 757151563}
   - component: {fileID: 757151562}
+  - component: {fileID: 757151566}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -194,6 +195,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757151566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 757151561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80f0ad7241792d4db611c6f043f2c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playlistBehaviour: 0
+  songs:
+  - {fileID: 8300000, guid: c681e4f0b14c6504ba3e77e47eadf07e, type: 3}
+  - {fileID: 8300000, guid: 978a21ad802caba45a13753c12a771a5, type: 3}
 --- !u!1001 &1756895636
 Prefab:
   m_ObjectHideFlags: 0
@@ -233,11 +249,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114101749302556808, guid: 87867fb6a4c1117448a443ce2eb3a9cb,
-        type: 2}
-      propertyPath: sceneMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 5223769b0894d7d47b6f4a5df4f0cc61, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87867fb6a4c1117448a443ce2eb3a9cb, type: 2}
   m_IsPrefabParent: 0

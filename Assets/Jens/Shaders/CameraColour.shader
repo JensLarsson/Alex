@@ -3,9 +3,7 @@
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
-		_Noise("NoiseTex", 2D) = "white" {}
-		_Frequency("Frequency", Float) = 1.0
-		_Intensity("Intensity", Float) = 1.0
+		_Saturation("Saturation", Range(0,1)) = 1.0
 	}
 		SubShader
 	{
@@ -42,14 +40,13 @@
 
 			sampler2D _MainTex;
 			sampler2D _Noise;
-			float _Frequency;
-			float _Intensity;
+			float _Saturation;
 
 			fixed4 frag(v2f i) : SV_Target
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);
 
-			col.rgb = col.r+col.g+col.b /30;
+			col.rgb = lerp(col.r+col.g+col.b /3, col, _Saturation);
 
 
 

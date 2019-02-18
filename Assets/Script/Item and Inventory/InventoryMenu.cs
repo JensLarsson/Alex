@@ -13,7 +13,11 @@ public class InventoryMenu : MonoBehaviour
     List<GameObject> menuFields = new List<GameObject>();
     public AudioClip moveButtonClip, unusableClip;
     public float buttonpressForce = 0.8f, buttonpressTime = 0.06f;
+
+
     bool buttonPressed = false;
+    bool previousControll;
+
     int menuIndex = 0;
     int MenuIndex
     {
@@ -43,6 +47,12 @@ public class InventoryMenu : MonoBehaviour
     private void OnEnable()
     {
         settupMenu();
+        PlayerMovement.canMove = false;
+    }
+
+    private void OnDisable()
+    {
+        PlayerMovement.canMove = true;
     }
 
     //Skapar en ny lista av items som fins i Inventory klassen
