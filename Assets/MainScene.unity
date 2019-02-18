@@ -1013,6 +1013,10 @@ MonoBehaviour:
     AnimationSpeed: 0.05
     soundThatPlayDuringDialogue:
     - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
+    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
     soundPitch: 0.1
     soundTimeDelay: -0.5
     Text: talks about the cat

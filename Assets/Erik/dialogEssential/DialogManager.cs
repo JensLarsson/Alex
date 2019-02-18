@@ -21,7 +21,7 @@ public class Dialogs
     public float AnimationSpeed = 0.05f;
     public AudioClip[] soundThatPlayDuringDialogue;
     public float soundPitch;
-    [Tooltip("")]
+    [Tooltip("delay efter varje enskilda ljud (vid själva pratandet i dialogen)")]
     public float soundTimeDelay;
     [TextArea(5, 20)]
     public string Text;
@@ -82,8 +82,7 @@ public class DialogManager : MonoBehaviour
             Debug.LogError("There is too many dialogManager placed on scene");
         }
         activeDialog = null;
-
-        InvokeRepeating("lookForNewDialogue", 0, 0.5f);
+        
         isInDialogue = false;
 		//nollställer systemet ifall det inte finns någon dialog i kön
 		//obs körs varje frame, oödigt; förbätring?
@@ -145,49 +144,6 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    void lookForNewDialogue()
-    {
-        if (activeDialog == null)
-        {
-            if (!isInDialogue)
-            {
-                //nollställer systemet ifall det inte finns någon dialog i kön
-                //obs körs varje frame, oödigt; förbätring?
-                dialogTextUI.text = "";
-                dialogNameTagUI.text = "";
-                dialogTextUI.enabled = false;
-                dialogNameTagUI.enabled = false;
-                dialogPortraitImageUI.enabled = false;
-                dialogAt = 0;
-
-                if (quedDialogs.Count == 1)
-                {
-                    //letar efter en ny dialog och ifall det finns en
-                    //aktiveras den
-                    if (quedDialogs[0].holder.GetComponent<ContaningDialog>().canPlaySound)
-                    {
-                        playStartDialogueSound();
-                    }
-                    activeDialog = quedDialogs[0];
-                    callFunctionOnce = true;
-                    isInDialogue = true;
-                    ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
-
-
-                }
-                else if (quedDialogs.Count >= 2)
-                {
-                    playStartDialogueSound();
-                    ChoseDialogue.Instance.enterMultyChoiceDialogue(quedDialogs);
-                    callFunctionOnce = true;
-                    isInDialogue = true;
-                    ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
-                }
-
-            }
-        }
-    }
-
     public void playStartDialogueSound()
     {
             List<AudioClip> allSounds = new List<AudioClip>();
@@ -216,6 +172,7 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (soundDelay >= 0)
         {
             soundDelay -= Time.deltaTime;
@@ -224,6 +181,7 @@ public class DialogManager : MonoBehaviour
         ///ifall spelaren befinner sig i en dialog
         if (activeDialog != null)
         {
+            
             //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
             {
@@ -274,6 +232,7 @@ public class DialogManager : MonoBehaviour
                             dialogNameTagUI.enabled = false;
                             dialogPortraitImageUI.enabled = false;
                             isInDialogue = false;
+                            PlayerMovement.canMove = true;
 
                             ChoseDialogue.Instance.leaveMultyChoiceDialogue();
                             
@@ -283,6 +242,48 @@ public class DialogManager : MonoBehaviour
                         }
                     }
                 }
+            }
+        }
+        if (activeDialog == null)
+        {
+
+            if (!isInDialogue)
+            {
+
+
+                //nollställer systemet ifall det inte finns någon dialog i kön
+                //obs körs varje frame, oödigt; förbätring?
+                dialogTextUI.text = "";
+                dialogNameTagUI.text = "";
+                dialogTextUI.enabled = false;
+                dialogNameTagUI.enabled = false;
+                dialogPortraitImageUI.enabled = false;
+                dialogAt = 0;
+
+                if (quedDialogs.Count == 1)
+                {
+                    //letar efter en ny dialog och ifall det finns en
+                    //aktiveras den
+                    if (quedDialogs[0].holder.GetComponent<ContaningDialog>().canPlaySound)
+                    {
+                        playStartDialogueSound();
+                    }
+                    activeDialog = quedDialogs[0];
+                    callFunctionOnce = true;
+                    isInDialogue = true;
+                    ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
+                    PlayerMovement.canMove = false;
+                }
+                else if (quedDialogs.Count >= 2)
+                {
+                    playStartDialogueSound();
+                    ChoseDialogue.Instance.enterMultyChoiceDialogue(quedDialogs);
+                    callFunctionOnce = true;
+                    isInDialogue = true;
+                    ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
+                    PlayerMovement.canMove = false;
+                }
+
             }
         }
     }
