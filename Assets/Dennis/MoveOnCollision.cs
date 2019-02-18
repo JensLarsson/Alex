@@ -39,12 +39,13 @@ public class MoveOnCollision : MonoBehaviour
                 {
                     differenceInPos.y = 0;
                     travelPos = new Vector2(transform.position.x + differenceInPos.x, transform.position.y);
-
+                    transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
                 }
                 else
                 {
                     differenceInPos.x = 0;
                     travelPos = new Vector2(transform.position.x, transform.position.y + differenceInPos.y);
+                    transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
                 }
             }
             
