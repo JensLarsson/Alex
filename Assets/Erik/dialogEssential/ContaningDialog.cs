@@ -31,7 +31,7 @@ public class ContaningDialog : MonoBehaviour
 	[SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
 	[SerializeField] bool canRepeatTheDialog = false;
 	[HideInInspector] public bool canBeActivated = true;
-	public bool hasBeenRead = false;
+	[HideInInspector] public bool hasBeenRead = false;
 	[HideInInspector] public List<GameObject> siblings = new List<GameObject>();
 	[SerializeField] GameObject[] answers;
 	[SerializeField] UnityEvent doAfterDialgue;
@@ -39,25 +39,14 @@ public class ContaningDialog : MonoBehaviour
     //start delay is the delay from active dialogue at the first frame (a reset)
 	float StartDelay;
 	float soundDelay;
+    [HideInInspector] public bool canPlaySound = true;
 
 
     void Start()
     {
         StartDelay = activateDialogWith.delay;
     }
-    void startDialogueSounds()
-    {
-        if (diffrentStartSounds.Length > 0)
-        {
-            int random = Random.Range(0, diffrentStartSounds.Length);
-
-            AudioManager.instance.playSFXRandomPitch(
-                diffrentStartSounds[random],
-                startSoundPitchRange);
-
-            soundDelay = diffrentStartSounds[random].length;
-        }
-    }
+    
     void OnDestroy()
     {
         for (int x = 0; x < siblings.Count; x++)
@@ -71,52 +60,35 @@ public class ContaningDialog : MonoBehaviour
         {
             if (!DialogManager.Instance.isInDialogue)
             {
-                startDialogueSounds();
-                DialogManager.Instance.queNewDialog(newDialog, answers, soundDelay, doAfterDialgue, onChoseText, this.gameObject);
+                //startDialogueSounds();
+                DialogManager.Instance.queNewDialog(diffrentStartSounds, startSoundPitchRange, newDialog, answers, doAfterDialgue, onChoseText, this.gameObject);
             }
         }
     }
-
-   //This function is called in dialogManager once the dialogue is complete
-   public void exitDialogue()
+    public void resetDialogue(bool chosedAnother)
     {
-        //if the dialog is repeteble it will create a new instance of the dialogue
-        if (canRepeatTheDialog)
+        //respawn the dialogue if the player picked another answer
+        //or if the dialogue can be played multiply times
+        if (chosedAnother || canRepeatTheDialog)
         {
             Vector3 pos = transform.position;
 
             GameObject newDialogue = Instantiate(gameObject);
-           
+
             newDialogue.transform.position = pos;
             newDialogue.name = gameObject.name;
             newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = StartDelay;
-           
+
             if (transform.parent != null)
             {
                 Transform parent = transform.parent.transform;
                 newDialogue.transform.SetParent(parent);
             }
-            //newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
+            if (activateDialogWith.onCollisionEnter)
+            {
+                newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
+            }
         }
-        Destroy(gameObject);
-    }
-    public void resetDialogue()
-    {
-            Vector3 pos = transform.position;
-
-            GameObject newDialogue = Instantiate(gameObject);
-
-            newDialogue.transform.position = pos;
-            newDialogue.name = gameObject.name;
-            newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = StartDelay;
-
-            if (transform.parent != null)
-            {
-                Transform parent = transform.parent.transform;
-                newDialogue.transform.SetParent(parent);
-            }
-            //newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
-        
         Destroy(gameObject);
     }
     // Update is called once per frame
