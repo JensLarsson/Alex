@@ -31,7 +31,7 @@ public class ContaningDialog : MonoBehaviour
 	[SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
 	[SerializeField] bool canRepeatTheDialog = false;
 	[HideInInspector] public bool canBeActivated = true;
-	public bool hasBeenRead = false;
+	[HideInInspector] public bool hasBeenRead = false;
 	[HideInInspector] public List<GameObject> siblings = new List<GameObject>();
 	[SerializeField] GameObject[] answers;
 	[SerializeField] UnityEvent doAfterDialgue;

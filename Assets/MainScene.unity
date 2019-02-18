@@ -1699,6 +1699,11 @@ Prefab:
       propertyPath: ySpacing
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 114830171544378162, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: isInDialogue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
   m_IsPrefabParent: 0

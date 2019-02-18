@@ -21,6 +21,7 @@ public class Dialogs
     public float AnimationSpeed = 0.05f;
     public AudioClip[] soundThatPlayDuringDialogue;
     public float soundPitch;
+    [Tooltip("")]
     public float soundTimeDelay;
     [TextArea(5, 20)]
     public string Text;
@@ -51,7 +52,7 @@ public class DialogManager : MonoBehaviour
     //en bool som håller koll på ifall man kan hoppa över dialogen
     bool skipAnimation = false;
 
-     public bool isInDialogue;
+   [HideInInspector]  public bool isInDialogue;
 
 
     //ui element
