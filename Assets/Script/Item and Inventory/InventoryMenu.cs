@@ -16,7 +16,7 @@ public class InventoryMenu : MonoBehaviour
 
 
     bool buttonPressed = false;
-    PlayerInputController.ControllerState previousControll;
+    bool previousControll;
 
     int menuIndex = 0;
     int MenuIndex
@@ -47,13 +47,12 @@ public class InventoryMenu : MonoBehaviour
     private void OnEnable()
     {
         settupMenu();
-        previousControll = PlayerInputController.controllerState;
-        PlayerInputController.controllerState = PlayerInputController.ControllerState.inInventory;
+        PlayerMovement.canMove = false;
     }
 
     private void OnDisable()
     {
-        PlayerInputController.controllerState = previousControll;
+        PlayerMovement.canMove = true;
     }
 
     //Skapar en ny lista av items som fins i Inventory klassen
