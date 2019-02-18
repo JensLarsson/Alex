@@ -7,7 +7,7 @@ using UnityEngine.Events;
 [System.Serializable]
 class menuFunction
 {
-    public GameObject GO;
+    [HideInInspector] public GameObject GO;
     public string ButtonTextUI;
     public UnityEvent newEvent;
 }
@@ -24,11 +24,12 @@ public class menuManager : MonoBehaviour
     }
     public MenuState menuState;
     bool inisiate = false;
+    
 
     [SerializeField] float xStartPos, yStartPos, ySpacing;
      [Tooltip("This text ui will determain the position and font/size of the text")]
 	[SerializeField] GameObject textUIBase;
-    [SerializeField] List<GameObject> choseUI = new List<GameObject>();
+   List<GameObject> choseUI = new List<GameObject>();
     int menuIndex = 0;
     int MenuIndex
     {
@@ -86,6 +87,7 @@ public class menuManager : MonoBehaviour
             menuButtons[x].GO = newText.gameObject;
             choseUI.Add(newText);
         }
+        gameObject.GetComponent<Image>().enabled = true;
         moveMenu(0);
     }
     void removeUI()
@@ -95,13 +97,7 @@ public class menuManager : MonoBehaviour
             Destroy(mf.GO);
             choseUI.Remove(mf.GO);
         }
-        //foreach(GameObject choice in choseUI)
-        //{
-        //    if(choseUI == null)
-        //    {
-        //        choseUI.Remove(choice);
-        //    }
-        //}
+        gameObject.GetComponent<Image>().enabled = false;
     }
     void moveMenu(int i)
     {
