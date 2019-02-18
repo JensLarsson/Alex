@@ -50,9 +50,6 @@ public class ChoseDialogue : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-    }
     // Use this for initialization
     void Start () {
         if (instance == null)
@@ -63,11 +60,11 @@ public class ChoseDialogue : MonoBehaviour
 		{
 			Debug.LogError("There is too many ChoseDialogue placed on scene");
 		}
-
     }
 
     public void enterMultyChoiceDialogue(List<CompleteConvesation> dialogueChoices)
 	{
+            
         playerHasToChose = true;
 
             for(int x = 0; x < dialogueChoices.Count; x++)
@@ -79,6 +76,7 @@ public class ChoseDialogue : MonoBehaviour
 
             allReplies.Add(dialogueChoices[x]);
             }
+      
         DialogManager.Instance.quedDialogs.Clear();
         moveMenu(0);
 	}
@@ -87,28 +85,26 @@ public class ChoseDialogue : MonoBehaviour
     {
         DialogManager.Instance.quedDialogs.Clear();
         DialogManager.Instance.isInDialogue = false;
+        allReplies[menuIndex].holder.GetComponent<ContaningDialog>().canPlaySound = false;
         DialogManager.Instance.quedDialogs.Add(allReplies[menuIndex]);
         cleanMultiDialogue();
         playerHasToChose = false;
     }
 
-    public void leaveMultyChoiceDialogue()
+    [HideInInspector] public void leaveMultyChoiceDialogue()
     {
         for(int i = 0; i < allReplies.Count; i++)
         {
             if (allReplies[i] != allReplies[menuIndex])
             {
-                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue();
+                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(true);
             }
             else
             {
-                allReplies[i].holder.GetComponent<ContaningDialog>().exitDialogue();
-             //   DialogManager.Instance.activeDialog.holder.GetComponent<ContaningDialog>().exitDialogue();
+                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(false);
             }
-           
         }
         allReplies.Clear();
-        
     }
 
     void cleanMultiDialogue()
@@ -137,20 +133,33 @@ public class ChoseDialogue : MonoBehaviour
         //Debug.Log(DialogManager.Instance.isInDialogue);
         if (playerHasToChose)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (DialogManager.Instance.soundDelay <= 0)
             {
-                moveMenu(1);
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                moveMenu(-1);
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                selectAChoice();
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    moveMenu(1);
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    moveMenu(-1);
+                }
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    selectAChoice();
+                }
             }
         }
     }
+
+    public void exitDialogueWindow()
+    {
+        DialogManager.Instance.activeDialog = null;
+        leaveMultyChoiceDialogue();
+        DialogManager.Instance.quedDialogs.Clear();
+        gameObject.GetComponent<Image>().enabled = false;
+    }
 }
+
+
 
 
