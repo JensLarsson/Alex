@@ -1982,3 +1982,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2069250909 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1321626129234796, guid: 85ee85005c4054740a158dde85e6b323,
+    type: 2}
+  m_PrefabInternal: {fileID: 1807475609}
+--- !u!114 &2069250917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069250909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c20d69eeb6af6846af15f20ae1aa9cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtons:
+  - ButtonTextUI: Return To Game
+    newEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2069250917}
+          m_MethodName: returnToGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  activeMenuButton: menu
+  menuState: 0
+  xStartPos: 0
+  yStartPos: 0
+  ySpacing: 0
+  textUIBase: {fileID: 1009490914401330, guid: 2b8d01fe0dffc3d4fab615182290a956, type: 2}
