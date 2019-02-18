@@ -1,4 +1,4 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +17,7 @@ public class Dialogs
 {
     public string NameOfTalkingNPC;
     public Sprite PortraitOfTalkingNPC;
-    [Tooltip("antal sekunder det tar fÃ¶r en bokstav att animeras fram")]
+    [Tooltip("antal sekunder det tar för en bokstav att animeras fram")]
     public float AnimationSpeed = 0.05f;
     public AudioClip[] soundThatPlayDuringDialogue;
     public float soundPitch;
@@ -39,16 +39,16 @@ public class CompleteConvesation
 public class DialogManager : MonoBehaviour
 {
 
-    //gÃ¶r scriptet till en singelton => finns inget behov fÃ¶r gamobjekt.find osv
-    //vid behov andvÃ¤nds DialogManager.Instance
+    //gör scriptet till en singelton => finns inget behov för gamobjekt.find osv
+    //vid behov andvänds DialogManager.Instance
     private static DialogManager instance;
     public static DialogManager Instance { get { return instance; } }
 
-    //en bool som kollar ifall spelaren Ã¤r i en dialog (hindrar frÃ¥n att texten ska skrivas oÃ¤ndligt med gÃ¥nger)
+    //en bool som kollar ifall spelaren är i en dialog (hindrar från att texten ska skrivas oändligt med gånger)
     bool callFunctionOnce = false;
-    //hindrar texten frÃ¥n att bli null och skriver om texten igen efter den Ã¤r klar
+    //hindrar texten från att bli null och skriver om texten igen efter den är klar
     bool stopRewriteText = false;
-    //en bool som hÃ¥ller koll pÃ¥ ifall man kan hoppa Ã¶ver dialogen
+    //en bool som håller koll på ifall man kan hoppa över dialogen
     bool skipAnimation = false;
 
      public bool isInDialogue;
@@ -58,16 +58,16 @@ public class DialogManager : MonoBehaviour
     [SerializeField] Text dialogTextUI;
     [SerializeField] Text dialogNameTagUI;
     [SerializeField] Image dialogPortraitImageUI;
-    //en int som hÃ¥ller koll pÃ¥ vilken text ruta spelaren beffiner sig vid 
-    //(likt en for loop, men variablen "i" Ã¤r tillgÃ¤nglig Ã¶ver hela scriptet)
+    //en int som håller koll på vilken text ruta spelaren beffiner sig vid 
+    //(likt en for loop, men variablen "i" är tillgänglig över hela scriptet)
     int dialogAt;
 
-   [HideInInspector] public float soundDelay;
+    float soundDelay;
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
     //List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
 
-    //sÃ¤kerstÃ¤ller sÃ¥ att det inte finns flera DialogManager
+    //säkerställer så att det inte finns flera DialogManager
     void Start()
     {
        
@@ -84,8 +84,8 @@ public class DialogManager : MonoBehaviour
 
         InvokeRepeating("lookForNewDialogue", 0, 0.5f);
         isInDialogue = false;
-		//nollstÃ¤ller systemet ifall det inte finns nÃ¥gon dialog i kÃ¶n
-		//obs kÃ¶rs varje frame, oÃ¶digt; fÃ¶rbÃ¤tring?
+		//nollställer systemet ifall det inte finns någon dialog i kön
+		//obs körs varje frame, oödigt; förbätring?
 		dialogTextUI.text = "";
 		dialogNameTagUI.text = "";
 		dialogTextUI.enabled = false;
@@ -116,7 +116,7 @@ public class DialogManager : MonoBehaviour
 
     public void createAnswers()
     {
-        //ifall nya objekt ska skapas efter dialogen gÃ¶rs det hÃ¤r
+        //ifall nya objekt ska skapas efter dialogen görs det här
         if (activeDialog.Answers.Length > 0)
         {
             if (dialogAt == activeDialog.dialogs.Count - 1)
@@ -150,8 +150,8 @@ public class DialogManager : MonoBehaviour
         {
             if (!isInDialogue)
             {
-                //nollstÃ¤ller systemet ifall det inte finns nÃ¥gon dialog i kÃ¶n
-                //obs kÃ¶rs varje frame, oÃ¶digt; fÃ¶rbÃ¤tring?
+                //nollställer systemet ifall det inte finns någon dialog i kön
+                //obs körs varje frame, oödigt; förbätring?
                 dialogTextUI.text = "";
                 dialogNameTagUI.text = "";
                 dialogTextUI.enabled = false;
@@ -210,20 +210,21 @@ public class DialogManager : MonoBehaviour
 
                 soundDelay = allSounds[random].length;
             }
+        
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (soundDelay >= 0)
-        {
-            soundDelay -= Time.deltaTime;
-        }
-
         ///ifall spelaren befinner sig i en dialog
         if (activeDialog != null)
         {
-            //hinder vilket gÃ¶r att en kod endast kÃ¶rs en gÃ¥ng
+            if (soundDelay >= 0)
+            {
+                soundDelay -= Time.deltaTime;
+            }
+           
+            //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
             {
 				//aktiverar alla ui-eliment
@@ -233,12 +234,12 @@ public class DialogManager : MonoBehaviour
 
                 if (soundDelay < 0)
                 {
-                    //startar animationen fÃ¶r texten (Ã¤ven ljuded?)
+                    //startar animationen för texten (även ljuded?)
                     StartCoroutine(animateText(activeDialog.dialogs[dialogAt].Text));
-                    //hindrar frÃ¥n Ã¥terspelning av animation och ljud
+                    //hindrar från återspelning av animation och ljud
                     callFunctionOnce = false;
                 }
-                //Ã¤ndrar profilen till hon/han som pratar
+                //ändrar profilen till hon/han som pratar
                 dialogPortraitImageUI.sprite = activeDialog.dialogs[dialogAt].PortraitOfTalkingNPC;
                 dialogNameTagUI.text = activeDialog.dialogs[dialogAt].NameOfTalkingNPC;
 
@@ -251,20 +252,20 @@ public class DialogManager : MonoBehaviour
                 //lettar efter dialog input
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    //ifall man Ã¤r mitten av en animation kan man hoppa Ã¶ver den
+                    //ifall man är mitten av en animation kan man hoppa över den
                     if (!callFunctionOnce)
                     {
                         skipAnimation = true;
                     }
                     else
                     {
-                        //om man inte Ã¤r i en...
+                        //om man inte är i en...
                         dialogAt++;
                         stopRewriteText = false;
                         dialogTextUI.text = "";
                         dialogNameTagUI.text = "";
 
-                        //nollstÃ¤ller dialogManager efter en dialog, samt tar bort dialogen ur listan
+                        //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
                         if (dialogAt >= activeDialog.dialogs.Count)
                         {
                             activeDialog.events.Invoke();
@@ -305,7 +306,7 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    //funktion fÃ¶r att ta fram bokstav fÃ¶r bokstav...
+    //funktion för att ta fram bokstav för bokstav...
     IEnumerator animateText(string TextToDisplay)
     {
         string displayingString = "";
