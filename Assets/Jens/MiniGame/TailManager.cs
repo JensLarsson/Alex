@@ -42,7 +42,7 @@ public class TailManager : MonoBehaviour
 
     IEnumerator tick()
     {
-        while (true)
+        while (tailPart.Count > 0)
         {
             yield return new WaitForSeconds(tickTimer);
             Vector3 pos = tailPart[0].transform.position + dir;
@@ -53,12 +53,30 @@ public class TailManager : MonoBehaviour
             {
                 if (positionOccupation[i].transform.position == pos)
                 {
-                    switch (positionOccupation[i].tag)
+                    if (positionOccupation[i].tag == "Apple")
                     {
-                        case "Apple":
+                        ate = true;
+                        Destroy(positionOccupation[i]);
+                    }
+                    else if (positionOccupation[i].tag == "BuggApple")
+                    {
+                        for (int y = tailPart.Count - 1; y > (tailPart.Count / 2); y--)
+                        {
+                            tailPart.RemoveAt(y);
                             ate = true;
-                            Destroy(positionOccupation[i]);
-                            break;
+                        }
+                        Destroy(positionOccupation[i]);
+                    }
+
+                    else if (positionOccupation[i] != tailPart[tailPart.Count - 1])
+                    {
+                        for (int y = tailPart.Count - 1; y >= 0; y--)
+                        {
+                            Destroy(tailPart[y]);
+                        }
+                        tailPart = new List<GameObject>();
+                        Debug.Log("Death");
+                        break;
                     }
                 }
             }
@@ -67,7 +85,7 @@ public class TailManager : MonoBehaviour
                 GameObject Tail = Instantiate(blockPrefab, pos, Quaternion.identity);
                 tailPart.Insert(0, Tail);
             }
-            else
+            else if (tailPart.Count > 0)
             {
 
                 tailPart[tailPart.Count - 1].transform.position = pos;
