@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4544764176421540}
   - component: {fileID: 212337905559355542}
-  - component: {fileID: 114564509371544970}
   - component: {fileID: 50699107905755954}
   - component: {fileID: 61401801158858430}
+  - component: {fileID: 114564509371544970}
   m_Layer: 0
   m_Name: BuggedBlock
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720269626658840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.05, y: 1.14, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfeea1798b983b418134f5e2a1b1b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestination: 100
-  narmeVarde: 0.05
+  timeToDestination: 2
+  narmeVarde: 0.01
 --- !u!212 &212337905559355542
 SpriteRenderer:
   m_ObjectHideFlags: 1

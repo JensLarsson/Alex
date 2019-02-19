@@ -100,8 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestination: 2
-  narmeVarde: 0.001
-  tempDistanceName: {x: 0, y: 0}
+  narmeVarde: 0.01
 --- !u!212 &212185311916492662
 SpriteRenderer:
   m_ObjectHideFlags: 1
