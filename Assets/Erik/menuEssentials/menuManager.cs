@@ -117,7 +117,7 @@ public class menuManager : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        Debug.Log(menuState);
+        //Debug.Log(menuState);
 
         switch (menuState)
         {

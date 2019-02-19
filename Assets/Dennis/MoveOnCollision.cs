@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(PositionSubscriber))]
 public class MoveOnCollision : MonoBehaviour
 {
     private Vector2 startPos;
@@ -33,10 +33,13 @@ public class MoveOnCollision : MonoBehaviour
             timeToLerp = 0;
         }
     }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isLerping == false)
         {
+            Vector3 intendedPosition = transform.position;
             startPos = transform.position;
             timeToLerp = 0;
             if (collision.transform.tag == "Player")
@@ -45,18 +48,22 @@ public class MoveOnCollision : MonoBehaviour
                 if (Mathf.Abs(differenceInPos.x) > Mathf.Abs(differenceInPos.y))
                 {
                     differenceInPos.y = 0;
-
-                    travelPos = new Vector2(transform.position.x + differenceInPos.x / Mathf.Abs(differenceInPos.x), transform.position.y);
+                    intendedPosition = new Vector2(transform.position.x + differenceInPos.x / Mathf.Abs(differenceInPos.x), transform.position.y);
 
                 }
                 else
                 {
                     differenceInPos.x = 0;
-                    travelPos = new Vector2(transform.position.x, transform.position.y + differenceInPos.y / Mathf.Abs(differenceInPos.y));
+                    intendedPosition = new Vector2(transform.position.x, transform.position.y + differenceInPos.y / Mathf.Abs(differenceInPos.y));
                 }
+                Debug.Log(travelPos);
             }
-
+            if (!PositionManager.Instance.isPositionOccupied(intendedPosition))
+            {
+                Debug.Log("Movint towards " + travelPos);
+                travelPos = intendedPosition;
+                isLerping = true;
+            }
         }
-        isLerping = true;
     }
 }
