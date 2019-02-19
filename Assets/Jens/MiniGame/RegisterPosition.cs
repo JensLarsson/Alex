@@ -18,7 +18,6 @@ public class RegisterPosition : MonoBehaviour
         {
             if (TailManager.positionOccupation[i] == this.gameObject)
             {
-                Debug.Log("Derp" + i);
                 TailManager.positionOccupation.RemoveAt(i);
                 break;
             }

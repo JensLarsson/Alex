@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class TailManager : MonoBehaviour
 {
+    enum MoveState { move, wall, apple, bugApple };
+
     public GameObject blockPrefab;
     public float tickTimer = 1.0f;
     public static List<GameObject> positionOccupation = new List<GameObject>();
 
     public List<GameObject> tailPart = new List<GameObject>();
-    public Vector2 startDirection = Vector2.up;
-    Vector3 dir;
+    //[SerializeField] Vector2 startDirection = Vector2.up; //For automaticMovement
+    //Vector3 dir;                                          //For automaticMovement
 
     private void Start()
     {
-        dir = startDirection;
-        StartCoroutine(tick());
+        //dir = startDirection; //For automaticMovement
+        //StartCoroutine(tick());//For automaticMovement
     }
 
 
@@ -24,74 +26,103 @@ public class TailManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            dir = Vector2.up;
+            move(Vector2.up);
+            //dir = Vector2.up;//For automaticMovement
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            dir = Vector2.left;
+            move(Vector2.left);
+            //dir = Vector2.left;//For automaticMovement
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            dir = Vector2.down;
+            move(Vector2.down);
+            //dir = Vector2.down;//For automaticMovement
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            dir = Vector2.right;
+            move(Vector2.right);
+            //dir = Vector2.right;//For automaticMovement
         }
     }
 
-    IEnumerator tick()
+    //IEnumerator tick()//For automaticMovement
+    //{
+    //    while (tailPart.Count > 0)
+    //    {
+    //        yield return new WaitForSeconds(tickTimer);
+    //        move(dir);
+    //    }
+    //}
+
+
+    void move(Vector3 vec)
     {
-        while (tailPart.Count > 0)
+        Vector3 pos = tailPart[0].transform.position + vec;
+
+        MoveState moveState = MoveState.move;
+
+        for (int i = positionOccupation.Count - 1; i >= 0; i--)
         {
-            yield return new WaitForSeconds(tickTimer);
-            Vector3 pos = tailPart[0].transform.position + dir;
-
-            bool ate = false;
-
-            for (int i = positionOccupation.Count - 1; i >= 0; i--)
+            if (positionOccupation[i].transform.position == pos)
             {
-                if (positionOccupation[i].transform.position == pos)
+                if (positionOccupation[i].tag == "Apple")
                 {
-                    if (positionOccupation[i].tag == "Apple")
-                    {
-                        ate = true;
-                        Destroy(positionOccupation[i]);
-                    }
-                    else if (positionOccupation[i].tag == "BuggApple")
-                    {
-                        for (int y = tailPart.Count - 1; y > (tailPart.Count / 2); y--)
-                        {
-                            tailPart.RemoveAt(y);
-                            ate = true;
-                        }
-                        Destroy(positionOccupation[i]);
-                    }
+                    moveState = MoveState.apple;
+                    Destroy(positionOccupation[i]);
+                }
+                else if (positionOccupation[i].tag == "BuggApple")
+                {
+                    moveState = MoveState.bugApple;
+                    Destroy(positionOccupation[i]);
+                }
+                else if (positionOccupation[i] != tailPart[tailPart.Count - 1])
+                {
+                    moveState = MoveState.wall;
 
-                    else if (positionOccupation[i] != tailPart[tailPart.Count - 1])
-                    {
-                        for (int y = tailPart.Count - 1; y >= 0; y--)
-                        {
-                            Destroy(tailPart[y]);
-                        }
-                        tailPart = new List<GameObject>();
-                        Debug.Log("Death");
-                        break;
-                    }
+                    //for (int y = tailPart.Count - 1; y >= 0; y--)
+                    //{
+                    //    Destroy(tailPart[y]);
+                    //}
+                    //tailPart = new List<GameObject>();
+                    //Debug.Log("Death");
+                    //break;
                 }
             }
-            if (ate)
-            {
+        }
+
+        switch (moveState)
+        {
+            case MoveState.move:
+                if (tailPart.Count > 0)
+                {
+                    moveForwardLastBlock(pos);
+                }
+                break;
+
+
+            case MoveState.apple:
                 GameObject Tail = Instantiate(blockPrefab, pos, Quaternion.identity);
                 tailPart.Insert(0, Tail);
-            }
-            else if (tailPart.Count > 0)
-            {
+                break;
 
-                tailPart[tailPart.Count - 1].transform.position = pos;
-                tailPart.Insert(0, tailPart[tailPart.Count - 1]);
-                tailPart.RemoveAt(tailPart.Count - 1);
-            }
+
+            case MoveState.bugApple:
+                int temp = tailPart.Count / 2;
+                for (int y = tailPart.Count - 1; y > temp; y--)
+                {
+                    tailPart.RemoveAt(y);
+                }
+                moveForwardLastBlock(pos);
+                break;
         }
     }
+
+    void moveForwardLastBlock(Vector3 pos)
+    {
+        tailPart[tailPart.Count - 1].transform.position = pos;
+        tailPart.Insert(0, tailPart[tailPart.Count - 1]);
+        tailPart.RemoveAt(tailPart.Count - 1);
+    }
+
 }

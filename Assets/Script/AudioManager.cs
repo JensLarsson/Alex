@@ -9,6 +9,19 @@ public class AudioManager : MonoBehaviour
 
     public enum TargetAudio { A = 0, B };
     [HideInInspector] public TargetAudio targetAudio = TargetAudio.A;
+    void switchAudioEnumTarget()        //Växlar mellan de två AudioSource enumIndex målen
+    {
+        switch (targetAudio)
+        {
+            case TargetAudio.A:
+                targetAudio = TargetAudio.B;
+                break;
+            case TargetAudio.B:
+                targetAudio = TargetAudio.A;
+                break;
+        }
+    }
+
 
     public AudioSource[] musicSource = new AudioSource[2];
     public AudioSource sfxSource;
@@ -17,7 +30,8 @@ public class AudioManager : MonoBehaviour
     [Tooltip("volume change per .01sec")]
     [Range(0.001f, 1.0f)]
     public float fadeInIncrememnt = 0.1f;
-    float volume = 1.0f;
+    float musicVolume = 1.0f;
+    float sfxVolume = 1.0f;
 
     void Start()
     {
@@ -35,13 +49,19 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-
-
+        
         if (sceneMusic != null)
         {
             instance.changeSong(sceneMusic);
         }
     }
+
+    public void changeSFXVolume()
+    {
+        sfxSource.volume = sfxVolume;
+        sfxSourcePitch.volume = sfxVolume;
+    }
+
 
     //Replaces current song (if one is playing) with new one and fades between the two
     public void changeSong(AudioClip clip)
@@ -49,7 +69,9 @@ public class AudioManager : MonoBehaviour
         fadeOut(targetAudio);
         switchAudioEnumTarget();
         fadeIn(targetAudio);
+
         musicSource[(int)targetAudio].loop = true;
+
         if (musicSource[(int)targetAudio].clip != clip)
         {
             musicSource[(int)targetAudio].clip = clip;
@@ -77,6 +99,7 @@ public class AudioManager : MonoBehaviour
         if (stopOtherSFX) sfxSource.Stop();
         sfxSource.PlayOneShot(clip, volume);
     }
+
     //
     //Ändrar pitch på en egen AudioSource innan clip spelas
     //
@@ -116,11 +139,12 @@ public class AudioManager : MonoBehaviour
     }
     IEnumerator fadeInC(TargetAudio source)
     {
-        while (musicSource[(int)source].volume < volume)
+        while (musicSource[(int)source].volume < musicVolume)
         {
             musicSource[(int)source].volume += fadeInIncrememnt * 0.1f;
             yield return new WaitForSeconds(0.01f);
         }
+        musicSource[(int)source].volume = musicVolume;
     }
 
     public void playSongs(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
@@ -144,20 +168,6 @@ public class AudioManager : MonoBehaviour
             {
                 i = -1;
             }
-        }
-    }
-
-    //Växlar mellan de två AudioSource enumIndex målen
-    void switchAudioEnumTarget()
-    {
-        switch (targetAudio)
-        {
-            case TargetAudio.A:
-                targetAudio = TargetAudio.B;
-                break;
-            case TargetAudio.B:
-                targetAudio = TargetAudio.A;
-                break;
         }
     }
 }
