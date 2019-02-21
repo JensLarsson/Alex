@@ -48,11 +48,13 @@ public class InventoryMenu : MonoBehaviour
     {
         settupMenu();
         PlayerMovement.canMove = false;
+        menuManager.IsInMenu = true;
     }
 
     private void OnDisable()
     {
         PlayerMovement.canMove = true;
+        menuManager.IsInMenu = false;
     }
 
     //Skapar en ny lista av items som fins i Inventory klassen
