@@ -4,7 +4,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CameraPostEffect : MonoBehaviour
 {
-    public bool pixelPerfectCamera = false;
+   // public bool pixelPerfectCamera = false;
 
     public Material material;
 

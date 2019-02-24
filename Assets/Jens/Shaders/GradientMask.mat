@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CameraTest
-  m_Shader: {fileID: 4800000, guid: 2deceac01c80ed646abad0b6a3c07414, type: 3}
-  m_ShaderKeywords: 
+  m_Name: GradientMask
+  m_Shader: {fileID: 4800000, guid: 1c3afc84547e4aa499746524dc2dcbc1, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA OUTLINE _OUTLINE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -18,6 +18,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -34,10 +38,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DisplacementTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -46,8 +46,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: fbc9a4f708f6b0149ae7a216ce4b9847, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 048b3ea529e93f645ac1c5fcf553ef56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -59,47 +71,35 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Br: 0
+    - PixelSnap: 0
+    - _BlendLevel: 1
     - _BumpScale: 1
-    - _Contrast: 0
     - _Cutoff: 0.5
-    - _Density: 0
     - _DetailNormalMapScale: 1
-    - _Distort: 0
     - _DstBlend: 0
+    - _EnableExternalAlpha: 0
+    - _Frequency: -0.49
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Hardness: 0.81
-    - _HorizontalPixelCount: 160
-    - _LineWidth: 0.01
-    - _LinesSize: 3.92
+    - _Intensity: -0.45
+    - _MaskPosX: 0
+    - _MaskPosY: 0
+    - _Max: 1
     - _Metallic: 0
+    - _Min: 0.73
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OnOff: 1
+    - _Outline: 1
     - _Parallax: 0.02
-    - _Saturation: 1
-    - _ScanDensity: 1
-    - _ScanPoint: 1080
-    - _ScanThikness: 100
+    - _Size: 1.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 0.159
+    - _Speed: -0.82
     - _SrcBlend: 1
-    - _Strength: 0
-    - _Tiles: 500
     - _UVSec: 0
-    - _VertsColor: 0
-    - _VertsColor2: 0
     - _ZWrite: 1
-    - hardPix: -3
-    - hardScan: -8
-    - maskDark: 0.5
-    - maskLight: 1.5
-    - resScale: 4
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ScansColor: {r: 1, g: 1, b: 1, a: 1}
-    - warp: {r: 0.03125, g: 0.04166, b: 0, a: 0}
+    - _OutlineCol: {r: 0, g: 0, b: 0, a: 1}

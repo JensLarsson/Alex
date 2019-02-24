@@ -1,4 +1,4 @@
-﻿Shader "Custom/CameraAfterEffekts/CameraTest"
+﻿Shader "Custom/CameraAfterEffekts/CRT"
 {
 	Properties{
 		[HideInInspector]_MainTex("Texture", 2D) = "white" {}
