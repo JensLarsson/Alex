@@ -9,7 +9,7 @@ public class MoveOnCollision : MonoBehaviour
     private float timeToLerp;
     private Vector2 differenceInPos;
     private Vector2 travelPos;
-    private bool isLerping = false;
+    private bool isLerping = false, buttonDown = false;
     public float narmeVarde;
 
 
@@ -21,6 +21,11 @@ public class MoveOnCollision : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetButtonDown("Submit")) buttonDown = true;
+        if (Input.GetButtonUp("Submit")) buttonDown = false;
+
+
+
         //startPos = transform.position;
         timeToLerp += Time.deltaTime;
         transform.position = Vector2.Lerp(startPos, travelPos, timeToLerp);
@@ -34,10 +39,9 @@ public class MoveOnCollision : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void move(Collision2D collision)
     {
-        if (isLerping == false)
+        if (!isLerping && buttonDown)
         {
             Vector3 intendedPosition = transform.position;
             startPos = transform.position;
@@ -65,5 +69,10 @@ public class MoveOnCollision : MonoBehaviour
                 isLerping = true;
             }
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        move(collision);
     }
 }
