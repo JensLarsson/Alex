@@ -11,7 +11,7 @@ public class OpenCloseInventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I) && !menuManager.IsInMenu)
         {
-            Debug.Log("Derp");
+
             inventory.SetActive(true);
         }
         else if (Input.GetButtonDown("Cancel") || Input.GetKeyDown(KeyCode.I))
