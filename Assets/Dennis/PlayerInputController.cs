@@ -34,11 +34,6 @@ public class PlayerInputController : MonoBehaviour
                 OnKey[key].Execute();
             }
         }
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            PlayerMovement.canMove = !PlayerMovement.canMove;
-        }
     }
 
 }

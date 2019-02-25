@@ -48,11 +48,13 @@ public class InventoryMenu : MonoBehaviour
     {
         settupMenu();
         PlayerMovement.canMove = false;
+        menuManager.IsInMenu = true;
     }
 
     private void OnDisable()
     {
         PlayerMovement.canMove = true;
+        menuManager.IsInMenu = false;
     }
 
     //Skapar en ny lista av items som fins i Inventory klassen
@@ -68,11 +70,12 @@ public class InventoryMenu : MonoBehaviour
     //Tar bort alla gameobjects som representerar item slots från menyn
     void clearList()
     {
-        menuFields = new List<GameObject>();
         for (int i = menuFields.Count - 1; i >= 0; i--)
         {
+            Debug.Log("Derp");  
             Destroy(menuFields[i]);
         }
+        menuFields = new List<GameObject>();
     }
 
 

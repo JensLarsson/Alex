@@ -16,7 +16,7 @@ public class menuManager : MonoBehaviour
 
     [SerializeField] List<menuFunction> menuButtons = new List<menuFunction>();
     [SerializeField] string activeMenuButton;
-    public enum MenuState
+     public  enum MenuState
     {
         mainMenu,
         menu,
@@ -24,7 +24,9 @@ public class menuManager : MonoBehaviour
     }
     public MenuState menuState;
     bool inisiate = false;
-    
+
+  [SerializeField] public static bool IsInMenu = false;
+
 
     [SerializeField] float xStartPos, yStartPos, ySpacing;
      [Tooltip("This text ui will determain the position and font/size of the text")]
@@ -79,6 +81,7 @@ public class menuManager : MonoBehaviour
     }
     void addUI()
     {
+        IsInMenu = true;
         for (int x = 0; x < menuButtons.Count; x++)
         {
             GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
@@ -92,6 +95,7 @@ public class menuManager : MonoBehaviour
     }
     void removeUI()
     {
+        IsInMenu = false;
        foreach(menuFunction mf in menuButtons)
         {
             Destroy(mf.GO);
@@ -128,7 +132,7 @@ public class menuManager : MonoBehaviour
                     Debug.Log("once");
                     inisiate = true;
                 }
-                if (Input.GetButtonDown(activeMenuButton))
+                if (Input.GetButtonDown(activeMenuButton) && PlayerMovement.canMove == true)
                 {
                     changeMenuState(MenuState.menu);
                     return;
