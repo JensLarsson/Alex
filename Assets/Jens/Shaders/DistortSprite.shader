@@ -6,6 +6,7 @@ Shader "Custom/Sprite/Sprite Distortion" {
 		_NoiseTex("Blend Texture", 2D) = "white" {}
 		_BlendLevel("Additive Texture Blend Multiplyer", Range(0,1)) = 1.0
 		_Color("Color", Color) = (1, 1, 1, 1)
+		[Toggle(INVERSE_COLOUR)] _Inverse("Inverse Colours", Float) = 0
 		_Frequency("Frequency", Float) = 1.0
 		_Intensity("Intensity", Float) = 1.0
 		_Speed("Speed", Float) = 1.0
@@ -50,6 +51,7 @@ Shader "Custom/Sprite/Sprite Distortion" {
 				float _Intensity;
 				float _Speed;
 				float _BlendLevel;
+				float _Inverse;
 
 
 				fixed4 frag(v2f i) : COLOR
@@ -59,10 +61,10 @@ Shader "Custom/Sprite/Sprite Distortion" {
 
 					//*2 för att ta texturen till orginalstorlek, -0..5 för att centrera texturen
 					fixed4 col = tex2D(_MainTex, (i.uv * 2 - .5) + offset);
+					if (_Inverse>0)	col.rgb = 1 - col;
 					fixed4 filt = tex2D(_NoiseTex, (i.uv * 2 - .5) + offset);
 					col.rgb *= col.a;
 					col += filt * _BlendLevel;
-
 
 					//ändrar alphan av de pixlar som är utanför bilden som förväntas visas
 					if (i.uv.x * 2 + offset.x < 0.5) col.a *= 0;
