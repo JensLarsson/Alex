@@ -10,6 +10,7 @@ public class keyQuestMain : MonoBehaviour
     int currentDoor = 0;
     [Tooltip("Det är viktigt att dörrarna inte heter samma")]
     public string[] nameOfAllDoors;
+   
     
 
     void Start()
@@ -29,9 +30,9 @@ public class keyQuestMain : MonoBehaviour
 	}
     public void updateKeyQuest(int theDoor)
     {
-        if (currentDoor < nameOfAllDoors.Length)
+        if (theDoor < nameOfAllDoors.Length)
         {
-            GameObject door = GameObject.Find(nameOfAllDoors[currentDoor]);
+            GameObject door = GameObject.Find(nameOfAllDoors[theDoor]);
             door.GetComponent<SceneTrigger>().unlock();
 
             if (theDoor == currentDoor)
@@ -39,10 +40,9 @@ public class keyQuestMain : MonoBehaviour
                 currentDoor++;
             }
             else
-            {
+            {     
                 currentDoor = 0;
             }
-            
         }
         if (currentDoor == nameOfAllDoors.Length)
         {
