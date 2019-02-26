@@ -7,15 +7,10 @@ using System.Xml.Serialization;
 using System.IO;
 
 
-public class XMLManger : MonoBehaviour {
-
-	public static XMLManger ins;
-
+public class XMLManger : Singleton<XMLManger>
+{
 	void Awake(){
-
-		ins = this;
-
-		if (!Directory.Exists(Application.dataPath + "/xml/")) {
+        if (!Directory.Exists(Application.dataPath + "/xml/")) {
 			Directory.CreateDirectory(Application.dataPath + "/xml/");
 		}
 	}

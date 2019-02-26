@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[System.Serializable]
-public class Quest {
+[CreateAssetMenu(menuName = "Alex/Quest")]
+public class QuestSO : ScriptableObject{
 
     public string _name;
     [TextArea]
