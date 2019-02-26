@@ -21,9 +21,14 @@ public class MoveOnCollision : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Submit")) buttonDown = true;
-        if (Input.GetButtonUp("Submit")) buttonDown = false;
-
+        if (Input.GetButtonDown("Submit"))
+        {
+            buttonDown = true;
+        }
+        if (Input.GetButtonUp("Submit"))
+        {
+            buttonDown = false;
+        }
 
 
         //startPos = transform.position;

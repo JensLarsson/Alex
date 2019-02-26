@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(PositionSubscriber))]
 public class BuggedMoveOnCollision : MonoBehaviour
 {
     private Vector2 startPos;
@@ -21,8 +21,14 @@ public class BuggedMoveOnCollision : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Submit")) buttonDown = true;
-        if (Input.GetButtonUp("Submit")) buttonDown = false;
+        if (Input.GetButtonDown("Submit"))
+        {
+            buttonDown = true;
+        }
+        if (Input.GetButtonUp("Submit"))
+        {
+            buttonDown = false;
+        }
 
 
         //startPos = transform.position;

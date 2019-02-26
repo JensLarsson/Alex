@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4402594276431736}
   - component: {fileID: 212185311916492662}
   - component: {fileID: 50977825971290834}
-  - component: {fileID: 61566349459055936}
   - component: {fileID: 114835717742527404}
   - component: {fileID: 114021552542597392}
+  - component: {fileID: 60638055729550268}
   m_Layer: 0
   m_Name: MovingBlock
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886140035140896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -1, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61566349459055936
-BoxCollider2D:
+--- !u!60 &60638055729550268
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -86,9 +86,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3, y: -0.5}
+      - {x: -0.5, y: -0.3}
+      - {x: -0.5, y: 0.3}
+      - {x: -0.3, y: 0.5}
+      - {x: 0.3, y: 0.5}
+      - {x: 0.5, y: 0.3}
+      - {x: 0.5, y: -0.3}
+      - {x: 0.3, y: -0.5}
 --- !u!114 &114021552542597392
 MonoBehaviour:
   m_ObjectHideFlags: 1
