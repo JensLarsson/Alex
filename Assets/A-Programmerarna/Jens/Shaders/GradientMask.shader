@@ -27,7 +27,7 @@
 			Cull Off
 			Lighting Off
 			ZWrite Off
-			Blend One OneMinusSrcAlpha
+			Blend SrcAlpha OneMinusSrcAlpha
 
 
 			Pass
@@ -82,7 +82,7 @@
 
 				if (dis <1 && _Outline >0) col *= _OutlineCol;
 
-				col.a = dis;
+				col.a *= dis;
 				return col;
 				}
 
