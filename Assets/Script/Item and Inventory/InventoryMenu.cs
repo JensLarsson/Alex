@@ -72,7 +72,7 @@ public class InventoryMenu : MonoBehaviour
     {
         for (int i = menuFields.Count - 1; i >= 0; i--)
         {
-            Debug.Log("Derp");  
+
             Destroy(menuFields[i]);
         }
         menuFields = new List<GameObject>();
