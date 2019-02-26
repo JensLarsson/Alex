@@ -98,7 +98,7 @@ public class ContaningDialog : MonoBehaviour
         {
             if (activateDialogWith.onCollisionAndKeyDown)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Submit"))
                 {
                     startConversation();
                 }

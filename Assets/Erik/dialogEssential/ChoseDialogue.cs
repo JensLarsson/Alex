@@ -143,7 +143,7 @@ public class ChoseDialogue : MonoBehaviour
                 {
                     moveMenu(-1);
                 }
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Submit"))
                 {
                     selectAChoice();
                 }

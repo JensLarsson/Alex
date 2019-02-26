@@ -208,7 +208,7 @@ public class DialogManager : MonoBehaviour
             if (soundDelay < 0)
             {
                 //lettar efter dialog input
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Submit"))
                 {
                     //ifall man är mitten av en animation kan man hoppa över den
                     if (!callFunctionOnce)

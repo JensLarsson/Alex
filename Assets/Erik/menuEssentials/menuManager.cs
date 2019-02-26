@@ -122,14 +122,12 @@ public class menuManager : MonoBehaviour
     void Update ()
     {
         //Debug.Log(menuState);
-
         switch (menuState)
         {
             #region not in menu
             case MenuState.noMenu:
                 if(!inisiate)
                 {
-                    Debug.Log("once");
                     inisiate = true;
                 }
                 if (Input.GetButtonDown(activeMenuButton) && PlayerMovement.canMove == true)
@@ -162,7 +160,7 @@ public class menuManager : MonoBehaviour
                 {
                     moveMenu(-1);
                 }
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Submit"))
                 {
                     selectAChoice();
                 }
@@ -178,5 +176,5 @@ public class menuManager : MonoBehaviour
                 break;
                 #endregion
         }
-	}
+    }
 }
