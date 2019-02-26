@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
     float musicVolume = 1.0f;
     float sfxVolume = 1.0f;
 
-    void Start()
+    void Awake()
     {
         if (instance == null)
         {
