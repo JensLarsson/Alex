@@ -203,9 +203,46 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1758070945296426, guid: 88799bf7f2da9114a935a4ef952fed43, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88799bf7f2da9114a935a4ef952fed43, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1202843525 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1758070945296426, guid: 88799bf7f2da9114a935a4ef952fed43,
+    type: 2}
+  m_PrefabInternal: {fileID: 1023234882}
+--- !u!95 &1202843526
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202843525}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: def11e6bdd0163c46877cbfc375696d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1202843533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202843525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab3e14c03ef2894694bf8bc3dabc657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2109108950
 GameObject:
   m_ObjectHideFlags: 0
