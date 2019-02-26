@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfQuest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Quest>
+    <_name>Yes</_name>
+    <description>Yes!!!</description>
+  </Quest>
+  <Quest>
+    <_name>Hello</_name>
+    <description>Hello World!</description>
+  </Quest>
+</ArrayOfQuest>
