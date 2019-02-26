@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(PositionSubscriber))]
 public class BuggedMoveOnCollision : MonoBehaviour
 {
     private Vector2 startPos;
@@ -9,7 +9,7 @@ public class BuggedMoveOnCollision : MonoBehaviour
     private float timeToLerp;
     private Vector2 differenceInPos;
     private Vector2 travelPos;
-    private bool isLerping = false;
+    private bool isLerping = false, buttonDown = false;
     public float narmeVarde;
 
 
@@ -21,6 +21,16 @@ public class BuggedMoveOnCollision : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetButton("Submit"))
+        {
+            buttonDown = false;
+        }
+        if (Input.GetButtonDown("Submit"))
+        {
+            buttonDown = true;
+        }
+
+
         //startPos = transform.position;
         timeToLerp += Time.deltaTime;
         transform.position = Vector2.Lerp(startPos, travelPos, timeToLerp);
@@ -34,10 +44,9 @@ public class BuggedMoveOnCollision : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void move(Collision2D collision)
     {
-        if (isLerping == false)
+        if (!isLerping && buttonDown)
         {
             Vector3 intendedPosition = transform.position;
             startPos = transform.position;
@@ -48,17 +57,19 @@ public class BuggedMoveOnCollision : MonoBehaviour
                 if (Mathf.Abs(differenceInPos.x) > Mathf.Abs(differenceInPos.y))
                 {
                     differenceInPos.y = 0;
-                    intendedPosition = new Vector2(transform.position.x + differenceInPos.x / -Mathf.Abs(differenceInPos.x), transform.position.y);
+                    differenceInPos.x = differenceInPos.x / -Mathf.Abs(differenceInPos.x);
+                    intendedPosition = new Vector2(transform.position.x + differenceInPos.x, transform.position.y);
 
                 }
                 else
                 {
                     differenceInPos.x = 0;
-                    intendedPosition = new Vector2(transform.position.x, transform.position.y + differenceInPos.y / -Mathf.Abs(differenceInPos.y));
+                    differenceInPos.y = differenceInPos.y / -Mathf.Abs(differenceInPos.y);
+                    intendedPosition = new Vector2(transform.position.x, transform.position.y + differenceInPos.y);
                 }
                 Debug.Log(travelPos);
             }
-            if (!PositionManager.Instance.isPositionOccupied(intendedPosition))
+            if (!PositionManager.Instance.isPositionOccupied(intendedPosition + new Vector3(differenceInPos.x, differenceInPos.y, 0)))
             {
                 Debug.Log("Movint towards " + travelPos);
                 travelPos = intendedPosition;
@@ -66,4 +77,10 @@ public class BuggedMoveOnCollision : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        move(collision);
+    }
+
 }

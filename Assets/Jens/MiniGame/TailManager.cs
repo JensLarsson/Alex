@@ -6,6 +6,8 @@ public class TailManager : MonoBehaviour
 {
     enum MoveState { move, wall, apple, bugApple };
 
+    //LineRenderer lineRenderer;
+
     public GameObject blockPrefab;
     public float tickTimer = 1.0f;
     public static List<GameObject> positionOccupation = new List<GameObject>();
@@ -16,6 +18,7 @@ public class TailManager : MonoBehaviour
 
     private void Start()
     {
+        //lineRenderer = GetComponent<LineRenderer>();
         //dir = startDirection; //For automaticMovement
         //StartCoroutine(tick());//For automaticMovement
     }
@@ -76,9 +79,14 @@ public class TailManager : MonoBehaviour
                     moveState = MoveState.bugApple;
                     Destroy(positionOccupation[i]);
                 }
-                else if (positionOccupation[i] != tailPart[tailPart.Count - 1])
+                else
                 {
                     moveState = MoveState.wall;
+
+                    if (positionOccupation[i] == tailPart[tailPart.Count - 1] && tailPart.Count > 2)
+                    {
+                        moveState = MoveState.move;
+                    }
 
                     //for (int y = tailPart.Count - 1; y >= 0; y--)
                     //{
@@ -116,6 +124,14 @@ public class TailManager : MonoBehaviour
                 moveForwardLastBlock(pos);
                 break;
         }
+        //List<Vector3> tempList= new List<Vector3>();
+        //foreach(GameObject gObject in tailPart)
+        //{
+        //    tempList.Add(gObject.transform.position);
+        //}
+        //lineRenderer.positionCount = tempList.Count;
+        //lineRenderer.SetPositions(tempList.ToArray());
+        
     }
 
     void moveForwardLastBlock(Vector3 pos)

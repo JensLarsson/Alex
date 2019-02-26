@@ -6,6 +6,8 @@ public class PositionManager : MonoBehaviour
 {
     public static PositionManager Instance = null;
 
+    //public static bool blockMoving = false;
+
     private List<GameObject> positionOccupant = new List<GameObject>();
 
     private void Awake()

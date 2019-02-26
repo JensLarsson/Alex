@@ -1,7 +1,6 @@
 ﻿Shader "Custom/CameraAfterEffekts/Camera Distortion"
 {
-	Properties
-	{
+	Properties{
 		_MainTex("Texture", 2D) = "white" {}
 		_Noise("NoiseTex", 2D) = "white" {}
 		_Frequency("Frequency", Float) = 1.0
@@ -10,7 +9,7 @@
 		SubShader
 	{
 		// No culling or depth
-		Cull Off ZWrite Off ZTest Always
+		Cull Off ZWrite Off ZTest Always Fog{ Mode off }
 
 		Pass
 		{
