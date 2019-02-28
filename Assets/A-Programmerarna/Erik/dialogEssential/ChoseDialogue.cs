@@ -89,20 +89,18 @@ public class ChoseDialogue : MonoBehaviour
         DialogManager.Instance.quedDialogs.Add(allReplies[menuIndex]);
         cleanMultiDialogue();
         playerHasToChose = false;
+        moveMenu(0);
     }
 
+    public void forceOne(CompleteConvesation con)
+    {
+        allReplies.Add(con);
+    }
     [HideInInspector] public void leaveMultyChoiceDialogue()
     {
         for(int i = 0; i < allReplies.Count; i++)
         {
-            if (allReplies[i] != allReplies[menuIndex])
-            {
-                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(true);
-            }
-            else
-            {
-                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(false);
-            }
+            allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue();
         }
         allReplies.Clear();
     }

@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Name: skeleton key
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: e498470591dac8942850de9659ab5c01, type: 3}
-  description: 'a master key that opens blue, green and red door
-
-'
+  description: a master key that should open any appartment

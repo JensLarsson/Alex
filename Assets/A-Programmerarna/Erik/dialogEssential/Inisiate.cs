@@ -6,7 +6,11 @@ public class Inisiate : MonoBehaviour {
 
     public void createObject()
     {
-        Instantiate(gameObject);//, position, Quaternion.identity);
+        if (!DialogManager.Instance.activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
+        {
+            GameObject newDia = Instantiate(gameObject, DialogManager.Instance.activeDialog.holder.transform.parent);
+            newDia.name = gameObject.name;
+        }
     }
 
 }

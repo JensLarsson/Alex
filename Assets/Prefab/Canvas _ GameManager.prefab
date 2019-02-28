@@ -290,8 +290,10 @@ GameObject:
   - component: {fileID: 114794161512245106}
   - component: {fileID: 114805422086437408}
   - component: {fileID: 114862324497778206}
+  - component: {fileID: 114672011085372362}
   - component: {fileID: 114762859935912782}
   - component: {fileID: 114340990483254128}
+  - component: {fileID: 114053812616461678}
   m_Layer: 5
   m_Name: Canvas _ GameManager
   m_TagString: Untagged
@@ -818,6 +820,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114053812616461678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcf4695bc327344f9d97f1e74c33c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114102344869031040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1078,7 +1091,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851876a6bc427c145b9da91f9526ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameOfAllDoors: []
+  nameOfAllDoors:
+  - DoorToETS1
+  - DoorToETS2
+  - DoorToETS3
 --- !u!114 &114340990483254128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1290,6 +1306,19 @@ MonoBehaviour:
   yStartPos: 0
   ySpacing: 20
   textUIBase: {fileID: 1009490914401330, guid: fe067c790747ddb4aacf530329f6a27c, type: 2}
+--- !u!114 &114672011085372362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb1423655c7b8f4e8a1f1fc116bed90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuests: []
+  completedQuests: []
 --- !u!114 &114750022118735002
 MonoBehaviour:
   m_ObjectHideFlags: 1

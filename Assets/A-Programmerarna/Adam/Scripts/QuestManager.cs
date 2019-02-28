@@ -48,6 +48,26 @@ public class QuestManager : Singleton<QuestManager>{
         }
 	}
 
+    public void addToCompletedQuests(QuestSO quest)
+    {
+        if (questExistsInCompletedQuests(quest))
+        {
+            Debug.Log(quest._name + " already exsist in completed quests");
+        }
+        else
+        {
+            if (questExistsInCurrentQuests(quest))
+            {
+                Debug.Log(quest._name + " dosen't exist in current quests");
+            }
+            else
+            {
+                currentQuests.Remove(quest);
+                completedQuests.Add(quest);
+            }
+        }
+    }
+
     public bool questExistsInCurrentQuests(string name)
     {
         return currentQuests.Contains(findQuestInCurrentQuests(name));
