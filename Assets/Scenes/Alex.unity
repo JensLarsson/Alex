@@ -500,8 +500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistBehaviour: 0
   songs:
-  - {fileID: 8300000, guid: cdb9571a934211945bba450fa083f766, type: 3}
-  - {fileID: 8300000, guid: b0ddc5074e31146438c86a93496a36ef, type: 3}
+  - {fileID: 8300000, guid: a0f1151d68d58754d940b75900e1c187, type: 3}
+  - {fileID: 8300000, guid: e776fa6df24245d498b35e9520c804ba, type: 3}
 --- !u!1001 &1101229531
 Prefab:
   m_ObjectHideFlags: 0
@@ -597,6 +597,16 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82584036002157830, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82495231319989140, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
