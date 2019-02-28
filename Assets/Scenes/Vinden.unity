@@ -1301,8 +1301,8 @@ GameObject:
   - component: {fileID: 890932898}
   - component: {fileID: 890932897}
   - component: {fileID: 890932900}
-  - component: {fileID: 890932899}
   - component: {fileID: 890932901}
+  - component: {fileID: 890932899}
   m_Layer: 0
   m_Name: green ball
   m_TagString: Untagged
@@ -1375,26 +1375,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 890932896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee25c6e366ec1a3409fefb4c9bba7914, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: fc075f23ae6962148813bdbd1d0ec2c4, type: 2}
+  removeOnPickup: 1
   button: Submit
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 890932896}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!61 &890932900
 BoxCollider2D:
   m_ObjectHideFlags: 0
