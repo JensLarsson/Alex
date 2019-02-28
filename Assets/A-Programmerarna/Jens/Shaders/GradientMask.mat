@@ -83,8 +83,8 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Intensity: -0.45
-    - _MaskPosX: -1
-    - _MaskPosY: 0
+    - _MaskPosX: 3.6399977
+    - _MaskPosY: 0.72
     - _Max: 1
     - _Metallic: 0
     - _Min: 0.859
