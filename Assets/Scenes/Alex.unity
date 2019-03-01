@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c96caeb10770a8248b9a8de2b07d4cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 5e01f66bf6db6884db9d98fc4aa1a291, type: 2}
+  mat: {fileID: 2100000, guid: e50f193b99fcd4443b581c2d1c133022, type: 2}
   tran: {fileID: 1587409727}
 --- !u!212 &583821557
 SpriteRenderer:
@@ -362,7 +362,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5e01f66bf6db6884db9d98fc4aa1a291, type: 2}
+  - {fileID: 2100000, guid: e50f193b99fcd4443b581c2d1c133022, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
