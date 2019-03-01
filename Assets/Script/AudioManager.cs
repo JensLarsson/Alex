@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 
     static public AudioManager instance = null;
 
-    public enum TargetAudio { A = 0, B };
+    public enum TargetAudio { A = 0, B, C, D };
     [HideInInspector] public TargetAudio targetAudio = TargetAudio.A;
     void switchAudioEnumTarget()        //Växlar mellan de två AudioSource enumIndex målen
     {
@@ -17,6 +17,12 @@ public class AudioManager : MonoBehaviour
                 targetAudio = TargetAudio.B;
                 break;
             case TargetAudio.B:
+                targetAudio = TargetAudio.C;
+                break;
+            case TargetAudio.C:
+                targetAudio = TargetAudio.D;
+                break;
+            case TargetAudio.D:
                 targetAudio = TargetAudio.A;
                 break;
         }
@@ -162,6 +168,7 @@ public class AudioManager : MonoBehaviour
     {
         musicSource[(int)targetAudio].clip = songs[0];
         musicSource[(int)targetAudio].Play();
+        musicSource[(int)targetAudio].loop = false;
 
         switchAudioEnumTarget();
 
@@ -172,6 +179,8 @@ public class AudioManager : MonoBehaviour
         musicSource[(int)targetAudio].loop = true;
         musicSource[(int)targetAudio].volume = 1.0f;
 
+        switchAudioEnumTarget();
+        fadeOut(targetAudio);
     }
 
 

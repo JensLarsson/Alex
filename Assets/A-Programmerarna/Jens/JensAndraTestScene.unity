@@ -785,8 +785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistBehaviour: 0
   songs:
-  - {fileID: 8300000, guid: c681e4f0b14c6504ba3e77e47eadf07e, type: 3}
-  - {fileID: 8300000, guid: 978a21ad802caba45a13753c12a771a5, type: 3}
+  - {fileID: 8300000, guid: cdb9571a934211945bba450fa083f766, type: 3}
+  - {fileID: 8300000, guid: b0ddc5074e31146438c86a93496a36ef, type: 3}
 --- !u!114 &757151567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,7 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65973e3777458c842958996ff01ded44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixelPerfectCamera: 0
   material: {fileID: 2100000, guid: b7eda899108d7f44887ff365fda82c0e, type: 2}
 --- !u!1001 &907331124
 Prefab:
