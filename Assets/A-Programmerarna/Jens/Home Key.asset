@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: Home Key
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 2a4012bc6bff21a41b12cc3da0fc1c2a, type: 3}
+  sprite: {fileID: 21300000, guid: 98d0749508ed9614b833481c8f5d5b39, type: 3}
   description: The key for Alex's appartment, opens the door for the appartment, a
     key which unlocks  the door which acts as the entrance for Alex's home appartment,
     a key.

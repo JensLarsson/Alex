@@ -60,13 +60,15 @@ public class AudioManager : MonoBehaviour
         {
             instance.changeSong(sceneMusic);
         }
+
     }
 
-    public void changeSFXVolume()
+    public void setSFXVolume()
     {
         sfxSource.volume = sfxVolume;
         sfxSourcePitch.volume = sfxVolume;
     }
+
 
 
     //Replaces current song (if one is playing) with new one and fades between the two
@@ -129,7 +131,12 @@ public class AudioManager : MonoBehaviour
     //
     public void fadeOut(TargetAudio source)
     {
-        StartCoroutine(fadeOutC(source));
+        if (source == (TargetAudio)(-1))
+        {
+            StartCoroutine(fadeOutC(TargetAudio.C));
+        }
+        else
+            StartCoroutine(fadeOutC(source));
     }
     public void fadeIn(TargetAudio source)
     {
@@ -155,12 +162,25 @@ public class AudioManager : MonoBehaviour
 
     public void playSongs(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
     {
-        fadeOut(targetAudio);
-        switchAudioEnumTarget();
-        fadeIn(targetAudio);
-        playPlaylist(songs, playBeaviour);
+        bool sameList = false;
 
-        // StartCoroutine(playPlaylist(songs, playBeaviour));
+        foreach (AudioClip clip in songs)
+        {
+            if (clip == musicSource[(int)targetAudio].clip)
+            {
+                sameList = true;
+                break;
+            }
+        }
+        if (!sameList)
+        {
+            StopAllCoroutines();
+            fadeOut(targetAudio);
+            fadeOut(targetAudio - 1);
+            switchAudioEnumTarget();
+            fadeIn(targetAudio);
+            playPlaylist(songs, playBeaviour);
+        }
     }
 
 
@@ -178,28 +198,6 @@ public class AudioManager : MonoBehaviour
         Debug.Log(test);
         musicSource[(int)targetAudio].loop = true;
         musicSource[(int)targetAudio].volume = 1.0f;
-
-        switchAudioEnumTarget();
-        fadeOut(targetAudio);
     }
 
-
-    //IEnumerator playPlaylist(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
-    //{
-    //    musicSource[(int)targetAudio].clip = songs[0];
-    //    musicSource[(int)targetAudio].Play();
-    //    float songTime = songs[0].length;
-    //    for (int i = 1; i < songs.Count; i++)
-    //    {
-    //        yield return new WaitForSeconds(songTime);
-    //        musicSource[(int)targetAudio].clip = songs[i];
-    //        musicSource[(int)targetAudio].Play();
-    //        songTime = songs[i].length;
-
-    //        if (playBeaviour == Playlist.PlayBeaviour.loopPlaylist && i == songs.Count - 1)
-    //        {
-    //            i = -1;
-    //        }
-    //    }
-    //}
 }

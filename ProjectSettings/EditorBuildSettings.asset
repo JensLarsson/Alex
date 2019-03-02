@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/A-Programmerarna/Jens/JensAndraTestScene.unity
     guid: 2d1ab766c1bc70a4f97128bafcd93d16
   - enabled: 1
+    path: Assets/A-Programmerarna/Jens/JensTestScen2.unity
+    guid: dfc1ea0a9474b6c44ba9bf1f11fc6a60
+  - enabled: 1
     path: Assets/A-Programmerarna/Erik/EriksTestScene.unity
     guid: 1b92ff2031fd5c64daa3f66183f3ec91
   - enabled: 1

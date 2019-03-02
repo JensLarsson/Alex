@@ -1212,7 +1212,7 @@ MonoBehaviour:
   startSoundPitchRange: 0.1
   newDialog:
   - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: f82763342c6152f47aa01a96f3624c37,
       type: 3}
     AnimationSpeed: 0.05
     soundThatPlayDuringDialogue:
@@ -1221,7 +1221,7 @@ MonoBehaviour:
     soundTimeDelay: -0.5
     Text: 1 test test test
   - NameOfTalkingNPC: Bert Bertsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 513bddd7778ea534a86a37d9ae502a5e,
       type: 3}
     AnimationSpeed: 0.05
     soundThatPlayDuringDialogue:
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     soundTimeDelay: -0.5
     Text: 2 test test test
   - NameOfTalkingNPC: Annabell Annabellsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 2670bfd5e2644c843a56c7de439be774,
       type: 3}
     AnimationSpeed: 0.05
     soundThatPlayDuringDialogue:
