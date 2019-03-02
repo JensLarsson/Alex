@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Elevator : MonoBehaviour {
+
+
     [Header("Menu Text List")]
     public GameObject textPrefab;
     public Color textColour = Color.white, selectionColour = Color.red;
     public float xStartPos, yStartPos, yOffset;
     List<GameObject> menuFields = new List<GameObject>();
     public AudioClip moveButtonClip, unusableClip;
+    public float buttonpressForce = 0.8f, buttonpressTime = 0.06f;
 
 
     bool buttonPressed = false;
@@ -40,14 +44,86 @@ public class Elevator : MonoBehaviour {
         }
     }
 
+    private void OnEnable()
+    {
+        settupMenu();
+        PlayerMovement.canMove = false;
+        menuManager.IsInMenu = true;
+    }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void OnDisable()
+    {
+        PlayerMovement.canMove = true;
+        menuManager.IsInMenu = false;
+    }
+
+    //Skapar en ny lista av items som fins i Inventory klassen
+    void settupMenu()
+    {
+        clearList();
+        foreach (Item item in Inventory.instance.items)
+        {
+            addText(item);
+        }
+        moveMenu(0);
+    }
+    //Tar bort alla gameobjects som representerar item slots från menyn
+    void clearList()
+    {
+        for (int i = menuFields.Count - 1; i >= 0; i--)
+        {
+
+            Destroy(menuFields[i]);
+        }
+        menuFields = new List<GameObject>();
+    }
+
+
+    //Lägger till items i listan av objekt
+    void addText(Item item)
+    {
+        GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
+        newText.GetComponent<Text>().text = item.name;
+        menuFields.Add(newText);
+        newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            moveMenu(-1);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            moveMenu(1);
+        }
+
+        if (Input.GetButtonDown("Submit") && !buttonPressed)
+        {
+            foreach (GameObject gObject in CollisionTracking.collisionList)
+            {
+                InteractWithItem iWI = gObject.GetComponent<InteractWithItem>();
+
+                if (iWI != null)
+                {
+                    if (!iWI.useItem(Inventory.instance.items[menuIndex])) AudioManager.instance.playSFXClip(unusableClip);
+                }
+            }
+        }
+    }
+
+
+    //Bläddrar genom listan av text gameobjects (menuFields) för vissuella effekter.
+    //Bläddrar även genom items listan i Inventory.instance för information för valt item.
+    void moveMenu(int i)
+    {
+        menuFields[MenuIndex].GetComponent<Text>().color = textColour;
+        MenuIndex += i;
+        menuFields[MenuIndex].GetComponent<Text>().color = selectionColour;
+        if (i != 0 && moveButtonClip != null)
+        {
+            AudioManager.instance.playSFXClip(moveButtonClip, true);
+        }
+    }
 }
