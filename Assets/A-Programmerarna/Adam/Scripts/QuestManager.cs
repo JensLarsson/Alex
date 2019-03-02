@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-<<<<<<< HEAD:Assets/A-Programmerarna/Adam/Scripts/QuestManager.cs
 public class QuestManager : MonoBehaviour{
 
     public static QuestManager Instance = null;
-=======
-public class QuestManager : Singleton<QuestManager>{
->>>>>>> Erik:Assets/A-Programmerarna/Adam/Scripts/QuestManager.cs
 
     public List<QuestSO> currentQuests;
 	public List<QuestSO> completedQuests;
 
 	private string currentQuestsSaves = "currentQuestsSaves";
 	private string completedQuestsSaves = "completedQuestsSaves";
-
-<<<<<<< HEAD:Assets/A-Programmerarna/Adam/Scripts/QuestManager.cs
+    
     private void Awake()
     {
         if (Instance == null)
@@ -28,9 +23,7 @@ public class QuestManager : Singleton<QuestManager>{
             Destroy(this.gameObject);
         }
     }
-
-=======
->>>>>>> Erik:Assets/A-Programmerarna/Adam/Scripts/QuestManager.cs
+    
     public void addToCurrentQuests(QuestSO quest)
     {
         if (questExistsInCurrentQuests(quest))
