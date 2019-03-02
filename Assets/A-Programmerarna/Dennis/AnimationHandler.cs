@@ -28,7 +28,7 @@ public class AnimationHandler : MonoBehaviour
         float verticalInput = Input.GetAxisRaw("Vertical");
         bool playAnim = PlayerMovement.canMove; 
 
-        if (playAnim && Input.GetKey(KeyCode.W) || playAnim && Input.GetKey(KeyCode.S))
+        if (playAnim && (Input.GetKey(KeyCode.W) ||  Input.GetKey(KeyCode.S)))
         {
             vertical = (int)verticalInput;
 
@@ -47,7 +47,7 @@ public class AnimationHandler : MonoBehaviour
             verticalAnim = 0;
         }
 
-        if (playAnim && Input.GetKey(KeyCode.A) || playAnim && Input.GetKey(KeyCode.D))
+        if (playAnim && (Input.GetKey(KeyCode.A) ||  Input.GetKey(KeyCode.D)))
         {
             if (Mathf.Abs(previousY) > 0)
             {
