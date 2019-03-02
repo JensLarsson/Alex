@@ -283,7 +283,7 @@ public class DialogManager : MonoBehaviour
                         quedDialogs.Remove(quedDialogs[i]);
                     }
                 }
-                
+
                 if (quedDialogs.Count == 1)
                 {
                     //letar efter en ny dialog och ifall det finns en
