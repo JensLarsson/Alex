@@ -3,13 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestManager : Singleton<QuestManager>{
+public class QuestManager : MonoBehaviour{
+
+    public static QuestManager Instance = null;
 
     public List<QuestSO> currentQuests;
 	public List<QuestSO> completedQuests;
 
 	private string currentQuestsSaves = "currentQuestsSaves";
 	private string completedQuestsSaves = "completedQuestsSaves";
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        } else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     public void addToCurrentQuests(QuestSO quest)
     {
