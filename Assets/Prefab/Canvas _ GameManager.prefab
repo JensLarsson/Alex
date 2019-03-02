@@ -326,6 +326,8 @@ GameObject:
   - component: {fileID: 114762859935912782}
   - component: {fileID: 114340990483254128}
   - component: {fileID: 114053812616461678}
+  - component: {fileID: 222103049164696306}
+  - component: {fileID: 114512596030946374}
   m_Layer: 5
   m_Name: Canvas _ GameManager
   m_TagString: Untagged
@@ -1330,6 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe2a10ac952f804ca342923b024f200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionIncrement: 1
 --- !u!114 &114382202799550628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1488,6 +1491,33 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: -Person
+--- !u!114 &114512596030946374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114527336604470102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1526,6 +1556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d6299c4c44634408141a21c7f5ab83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textColour: {r: 1, g: 1, b: 1, a: 1}
+  selectionColour: {r: 1, g: 0, b: 0, a: 1}
   xStartPos: 0
   yStartPos: 0
   ySpacing: 20
@@ -1709,6 +1741,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436703843407908}
+--- !u!222 &222103049164696306
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
 --- !u!222 &222145929991605068
 CanvasRenderer:
   m_ObjectHideFlags: 1
