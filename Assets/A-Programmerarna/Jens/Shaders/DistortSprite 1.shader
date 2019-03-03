@@ -70,6 +70,7 @@ Shader "Custom/Sprite/Sprite Distortion" {
 
 						fixed4 noiseTex = tex2D(_NoiseTex, i.uv + offset2 * _BlendDistort);
 						col += noiseTex * _BlendLevel;
+						col = col / (1 + _BlendLevel);
 
 
 						//Dödar pixlar med alpha under 0.001

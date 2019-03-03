@@ -11,6 +11,7 @@ public class MoveOnCollision : MonoBehaviour
     private Vector2 travelPos;
     private bool isLerping = false, buttonDown = false;
     public float narmeVarde;
+    public AudioClip pushClip;
 
 
     private void Start()
@@ -48,6 +49,7 @@ public class MoveOnCollision : MonoBehaviour
     {
         if (!isLerping && buttonDown)
         {
+            AudioManager.instance.playSFXClip(pushClip);
             Vector3 intendedPosition = transform.position;
             startPos = transform.position;
             timeToLerp = 0;
