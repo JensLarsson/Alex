@@ -29,15 +29,15 @@ public class SceneController : MonoBehaviour
 
     public void loadScene(Scene scene)
     {
-        if (!transitioning) StartCoroutine(SceneTransition(scene.name));
+        StartCoroutine(SceneTransition(scene.name));
     }
     public void loadScene(string scene)
     {
-        if (!transitioning) StartCoroutine(SceneTransition(scene));
+        StartCoroutine(SceneTransition(scene));
     }
     public void loadScene(string scene, float time)
     {
-        if (!transitioning) StartCoroutine(SceneTransition(scene, time));
+        StartCoroutine(SceneTransition(scene, time));
     }
 
     void saveScene(string scene)
@@ -47,38 +47,41 @@ public class SceneController : MonoBehaviour
 
     IEnumerator SceneTransition(string scene, float f = 0.0f)
     {
-        saveScene(scene);
-        transitioning = true;
-        string id = SceneManager.GetActiveScene().name;
-        if (lastScenePosition.ContainsKey(id))
+        if (!transitioning)
         {
-            lastScenePosition[id] = PlayerTracker.Instance.gameObject.transform.position;
-        }
-        else
-        {
-            lastScenePosition.Add(id, PlayerTracker.Instance.gameObject.transform.position);
+            saveScene(scene);
+            transitioning = true;
+            string id = SceneManager.GetActiveScene().name;
+            if (lastScenePosition.ContainsKey(id))
+            {
+                lastScenePosition[id] = PlayerTracker.Instance.gameObject.transform.position;
+            }
+            else
+            {
+                lastScenePosition.Add(id, PlayerTracker.Instance.gameObject.transform.position);
 
+            }
+
+            Color colour;
+            while (image.color.a < 1)
+            {
+                colour = new Color(0, 0, 0, image.color.a + Time.deltaTime * transitionIncrement);
+                image.color = colour;
+                yield return new WaitForEndOfFrame();
+            }
+
+            SceneManager.LoadScene(scene);
+            yield return new WaitForSeconds(f);
+
+            while (image.color.a > 0)
+            {
+                colour = new Color(0, 0, 0, image.color.a - Time.deltaTime * transitionIncrement);
+                image.color = colour;
+                yield return new WaitForEndOfFrame();
+            }
+            transitioning = false;
         }
 
-        Color colour;
-        while (image.color.a < 1)
-        {
-            colour = new Color(0, 0, 0, image.color.a + Time.deltaTime * transitionIncrement);
-            image.color = colour;
-            yield return new WaitForEndOfFrame();
-        }
 
-        SceneManager.LoadScene(scene);
-        yield return new WaitForSeconds(f);
-
-        while (image.color.a > 0)
-        {
-            colour = new Color(0, 0, 0, image.color.a - Time.deltaTime * transitionIncrement);
-            image.color = colour;
-            yield return new WaitForEndOfFrame();
-        }
-        transitioning = false;
     }
-
-
 }
