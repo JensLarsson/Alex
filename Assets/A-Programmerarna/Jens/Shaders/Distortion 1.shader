@@ -1,4 +1,4 @@
-﻿Shader "Custom/CameraAfterEffekts/Camera Distortion"
+﻿Shader "Unlisted/Camera Distortion"
 {
 	Properties{
 		[HideInInspector]_MainTex("Texture", 2D) = "white" {}
@@ -45,15 +45,19 @@
 				float _Frequency;
 				float _Intensity;
 				float _Speed;
+				float4 _Noise_ST;
 
 				fixed4 frag(v2f i) : SV_Target
 				{
 					float2 offset = float2((sin(tex2D(_Noise, float2(0,i.uv.y + _Time[1] * _Speed)*_Frequency).r) - 0.5)*_Intensity,0.0);
-					fixed4 col = tex2D(_MainTex, i.uv + offset);
+					fixed test = tex2D(_Noise, i.uv + half2(_Noise_ST.z, _Noise_ST.w+_Time[1]*_Speed)).r;
 
-					if (i.uv.y  < 0.3 || i.uv.y >0.7) col = 1 - col;
-					if (i.uv.y > 0.5 && i.uv.x > 0.5) col = tex2D(_MainTex, i.uv);
-
+					if (i.uv.y > 0.5) {
+						fixed4 col = tex2D(_MainTex, (i.uv + test));
+						if (test > 0.5) col = 1 - col;
+						return col;
+					}
+					fixed4 col = tex2D(_MainTex, i.uv);
 
 					return col;
 				}

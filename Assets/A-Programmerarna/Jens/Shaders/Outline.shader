@@ -1,5 +1,5 @@
 
-Shader "unlisted/Test" {
+Shader "unlisted/Outline" {
 	Properties{
 		[HideInInspector]_MainTex("Base (RGB)", 2D) = "white" {}
 		_Outline("Outline", Range(0.0,4.0)) = 1

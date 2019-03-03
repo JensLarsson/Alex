@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-guid: bf110263ba92de04691209ce0a4fc9da
-timeCreated: 1551195269
+guid: c6eaadc51b010d442a8ce91cbc7cdb1c
+timeCreated: 1551623205
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: sheet kattdam2_0
-    21300002: sheet kattdam2_2
-    21300004: sheet kattdam2_4
-    21300006: sheet kattdam2_6
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -38,19 +34,19 @@ TextureImporter:
     filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -102,63 +98,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: sheet kattdam2_0
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 0
-        width: 28
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: sheet kattdam2_2
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 0
-        width: 28
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: sheet kattdam2_4
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 0
-        width: 28
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: sheet kattdam2_6
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 0
-        width: 28
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
