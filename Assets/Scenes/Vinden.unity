@@ -1470,14 +1470,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 821923855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5a17796dd7aee4cae61151e3c05a01, type: 3}
+  m_Script: {fileID: 11500000, guid: b80f0ad7241792d4db611c6f043f2c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips:
+  playlistBehaviour: 0
+  songs:
   - {fileID: 8300000, guid: 2f7eb8b525dccd845a906170ab84fff2, type: 3}
-  audioSources: []
-  maxVolume: 10
-  fadeSpeed: 0
 --- !u!1001 &833813295
 Prefab:
   m_ObjectHideFlags: 0
