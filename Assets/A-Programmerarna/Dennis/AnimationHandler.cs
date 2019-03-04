@@ -39,6 +39,7 @@ public class AnimationHandler : MonoBehaviour
             else
             {
                 verticalAnim = (int)verticalInput;
+                horizontalAnim = 0;
             }
         }
         else
@@ -56,6 +57,7 @@ public class AnimationHandler : MonoBehaviour
             else
             {
                 horizontalAnim = (int)horizontalInput;
+                verticalAnim = 0;
             }
         }
         else
