@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 
     static public AudioManager instance = null;
 
-    public enum TargetAudio { A = 0, B };
+    public enum TargetAudio { A = 0, B, C, D };
     [HideInInspector] public TargetAudio targetAudio = TargetAudio.A;
     void switchAudioEnumTarget()        //Växlar mellan de två AudioSource enumIndex målen
     {
@@ -17,6 +17,12 @@ public class AudioManager : MonoBehaviour
                 targetAudio = TargetAudio.B;
                 break;
             case TargetAudio.B:
+                targetAudio = TargetAudio.C;
+                break;
+            case TargetAudio.C:
+                targetAudio = TargetAudio.D;
+                break;
+            case TargetAudio.D:
                 targetAudio = TargetAudio.A;
                 break;
         }
@@ -54,13 +60,15 @@ public class AudioManager : MonoBehaviour
         {
             instance.changeSong(sceneMusic);
         }
+
     }
 
-    public void changeSFXVolume()
+    public void setSFXVolume()
     {
         sfxSource.volume = sfxVolume;
         sfxSourcePitch.volume = sfxVolume;
     }
+
 
 
     //Replaces current song (if one is playing) with new one and fades between the two
@@ -123,7 +131,12 @@ public class AudioManager : MonoBehaviour
     //
     public void fadeOut(TargetAudio source)
     {
-        StartCoroutine(fadeOutC(source));
+        if (source == (TargetAudio)(-1))
+        {
+            StartCoroutine(fadeOutC(TargetAudio.C));
+        }
+        else
+            StartCoroutine(fadeOutC(source));
     }
     public void fadeIn(TargetAudio source)
     {
@@ -149,47 +162,42 @@ public class AudioManager : MonoBehaviour
 
     public void playSongs(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
     {
-        fadeOut(targetAudio);
-        switchAudioEnumTarget();
-        fadeIn(targetAudio);
-        //playPlaylist(songs, playBeaviour);
+        bool sameList = false;
 
-        StartCoroutine(playPlaylist(songs, playBeaviour));
+        foreach (AudioClip clip in songs)
+        {
+            if (clip == musicSource[(int)targetAudio].clip)
+            {
+                sameList = true;
+                break;
+            }
+        }
+        if (!sameList)
+        {
+            StopAllCoroutines();
+            fadeOut(targetAudio);
+            fadeOut(targetAudio - 1);
+            switchAudioEnumTarget();
+            fadeIn(targetAudio);
+            playPlaylist(songs, playBeaviour);
+        }
     }
 
 
-    //void playPlaylist(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
-    //{
-    //    musicSource[(int)targetAudio].clip = songs[0];
-    //    musicSource[(int)targetAudio].Play();
-
-    //    switchAudioEnumTarget();
-
-    //    double test = songs[1].length;
-    //    musicSource[(int)targetAudio].clip = songs[1];
-    //    musicSource[(int)targetAudio].PlayScheduled(test);
-    //    musicSource[(int)targetAudio].loop = true;
-    //    musicSource[(int)targetAudio].volume = 1.0f;
-
-    //}
-
-
-    IEnumerator playPlaylist(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
+    void playPlaylist(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
     {
         musicSource[(int)targetAudio].clip = songs[0];
         musicSource[(int)targetAudio].Play();
-        float songTime = songs[0].length;
-        for (int i = 1; i < songs.Count; i++)
-        {
-            yield return new WaitForSeconds(songTime);
-            musicSource[(int)targetAudio].clip = songs[i];
-            musicSource[(int)targetAudio].Play();
-            songTime = songs[i].length;
+        musicSource[(int)targetAudio].loop = false;
 
-            if (playBeaviour == Playlist.PlayBeaviour.loopPlaylist && i == songs.Count - 1)
-            {
-                i = -1;
-            }
-        }
+        switchAudioEnumTarget();
+
+        double test = songs[0].length + AudioSettings.dspTime;
+        musicSource[(int)targetAudio].clip = songs[1];
+        musicSource[(int)targetAudio].PlayScheduled(test);
+        Debug.Log(test);
+        musicSource[(int)targetAudio].loop = true;
+        musicSource[(int)targetAudio].volume = 1.0f;
     }
+
 }

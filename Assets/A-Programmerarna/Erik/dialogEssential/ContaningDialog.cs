@@ -20,33 +20,37 @@ public class ActivateDialog
 
 public class ContaningDialog : MonoBehaviour
 {
-	[SerializeField] string onChoseText;
-	[SerializeField] ActivateDialog activateDialogWith;
+    [Header("Quests")]
+    public List<QuestSO> instantiateDialogIfQuestsExistsInCurrent;
+    public List<QuestSO> removeDialogIfQuestsHasCompleted;
+    [SerializeField] string onChoseText;
+    [SerializeField] ActivateDialog activateDialogWith;
 
-	[Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
-	[SerializeField] AudioClip[] diffrentStartSounds;
-	[SerializeField] float startSoundPitchRange;
+    [Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
+    [SerializeField] AudioClip[] diffrentStartSounds;
+    [SerializeField] float startSoundPitchRange;
 
 
-	[SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
-	[SerializeField] bool canRepeatTheDialog = false;
-	[HideInInspector] public bool canBeActivated = true;
-	[HideInInspector] public bool hasBeenRead = false;
-	[HideInInspector] public List<GameObject> siblings = new List<GameObject>();
-	[SerializeField] GameObject[] answers;
-	[SerializeField] UnityEvent doAfterDialgue;
-	bool isInDialogueTrigger = false;
+    [SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
+    public bool canRepeatTheDialog = false;
+    [HideInInspector] public bool canBeActivated = true;
+    public bool hasBeenRead = false;
+    [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
+    [SerializeField] GameObject[] answers;
+    [SerializeField] UnityEvent doAfterDialgue;
+    bool isInDialogueTrigger = false;
     //start delay is the delay from active dialogue at the first frame (a reset)
-	float StartDelay;
-	float soundDelay;
+    float StartDelay;
+    float soundDelay;
     [HideInInspector] public bool canPlaySound = true;
+
 
 
     void Start()
     {
         StartDelay = activateDialogWith.delay;
     }
-    
+
     void OnDestroy()
     {
         for (int x = 0; x < siblings.Count; x++)
@@ -60,36 +64,24 @@ public class ContaningDialog : MonoBehaviour
         {
             if (!DialogManager.Instance.isInDialogue)
             {
-                //startDialogueSounds();
-                DialogManager.Instance.queNewDialog(diffrentStartSounds, startSoundPitchRange, newDialog, answers, doAfterDialgue, onChoseText, this.gameObject);
+                DialogManager.Instance.queNewDialog(
+                    diffrentStartSounds, 
+                    startSoundPitchRange,
+                    newDialog, 
+                    answers,
+                    doAfterDialgue,
+                    onChoseText, 
+                    this.gameObject,
+                    hasBeenRead);
             }
         }
     }
-    public void resetDialogue(bool chosedAnother)
+    public void resetDialogue()
     {
-        //respawn the dialogue if the player picked another answer
-        //or if the dialogue can be played multiply times
-        if (chosedAnother || canRepeatTheDialog)
+        if(!canRepeatTheDialog)
         {
-            Vector3 pos = transform.position;
-
-            GameObject newDialogue = Instantiate(gameObject);
-
-            newDialogue.transform.position = pos;
-            newDialogue.name = gameObject.name;
-            newDialogue.GetComponent<ContaningDialog>().activateDialogWith.delay = StartDelay;
-
-            if (transform.parent != null)
-            {
-                Transform parent = transform.parent.transform;
-                newDialogue.transform.SetParent(parent);
-            }
-            if (activateDialogWith.onCollisionEnter)
-            {
-                newDialogue.GetComponent<ContaningDialog>().canBeActivated = false;
-            }
+            Destroy(this.gameObject);
         }
-        Destroy(gameObject);
     }
     // Update is called once per frame
     void Update()
@@ -127,7 +119,7 @@ public class ContaningDialog : MonoBehaviour
             {
                 if (col.tag == "Player")
                 {
-						startConversation();
+                    startConversation();
                 }
             }
         }

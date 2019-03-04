@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4479535634002804}
   - component: {fileID: 212029477590431074}
-  - component: {fileID: 114261210354030802}
   - component: {fileID: 61792880920043656}
   - component: {fileID: 114873239914778078}
+  - component: {fileID: 114154329573413406}
   m_Layer: 0
   m_Name: toy
   m_TagString: Untagged
@@ -68,7 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114261210354030802
+--- !u!114 &114154329573413406
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,26 +76,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1745186560299790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee25c6e366ec1a3409fefb4c9bba7914, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 9186693a6ffd75e4d8ab2893088cc474, type: 2}
+  removeOnPickup: 1
   button: Submit
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1745186560299790}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114873239914778078
 MonoBehaviour:
   m_ObjectHideFlags: 1

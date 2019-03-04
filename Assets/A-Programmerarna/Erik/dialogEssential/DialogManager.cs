@@ -30,11 +30,12 @@ public class CompleteConvesation
 {
     [HideInInspector] public AudioClip[] startDialogueSound;
     [HideInInspector] public GameObject holder;
-	[HideInInspector] public string displayText;
-	[HideInInspector] public List<Dialogs> dialogs = new List<Dialogs>();
+    [HideInInspector] public string displayText;
+    [HideInInspector] public List<Dialogs> dialogs = new List<Dialogs>();
     [HideInInspector] public float startConversationDelay;
     [HideInInspector] public GameObject[] Answers;
     [HideInInspector] public UnityEvent events;
+    [HideInInspector] public bool hasBeenRead;
 }
 
 public class DialogManager : MonoBehaviour
@@ -52,7 +53,7 @@ public class DialogManager : MonoBehaviour
     //en bool som håller koll på ifall man kan hoppa över dialogen
     bool skipAnimation = false;
 
-   [HideInInspector]  public bool isInDialogue;
+    [HideInInspector] public bool isInDialogue;
 
 
     //ui element
@@ -63,7 +64,7 @@ public class DialogManager : MonoBehaviour
     //(likt en for loop, men variablen "i" är tillgänglig över hela scriptet)
     int dialogAt;
 
-   [HideInInspector] public float soundDelay;
+    [HideInInspector] public float soundDelay;
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
     //List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
@@ -71,8 +72,8 @@ public class DialogManager : MonoBehaviour
     //säkerställer så att det inte finns flera DialogManager
     void Start()
     {
-       
-        
+
+
         if (instance == null)
         {
             instance = this;
@@ -82,26 +83,27 @@ public class DialogManager : MonoBehaviour
             Debug.LogError("There is too many dialogManager placed on scene");
         }
         activeDialog = null;
-        
+
         isInDialogue = false;
-		//nollställer systemet ifall det inte finns någon dialog i kön
-		//obs körs varje frame, oödigt; förbätring?
-		dialogTextUI.text = "";
-		dialogNameTagUI.text = "";
-		dialogTextUI.enabled = false;
-		dialogNameTagUI.enabled = false;
-		dialogPortraitImageUI.enabled = false;
-		dialogAt = 0;
-	}
+        //nollställer systemet ifall det inte finns någon dialog i kön
+        //obs körs varje frame, oödigt; förbätring?
+        dialogTextUI.text = "";
+        dialogNameTagUI.text = "";
+        dialogTextUI.enabled = false;
+        dialogNameTagUI.enabled = false;
+        dialogPortraitImageUI.enabled = false;
+        dialogAt = 0;
+    }
     //en funktion som kallas vid nya dialoger
     public void queNewDialog(
         AudioClip[] allStartSound,
         float startSundPitch,
-		List<Dialogs> newDialog,
-		GameObject[] newAnswers,
-		UnityEvent newEvents,
-		string textOnChose,
-        GameObject holder)
+        List<Dialogs> newDialog,
+        GameObject[] newAnswers,
+        UnityEvent newEvents,
+        string textOnChose,
+        GameObject holder,
+        bool hasBeenRead)
     {
         CompleteConvesation newConversation = new CompleteConvesation();
 
@@ -109,9 +111,11 @@ public class DialogManager : MonoBehaviour
         newConversation.dialogs = newDialog;
         newConversation.Answers = newAnswers;
         newConversation.events = newEvents;
-		newConversation.displayText = textOnChose;
+        newConversation.displayText = textOnChose;
         newConversation.holder = holder;
+        newConversation.hasBeenRead = hasBeenRead;
         quedDialogs.Add(newConversation);
+
     }
 
     public void createAnswers()
@@ -146,33 +150,33 @@ public class DialogManager : MonoBehaviour
 
     public void playStartDialogueSound()
     {
-            List<AudioClip> allSounds = new List<AudioClip>();
+        List<AudioClip> allSounds = new List<AudioClip>();
 
-            for (int i = 0; i < quedDialogs.Count; i++)
+        for (int i = 0; i < quedDialogs.Count; i++)
+        {
+            for (int x = 0; x < quedDialogs[i].startDialogueSound.Length; x++)
             {
-                for (int x = 0; x < quedDialogs[i].startDialogueSound.Length; x++)
-                {
-                    allSounds.Add(quedDialogs[i].startDialogueSound[x]);
-                }
+                allSounds.Add(quedDialogs[i].startDialogueSound[x]);
             }
+        }
 
-            float pitch = 0;
-            if (allSounds.Count > 0)
-            {
-                int random = Random.Range(0, allSounds.Count);
+        float pitch = 0;
+        if (allSounds.Count > 0)
+        {
+            int random = Random.Range(0, allSounds.Count);
 
-                AudioManager.instance.playSFXRandomPitch(
-                    allSounds[random],
-                    pitch);
+            AudioManager.instance.playSFXRandomPitch(
+                allSounds[random],
+                pitch);
 
-                soundDelay = allSounds[random].length;
-            }
+            soundDelay = allSounds[random].length;
+        }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-       
+
         if (soundDelay >= 0)
         {
             soundDelay -= Time.deltaTime;
@@ -181,12 +185,12 @@ public class DialogManager : MonoBehaviour
         ///ifall spelaren befinner sig i en dialog
         if (activeDialog != null)
         {
-            
+
             //hinder vilket gör att en kod endast körs en gång
             if (callFunctionOnce && !stopRewriteText)
             {
-				//aktiverar alla ui-eliment
-				dialogTextUI.enabled = true;
+                //aktiverar alla ui-eliment
+                dialogTextUI.enabled = true;
                 dialogNameTagUI.enabled = true;
                 dialogPortraitImageUI.enabled = true;
 
@@ -226,7 +230,12 @@ public class DialogManager : MonoBehaviour
                         //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
                         if (dialogAt >= activeDialog.dialogs.Count)
                         {
+
                             activeDialog.events.Invoke();
+                            
+                               activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
+                            
+
                             activeDialog = null;
                             dialogTextUI.enabled = false;
                             dialogNameTagUI.enabled = false;
@@ -234,8 +243,9 @@ public class DialogManager : MonoBehaviour
                             isInDialogue = false;
                             PlayerMovement.canMove = true;
 
+
                             ChoseDialogue.Instance.leaveMultyChoiceDialogue();
-                            
+
 
                             quedDialogs.Clear();
                             ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = false;
@@ -260,6 +270,20 @@ public class DialogManager : MonoBehaviour
                 dialogPortraitImageUI.enabled = false;
                 dialogAt = 0;
 
+                for (int i = 0; i < quedDialogs.Count; i++)
+                {
+                    ContaningDialog contaningDialog = quedDialogs[i].holder.GetComponent<ContaningDialog>();
+                    if (QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.removeDialogIfQuestsHasCompleted) && contaningDialog.removeDialogIfQuestsHasCompleted.Count > 0)
+                    {
+                        Destroy(quedDialogs[i].holder);
+                        quedDialogs.Remove(quedDialogs[i]);
+                    }
+                    if (!QuestManager.Instance.questsExistsInCurrentQuests(contaningDialog.instantiateDialogIfQuestsExistsInCurrent))
+                    {
+                        quedDialogs.Remove(quedDialogs[i]);
+                    }
+                }
+
                 if (quedDialogs.Count == 1)
                 {
                     //letar efter en ny dialog och ifall det finns en
@@ -268,7 +292,10 @@ public class DialogManager : MonoBehaviour
                     {
                         playStartDialogueSound();
                     }
+                   
                     activeDialog = quedDialogs[0];
+                    ChoseDialogue.Instance.forceOne(activeDialog);
+                    activeDialog.hasBeenRead = true;
                     callFunctionOnce = true;
                     isInDialogue = true;
                     ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
@@ -287,7 +314,7 @@ public class DialogManager : MonoBehaviour
             }
         }
     }
-   
+
 
     IEnumerator playSound()
     {

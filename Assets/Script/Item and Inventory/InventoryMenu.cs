@@ -9,12 +9,13 @@ public class InventoryMenu : MonoBehaviour
 
     [Header("Menu Text List")]
     public GameObject textPrefab;
+    public Color textColour = Color.white, selectionColour = Color.red;
     public float xStartPos, yStartPos, yOffset;
     List<GameObject> menuFields = new List<GameObject>();
     public AudioClip moveButtonClip, unusableClip;
     public float buttonpressForce = 0.8f, buttonpressTime = 0.06f;
 
-
+    
     bool buttonPressed = false;
     bool previousControll;
 
@@ -119,9 +120,9 @@ public class InventoryMenu : MonoBehaviour
     //Bläddrar även genom items listan i Inventory.instance för information för valt item.
     void moveMenu(int i)
     {
-        menuFields[MenuIndex].GetComponent<Text>().color = Color.black;
+        menuFields[MenuIndex].GetComponent<Text>().color = textColour;
         MenuIndex += i;
-        menuFields[MenuIndex].GetComponent<Text>().color = Color.red;
+        menuFields[MenuIndex].GetComponent<Text>().color = selectionColour;
         ItemDescriptionArea.text = Inventory.instance.items[menuIndex].description;
         image.sprite = Inventory.instance.items[menuIndex].sprite;
         if (i != 0 && moveButtonClip != null)

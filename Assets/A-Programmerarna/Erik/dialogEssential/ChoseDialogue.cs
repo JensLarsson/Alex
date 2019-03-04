@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChoseDialogue : MonoBehaviour 
+public class ChoseDialogue : MonoBehaviour
 {
     int max;
 
+    public Color textColour = Color.white, selectionColour = Color.red;
     public float xStartPos, yStartPos, ySpacing;
 
-	private static ChoseDialogue instance;
-	public static ChoseDialogue Instance { get { return instance; } }
+    private static ChoseDialogue instance;
+    public static ChoseDialogue Instance { get { return instance; } }
 
-	
 
-	List<GameObject> choseUI = new List<GameObject>();
+
+    List<GameObject> choseUI = new List<GameObject>();
 
 
     [Tooltip("This text ui will determain the position and font/size of the text")]
-	[SerializeField] GameObject textUIBase;
+    [SerializeField] GameObject textUIBase;
 
-    [HideInInspector]  bool playerHasToChose = false;
+    [HideInInspector] bool playerHasToChose = false;
 
     List<CompleteConvesation> allReplies = new List<CompleteConvesation>();
-   
+
     int menuIndex = 0;
     int MenuIndex
     {
@@ -51,35 +52,38 @@ public class ChoseDialogue : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         if (instance == null)
-		{
-			instance = this;
-		}
-		else
-		{
-			Debug.LogError("There is too many ChoseDialogue placed on scene");
-		}
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogError("There is too many ChoseDialogue placed on scene");
+        }
     }
 
     public void enterMultyChoiceDialogue(List<CompleteConvesation> dialogueChoices)
-	{
-            
+    {
+
         playerHasToChose = true;
 
-            for(int x = 0; x < dialogueChoices.Count; x++)
-            {
-                GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
-                newText.GetComponent<Text>().text = dialogueChoices[x].displayText;
-                newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ySpacing * choseUI.Count);
-                choseUI.Add(newText);
+        for (int x = 0; x < dialogueChoices.Count; x++)
+        {
+            GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
+            newText.GetComponent<Text>().text = dialogueChoices[x].displayText;
+            newText.GetComponent<Text>().color = textColour;
+            newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ySpacing * choseUI.Count);
+            choseUI.Add(newText);
+
 
             allReplies.Add(dialogueChoices[x]);
-            }
-      
+        }
+
         DialogManager.Instance.quedDialogs.Clear();
         moveMenu(0);
-	}
+    }
 
     void selectAChoice()
     {
@@ -89,27 +93,26 @@ public class ChoseDialogue : MonoBehaviour
         DialogManager.Instance.quedDialogs.Add(allReplies[menuIndex]);
         cleanMultiDialogue();
         playerHasToChose = false;
+        moveMenu(0);
     }
 
-    [HideInInspector] public void leaveMultyChoiceDialogue()
+    public void forceOne(CompleteConvesation con)
     {
-        for(int i = 0; i < allReplies.Count; i++)
+        allReplies.Add(con);
+    }
+    [HideInInspector]
+    public void leaveMultyChoiceDialogue()
+    {
+        for (int i = 0; i < allReplies.Count; i++)
         {
-            if (allReplies[i] != allReplies[menuIndex])
-            {
-                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(true);
-            }
-            else
-            {
-                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(false);
-            }
+            allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue();
         }
         allReplies.Clear();
     }
 
     void cleanMultiDialogue()
     {
-        for(int i = 0; i < choseUI.Count; i++)
+        for (int i = 0; i < choseUI.Count; i++)
         {
             Destroy(choseUI[i].gameObject);
         }
@@ -120,15 +123,15 @@ public class ChoseDialogue : MonoBehaviour
     {
         if (choseUI.Count > 0)
         {
-            choseUI[MenuIndex].GetComponent<Text>().color = Color.black;
+            choseUI[MenuIndex].GetComponent<Text>().color = textColour;
             MenuIndex += i;
-            choseUI[MenuIndex].GetComponent<Text>().color = Color.red;
+            choseUI[MenuIndex].GetComponent<Text>().color = selectionColour;
         }
     }
 
     // Update is called once per frame
-    void Update ()
-	{
+    void Update()
+    {
         //Debug.Log("qued: " + DialogManager.Instance.quedDialogs.Count + ", replies: " + allReplies.Count);
         //Debug.Log(DialogManager.Instance.isInDialogue);
         if (playerHasToChose)

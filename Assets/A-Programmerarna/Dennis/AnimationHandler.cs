@@ -6,6 +6,7 @@ public class AnimationHandler : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D rb2d;
+
     private int horizontal = 0;
     private int vertical = 0;
 
@@ -19,13 +20,15 @@ public class AnimationHandler : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+
     }
     private void Update()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+        bool playAnim = PlayerMovement.canMove; 
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        if (playAnim && (Input.GetKey(KeyCode.W) ||  Input.GetKey(KeyCode.S)))
         {
             vertical = (int)verticalInput;
 
@@ -36,6 +39,7 @@ public class AnimationHandler : MonoBehaviour
             else
             {
                 verticalAnim = (int)verticalInput;
+                horizontalAnim = 0;
             }
         }
         else
@@ -44,7 +48,7 @@ public class AnimationHandler : MonoBehaviour
             verticalAnim = 0;
         }
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (playAnim && (Input.GetKey(KeyCode.A) ||  Input.GetKey(KeyCode.D)))
         {
             if (Mathf.Abs(previousY) > 0)
             {
@@ -53,6 +57,7 @@ public class AnimationHandler : MonoBehaviour
             else
             {
                 horizontalAnim = (int)horizontalInput;
+                verticalAnim = 0;
             }
         }
         else
@@ -66,5 +71,7 @@ public class AnimationHandler : MonoBehaviour
 
         animator.SetFloat("VelocityY", verticalAnim);
         animator.SetFloat("VelocityX", horizontalAnim);
+
+
     }
 }
