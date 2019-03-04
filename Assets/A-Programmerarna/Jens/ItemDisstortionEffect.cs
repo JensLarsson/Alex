@@ -9,7 +9,7 @@ public class ItemDisstortionEffect : MonoBehaviour
     SpriteRenderer sr;
     Timer timer = new Timer();
 
-    public float minWait=0.1f, maxWait = 1.0f, minDuration = 0.1f, maxDuration = 0.3f;
+    public float minWait = 0.1f, maxWait = 1.0f, minDuration = 0.1f, maxDuration = 0.3f;
     public Material baseMat, effectMat;
 
 
@@ -17,17 +17,20 @@ public class ItemDisstortionEffect : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-
+        startEffect();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void startEffect()
     {
-        timer.Time += Time.deltaTime;
-        if (timer.expireRepeat(Random.Range(minWait, maxWait)))
-        {
-            StartCoroutine(useEffect());
-        }
+
+        StartCoroutine(effectStepOne());
+    }
+
+
+    IEnumerator effectStepOne()
+    {
+        yield return new WaitForSeconds(Random.Range(minWait, maxWait));
+        StartCoroutine(useEffect());
     }
 
     IEnumerator useEffect()
@@ -35,5 +38,6 @@ public class ItemDisstortionEffect : MonoBehaviour
         sr.material = effectMat;
         yield return new WaitForSeconds(Random.Range(minDuration, maxDuration));
         sr.material = baseMat;
+        StartCoroutine(effectStepOne());
     }
 }

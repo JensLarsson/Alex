@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+[System.Serializable]
+public class Floor
+{
+    public string floorLabel, SceneName;
+}
+
 
 public class Elevator : MonoBehaviour {
 
+    public static Elevator Instance = null;
+
+    public List<Floor> floors = new List<Floor>();
 
     [Header("Menu Text List")]
     public GameObject textPrefab;
@@ -57,13 +66,15 @@ public class Elevator : MonoBehaviour {
         menuManager.IsInMenu = false;
     }
 
+
+
     //Skapar en ny lista av items som fins i Inventory klassen
     void settupMenu()
     {
         clearList();
-        foreach (Item item in Inventory.instance.items)
+        foreach (Floor floor in floors)
         {
-            addText(item);
+            addText(floor);
         }
         moveMenu(0);
     }
@@ -80,10 +91,10 @@ public class Elevator : MonoBehaviour {
 
 
     //Lägger till items i listan av objekt
-    void addText(Item item)
+    void addText(Floor floor)
     {
         GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
-        newText.GetComponent<Text>().text = item.name;
+        newText.GetComponent<Text>().text = floor.floorLabel;
         menuFields.Add(newText);
         newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
     }
@@ -92,24 +103,17 @@ public class Elevator : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            moveMenu(-1);
+            moveMenu(1);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            moveMenu(1);
+            moveMenu(-1);
         }
 
         if (Input.GetButtonDown("Submit") && !buttonPressed)
         {
-            foreach (GameObject gObject in CollisionTracking.collisionList)
-            {
-                InteractWithItem iWI = gObject.GetComponent<InteractWithItem>();
-
-                if (iWI != null)
-                {
-                    if (!iWI.useItem(Inventory.instance.items[menuIndex])) AudioManager.instance.playSFXClip(unusableClip);
-                }
-            }
+            SceneController.instance.loadScene(floors[MenuIndex].SceneName);
+            this.gameObject.SetActive(false);
         }
     }
 

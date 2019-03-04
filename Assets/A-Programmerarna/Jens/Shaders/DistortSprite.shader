@@ -1,5 +1,5 @@
 
-Shader "Custom/Sprite/Sprite Distortion" {
+Shader "Unlisted/Sprite Distortion" {
 	Properties{
 		[HideInInspector]_MainTex("Base (RGB)", 2D) = "white" {}
 		_Noise("Noise", 2D) = "white" {}
