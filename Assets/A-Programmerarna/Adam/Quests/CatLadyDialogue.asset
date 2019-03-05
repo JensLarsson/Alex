@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d147ef13ca3a74592e813a7bec33be, type: 3}
-  m_Name: Yes
+  m_Name: CatLadyDialogue
   m_EditorClassIdentifier: 
-  _name: Yes
-  description: Yes!!!
+  _name: CatLadyDialogue
+  description: Talked to Cat Lady first time
