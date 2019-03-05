@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114726128075063432}
   - component: {fileID: 114030764271053476}
   m_Layer: 0
-  m_Name: QuestCheckHello
+  m_Name: diaStop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
