@@ -83,6 +83,8 @@
 				if (dis <1 && _Outline >0) col *= _OutlineCol;
 
 				col.a *= dis;
+
+				clip(col.a - 0.001);
 				return col;
 				}
 
