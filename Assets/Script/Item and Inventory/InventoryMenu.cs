@@ -20,7 +20,7 @@ public class InventoryMenu : MonoBehaviour
     bool previousControll;
 
     int menuIndex = 0;
-    int MenuIndex
+    int MenuIndex   //Loops through the available indexes 
     {
         get
         {
@@ -59,7 +59,7 @@ public class InventoryMenu : MonoBehaviour
         menuManager.IsInMenu = false;
     }
 
-    //Skapar en ny lista av items som fins i Inventory klassen
+    //Skapar en ny lista av interaktivbara textobjekt som kan användas som en meny
     void settupMenu()
     {
         clearList();
@@ -81,7 +81,7 @@ public class InventoryMenu : MonoBehaviour
     }
 
 
-    //Lägger till items i listan av objekt
+    //Skapar en ny rad i listan av interaktivbara texter
     void addText(Item item)
     {
         GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
@@ -104,6 +104,7 @@ public class InventoryMenu : MonoBehaviour
         if (Input.GetButtonDown("Submit") && !buttonPressed)
         {
             StartCoroutine(shake(menuFields[MenuIndex]));
+
             foreach (GameObject gObject in CollisionTracking.collisionList)
             {
                 InteractWithItem iWI = gObject.GetComponent<InteractWithItem>();
@@ -132,6 +133,7 @@ public class InventoryMenu : MonoBehaviour
         }
     }
 
+    
     IEnumerator shake(GameObject gObject)
     {
         buttonPressed = true;
