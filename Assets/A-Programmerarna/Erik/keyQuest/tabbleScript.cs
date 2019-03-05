@@ -13,8 +13,7 @@ public class tabbleScript : MonoBehaviour
 {
     [SerializeField] Material pointerMaterial;
     [SerializeField] Material defaultMaterial;
-    [SerializeField] GameObject pointer;
-    GameObject pointerControl;
+    
     int pointerAtIndex = 1;
     [SerializeField] Transform cardGoTo;
 
@@ -52,7 +51,6 @@ public class tabbleScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Debug.LogWarning("is possible to improve the card position when odd number (which it is)");
     }
 
     // Update is called once per frame
@@ -116,6 +114,8 @@ public class tabbleScript : MonoBehaviour
                                   newCard.transform.position.x + startOfset + (-((ofset * cards.Length * 0.5f) - ofset * 0.5f) + ofset * i),
                                   newCard.transform.position.y,
                                   0);
+
+                            pointerAtIndex = cards.Length / 2;
                         }
 
                         for (int child = 0; child < newCard.transform.childCount; child++)
@@ -134,10 +134,19 @@ public class tabbleScript : MonoBehaviour
                         existingCards.Add(newCards);
                     }
                     #endregion
-                    GameObject Pointer = Instantiate(pointer);
-                    Pointer.GetComponent<SpriteRenderer>().sortingOrder = 8;
-                    pointerControl = Pointer;
-                    pointerControl.transform.position = existingCards[pointerAtIndex].pos;
+                    
+                    for (int i = 0; i < existingCards.Count; i++)
+                    {
+                        if (i == pointerAtIndex)
+                        {
+                            existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
+                        }
+                        else
+                        {
+                            existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
+                        }
+                    }
+                    
                     inisiate = false;
                 }
 
@@ -148,13 +157,11 @@ public class tabbleScript : MonoBehaviour
                     {
                         aCardIsZoomedIn = true;
                         existingCards[pointerAtIndex].card.GetComponent<keyQuestCardScript>().playCardAnimation(pickUpAnimation);
-                        pointerControl.active = false;
+                       
                     }
                     else if (aCardIsZoomedIn)
                     {
                         existingCards[pointerAtIndex].card.GetComponent<keyQuestCardScript>().playCardAnimation(putDownAnimation);
-                        pointerControl.active = true;
-
                         aCardIsZoomedIn = false;
                     }
                 }
@@ -167,7 +174,7 @@ public class tabbleScript : MonoBehaviour
                         {
                             pointerAtIndex = existingCards.Count - 1;
                         }
-                        pointerControl.transform.position = existingCards[pointerAtIndex].pos;
+                      
                         for(int i = 0; i < existingCards.Count; i++)
                         {
                             if(i == pointerAtIndex)
@@ -187,7 +194,7 @@ public class tabbleScript : MonoBehaviour
                         {
                             pointerAtIndex = 0;
                         }
-                        pointerControl.transform.position = existingCards[pointerAtIndex].pos;
+                       
                         for (int i = 0; i < existingCards.Count; i++)
                         {
                             if (i == pointerAtIndex)
@@ -207,8 +214,6 @@ public class tabbleScript : MonoBehaviour
                     if (aCardIsZoomedIn)
                     {
                         existingCards[pointerAtIndex].card.GetComponent<keyQuestCardScript>().playCardAnimation(putDownAnimation);
-                        pointerControl.active = true;
-
                         aCardIsZoomedIn = false;
                     }
                     else if (!aCardIsZoomedIn)
@@ -217,7 +222,6 @@ public class tabbleScript : MonoBehaviour
                         {
                             Destroy(GOInTabbleOverlay[i]);
                         }
-                        Destroy(pointerControl);
                         GOInTabbleOverlay.Clear();
                         existingCards.Clear();
 
