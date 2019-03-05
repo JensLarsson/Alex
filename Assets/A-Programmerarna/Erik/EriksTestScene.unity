@@ -113,108 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &46894555
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 46894559}
-  - component: {fileID: 46894558}
-  - component: {fileID: 46894556}
-  m_Layer: 0
-  m_Name: NPCOnklick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &46894556
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 46894555}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!212 &46894558
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 46894555}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 79a322d7a6edeb84b84bb6db692d0a41, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
---- !u!4 &46894559
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 46894555}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8835537, y: 3.3124604, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 890612624}
-  - {fileID: 1365428998}
-  - {fileID: 1779460018}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105902736
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &120629008
 GameObject:
@@ -469,7 +367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &120629015
 MonoBehaviour:
@@ -719,7 +617,7 @@ Transform:
   m_LocalScale: {x: 18.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &764085289
 GameObject:
@@ -818,7 +716,7 @@ Transform:
   m_LocalScale: {x: 18.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816058054
 GameObject:
@@ -886,9 +784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueName: Hi
   instantiateDialogIfQuestsExistsInCurrent: []
   removeDialogIfQuestsHasCompleted: []
-  onChoseText: give me something new to talk about
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
@@ -898,16 +796,32 @@ MonoBehaviour:
   diffrentStartSounds:
   - {fileID: 8300000, guid: 9bcb3906a0768e84ba4f2a4519bbe3a9, type: 3}
   startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: NPC
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: hold on, there...
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: hi
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: new inventions?
+  - NameOfTalkingNPC: NPC
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Ofc....
   canRepeatTheDialog: 1
   canBeActivated: 1
   hasBeenRead: 0
@@ -930,107 +844,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
---- !u!1 &890612623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 890612624}
-  - component: {fileID: 890612627}
-  - component: {fileID: 890612626}
-  m_Layer: 0
-  m_Name: Dialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &890612624
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890612623}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 46894559}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &890612626
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890612623}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &890612627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890612623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  removeDialogIfQuestsHasCompleted:
-  - {fileID: 11400000, guid: 1a5495cd014a74844ace508005e0f08b, type: 2}
-  onChoseText: I have note yet done the quest.... sorry
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
-  diffrentStartSounds: []
-  startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: Bob  Bobsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.4
-    Text: Hurry do it i dont have all day.... well i am just a image and some code
-      so technicaly i do, but dont test me
-  canRepeatTheDialog: 1
-  canBeActivated: 1
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
 --- !u!1 &894183426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,109 +872,6 @@ Transform:
   m_Father: {fileID: 2107190267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1365428997
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1365428998}
-  - component: {fileID: 1365429000}
-  - component: {fileID: 1365428999}
-  m_Layer: 0
-  m_Name: Dialog (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1365428998
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1365428997}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 46894559}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1365428999
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1365428997}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1365429000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1365428997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  removeDialogIfQuestsHasCompleted: []
-  onChoseText: I'm here for the cat.
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
-  diffrentStartSounds:
-  - {fileID: 8300000, guid: 9bcb3906a0768e84ba4f2a4519bbe3a9, type: 3}
-  startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: talks about the cat
-  canRepeatTheDialog: 1
-  canBeActivated: 1
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
 --- !u!114 &1398923122 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114268490708188642, guid: 85ee85005c4054740a158dde85e6b323,
@@ -1265,7 +975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499133487
 GameObject:
@@ -1309,7 +1019,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.6112976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1320,7 +1030,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.2225952}
   m_EdgeRadius: 0
 --- !u!114 &1499133491
 MonoBehaviour:
@@ -1333,52 +1043,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueName: NPC
   instantiateDialogIfQuestsExistsInCurrent: []
   removeDialogIfQuestsHasCompleted: []
-  onChoseText: I'm here for the cat.
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
+    onCollisionStayWithDelay: 1
     delay: 2
-    onCollisionAndKeyDown: 1
+    onCollisionAndKeyDown: 0
     onFunctionCall: 0
   diffrentStartSounds:
   - {fileID: 8300000, guid: 9bcb3906a0768e84ba4f2a4519bbe3a9, type: 3}
   startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: "G\xF6ns G\xF6nsson"
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: NPC
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
       type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: 1 test test test
-  - NameOfTalkingNPC: Bert Bertsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: 2 test test test
-  - NameOfTalkingNPC: Annabell Annabellsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 104dabef526e6e14696f01b5e7d59843,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.5
-    Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin
-      lectus purus, a mattis dui bibendum vel. Cras sodales nisi in lacinia pretium.
-      Suspendisse potenti. Praesent quis pellentesque nisl, sit amet gravida diam.
-      Donec lacinia laoreet molestie. Praesent tincidunt sollicitudin faucibus. Suspendisse
-      quis metus scelerisque, sodales orci at, consectetur mauris. Mauris at tincidunt
-      lectus. Nunc euismod turpis ut interdum varius.
-  canRepeatTheDialog: 1
+    AnimationSpeed: 0.09
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Hi i am Ash
+  canRepeatTheDialog: 0
   canBeActivated: 1
   hasBeenRead: 0
   siblings: []
@@ -1388,7 +1075,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
 --- !u!1 &1619720551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,7 +1190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1619720556
 MonoBehaviour:
@@ -1717,7 +1403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1707551770
 MonoBehaviour:
@@ -1840,111 +1526,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763181770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.85, y: 3.3124604, z: 0}
+  m_LocalPosition: {x: 2.77, y: 3.3124604, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1499133488}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1779460017
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1779460018}
-  - component: {fileID: 1779460020}
-  - component: {fileID: 1779460019}
-  m_Layer: 0
-  m_Name: Dialog (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1779460018
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1779460017}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 46894559}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1779460019
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1779460017}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1779460020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1779460017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  removeDialogIfQuestsHasCompleted: []
-  onChoseText: I need to go
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
-  diffrentStartSounds: []
-  startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: Bob  Bobsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
-      type: 3}
-    AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.4
-    Text: ok bye
-  canRepeatTheDialog: 1
-  canBeActivated: 1
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
 --- !u!1 &1834272729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,11 +1599,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueName: get door quest
   instantiateDialogIfQuestsExistsInCurrent:
   - {fileID: 11400000, guid: 9aa36e3b9ff087a46a3f08812c160acd, type: 2}
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: 1a5495cd014a74844ace508005e0f08b, type: 2}
-  onChoseText: Start quest
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
@@ -2024,19 +1612,19 @@ MonoBehaviour:
     onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: Bob  Bobsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: NPC
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.4
-    Text: 'ok solve the key puzzle
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'quest starts
 
 '
-  canRepeatTheDialog: 1
+  canRepeatTheDialog: 0
   canBeActivated: 1
   hasBeenRead: 0
   siblings: []
@@ -2055,9 +1643,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114249492905601934, guid: 7a9fb94fae5d02e48904434e20acddd0,
+          type: 2}
+        m_MethodName: createObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
 --- !u!1001 &1858741777
 Prefab:
   m_ObjectHideFlags: 0
@@ -2155,6 +1754,25 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1103365627639472, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537066214441870, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: selectionColour.r
+      value: 0.19634591
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537066214441870, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: selectionColour.b
+      value: 0.8161765
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537066214441870, guid: 85ee85005c4054740a158dde85e6b323,
+        type: 2}
+      propertyPath: selectionColour.g
+      value: 0.11402467
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
   m_IsPrefabParent: 0
@@ -2218,7 +1836,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1979218474
 GameObject:
@@ -2375,7 +1993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1979218481
 MonoBehaviour:
@@ -2550,7 +2168,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107190264
 GameObject:
@@ -2641,7 +2259,7 @@ Transform:
   m_Children:
   - {fileID: 894183427}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2107190268
 MonoBehaviour:

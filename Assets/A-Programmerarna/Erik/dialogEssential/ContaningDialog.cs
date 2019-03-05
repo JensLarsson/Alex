@@ -10,7 +10,8 @@ using UnityEngine.Events;
 [System.Serializable]
 public class ActivateDialog
 {
-    public bool onCollisionEnter;
+    //this is hidden due to malfunction; since focus is else were contact me if this is needs to be in game 
+    [HideInInspector] public bool onCollisionEnter;
     public bool onCollisionStayWithDelay;
     public float delay;
     public bool onCollisionAndKeyDown;
@@ -20,20 +21,27 @@ public class ActivateDialog
 
 public class ContaningDialog : MonoBehaviour
 {
+    [SerializeField] string dialogueName;
+
     [Header("Quests")]
     public List<QuestSO> instantiateDialogIfQuestsExistsInCurrent;
     public List<QuestSO> removeDialogIfQuestsHasCompleted;
-    [SerializeField] string onChoseText;
+
+    [Header("Dialogue activation")]
     [SerializeField] ActivateDialog activateDialogWith;
 
+    [Header("Start dialogue sound")]
     [Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
     [SerializeField] AudioClip[] diffrentStartSounds;
     [SerializeField] float startSoundPitchRange;
+    [HideInInspector] public bool canPlaySound = true;
 
+    [Header("Unique dialogue traits")]
+    [SerializeField] List<Dialogs> speechBubbles = new List<Dialogs>();
 
-    [SerializeField] List<Dialogs> newDialog = new List<Dialogs>();
+    [Header("Dialogue functions")]
     public bool canRepeatTheDialog = false;
-    [HideInInspector] public bool canBeActivated = true;
+   public bool canBeActivated = true;
     public bool hasBeenRead = false;
     [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
     [SerializeField] GameObject[] answers;
@@ -42,7 +50,7 @@ public class ContaningDialog : MonoBehaviour
     //start delay is the delay from active dialogue at the first frame (a reset)
     float StartDelay;
     float soundDelay;
-    [HideInInspector] public bool canPlaySound = true;
+  
 
 
 
@@ -67,18 +75,18 @@ public class ContaningDialog : MonoBehaviour
                 DialogManager.Instance.queNewDialog(
                     diffrentStartSounds, 
                     startSoundPitchRange,
-                    newDialog, 
+                    speechBubbles, 
                     answers,
                     doAfterDialgue,
-                    onChoseText, 
+                    dialogueName, 
                     this.gameObject,
                     hasBeenRead);
             }
         }
     }
-    public void resetDialogue()
+    public void resetDialogue(bool wasSelected)
     {
-        if(!canRepeatTheDialog)
+        if(!canRepeatTheDialog && wasSelected)
         {
             Destroy(this.gameObject);
         }
@@ -96,7 +104,7 @@ public class ContaningDialog : MonoBehaviour
                 }
             }
 
-            if (DialogManager.Instance.activeDialog != null)
+            if (DialogManager.Instance.activeDialog == null)
             {
                 activateDialogWith.delay -= Time.deltaTime;
                 if (activateDialogWith.delay < 0)

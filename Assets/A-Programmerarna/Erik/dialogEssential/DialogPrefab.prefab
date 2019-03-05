@@ -9,45 +9,44 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1644192886867918}
+  m_RootGameObject: {fileID: 1021669807820406}
   m_IsPrefabParent: 1
---- !u!1 &1644192886867918
+--- !u!1 &1021669807820406
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4113900746096026}
-  - component: {fileID: 114777248239067236}
-  - component: {fileID: 61883948885751532}
-  - component: {fileID: 114804754851715070}
+  - component: {fileID: 4268159392010528}
+  - component: {fileID: 114565634655455574}
+  - component: {fileID: 61428123856533532}
   m_Layer: 0
-  m_Name: Dialog
+  m_Name: DialogPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4113900746096026
+--- !u!4 &4268159392010528
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644192886867918}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1021669807820406}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61883948885751532
+--- !u!61 &61428123856533532
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644192886867918}
+  m_GameObject: {fileID: 1021669807820406}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -67,18 +66,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114777248239067236
+--- !u!114 &114565634655455574
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644192886867918}
+  m_GameObject: {fileID: 1021669807820406}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: talks about quest
+  dialogueName: Hi
   instantiateDialogIfQuestsExistsInCurrent: []
   removeDialogIfQuestsHasCompleted: []
   activateDialogWith:
@@ -87,7 +86,8 @@ MonoBehaviour:
     delay: 0
     onCollisionAndKeyDown: 1
     onFunctionCall: 0
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: 9bcb3906a0768e84ba4f2a4519bbe3a9, type: 3}
   startSoundPitchRange: 0.1
   canPlaySound: 1
   speechBubbles:
@@ -98,7 +98,23 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: here is the option to start a quest
+    Text: hi
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: new inventions?
+  - NameOfTalkingNPC: NPC
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Ofc....
   canRepeatTheDialog: 1
   canBeActivated: 1
   hasBeenRead: 0
@@ -107,9 +123,9 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114726128075063432, guid: ee066f969c8618347a9fa1641c393621,
+      - m_Target: {fileID: 114804754851715070, guid: 489e8ed5c13c3da469eb80c14706a4ff,
           type: 2}
-        m_MethodName: getQuests
+        m_MethodName: createObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -121,14 +137,3 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114804754851715070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644192886867918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ece88e67e002924c9e31d31ab8e2c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
