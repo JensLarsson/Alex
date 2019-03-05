@@ -62,8 +62,13 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+<<<<<<< HEAD
     - _MaskPosX: -1.9199991
     - _MaskPosY: 1.5652492
+=======
+    - _MaskPosX: -1.6263605
+    - _MaskPosY: 1.9999995
+>>>>>>> Design
     - _Max: 1
     - _Metallic: 0
     - _Min: 0.848
