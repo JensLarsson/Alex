@@ -11,6 +11,7 @@ public class TailManager : MonoBehaviour
     public GameObject blockPrefab;
     public float tickTimer = 1.0f;
     public static List<GameObject> positionOccupation = new List<GameObject>();
+    public int tailParsRemoved = 1;
 
     public List<GameObject> tailPart = new List<GameObject>();
     //[SerializeField] Vector2 startDirection = Vector2.up; //For automaticMovement
@@ -116,10 +117,10 @@ public class TailManager : MonoBehaviour
 
 
             case MoveState.bugApple:
-                int temp = tailPart.Count / 2;
+                int temp = tailPart.Count - 1-tailParsRemoved;
                 for (int y = tailPart.Count - 1; y > temp; y--)
                 {
-                    tailPart.RemoveAt(y);
+                    if (y > 0) tailPart.RemoveAt(y);
                 }
                 moveForwardLastBlock(pos);
                 break;
@@ -131,7 +132,7 @@ public class TailManager : MonoBehaviour
         //}
         //lineRenderer.positionCount = tempList.Count;
         //lineRenderer.SetPositions(tempList.ToArray());
-        
+
     }
 
     void moveForwardLastBlock(Vector3 pos)
