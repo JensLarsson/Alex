@@ -149,14 +149,6 @@ public class ChoseDialogue : MonoBehaviour
     void Update()
     {
         
-        if(allReplies.Count >= 4)
-        {
-            for(int i = 0; i < allReplies.Count; i++)
-            {
-                Debug.Log(i + " " + allReplies[i].displayText);
-            }
-
-        }
         //Debug.Log("qued: " + DialogManager.Instance.quedDialogs.Count + ", replies: " + allReplies.Count);
         //Debug.Log(DialogManager.Instance.isInDialogue);
         if (playerHasToChose)

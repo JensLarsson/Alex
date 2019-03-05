@@ -25,6 +25,7 @@ public class ContaningDialog : MonoBehaviour
 
     [Header("Quests")]
     public List<QuestSO> instantiateDialogIfQuestsExistsInCurrent;
+    public List<QuestSO> instantiateDialogIfQuestsExistsInCompleted;
     public List<QuestSO> removeDialogIfQuestsHasCompleted;
 
     [Header("Dialogue activation")]
