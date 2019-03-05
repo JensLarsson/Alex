@@ -47,6 +47,7 @@ public class InventoryMenu : MonoBehaviour
 
     private void OnEnable()
     {
+        MenuIndex = 0;
         settupMenu();
         PlayerMovement.canMove = false;
         menuManager.IsInMenu = true;

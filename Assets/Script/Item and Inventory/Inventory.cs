@@ -27,6 +27,10 @@ public class Inventory : MonoBehaviour
     {
         if (!items.Contains(item)) items.Add(item);
     }
+    public void removeItem(Item item)
+    {
+        if (items.Contains(item)) items.Remove(item);
+    }
 
     public bool hasItem(Item item)
     {
