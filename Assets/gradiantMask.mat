@@ -64,6 +64,10 @@ Material:
     - _GlossyReflections: 1
     - _MaskPosX: 1.4239998
     - _MaskPosY: -0.18951467
+=======
+    - _MaskPosX: 0.44000053
+    - _MaskPosY: -0.91500133
+>>>>>>> 84095526cc420c91f52688200a737ddd652e7fb4
     - _Max: 1
     - _Metallic: 0
     - _Min: 0.848
