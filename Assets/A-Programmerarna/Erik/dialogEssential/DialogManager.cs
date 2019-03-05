@@ -279,10 +279,15 @@ public class DialogManager : MonoBehaviour
                         Destroy(quedDialogs[i].holder);
                         quedDialogs.Clear();
                     }
+                    if (!QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.instantiateDialogIfQuestsExistsInCompleted) && contaningDialog.instantiateDialogIfQuestsExistsInCompleted.Count > 0)
+                    {
+                        quedDialogs.Remove(quedDialogs[i]);
+                    }
                     if (!QuestManager.Instance.questsExistsInCurrentQuests(contaningDialog.instantiateDialogIfQuestsExistsInCurrent))
                     {
                         quedDialogs.Remove(quedDialogs[i]);
                     }
+
                 }
 
                 if (quedDialogs.Count == 1)

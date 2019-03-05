@@ -7,7 +7,7 @@ public class PlayerTracker : MonoBehaviour {
 
     public static PlayerTracker Instance = null;
 
-	// Use this for initialization
+	// Helt enkelt ett enkelt sätt att hitta spelaren (Eller vilket objekt som nu får skriptet)
 	void Awake () {
         Instance = this;
 	}

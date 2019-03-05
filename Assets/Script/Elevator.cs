@@ -7,7 +7,7 @@ public class Floor
 {
     public string floorLabel, SceneName;
 }
-
+//Återanvänder menu skriptet för jag var för lat för att göra en klass som hanterar menuer
 
 public class Elevator : MonoBehaviour {
 

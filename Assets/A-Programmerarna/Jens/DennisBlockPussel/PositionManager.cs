@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PositionManager : MonoBehaviour
 {
+    //Håller reda på vilka positioner objekt är placerade på
+
     public static PositionManager Instance = null;
-
-    //public static bool blockMoving = false;
-
+    
     private List<GameObject> positionOccupant = new List<GameObject>();
 
     private void Awake()

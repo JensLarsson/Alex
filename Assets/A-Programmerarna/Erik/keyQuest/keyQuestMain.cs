@@ -46,8 +46,10 @@ public class keyQuestMain : MonoBehaviour
         }
         if (currentDoor == nameOfAllDoors.Length)
         {
+          
             QuestManager.Instance.addToCompletedQuests("Door");
             Debug.Log("QuestIsDone");
         }
+        
     }
 }
