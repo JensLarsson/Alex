@@ -113,6 +113,310 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &29086618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 29086619}
+  - component: {fileID: 29086621}
+  - component: {fileID: 29086620}
+  m_Layer: 0
+  m_Name: Main Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &29086619
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29086618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1497692796}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &29086620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29086618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &29086621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29086618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh! Oh dear! Mittens, watch out my darling!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: What's going on!?
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Alex dear! Oh - I'm so glad you're here. There is this terrible thing flying
+      all around, it's upsetting my darlings!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Is that... a cat toy?
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Mittens, watch out! Oh, my Mittens is such a brave little boy, he's been
+      trying to get at it - he wants to protect his brothers and sisters you see.
+      Such a brave little boy.
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'What did you say dear? Can you see what it is? If it''s a bird Champagne
+      will take care of it right quick. She''s very in touch with her wilder side
+      you see, a very skilled hunter. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'I... never mind. It''s not a bird. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: '(I remember this. The toy, it belongs to one of her cats but he''s not
+      here. He''s in apartment 5. We just have to get him, and he''ll get it down.) '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Bertha... I, uh, found this cat toy in the corridor. It's blue and it jingles,
+      do you know...
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'Oh! yes, that''s Taffy''s. He keeps losing his toys. I haven''t seen him
+      in a bit, he might have gone looking for it. You know, Taffy is such an adventurous
+      one. No regard for his old mothers'' poor heart, always getting into all kinds
+      of trouble. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'Yeah that''s... alright. Uh, Bertha I think I know how to get the flying
+      thing down. I''m gonna go... look for a net. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: (It's best she doesn't know what we're about to do. We need to distract
+      her, otherwise she might kill me. Not even kidding. Maybe... she always makes
+      sure no one leaves her home hungry.)
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: You know, I'm getting a bit hungry. Hopefully I can find something to eat
+      after I get the net...
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Hopefully? Pah! You go get that net, a growing girl like you should never
+      go hungry. I'm going to see what I can find in the kitchen. Perhaps a pie? and
+      I'm sure I have what I need for some blueberry muffins. Unless Spot has gotten
+      into the pantry again!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: '...Spot?'
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh yes, the doctor says he's the biggest cat he's ever seen. Spot is a robust
+      man, he knows good food when he sees it. See, I have a picture of him here.
+      He eats only the best, what mother would deny her sweet baby what he needs!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yeah, alright - Thank you Bertha!
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'Of course, Alex dear. Mittens, now you stay there. This nice lady is going
+      to help us, so all of you behave and let her do what she needs to. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: (I almost feel bad. Alright, go pick up that cage.)
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "(We need to get Mittens into this. Dr. Oakley will realize the cat is gone
+      if we just take Taffy. She is using Taffy to experiment on. No, like, don\u2019t
+      even ask. I don\u2019t know what she is doing and I really don\u2019t want to.
+      So, we need to replace Taffy with Mittens.)"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "(He seems weird anyways, probably wouldn\u2019t mind being used as a lab
+      cat.)"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: (Uh, use the yarn to try and lure him into the cage. If we try and grab
+      him Bertha might hear, and I would like to live thank you very much.)
+  canRepeatTheDialog: 0
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
+          type: 2}
+        m_MethodName: completeQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &260093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +725,136 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &921070873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 921070874}
+  - component: {fileID: 921070876}
+  - component: {fileID: 921070875}
+  m_Layer: 0
+  m_Name: Loop 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &921070874
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921070873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1497692796}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &921070875
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921070873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &921070876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921070873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, hello Alex dear, have you seen Mittens? It\u2019s time for his bath,
+      and I can\u2019t seem to find him anywhere. Must be hiding, he never liked the
+      baths. But I always tell him a clean boy is a good boy!"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I\u2026uh, I haven\u2019t seen him. Sorry Bertha."
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
+      here my sweet!"
+  canRepeatTheDialog: 1
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
+          type: 2}
+        m_MethodName: completeQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1011859741
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +1330,253 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1403819934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1403819935}
+  - component: {fileID: 1403819937}
+  - component: {fileID: 1403819936}
+  m_Layer: 0
+  m_Name: Loop 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403819935
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403819934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1497692796}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1403819936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403819934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1403819937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403819934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 7c3aaedeb49f09448bd1d006fcf5a4a4, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Dearie! How was the pie?
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: It was great, thank you Bertha.
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: And your brother, did he enjoy it as well?
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I can\u2019t- I haven\u2019t been able to talk to him yet. But I\u2019m
+      sure he loved it."
+  canRepeatTheDialog: 0
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
+          type: 2}
+        m_MethodName: completeQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &1495928090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1495928091}
+  - component: {fileID: 1495928093}
+  - component: {fileID: 1495928092}
+  m_Layer: 0
+  m_Name: Loop 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495928091
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495928090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1497692796}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1495928092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495928090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1495928093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495928090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 8cd79670c5ed52b43854a00e86c02ae6, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Mittens! Mittens!
+  canRepeatTheDialog: 1
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
+          type: 2}
+        m_MethodName: completeQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1497692794
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +1586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497692796}
   - component: {fileID: 1497692795}
+  - component: {fileID: 1497692797}
   m_Layer: 0
   m_Name: sheet kattdam2_0
   m_TagString: Untagged
@@ -963,12 +1645,42 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1497692794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0601103, y: 1.930221, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: -2.0601103, y: 1.9262, z: 0}
+  m_LocalScale: {x: 1, y: 0.99190235, z: 1}
+  m_Children:
+  - {fileID: 29086619}
+  - {fileID: 1975055579}
+  - {fileID: 921070874}
+  - {fileID: 1403819935}
+  - {fileID: 1495928091}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1497692797
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497692794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.03673768}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4375, y: 1}
+    newSize: {x: 0.4375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4375, y: 0.92652464}
+  m_EdgeRadius: 0
 --- !u!1 &1498961412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1808,170 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1975055578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1975055579}
+  - component: {fileID: 1975055581}
+  - component: {fileID: 1975055580}
+  m_Layer: 0
+  m_Name: Puzzle done dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975055579
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975055578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1497692796}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1975055580
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975055578}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1975055581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975055578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 4c5e9e95c0ec26e4fa43a2695c9022f9, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Taffy! Oh, you rascal where have you been? I\u2019ve been worried sick
+      you curious kitty."
+  - NameOfTalkingNPC: Taffy
+    PortraitOfTalkingNPC: {fileID: 0}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Meow
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, you know I can\u2019t be mad at you. Such a little sweet. Now! would
+      you look at that. Alex dearie, the bird is gone! Well done, you really are such
+      a sweetheart."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "It wasn\u2019t a\u2026 never mind. It was no problem Bertha."
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Here you go, I didn\u2019t have everything so I made a blueberry pie instead.
+      Make sure to share some with your brother! He needs to put on some weight, plus
+      a boy that age is always running around. Some sugar will keep him going. And
+      give my best to your mother!"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I will.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"
+  canRepeatTheDialog: 0
+  canBeActivated: 1
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
+          type: 2}
+        m_MethodName: completeQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2010172430
 GameObject:
   m_ObjectHideFlags: 0
