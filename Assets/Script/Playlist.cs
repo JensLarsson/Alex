@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-//public class Songs
-//{
-//    public AudioClip clip;
-//    [Tooltip("0 för oändligt loopande")] [SerializeField] public int plays = 0;
-//}
+
 
     public class Playlist : MonoBehaviour {
 
