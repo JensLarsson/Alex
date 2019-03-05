@@ -84,6 +84,7 @@ public class DialogManager : MonoBehaviour
         }
         activeDialog = null;
 
+
         isInDialogue = false;
         //nollställer systemet ifall det inte finns någon dialog i kön
         //obs körs varje frame, oödigt; förbätring?
@@ -129,7 +130,6 @@ public class DialogManager : MonoBehaviour
                 GameObject newAnswer;
                 for (int i = 0; i < activeDialog.Answers.Length; i++)
                 {
-
                     newAnswer = Instantiate(activeDialog.Answers[i].gameObject);
                     allAnswers.Add(newAnswer);
                 }
@@ -230,11 +230,12 @@ public class DialogManager : MonoBehaviour
                         //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
                         if (dialogAt >= activeDialog.dialogs.Count)
                         {
-
-                            activeDialog.events.Invoke();
-                            
-                               activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
-                            
+                            if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
+                            {
+                                activeDialog.events.Invoke();
+                            }
+                            activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
+                            ChoseDialogue.Instance.leaveMultyChoiceDialogue();
 
                             activeDialog = null;
                             dialogTextUI.enabled = false;
@@ -244,7 +245,7 @@ public class DialogManager : MonoBehaviour
                             PlayerMovement.canMove = true;
 
 
-                            ChoseDialogue.Instance.leaveMultyChoiceDialogue();
+                            
 
 
                             quedDialogs.Clear();
@@ -276,12 +277,17 @@ public class DialogManager : MonoBehaviour
                     if (QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.removeDialogIfQuestsHasCompleted) && contaningDialog.removeDialogIfQuestsHasCompleted.Count > 0)
                     {
                         Destroy(quedDialogs[i].holder);
+                        quedDialogs.Clear();
+                    }
+                    if (!QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.instantiateDialogIfQuestsExistsInCompleted) && contaningDialog.instantiateDialogIfQuestsExistsInCompleted.Count > 0)
+                    {
                         quedDialogs.Remove(quedDialogs[i]);
                     }
                     if (!QuestManager.Instance.questsExistsInCurrentQuests(contaningDialog.instantiateDialogIfQuestsExistsInCurrent))
                     {
                         quedDialogs.Remove(quedDialogs[i]);
                     }
+
                 }
 
                 if (quedDialogs.Count == 1)
@@ -310,7 +316,6 @@ public class DialogManager : MonoBehaviour
                     ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = true;
                     PlayerMovement.canMove = false;
                 }
-
             }
         }
     }

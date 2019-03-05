@@ -78,9 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueName: talks about quest
   instantiateDialogIfQuestsExistsInCurrent: []
   removeDialogIfQuestsHasCompleted: []
-  onChoseText: give me the option to start quest
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
@@ -89,18 +89,16 @@ MonoBehaviour:
     onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0.1
-  newDialog:
-  - NameOfTalkingNPC: Bob  Bobsson
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 79fb13fadaefb4049bf2d9c86fd9cab9,
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: NPC
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b885de38f7579124989a7f9c69615a48, type: 3}
-    soundPitch: 0.1
-    soundTimeDelay: -0.4
-    Text: '-you can now start the quest
-
-'
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: here is the option to start a quest
   canRepeatTheDialog: 1
   canBeActivated: 1
   hasBeenRead: 0
@@ -123,7 +121,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  canPlaySound: 1
 --- !u!114 &114804754851715070
 MonoBehaviour:
   m_ObjectHideFlags: 1

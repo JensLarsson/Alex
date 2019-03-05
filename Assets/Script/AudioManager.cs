@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
 
     public enum TargetAudio { A = 0, B, C, D };
     [HideInInspector] public TargetAudio targetAudio = TargetAudio.A;
-    void switchAudioEnumTarget()        //Växlar mellan de två AudioSource enumIndex målen
+    void switchAudioEnumTarget()        //Växlar mellan  AudioSource enumIndex målen
     {
         switch (targetAudio)
         {
@@ -32,7 +32,6 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] musicSource = new AudioSource[2];
     public AudioSource sfxSource;
     public AudioSource sfxSourcePitch;
-    AudioClip sceneMusic;
     [Tooltip("volume change per .01sec")]
     [Range(0.001f, 1.0f)]
     public float fadeInIncrememnt = 0.1f;
@@ -41,6 +40,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+        //Sätter Singleton instance
         if (instance == null)
         {
             instance = this;
@@ -51,16 +51,8 @@ public class AudioManager : MonoBehaviour
         }
         else if (instance != this)
         {
-            instance.sceneMusic = this.sceneMusic;
             Destroy(gameObject);
         }
-
-
-        if (sceneMusic != null)
-        {
-            instance.changeSong(sceneMusic);
-        }
-
     }
 
     public void setSFXVolume()
@@ -127,7 +119,7 @@ public class AudioManager : MonoBehaviour
 
 
     //
-    //  Crossfading mellan Audiosources på de två musikobjekten.
+    //  Crossfading mellan Audiosources.
     //
     public void fadeOut(TargetAudio source)
     {
@@ -160,6 +152,7 @@ public class AudioManager : MonoBehaviour
         musicSource[(int)source].volume = musicVolume;
     }
 
+    //Kollar i fall den nya spellistan redan spellas genom att see i fall någon av tracksen matchar vad som just nu spelas
     public void playSongs(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
     {
         bool sameList = false;
@@ -184,6 +177,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
+    //Spelar första clippet i listan som skickats för att sedan loopa det andra (Kan utbyggas för me funktionalitet med hjälp av PlayBehaviour enum
     void playPlaylist(List<AudioClip> songs, Playlist.PlayBeaviour playBeaviour)
     {
         musicSource[(int)targetAudio].clip = songs[0];

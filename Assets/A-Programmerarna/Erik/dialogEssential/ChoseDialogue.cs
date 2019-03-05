@@ -66,19 +66,21 @@ public class ChoseDialogue : MonoBehaviour
 
     public void enterMultyChoiceDialogue(List<CompleteConvesation> dialogueChoices)
     {
-
         playerHasToChose = true;
 
         for (int x = 0; x < dialogueChoices.Count; x++)
         {
-            GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
-            newText.GetComponent<Text>().text = dialogueChoices[x].displayText;
-            newText.GetComponent<Text>().color = textColour;
-            newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ySpacing * choseUI.Count);
-            choseUI.Add(newText);
+            if (!allReplies.Contains(dialogueChoices[x]))
+            {
+                GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
+                newText.GetComponent<Text>().text = dialogueChoices[x].displayText;
+                newText.GetComponent<Text>().color = textColour;
+                newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ySpacing * choseUI.Count);
+                choseUI.Add(newText);
 
 
-            allReplies.Add(dialogueChoices[x]);
+                allReplies.Add(dialogueChoices[x]);
+            }
         }
 
         DialogManager.Instance.quedDialogs.Clear();
@@ -89,7 +91,14 @@ public class ChoseDialogue : MonoBehaviour
     {
         DialogManager.Instance.quedDialogs.Clear();
         DialogManager.Instance.isInDialogue = false;
-        allReplies[menuIndex].holder.GetComponent<ContaningDialog>().canPlaySound = false;
+        if (allReplies.Count > 1)
+        {
+            allReplies[menuIndex].holder.GetComponent<ContaningDialog>().canPlaySound = false;
+        }
+        else
+        {
+            allReplies[menuIndex].holder.GetComponent<ContaningDialog>().canPlaySound = true;
+        }
         DialogManager.Instance.quedDialogs.Add(allReplies[menuIndex]);
         cleanMultiDialogue();
         playerHasToChose = false;
@@ -105,7 +114,14 @@ public class ChoseDialogue : MonoBehaviour
     {
         for (int i = 0; i < allReplies.Count; i++)
         {
-            allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue();
+            if (allReplies[i] == DialogManager.Instance.activeDialog)
+            {
+                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(true);
+            }
+            else
+            {
+                allReplies[i].holder.GetComponent<ContaningDialog>().resetDialogue(false);
+            }
         }
         allReplies.Clear();
     }
@@ -132,6 +148,7 @@ public class ChoseDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //Debug.Log("qued: " + DialogManager.Instance.quedDialogs.Count + ", replies: " + allReplies.Count);
         //Debug.Log(DialogManager.Instance.isInDialogue);
         if (playerHasToChose)

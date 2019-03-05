@@ -9,7 +9,7 @@ public class Reset : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Submit"))
         {
-            SceneManager.LoadScene("JensAndraTestScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }		
 	}
 }
