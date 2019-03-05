@@ -67,8 +67,11 @@ Shader "unlisted/Outline" {
 
 					value.a *= f;
 
+					clip(value.a - 0.001);
+
 					return value;
 				}
+				clip(col.a - 0.001);
 					return col;
 				}
 
