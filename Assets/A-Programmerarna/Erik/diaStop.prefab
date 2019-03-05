@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test:
-  - {fileID: 11400000, guid: 9aa36e3b9ff087a46a3f08812c160acd, type: 2}
+  - {fileID: 11400000, guid: 0e8ceec4bf94f1c4d81d51c013f206d6, type: 2}
 --- !u!114 &114726128075063432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,4 +70,4 @@ MonoBehaviour:
   - currentQuestsToCheck: []
     completedQuestsToCheck: []
     questsToGet:
-    - {fileID: 11400000, guid: 9aa36e3b9ff087a46a3f08812c160acd, type: 2}
+    - {fileID: 11400000, guid: 0e8ceec4bf94f1c4d81d51c013f206d6, type: 2}
