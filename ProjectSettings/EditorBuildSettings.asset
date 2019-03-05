@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Alex.unity
     guid: 57bba486509c0014d8924a0291cf2a4a
   - enabled: 1
+    path: Assets/Scenes/Alex_toalett.unity
+    guid: 9248f2213a5d1a8448b9c229fb522f25
+  - enabled: 1
+    path: Assets/Scenes/Ash_rum.unity
+    guid: 6f61f13a8b8e3e84b83b24bc8811fa88
+  - enabled: 1
     path: Assets/Scenes/Cat_Lady.unity
     guid: 732f3c7123ad9114a8825046113fbfbf
   - enabled: 1
@@ -32,9 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Svensson.unity
     guid: 936f2e695a974944d9cb4c080ff360f0
-  - enabled: 1
-    path: Assets/Scenes/Alex_toalett.unity
-    guid: 461a2a4998f334e418d83bf6d6ea8c72
   - enabled: 1
     path: Assets/Scenes/Vaning1.unity
     guid: f69cb3bf861c7fb42b483f5da1a45e6f
