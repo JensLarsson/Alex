@@ -11,6 +11,8 @@ public struct Cards
 
 public class tabbleScript : MonoBehaviour
 {
+    [SerializeField] Material pointerMaterial;
+    [SerializeField] Material defaultMaterial;
     [SerializeField] GameObject pointer;
     GameObject pointerControl;
     int pointerAtIndex = 1;
@@ -120,7 +122,7 @@ public class tabbleScript : MonoBehaviour
                         {
                             if (newCard.transform.GetChild(child).GetComponent<SpriteRenderer>() != null)
                             {
-                                newCard.transform.GetChild(child).GetComponent<SpriteRenderer>().sortingOrder = 1;
+                                newCard.transform.GetChild(child).GetComponent<SpriteRenderer>().sortingOrder = 7;
                             }
                         }
 
@@ -133,7 +135,7 @@ public class tabbleScript : MonoBehaviour
                     }
                     #endregion
                     GameObject Pointer = Instantiate(pointer);
-                    Pointer.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    Pointer.GetComponent<SpriteRenderer>().sortingOrder = 8;
                     pointerControl = Pointer;
                     pointerControl.transform.position = existingCards[pointerAtIndex].pos;
                     inisiate = false;
@@ -166,6 +168,17 @@ public class tabbleScript : MonoBehaviour
                             pointerAtIndex = existingCards.Count - 1;
                         }
                         pointerControl.transform.position = existingCards[pointerAtIndex].pos;
+                        for(int i = 0; i < existingCards.Count; i++)
+                        {
+                            if(i == pointerAtIndex)
+                            {
+                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
+                            }
+                            else
+                            {
+                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
+                            }
+                        }
                     }
                     if (Input.GetKeyDown(KeyCode.A))
                     {
@@ -175,6 +188,17 @@ public class tabbleScript : MonoBehaviour
                             pointerAtIndex = 0;
                         }
                         pointerControl.transform.position = existingCards[pointerAtIndex].pos;
+                        for (int i = 0; i < existingCards.Count; i++)
+                        {
+                            if (i == pointerAtIndex)
+                            {
+                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
+                            }
+                            else
+                            {
+                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
+                            }
+                        }
                     }
                 }
 
