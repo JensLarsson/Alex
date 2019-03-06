@@ -45,7 +45,6 @@ public class ContaningDialog : MonoBehaviour
     [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
     [SerializeField] GameObject[] answers;
     [SerializeField] UnityEvent doAfterDialgue;
-    bool isInDialogueTrigger = false;
     //start delay is the delay from active dialogue at the first frame (a reset)
   
     float soundDelay;
@@ -67,8 +66,6 @@ public class ContaningDialog : MonoBehaviour
     }
     public void startConversation()
     {
-        //if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onFunctionCall && transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay < 0 || !transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onFunctionCall)
-        //{
             if (!DialogManager.Instance.isInDialogue)
             {
                 DialogManager.Instance.queNewDialog(
@@ -81,7 +78,6 @@ public class ContaningDialog : MonoBehaviour
                     this.gameObject,
                     hasBeenRead);
             }
-        //}
     }
     public void resetDialogue(bool wasSelected)
     {
@@ -92,53 +88,5 @@ public class ContaningDialog : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (isInDialogueTrigger)
-        {
-            if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onCollisionAndKeyDown)
-            {
-                if (Input.GetButtonDown("Submit"))
-                {
-                    startConversation();
-                }
-            }
-
-            if (DialogManager.Instance.activeDialog == null)
-            {
-                transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay -= Time.deltaTime;
-                if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay < 0)
-                {
-                    if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onCollisionStayWithDelay)
-                    {
-                        transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay = transform.parent.gameObject.GetComponent<conversationCollection>().StartDelay;
-                        startConversation();
-                    }
-                }
-            }
-        }
-    }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        isInDialogueTrigger = true;
-        if (canBeActivated)
-        {
-            if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onCollisionEnter)
-            {
-                if (col.tag == "Player")
-                {
-                    startConversation();
-                }
-            }
-        }
-    }
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            isInDialogueTrigger = false;
-            canBeActivated = true;
-        }
-    }
 }
+
