@@ -9,7 +9,8 @@ public class CompleteQuestScript : MonoBehaviour {
     {
         for (int i = 0; i < test.Length; i++)
         {
-            QuestManager.Instance.addToCompletedQuests(test[i]);
+            // QuestManager.Instance.addToCompletedQuests(test[i]);
+            QuestManager.Instance.ForceCompletedQuest(test[i]);
         }
     }
 }

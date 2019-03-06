@@ -14,7 +14,7 @@ public class QuestManager : MonoBehaviour
     private string currentQuestsSaves = "currentQuestsSaves";
     private string completedQuestsSaves = "completedQuestsSaves";
 
-    public bool CompleteQuestNew(QuestSO quest)
+    public bool CompleteQuestfromCurrent(QuestSO quest)
     {
         if (currentQuests.Contains(quest))
         {
@@ -25,6 +25,22 @@ public class QuestManager : MonoBehaviour
 
         return false;
     }
+    public bool ForceCompletedQuest(QuestSO quest)
+    {
+        if (currentQuests.Contains(quest))
+        {
+            currentQuests.Remove(quest);
+            completedQuests.Add(quest);
+            return true;
+        }
+        else
+        {
+            completedQuests.Add(quest);
+        }
+
+        return false;
+    }
+
 
     private void Awake()
     {
@@ -224,17 +240,17 @@ public class QuestManager : MonoBehaviour
     {
         if (quests.Count < 1)
         {
-            Debug.Log("No quests are in " + quests + ".");
             return null;
         }
         foreach (QuestSO forQuest in quests)
         {
+            Debug.Log(forQuest._name);
             if (forQuest._name == quest._name)
             {
                 return quest;
             }
         }
-        Debug.Log("Couldn't find a quest with the name '" + quest._name + "'.");
+        Debug.Log("Couldn't find a quest with the name '" + quest._name);
         return null;
     }
 }
