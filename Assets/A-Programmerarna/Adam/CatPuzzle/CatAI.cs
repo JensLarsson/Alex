@@ -13,6 +13,7 @@ public class CatAI : MonoBehaviour {
     Vector3[] path;
     int targetIndex;
     public Rigidbody2D rb2D;
+    public GameObject lightVision;
 
     Animator anim;
     public GameObject player;
@@ -46,6 +47,15 @@ public class CatAI : MonoBehaviour {
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(anim.GetInteger("moveDirectionX"), anim.GetInteger("moveDirectionY")), Mathf.Infinity, visionMask);
         Debug.DrawRay(transform.position, new Vector2(anim.GetInteger("moveDirectionX") * 20, anim.GetInteger("moveDirectionY") * 20), Color.red);
+        if (anim.GetInteger("moveDirectionX") != 0)
+        {
+            lightVision.transform.localScale = new Vector3(20, 0.5f, 1);
+        }
+        else if (anim.GetInteger("moveDirectionY") != 0)
+        {
+            lightVision.transform.localScale = new Vector3(0.5f, 20, 1);
+        }
+        lightVision.transform.position = new Vector3(anim.GetInteger("moveDirectionX") * 10 + transform.position.x, anim.GetInteger("moveDirectionY") * 10 + transform.position.y);
         if (hit)
         {
             Debug.Log("Hit Something");
