@@ -79,15 +79,15 @@ public class QuestManager : MonoBehaviour
         }
         else
         {
-            QuestSO quest = findQuestInCurrentQuests(name);
-            if (quest == null)
+            if (questExistsInCurrentQuests(name))
             {
-                Debug.Log(name + " dosen't exist in current quests");
+                QuestSO quest = findQuestInCurrentQuests(name);
+                currentQuests.Remove(quest);
+                completedQuests.Add(quest);
             }
             else
             {
-                currentQuests.Remove(quest);
-                completedQuests.Add(quest);
+                Debug.Log(name + " dosen't exist in current quests");
             }
         }
     }
@@ -102,12 +102,12 @@ public class QuestManager : MonoBehaviour
         {
             if (questExistsInCurrentQuests(quest))
             {
-                Debug.Log(quest._name + " dosen't exist in current quests");
+                currentQuests.Remove(quest);
+                completedQuests.Add(quest);
             }
             else
             {
-                currentQuests.Remove(quest);
-                completedQuests.Add(quest);
+                Debug.Log(quest._name + " dosen't exist in current quests");
             }
         }
     }
