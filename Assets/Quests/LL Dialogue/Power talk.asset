@@ -9,7 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d147ef13ca3a74592e813a7bec33be, type: 3}
-  m_Name: All quests
+  m_Name: Power talk
   m_EditorClassIdentifier: 
   _name: 
-  description: CL Puzzle and H Puzzle both done
+  description: 'Conversation about shutting the power down (Dialogue name: H Puzzle
+    Started)'
