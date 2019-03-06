@@ -244,10 +244,6 @@ public class DialogManager : MonoBehaviour
                             isInDialogue = false;
                             PlayerMovement.canMove = true;
 
-
-                            
-
-
                             quedDialogs.Clear();
                             ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = false;
                         }
@@ -271,25 +267,27 @@ public class DialogManager : MonoBehaviour
                 dialogPortraitImageUI.enabled = false;
                 dialogAt = 0;
 
-                for (int i = 0; i < quedDialogs.Count; i++)
-                {
-                    ContaningDialog contaningDialog = quedDialogs[i].holder.GetComponent<ContaningDialog>();
-                    if (QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.removeDialogIfQuestsHasCompleted) && contaningDialog.removeDialogIfQuestsHasCompleted.Count > 0)
-                    {
-                        Destroy(quedDialogs[i].holder);
-                        quedDialogs.Clear();
-                    }
-                    if (!QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.instantiateDialogIfQuestsExistsInCompleted) && contaningDialog.instantiateDialogIfQuestsExistsInCompleted.Count > 0)
-                    {
-                        quedDialogs.Remove(quedDialogs[i]);
-                    }
-                    if (!QuestManager.Instance.questsExistsInCurrentQuests(contaningDialog.instantiateDialogIfQuestsExistsInCurrent))
-                    {
-                        quedDialogs.Remove(quedDialogs[i]);
-                    }
+                //for (int i = 0; i < quedDialogs.Count; i++)
+                //{
+                //    ContaningDialog dialogIndex = quedDialogs[i].holder.GetComponent<ContaningDialog>();
+                //    if (QuestManager.Instance.questsExistsInCompletedQuests(dialogIndex.removeDialogIfQuestsHasCompleted) && dialogIndex.removeDialogIfQuestsHasCompleted.Count > 0)
+                //    {
+                //        Debug.Log("should search");
+                //        quedDialogs[i].holder.gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(quedDialogs[i].holder);
+                //        Destroy(quedDialogs[i].holder);
+                //        quedDialogs.Clear();
+                //        //quedDialogs.Remove(quedDialogs[i]);
+                //    }
+                //    if (!QuestManager.Instance.questsExistsInCompletedQuests(dialogIndex.instantiateDialogIfQuestsExistsInCompleted))
+                //    {
+                //        quedDialogs.Remove(quedDialogs[i]);
+                //    }
+                //    if (!QuestManager.Instance.questsExistsInCurrentQuests(dialogIndex.instantiateDialogIfQuestsExistsInCurrent))
+                //    {
+                //        quedDialogs.Remove(quedDialogs[i]);
+                //    }
 
-                }
-
+                //}
                 if (quedDialogs.Count == 1)
                 {
                     //letar efter en ny dialog och ifall det finns en
@@ -298,7 +296,7 @@ public class DialogManager : MonoBehaviour
                     {
                         playStartDialogueSound();
                     }
-                   
+
                     activeDialog = quedDialogs[0];
                     ChoseDialogue.Instance.forceOne(activeDialog);
                     activeDialog.hasBeenRead = true;

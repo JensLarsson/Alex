@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: gradiantMask
+  m_Name: GradientMask
   m_Shader: {fileID: 4800000, guid: 1c3afc84547e4aa499746524dc2dcbc1, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA OUTLINE
   m_LightmapFlags: 4
@@ -62,16 +62,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MaskPosX: 2.7914493
-    - _MaskPosY: 1.2460002
+    - _MaskPosX: -0.8399999
+    - _MaskPosY: 1.005249
     - _Max: 1
     - _Metallic: 0
-    - _Min: 0.848
+    - _Min: 0.777
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Outline: 1
     - _Parallax: 0.02
-    - _Size: 2.37
+    - _Size: 2.45
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -80,4 +80,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineCol: {r: 0, g: 0, b: 0, a: 0.609}
+    - _OutlineCol: {r: 0, g: 0, b: 0, a: 0.397}

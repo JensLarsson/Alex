@@ -27,9 +27,7 @@ public class ContaningDialog : MonoBehaviour
     public List<QuestSO> instantiateDialogIfQuestsExistsInCurrent;
     public List<QuestSO> instantiateDialogIfQuestsExistsInCompleted;
     public List<QuestSO> removeDialogIfQuestsHasCompleted;
-
-    [Header("Dialogue activation")]
-    [SerializeField] ActivateDialog activateDialogWith;
+    
 
     [Header("Start dialogue sound")]
     [Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
@@ -42,14 +40,13 @@ public class ContaningDialog : MonoBehaviour
 
     [Header("Dialogue functions")]
     public bool canRepeatTheDialog = false;
-   public bool canBeActivated = true;
-    public bool hasBeenRead = false;
+  // public bool canBeActivated = true;
+    [SerializeField] public bool hasBeenRead = false;
     [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
     [SerializeField] GameObject[] answers;
     [SerializeField] UnityEvent doAfterDialgue;
-    bool isInDialogueTrigger = false;
     //start delay is the delay from active dialogue at the first frame (a reset)
-    float StartDelay;
+  
     float soundDelay;
   
 
@@ -57,7 +54,7 @@ public class ContaningDialog : MonoBehaviour
 
     void Start()
     {
-        StartDelay = activateDialogWith.delay;
+       
     }
 
     void OnDestroy()
@@ -69,8 +66,6 @@ public class ContaningDialog : MonoBehaviour
     }
     public void startConversation()
     {
-        if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0 || !activateDialogWith.onFunctionCall)
-        {
             if (!DialogManager.Instance.isInDialogue)
             {
                 DialogManager.Instance.queNewDialog(
@@ -83,62 +78,15 @@ public class ContaningDialog : MonoBehaviour
                     this.gameObject,
                     hasBeenRead);
             }
-        }
     }
     public void resetDialogue(bool wasSelected)
     {
         if(!canRepeatTheDialog && wasSelected)
         {
+            Debug.Log("should search");
+            gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(this.gameObject);
             Destroy(this.gameObject);
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (isInDialogueTrigger)
-        {
-            if (activateDialogWith.onCollisionAndKeyDown)
-            {
-                if (Input.GetButtonDown("Submit"))
-                {
-                    startConversation();
-                }
-            }
-
-            if (DialogManager.Instance.activeDialog == null)
-            {
-                activateDialogWith.delay -= Time.deltaTime;
-                if (activateDialogWith.delay < 0)
-                {
-                    if (activateDialogWith.onCollisionStayWithDelay)
-                    {
-                        activateDialogWith.delay = StartDelay;
-                        startConversation();
-                    }
-                }
-            }
-        }
-    }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        isInDialogueTrigger = true;
-        if (canBeActivated)
-        {
-            if (activateDialogWith.onCollisionEnter)
-            {
-                if (col.tag == "Player")
-                {
-                    startConversation();
-                }
-            }
-        }
-    }
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            isInDialogueTrigger = false;
-            canBeActivated = true;
-        }
-    }
 }
+
