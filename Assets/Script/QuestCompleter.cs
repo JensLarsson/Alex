@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class QuestCompleter : MonoBehaviour
 {
-    enum QuestMode { Try, Force };
-    QuestMode questMode = QuestMode.Try;
+    public enum QuestMode { Try, Force };
+    public QuestMode questMode = QuestMode.Try;
 
     public QuestSO quest;
 
     public void CompleteQuest()
     {
-        QuestManager.Instance.CompleteQuestfromCurrent(quest);
+        switch (questMode)
+        {
+            case QuestMode.Try:
+                QuestManager.Instance.CompleteQuestfromCurrent(quest);
+                break;
+            case QuestMode.Force:
+                QuestManager.Instance.ForceCompletedQuest(quest);
+                break;
+        }
     }
 }

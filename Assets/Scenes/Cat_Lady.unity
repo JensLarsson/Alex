@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 29086621}
   - component: {fileID: 29086620}
   - component: {fileID: 29086622}
+  - component: {fileID: 29086623}
   m_Layer: 0
   m_Name: Main Dialogue
   m_TagString: Untagged
@@ -397,8 +398,19 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 29086618}
-        m_MethodName: 
+      - m_Target: {fileID: 29086622}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 29086623}
+        m_MethodName: getQuests
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -418,6 +430,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 29086618}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
+--- !u!114 &29086623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29086618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -426,7 +451,7 @@ MonoBehaviour:
   - currentQuestsToCheck: []
     completedQuestsToCheck: []
     questsToGet:
-    - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
+    - {fileID: 11400000, guid: adb49676a37d7474288366c2d867763e, type: 2}
 --- !u!1 &260093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,6 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questMode: 0
   quest: {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
 --- !u!114 &921070878
 MonoBehaviour:
@@ -2476,6 +2502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questMode: 0
   quest: {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
 --- !u!114 &1403819939
 MonoBehaviour:
@@ -3521,6 +3548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questMode: 0
   quest: {fileID: 0}
 --- !u!1 &1975603814
 GameObject:
