@@ -15,9 +15,6 @@ public class Teleporter : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         other.transform.position = outTeleporter.transform.position;
-        if (other.tag == "Cat")
-        {
-            other.GetComponent<CatAI>().MakePathRequest(other.transform.position, other.transform.position, other.GetComponent<CatAI>().speed);
-        }
+
     }
 }
