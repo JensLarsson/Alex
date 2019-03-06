@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 40a8d721c327e09469ec872ff98aa59c
 timeCreated: 1551793041
+=======
+guid: d36f3d285f6227b4cbe4f38e18610ee3
+timeCreated: 1551791622
+>>>>>>> Dennis
 licenseType: Free
 AudioImporter:
   externalObjects: {}

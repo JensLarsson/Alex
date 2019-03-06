@@ -10,7 +10,9 @@ class menuFunction
     [HideInInspector] public GameObject GO;
     public string ButtonTextUI;
     public UnityEvent newEvent;
+    public UnityEvent newEventSec;
 }
+
 public class menuManager : MonoBehaviour
 {
 
@@ -29,7 +31,7 @@ public class menuManager : MonoBehaviour
 
 
     [SerializeField] float xStartPos, yStartPos, ySpacing;
-     [Tooltip("This text ui will determain the position and font/size of the text")]
+    [Tooltip("This text ui will determain the position and font/size of the text")]
 	[SerializeField] GameObject textUIBase;
    List<GameObject> choseUI = new List<GameObject>();
     int menuIndex = 0;
@@ -76,7 +78,6 @@ public class menuManager : MonoBehaviour
     }
     public void nothing()
     {
-        //lol i lied
         changeMenuState(MenuState.noMenu);
     }
     void addUI()

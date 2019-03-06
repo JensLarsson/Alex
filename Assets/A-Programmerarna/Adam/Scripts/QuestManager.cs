@@ -3,27 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestManager : MonoBehaviour{
+public class QuestManager : MonoBehaviour
+{
 
     public static QuestManager Instance = null;
 
     public List<QuestSO> currentQuests;
-	public List<QuestSO> completedQuests;
+    public List<QuestSO> completedQuests;
 
-	private string currentQuestsSaves = "currentQuestsSaves";
-	private string completedQuestsSaves = "completedQuestsSaves";
-    
+    private string currentQuestsSaves = "currentQuestsSaves";
+    private string completedQuestsSaves = "completedQuestsSaves";
+
+    public bool CompleteQuestNew(QuestSO quest)
+    {
+        if (currentQuests.Contains(quest))
+        {
+            currentQuests.Remove(quest);
+            completedQuests.Add(quest);
+            return true;
+        }
+
+        return false;
+    }
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-        } else
+        }
+        else
         {
             Destroy(this.gameObject);
         }
     }
-    
+
     public void addToCurrentQuests(QuestSO quest)
     {
         if (questExistsInCurrentQuests(quest))
@@ -50,16 +64,17 @@ public class QuestManager : MonoBehaviour{
         else
         {
             QuestSO quest = findQuestInCurrentQuests(name);
-		    if (quest == null) {
+            if (quest == null)
+            {
                 Debug.Log(name + " dosen't exist in current quests");
-		    }
+            }
             else
             {
-			    currentQuests.Remove (quest);
-			    completedQuests.Add(quest);
+                currentQuests.Remove(quest);
+                completedQuests.Add(quest);
             }
         }
-	}
+    }
 
     public void addToCompletedQuests(QuestSO quest)
     {
@@ -103,9 +118,10 @@ public class QuestManager : MonoBehaviour{
         }
         return numberofRightQuests == quests.Count;
     }
-    public bool questExistsInCompletedQuests(string name){
-		return completedQuests.Contains(findQuestInCompletedQuests(name));
-	}
+    public bool questExistsInCompletedQuests(string name)
+    {
+        return completedQuests.Contains(findQuestInCompletedQuests(name));
+    }
 
     public bool questExistsInCompletedQuests(QuestSO quest)
     {
@@ -143,8 +159,8 @@ public class QuestManager : MonoBehaviour{
             quest.description = questSO.description;
             tempCompletedQuests.Add(quest);
         }
-        XMLManger.Instance.Savequests (tempCurrentQuests, currentQuestsSaves);
-        XMLManger.Instance.Savequests (tempCompletedQuests, completedQuestsSaves);
+        XMLManger.Instance.Savequests(tempCurrentQuests, currentQuestsSaves);
+        XMLManger.Instance.Savequests(tempCompletedQuests, completedQuestsSaves);
     }
 
     public void LoadQuests()
@@ -167,17 +183,19 @@ public class QuestManager : MonoBehaviour{
         }
     }
 
-    QuestSO findQuestInCurrentQuests(string name){
-		return findQuestByName(name, currentQuests);
-	}
+    QuestSO findQuestInCurrentQuests(string name)
+    {
+        return findQuestByName(name, currentQuests);
+    }
 
     QuestSO findQuestInCurrentQuests(QuestSO quest)
     {
         return findQuestByQuest(quest, currentQuests);
     }
-    QuestSO findQuestInCompletedQuests(string name){
-		return findQuestByName (name, completedQuests);
-	}
+    QuestSO findQuestInCompletedQuests(string name)
+    {
+        return findQuestByName(name, completedQuests);
+    }
 
     QuestSO findQuestInCompletedQuests(QuestSO quest)
     {
@@ -185,19 +203,22 @@ public class QuestManager : MonoBehaviour{
     }
 
     QuestSO findQuestByName(string name, List<QuestSO> quests)
-	{
-		if (quests.Count < 1) {
-			Debug.Log("No quests are in " + quests + ".");
-			return null;
-		}
-		foreach (QuestSO quest in quests) {
-			if (quest._name == name) {
-				return quest;
-			}
-		}
-		Debug.Log("Couldn't find a quest with the name '" + name + "'.");
-		return null;
-	}
+    {
+        if (quests.Count < 1)
+        {
+            Debug.Log("No quests are in " + quests + ".");
+            return null;
+        }
+        foreach (QuestSO quest in quests)
+        {
+            if (quest._name == name)
+            {
+                return quest;
+            }
+        }
+        Debug.Log("Couldn't find a quest with the name '" + name + "'.");
+        return null;
+    }
 
     QuestSO findQuestByQuest(QuestSO quest, List<QuestSO> quests)
     {

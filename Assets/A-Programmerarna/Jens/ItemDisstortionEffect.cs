@@ -7,7 +7,6 @@ public class ItemDisstortionEffect : MonoBehaviour
 
 
     SpriteRenderer sr;
-    Timer timer = new Timer();
 
     public float minWait = 0.1f, maxWait = 1.0f, minDuration = 0.1f, maxDuration = 0.3f;
     public Material baseMat, effectMat;

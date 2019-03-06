@@ -66,8 +66,16 @@ public class AudioManager : MonoBehaviour
     //Replaces current song (if one is playing) with new one and fades between the two
     public void changeSong(AudioClip clip)
     {
-        fadeOut(targetAudio);
+        StopAllCoroutines();
+        foreach (TargetAudio item in TargetAudio.GetValues(typeof(TargetAudio)))
+        {
+            if (musicSource[(int)item].volume > 0)
+            {
+                fadeOut(item);
+            }
+        }
         switchAudioEnumTarget();
+        musicSource[(int)targetAudio].volume = 0;
         fadeIn(targetAudio);
 
         musicSource[(int)targetAudio].loop = true;
