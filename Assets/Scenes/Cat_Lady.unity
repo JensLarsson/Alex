@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 29086619}
   - component: {fileID: 29086621}
   - component: {fileID: 29086620}
+  - component: {fileID: 29086622}
   m_Layer: 0
   m_Name: Main Dialogue
   m_TagString: Untagged
@@ -396,9 +397,8 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
-          type: 2}
-        m_MethodName: completeQuest
+      - m_Target: {fileID: 29086618}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -410,6 +410,23 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &29086622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29086618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
 --- !u!1 &260093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1432,8 @@ GameObject:
   - component: {fileID: 921070874}
   - component: {fileID: 921070876}
   - component: {fileID: 921070875}
+  - component: {fileID: 921070878}
+  - component: {fileID: 921070877}
   m_Layer: 0
   m_Name: Loop 1
   m_TagString: Untagged
@@ -1472,9 +1491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: 1
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
+  instantiateDialogIfQuestsExistsInCurrent:
   - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -1514,9 +1533,19 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
-          type: 2}
-        m_MethodName: completeQuest
+      - m_Target: {fileID: 921070878}
+        m_MethodName: getQuests
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 921070877}
+        m_MethodName: CompleteQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1528,6 +1557,35 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &921070877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921070873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
+--- !u!114 &921070878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921070873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
 --- !u!1 &934908571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2334,8 @@ GameObject:
   - component: {fileID: 1403819935}
   - component: {fileID: 1403819937}
   - component: {fileID: 1403819936}
+  - component: {fileID: 1403819939}
+  - component: {fileID: 1403819938}
   m_Layer: 0
   m_Name: Loop 2
   m_TagString: Untagged
@@ -2333,9 +2393,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: 2
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 7c3aaedeb49f09448bd1d006fcf5a4a4, type: 2}
+  instantiateDialogIfQuestsExistsInCurrent:
+  - {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -2381,9 +2441,19 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
-          type: 2}
-        m_MethodName: completeQuest
+      - m_Target: {fileID: 1403819939}
+        m_MethodName: getQuests
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1403819938}
+        m_MethodName: CompleteQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2395,6 +2465,35 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1403819938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403819934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
+--- !u!114 &1403819939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403819934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: 8d81e0f45a2c01642b3610d5c980fb00, type: 2}
 --- !u!1001 &1451527790
 Prefab:
   m_ObjectHideFlags: 0
@@ -2508,9 +2607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: 3
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 8cd79670c5ed52b43854a00e86c02ae6, type: 2}
+  instantiateDialogIfQuestsExistsInCurrent:
+  - {fileID: 11400000, guid: 8d81e0f45a2c01642b3610d5c980fb00, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -3246,6 +3345,8 @@ GameObject:
   - component: {fileID: 1975055579}
   - component: {fileID: 1975055581}
   - component: {fileID: 1975055580}
+  - component: {fileID: 1975055582}
+  - component: {fileID: 1975055583}
   m_Layer: 0
   m_Name: Puzzle done dialogue
   m_TagString: Untagged
@@ -3379,9 +3480,8 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
-          type: 2}
-        m_MethodName: completeQuest
+      - m_Target: {fileID: 1975055582}
+        m_MethodName: getQuests
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3393,6 +3493,35 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1975055582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975055578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
+--- !u!114 &1975055583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975055578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &1975603814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1975603815
 BoxCollider2D:
   m_ObjectHideFlags: 0
