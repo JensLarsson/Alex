@@ -9,6 +9,6 @@ public class QuestCompleter : MonoBehaviour
 
     public void CompleteQuest()
     {
-        QuestManager.Instance.CompleteQuestNew(quest);
+        QuestManager.Instance.CompleteQuestfromCurrent(quest);
     }
 }

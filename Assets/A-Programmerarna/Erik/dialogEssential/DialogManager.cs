@@ -271,6 +271,8 @@ public class DialogManager : MonoBehaviour
                 dialogPortraitImageUI.enabled = false;
                 dialogAt = 0;
 
+                //Debug.Log("there are " + quedDialogs.Count + " dialogs on hold");
+
                 for (int i = 0; i < quedDialogs.Count; i++)
                 {
                     ContaningDialog contaningDialog = quedDialogs[i].holder.GetComponent<ContaningDialog>();
@@ -279,8 +281,9 @@ public class DialogManager : MonoBehaviour
                         Destroy(quedDialogs[i].holder);
                         quedDialogs.Clear();
                     }
-                    if (!QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.instantiateDialogIfQuestsExistsInCompleted) && contaningDialog.instantiateDialogIfQuestsExistsInCompleted.Count > 0)
+                    if (!QuestManager.Instance.questsExistsInCompletedQuests(contaningDialog.instantiateDialogIfQuestsExistsInCompleted))
                     {
+
                         quedDialogs.Remove(quedDialogs[i]);
                     }
                     if (!QuestManager.Instance.questsExistsInCurrentQuests(contaningDialog.instantiateDialogIfQuestsExistsInCurrent))
@@ -289,7 +292,7 @@ public class DialogManager : MonoBehaviour
                     }
 
                 }
-
+                //Debug.Log("there are " + quedDialogs.Count + " dialogs availbile");
                 if (quedDialogs.Count == 1)
                 {
                     //letar efter en ny dialog och ifall det finns en
