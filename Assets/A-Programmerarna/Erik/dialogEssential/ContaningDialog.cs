@@ -27,9 +27,7 @@ public class ContaningDialog : MonoBehaviour
     public List<QuestSO> instantiateDialogIfQuestsExistsInCurrent;
     public List<QuestSO> instantiateDialogIfQuestsExistsInCompleted;
     public List<QuestSO> removeDialogIfQuestsHasCompleted;
-
-    [Header("Dialogue activation")]
-    [SerializeField] ActivateDialog activateDialogWith;
+    
 
     [Header("Start dialogue sound")]
     [Tooltip("om inget ljud finns kommer det helt enkelt inte spelas upp något")]
@@ -49,7 +47,7 @@ public class ContaningDialog : MonoBehaviour
     [SerializeField] UnityEvent doAfterDialgue;
     bool isInDialogueTrigger = false;
     //start delay is the delay from active dialogue at the first frame (a reset)
-    float StartDelay;
+  
     float soundDelay;
   
 
@@ -57,7 +55,7 @@ public class ContaningDialog : MonoBehaviour
 
     void Start()
     {
-        StartDelay = activateDialogWith.delay;
+       
     }
 
     void OnDestroy()
@@ -69,8 +67,8 @@ public class ContaningDialog : MonoBehaviour
     }
     public void startConversation()
     {
-        if (activateDialogWith.onFunctionCall && activateDialogWith.delay < 0 || !activateDialogWith.onFunctionCall)
-        {
+        //if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onFunctionCall && transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay < 0 || !transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onFunctionCall)
+        //{
             if (!DialogManager.Instance.isInDialogue)
             {
                 DialogManager.Instance.queNewDialog(
@@ -83,12 +81,14 @@ public class ContaningDialog : MonoBehaviour
                     this.gameObject,
                     hasBeenRead);
             }
-        }
+        //}
     }
     public void resetDialogue(bool wasSelected)
     {
         if(!canRepeatTheDialog && wasSelected)
         {
+            Debug.Log("should search");
+            gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(this.gameObject);
             Destroy(this.gameObject);
         }
     }
@@ -97,7 +97,7 @@ public class ContaningDialog : MonoBehaviour
     {
         if (isInDialogueTrigger)
         {
-            if (activateDialogWith.onCollisionAndKeyDown)
+            if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onCollisionAndKeyDown)
             {
                 if (Input.GetButtonDown("Submit"))
                 {
@@ -107,12 +107,12 @@ public class ContaningDialog : MonoBehaviour
 
             if (DialogManager.Instance.activeDialog == null)
             {
-                activateDialogWith.delay -= Time.deltaTime;
-                if (activateDialogWith.delay < 0)
+                transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay -= Time.deltaTime;
+                if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay < 0)
                 {
-                    if (activateDialogWith.onCollisionStayWithDelay)
+                    if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onCollisionStayWithDelay)
                     {
-                        activateDialogWith.delay = StartDelay;
+                        transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.delay = transform.parent.gameObject.GetComponent<conversationCollection>().StartDelay;
                         startConversation();
                     }
                 }
@@ -124,7 +124,7 @@ public class ContaningDialog : MonoBehaviour
         isInDialogueTrigger = true;
         if (canBeActivated)
         {
-            if (activateDialogWith.onCollisionEnter)
+            if (transform.parent.gameObject.GetComponent<conversationCollection>().activateDialogWith.onCollisionEnter)
             {
                 if (col.tag == "Player")
                 {
