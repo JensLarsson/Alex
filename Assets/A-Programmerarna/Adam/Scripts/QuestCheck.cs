@@ -10,6 +10,7 @@ public class QuestCheck {
     public QuestSO[] completedQuestsToCheck;
     [Header("Get")]
     public QuestSO[] questsToGet;
+    public bool getQuestsToCompleted;
 
     public bool checkCurrentQuests()
     {
@@ -48,9 +49,19 @@ public class QuestCheck {
     {
         if (checkCurrentQuests() && checkCompletedQuests())
         {
-            foreach (QuestSO quest in questsToGet)
+            if (getQuestsToCompleted)
             {
-                QuestManager.Instance.addToCurrentQuests(quest);
+                foreach (QuestSO quest in questsToGet)
+                {
+                    QuestManager.Instance.addToCompletedQuests(quest);
+                }
+            }
+            else
+            {
+                foreach (QuestSO quest in questsToGet)
+                {
+                    QuestManager.Instance.addToCurrentQuests(quest);
+                }
             }
         }
     }
