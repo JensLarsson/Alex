@@ -149,7 +149,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 29086618}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -184,12 +184,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -396,7 +390,6 @@ MonoBehaviour:
     Text: (Uh, use the yarn to try and lure him into the cage. If we try and grab
       him Bertha might hear, and I would like to live thank you very much.)
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -526,7 +519,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261962239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -561,12 +554,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 4c5e9e95c0ec26e4fa43a2695c9022f9, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -581,10 +568,10 @@ MonoBehaviour:
     Text: "Taffy! Oh, you rascal where have you been? I\u2019ve been worried sick
       you curious kitty."
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
-  answers: []
+  answers:
+  - {fileID: 0}
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
@@ -1152,7 +1139,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 806926721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1187,12 +1174,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1208,7 +1189,6 @@ MonoBehaviour:
       and I can\u2019t seem to find him anywhere. Must be hiding, he never liked the
       baths. But I always tell him a clean boy is a good boy!"
   canRepeatTheDialog: 1
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1461,7 +1441,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921070873}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1496,12 +1476,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1534,7 +1508,6 @@ MonoBehaviour:
     Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
       here my sweet!"
   canRepeatTheDialog: 1
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1896,6 +1869,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1234627451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1234627454}
+  - component: {fileID: 1234627453}
+  - component: {fileID: 1234627452}
+  m_Layer: 0
+  m_Name: Main Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1234627452
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234627451}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1234627453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234627451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: main
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Bertha
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh! Oh dear! Mittens, watch out my darling!
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1234627454
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234627451}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.049, y: -0.6600001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1975603817}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279512887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,7 +2302,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1403819934}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2273,12 +2337,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 7c3aaedeb49f09448bd1d006fcf5a4a4, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2317,7 +2375,6 @@ MonoBehaviour:
     Text: "I can\u2019t- I haven\u2019t been able to talk to him yet. But I\u2019m
       sure he loved it."
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2420,7 +2477,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1495928090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2455,12 +2512,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 8cd79670c5ed52b43854a00e86c02ae6, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2474,7 +2525,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Mittens! Mittens!
   canRepeatTheDialog: 1
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2505,6 +2555,8 @@ GameObject:
   - component: {fileID: 1497692796}
   - component: {fileID: 1497692795}
   - component: {fileID: 1497692797}
+  - component: {fileID: 1497692798}
+  - component: {fileID: 1497692799}
   m_Layer: 0
   m_Name: sheet kattdam2_0
   m_TagString: Untagged
@@ -2598,6 +2650,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.4375, y: 0.92652464}
+  m_EdgeRadius: 0
+--- !u!114 &1497692798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497692794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 29086618}
+  - {fileID: 1975055578}
+  - {fileID: 921070873}
+  - {fileID: 1403819934}
+  - {fileID: 1495928090}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!61 &1497692799
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497692794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029954076, y: -0.15099365}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4375, y: 1}
+    newSize: {x: 0.4375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.84188104, y: 1.3019873}
   m_EdgeRadius: 0
 --- !u!1 &1498961412
 GameObject:
@@ -2835,7 +2937,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557583226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2870,12 +2972,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 8cd79670c5ed52b43854a00e86c02ae6, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2889,7 +2985,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Mittens! Mittens!
   canRepeatTheDialog: 1
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3019,7 +3114,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695170675}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3054,12 +3149,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3073,7 +3162,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Oh! Oh dear! Mittens, watch out my darling!
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3184,7 +3272,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1975055578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3219,12 +3307,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 4c5e9e95c0ec26e4fa43a2695c9022f9, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3291,7 +3373,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3322,6 +3403,8 @@ GameObject:
   - component: {fileID: 1975603817}
   - component: {fileID: 1975603816}
   - component: {fileID: 1975603815}
+  - component: {fileID: 1975603818}
+  - component: {fileID: 1975603819}
   m_Layer: 0
   m_Name: sheet kattdam2_0 (1)
   m_TagString: Untagged
@@ -3413,9 +3496,61 @@ Transform:
   - {fileID: 806926722}
   - {fileID: 2042961351}
   - {fileID: 1557583227}
+  - {fileID: 1234627454}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975603818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975603814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1695170675}
+  - {fileID: 261962239}
+  - {fileID: 806926721}
+  - {fileID: 2042961350}
+  - {fileID: 1557583226}
+  - {fileID: 1234627451}
+  isInDialogueTrigger: 1
+  StartDelay: 0
+--- !u!61 &1975603819
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975603814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.018834352, y: -0.17469075}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4375, y: 1}
+    newSize: {x: 0.4375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0929358, y: 1.3493814}
+  m_EdgeRadius: 0
 --- !u!1 &2010172430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,7 +3674,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042961350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3574,12 +3709,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 7c3aaedeb49f09448bd1d006fcf5a4a4, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3593,7 +3722,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Dearie! How was the pie?
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []

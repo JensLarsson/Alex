@@ -40,8 +40,8 @@ public class ContaningDialog : MonoBehaviour
 
     [Header("Dialogue functions")]
     public bool canRepeatTheDialog = false;
-   public bool canBeActivated = true;
-    public bool hasBeenRead = false;
+  // public bool canBeActivated = true;
+    [SerializeField] public bool hasBeenRead = false;
     [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
     [SerializeField] GameObject[] answers;
     [SerializeField] UnityEvent doAfterDialgue;
