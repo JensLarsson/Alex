@@ -16,15 +16,22 @@ class menuFunction
 public class menuManager : MonoBehaviour
 {
 
+    [SerializeField] Material basic;
+    [SerializeField] Material selected;
+    GameObject Play;
+    GameObject Developers;
+    GameObject Exit;
+    List<GameObject> Buttons = new List<GameObject>();
+
     [SerializeField] List<menuFunction> menuButtons = new List<menuFunction>();
     [SerializeField] string activeMenuButton;
-     public  enum MenuState
+    [HideInInspector] public  enum MenuState
     {
         mainMenu,
         menu,
         noMenu
     }
-    public MenuState menuState;
+    [HideInInspector] public MenuState menuState;
     bool inisiate = false;
 
   [SerializeField] public static bool IsInMenu = false;
@@ -62,7 +69,6 @@ public class menuManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        
         menuState = MenuState.noMenu;
 	}
     void changeMenuState(MenuState newMenuState)
@@ -113,6 +119,31 @@ public class menuManager : MonoBehaviour
             choseUI[MenuIndex].GetComponent<Text>().color = Color.red;
         }
     }
+    void moveMainMenu()
+    {
+        if(menuIndex > Buttons.Count - 1)
+        {
+            menuIndex = Buttons.Count - 1;
+        }
+        if (menuIndex < 0)
+        {
+            menuIndex = 0;
+        }
+        for (int index = 0; index < Buttons.Count; index++)
+        {
+            if (index == menuIndex)
+            {
+                Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = selected;
+                Buttons[index].gameObject.active = true;
+            }
+            else
+            {
+                Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = basic;
+                Buttons[index].gameObject.active = false;
+            }
+        }
+    }
+
 
     void selectAChoice()
     {
@@ -170,9 +201,35 @@ public class menuManager : MonoBehaviour
 
             #region mainMenu
             case MenuState.mainMenu:
+               
                 if (!inisiate)
                 {
+                    Play = GameObject.Find("play");
+                    Developers = GameObject.Find("developers");
+                    Exit = GameObject.Find("exit");
+
+                    Buttons.Add(Play);
+                    Buttons.Add(Developers);
+                    Buttons.Add(Exit);
+
+                    MenuIndex = 0;
+                    moveMainMenu();
+
                     inisiate = true;
+                }
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    menuIndex--;
+                    moveMainMenu();
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    menuIndex++;
+                    moveMainMenu();
+                }
+                if (Input.GetButtonDown("Submit"))
+                {
+                    Buttons[menuIndex].gameObject.GetComponent<mainMenuSelect>().onSelect.Invoke();
                 }
                 break;
                 #endregion

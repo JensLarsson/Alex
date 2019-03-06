@@ -52,14 +52,16 @@ public class SceneController : MonoBehaviour
             saveScene(scene);
             transitioning = true;
             string id = SceneManager.GetActiveScene().name;
-            if (lastScenePosition.ContainsKey(id))
+            if (PlayerTracker.Instance != null)
             {
-                lastScenePosition[id] = PlayerTracker.Instance.gameObject.transform.position;
-            }
-            else
-            {
-                lastScenePosition.Add(id, PlayerTracker.Instance.gameObject.transform.position);
-
+                if (lastScenePosition.ContainsKey(id))
+                {
+                    lastScenePosition[id] = PlayerTracker.Instance.gameObject.transform.position;
+                }
+                else
+                {
+                    lastScenePosition.Add(id, PlayerTracker.Instance.gameObject.transform.position);
+                }
             }
 
             Color colour;
