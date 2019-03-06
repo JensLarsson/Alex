@@ -487,31 +487,19 @@ Transform:
   m_Father: {fileID: 1312141005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &340203411
-BoxCollider2D:
+--- !u!114 &340203411
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340203409}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: b3e204f08627780428a189db73b8f195, type: 2}
 --- !u!114 &340203412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,13 +514,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: b3e204f08627780428a189db73b8f195, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -619,13 +602,23 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Yup, see you later!
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 340203411}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &385410481
@@ -637,7 +630,6 @@ GameObject:
   m_Component:
   - component: {fileID: 385410484}
   - component: {fileID: 385410483}
-  - component: {fileID: 385410482}
   m_Layer: 0
   m_Name: Clothes monolog
   m_TagString: Untagged
@@ -645,31 +637,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &385410482
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 385410481}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -3.006285, y: -1.3607392}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2911344, y: 0.7341814}
-  m_EdgeRadius: 0
 --- !u!114 &385410483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,12 +653,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -722,7 +683,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Oh, whatever. It\u2019s not my mess."
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -738,11 +698,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 385410481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1398084, y: 0.062802926, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 563843323}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &401902094
 GameObject:
@@ -816,6 +776,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &563843320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 563843323}
+  - component: {fileID: 563843322}
+  - component: {fileID: 563843321}
+  m_Layer: 0
+  m_Name: Clothes Diag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &563843321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563843320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 385410481}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!61 &563843322
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563843320}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.006285, y: -1.3607392}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2911344, y: 0.7341814}
+  m_EdgeRadius: 0
+--- !u!4 &563843323
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563843320}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1398084, y: 0.062802926, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 385410484}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648063098
 GameObject:
@@ -1366,7 +1403,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1117389304}
   - component: {fileID: 1117389306}
-  - component: {fileID: 1117389305}
   m_Layer: 0
   m_Name: Puzzle dialogue part 2 Door
   m_TagString: Untagged
@@ -1384,34 +1420,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1312141005}
-  m_RootOrder: 3
+  m_Father: {fileID: 1522769721}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1117389305
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1117389303}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.0506176, y: -1.6202288}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9999993, y: 0.64557457}
-  m_EdgeRadius: 0
 --- !u!114 &1117389306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,12 +1440,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1448,7 +1453,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Well, maybe mum will cook something if I say I\u2019m hungry."
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1466,7 +1470,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1158505275}
   - component: {fileID: 1158505274}
-  - component: {fileID: 1158505273}
   m_Layer: 0
   m_Name: Bed monolog
   m_TagString: Untagged
@@ -1474,31 +1477,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1158505273
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1158505272}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.9176774, y: -0.113922834}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2658205, y: 1.6329036}
-  m_EdgeRadius: 0
 --- !u!114 &1158505274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,12 +1493,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1575,13 +1547,24 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Fine, I\u2019ll do it for him"
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1060115750}
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 54792bd356f989e48866887763a0fb11,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1158505275
@@ -1591,11 +1574,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1158505272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1398084, y: 0.062802926, z: 0}
+  m_LocalPosition: {x: 1.243103, y: 0.3487742, z: -0.11130463}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1483444965}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1239779658
 GameObject:
@@ -1606,7 +1589,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1239779659}
   - component: {fileID: 1239779661}
-  - component: {fileID: 1239779660}
   m_Layer: 0
   m_Name: Ash Puzzle dialogue
   m_TagString: Untagged
@@ -1627,31 +1609,6 @@ Transform:
   m_Father: {fileID: 1312141005}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1239779660
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239779658}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &1239779661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,12 +1625,6 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1722,7 +1673,6 @@ MonoBehaviour:
       gets him away from here is mum\u2019s cooking. But it\u2019s not dinner time
       yet\u2026 Maybe if I\u2026)"
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1741,6 +1691,8 @@ GameObject:
   - component: {fileID: 1312141005}
   - component: {fileID: 1312141004}
   - component: {fileID: 1312141003}
+  - component: {fileID: 1312141007}
+  - component: {fileID: 1312141006}
   m_Layer: 0
   m_Name: sheet broA_0
   m_TagString: Untagged
@@ -1830,10 +1782,57 @@ Transform:
   - {fileID: 340203410}
   - {fileID: 1239779659}
   - {fileID: 1749640932}
-  - {fileID: 1117389304}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1312141006
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312141002}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.17}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.390625, y: 0.828125}
+    newSize: {x: 0.390625, y: 0.828125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1312141007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312141002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 340203409}
+  - {fileID: 1239779658}
+  - {fileID: 1749640931}
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &1455064200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,6 +1948,160 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85672766, y: 1.2120023}
   m_EdgeRadius: 0
+--- !u!1 &1483444963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1483444965}
+  - component: {fileID: 1483444964}
+  - component: {fileID: 1483444966}
+  m_Layer: 0
+  m_Name: "S\xE4ng Diag"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1483444964
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483444963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.9176774, y: -0.113922834}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2658205, y: 1.6329036}
+  m_EdgeRadius: 0
+--- !u!4 &1483444965
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483444963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.01, y: 0.025, z: 0.11130463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1158505275}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483444966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483444963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 1158505272}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!1 &1522769718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1522769721}
+  - component: {fileID: 1522769720}
+  - component: {fileID: 1522769719}
+  m_Layer: 0
+  m_Name: Door Diag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1522769719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522769718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 1117389303}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!61 &1522769720
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522769718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.0506176, y: -1.6202288}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9999993, y: 0.64557457}
+  m_EdgeRadius: 0
+--- !u!4 &1522769721
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522769718}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1398084, y: 0.062802926, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1117389304}
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587451973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,7 +2318,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1749640932}
   - component: {fileID: 1749640934}
-  - component: {fileID: 1749640933}
   m_Layer: 0
   m_Name: Puzzle dialogue part 2 Ash
   m_TagString: Untagged
@@ -2186,31 +2338,6 @@ Transform:
   m_Father: {fileID: 1312141005}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1749640933
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1749640931}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &1749640934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,12 +2355,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
-    delay: 0
-    onCollisionAndKeyDown: 1
-    onFunctionCall: 0
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2272,7 +2393,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Sure!
   canRepeatTheDialog: 0
-  canBeActivated: 1
   hasBeenRead: 0
   siblings: []
   answers: []
