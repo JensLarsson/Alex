@@ -11,9 +11,21 @@ using UnityEngine;
     public PlayBeaviour playlistBehaviour = PlayBeaviour.loopLast;
 
     public List<AudioClip> songs = new List<AudioClip>();
-    
-	void Start () {
-        AudioManager.instance.playSongs(songs, playlistBehaviour);
-	}
+
+    void Start()
+    {
+        if (songs.Count == 1)
+        {
+            AudioManager.instance.changeSong(songs[0]);
+        }
+        else if (songs.Count > 0)
+        {
+            AudioManager.instance.playSongs(songs, playlistBehaviour);
+        }
+        else
+        {
+            Debug.LogError("No songs in playlist");
+        }
+    }
 	
 }
