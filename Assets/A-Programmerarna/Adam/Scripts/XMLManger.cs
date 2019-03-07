@@ -15,19 +15,19 @@ public class XMLManger : Singleton<XMLManger>
 		}
 	}
 
-	public void Savequests(List<Quest> quests, string saveName){
-		XmlSerializer serializer = new XmlSerializer(typeof(List<Quest>));
+	public void Savequests(List<QuestSO> quests, string saveName){
+		XmlSerializer serializer = new XmlSerializer(typeof(List<QuestSO>));
 		FileStream stream = new FileStream (Application.dataPath + "/xml/" + saveName + ".xml", FileMode.Create);
 
 		serializer.Serialize (stream, quests);
 		stream.Close ();
 	}
 
-	public List<Quest> Loadquests(string saveName){
-		List<Quest> temp;
-		XmlSerializer serializer = new XmlSerializer(typeof(List<Quest>));
+	public List<QuestSO> Loadquests(string saveName){
+		List<QuestSO> temp;
+		XmlSerializer serializer = new XmlSerializer(typeof(List<QuestSO>));
 		FileStream stream = new FileStream (Application.dataPath + "/xml/" + saveName + ".xml", FileMode.Open);
-		temp = serializer.Deserialize (stream) as List<Quest>;
+		temp = serializer.Deserialize (stream) as List<QuestSO>;
 
 		stream.Close ();
 		return temp;

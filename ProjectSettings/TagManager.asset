@@ -8,6 +8,7 @@ TagManager:
   - Apple
   - BuggApple
   - questDoor
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - UnWalkable
   - 
   - 
   - 
