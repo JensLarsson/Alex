@@ -243,8 +243,8 @@ public class DialogManager : MonoBehaviour
                             Debug.Log("before invoke");
                             if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
                             {
-                                activeDialog.events.Invoke();
                             }
+                           activeDialog.events.Invoke();
                             activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
                             activeDialog = null;
                            
