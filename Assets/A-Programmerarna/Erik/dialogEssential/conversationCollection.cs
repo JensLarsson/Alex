@@ -60,7 +60,6 @@ public class conversationCollection : MonoBehaviour
                 Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName);
                 tempList.Add(dialogs);
             }
-
         }
         Debug.Log(tempList.Count);
         for(int i = 0; i < tempList.Count; i++)

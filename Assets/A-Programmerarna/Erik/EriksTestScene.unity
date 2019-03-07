@@ -439,6 +439,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: enable options
+  canRepeat: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -915,6 +916,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: enable options 2
+  canRepeat: 1
   hasBeenRead: 0
   siblings: []
   answers: []
