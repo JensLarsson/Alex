@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Hoarder_room
-  locked: 1
+  locked: 0
   clip: {fileID: 0}
   button: Submit
 --- !u!61 &100826625
