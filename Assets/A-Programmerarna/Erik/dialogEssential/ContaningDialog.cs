@@ -21,7 +21,7 @@ public class ActivateDialog
 
 public class ContaningDialog : MonoBehaviour
 {
-    [SerializeField] string dialogueName;
+    [SerializeField] public string dialogueName;
 
     [Header("Quests")]
     public List<QuestSO> instantiateDialogIfQuestsExistsInCurrent;

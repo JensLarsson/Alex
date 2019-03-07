@@ -25,20 +25,20 @@ public class QuestManager : MonoBehaviour
 
         return false;
     }
-    public bool ForceCompletedQuest(QuestSO quest)
+    public void ForceCompletedQuest(QuestSO quest)
     {
-        if (currentQuests.Contains(quest))
+        if (!completedQuests.Contains(quest))
         {
-            currentQuests.Remove(quest);
-            completedQuests.Add(quest);
-            return true;
+            if (currentQuests.Contains(quest))
+            {
+                currentQuests.Remove(quest);
+                completedQuests.Add(quest);
+            }
+            else
+            {
+                completedQuests.Add(quest);
+            }
         }
-        else
-        {
-            completedQuests.Add(quest);
-        }
-
-        return false;
     }
 
 

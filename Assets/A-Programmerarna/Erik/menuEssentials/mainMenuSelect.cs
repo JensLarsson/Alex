@@ -14,6 +14,11 @@ public class mainMenuSelect : MonoBehaviour {
     }
     public void play()
     {
+        for (int i = 0; i < DialogManager.Instance.gameObject.transform.childCount; i++)
+        {
+            DialogManager.Instance.gameObject.transform.parent.GetChild(i).gameObject.SetActive(true);
+        }
+
         SceneController.instance.loadScene("Alex");
     }
 }

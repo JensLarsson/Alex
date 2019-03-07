@@ -69,7 +69,7 @@ public class menuManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        menuState = MenuState.noMenu;
+        
 	}
     void changeMenuState(MenuState newMenuState)
     {
@@ -134,12 +134,12 @@ public class menuManager : MonoBehaviour
             if (index == menuIndex)
             {
                 Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = selected;
-                Buttons[index].gameObject.active = true;
+                //Buttons[index].gameObject.active = true;
             }
             else
             {
                 Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = basic;
-                Buttons[index].gameObject.active = false;
+               // Buttons[index].gameObject.active = false;
             }
         }
     }
@@ -204,6 +204,17 @@ public class menuManager : MonoBehaviour
                
                 if (!inisiate)
                 {
+
+                    for (int i = 0; i < transform.parent.transform.childCount; i++)
+                    {
+                        GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
+                        if (!child == this.gameObject)
+                        {
+                            child.SetActive(false);
+                        }
+                    }
+                    menuState = MenuState.mainMenu;
+
                     Play = GameObject.Find("play");
                     Developers = GameObject.Find("developers");
                     Exit = GameObject.Find("exit");
@@ -211,11 +222,21 @@ public class menuManager : MonoBehaviour
                     Buttons.Add(Play);
                     Buttons.Add(Developers);
                     Buttons.Add(Exit);
+                    
 
+                   
                     MenuIndex = 0;
                     moveMainMenu();
 
                     inisiate = true;
+                }
+                for (int i = 0; i < transform.parent.transform.childCount; i++)
+                {
+                    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
+                    if (!child == this.gameObject)
+                    {
+                        child.SetActive(false);
+                    }
                 }
                 if (Input.GetKeyDown(KeyCode.W))
                 {

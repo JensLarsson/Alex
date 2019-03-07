@@ -8,12 +8,12 @@ public class conversationCollection : MonoBehaviour
     [SerializeField] List<GameObject> thisCharacterConversations = new List<GameObject>();
 
     public bool isInDialogueTrigger = false;
+    [HideInInspector] public bool isActive = false;
     public float StartDelay;
     // Use this for initialization
     void Start ()
     {
         StartDelay = activateDialogWith.delay;
-
     }
     public void isRemoved(GameObject removedGO)
     {
@@ -32,52 +32,76 @@ public class conversationCollection : MonoBehaviour
 	
     void sendConversationsToDialogManager()
     {
-        for (int i = 0; i < thisCharacterConversations.Count; i++)
+        isActive = true;
+        List<GameObject> tempList = new List<GameObject>();
+        Debug.Log(tempList.Count);
+        //for (int i = thisCharacterConversations.Count - 1; i >= 0; i--)
+        foreach(GameObject dialogs in thisCharacterConversations)
         {
-            bool can = true;
-            ContaningDialog con = thisCharacterConversations[i].gameObject.GetComponent<ContaningDialog>();
+            
+            bool isDialogueAcceible = true;
+            ContaningDialog con = dialogs.gameObject.GetComponent<ContaningDialog>();
 
-            if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted) && con.removeDialogIfQuestsHasCompleted.Count > 0)
-            {
-                isRemoved(thisCharacterConversations[i].gameObject);
-                Destroy(thisCharacterConversations[i].gameObject);
-
-                thisCharacterConversations.Remove(thisCharacterConversations[i]);
-                i = 0;
-            }
+         
             if (!QuestManager.Instance.questsExistsInCompletedQuests(con.instantiateDialogIfQuestsExistsInCompleted))
             {
-                can = false;
+                isDialogueAcceible = false;
+                Debug.Log("Dialog is removed");
             }
             if (!QuestManager.Instance.questsExistsInCurrentQuests(con.instantiateDialogIfQuestsExistsInCurrent))
             {
-                can = false;
+                isDialogueAcceible = false;
+                Debug.Log("Dialog is removed");
+            }
+            if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted)
+              && con.removeDialogIfQuestsHasCompleted.Count > 0)
+            {
+
+                isDialogueAcceible = false;
+                //Destroy(dialogs.gameObject);
+                //isRemoved(dialogs.gameObject);
+
+                //thisCharacterConversations.Remove(thisCharacterConversations[i]);
+                //return;
+                //i--;// = 0;
+            }
+            //Debug.Log(isDialogueAcceible);
+            if (isDialogueAcceible)
+            {
+                Debug.Log("made it");
+                Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName);
+                tempList.Add(dialogs);
             }
 
-            Debug.Log(can);
-            if (can)
-            {
-                thisCharacterConversations[i].GetComponent<ContaningDialog>().startConversation();
-            }
         }
+        Debug.Log(tempList.Count);
+        for(int i = 0; i < tempList.Count; i++)
+        {
+            tempList[i].GetComponent<ContaningDialog>().startConversation();
+            Debug.Log(tempList[i].GetComponent<ContaningDialog>().dialogueName);
+        }
+        tempList.Clear();
     }
 
 	// Update is called once per frame
 	void Update ()
     {
-        if (isInDialogueTrigger)
+        if (!DialogManager.Instance.isInDialogue && !isActive)
         {
-            if (Input.GetButtonDown("Submit") && activateDialogWith.onCollisionAndKeyDown)
+            if (isInDialogueTrigger)
             {
-                sendConversationsToDialogManager();
-            }
-            if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue)
-            {
-                StartDelay -= Time.deltaTime;
-                if (StartDelay < 0)
+                if (Input.GetButtonDown("Submit") && activateDialogWith.onCollisionAndKeyDown)
                 {
-                    StartDelay = activateDialogWith.delay;
                     sendConversationsToDialogManager();
+                }
+                if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue)
+                {
+                    StartDelay -= Time.deltaTime;
+                    if (StartDelay < 0)
+                    {
+                        StartDelay = activateDialogWith.delay;
+                        sendConversationsToDialogManager();
+                    }
                 }
             }
         }

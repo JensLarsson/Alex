@@ -389,8 +389,8 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: (Uh, we'll have to chase him into the cage. If we try and grab him Bertha
-      might hear, and I would like to live thank you very much.)
+    Text: (Uh, use the yarn to try and lure him into the cage. If we try and grab
+      him Bertha might hear, and I would like to live thank you very much.)
   canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
@@ -452,7 +452,6 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: adb49676a37d7474288366c2d867763e, type: 2}
-    getQuestsToCompleted: 0
 --- !u!1 &260093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1612,6 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
-    getQuestsToCompleted: 0
 --- !u!1 &934908571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,7 +2521,6 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: 8d81e0f45a2c01642b3610d5c980fb00, type: 2}
-    getQuestsToCompleted: 0
 --- !u!1001 &1451527790
 Prefab:
   m_ObjectHideFlags: 0
@@ -3540,7 +3537,6 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
-    getQuestsToCompleted: 0
 --- !u!114 &1975055583
 MonoBehaviour:
   m_ObjectHideFlags: 0
