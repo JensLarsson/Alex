@@ -27,6 +27,7 @@ public class BranchingDialogMovementController : MonoBehaviour
     void invokeAction(UnityEvent even)
     {
         even.Invoke();
+        this.gameObject.SetActive(false);
     }
 
 }

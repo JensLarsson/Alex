@@ -279,7 +279,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Mittens! Mittens!
-  canRepeatTheDialog: 1
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -441,7 +441,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I can\u2019t- I haven\u2019t been able to talk to him yet. But I\u2019m
       sure he loved it."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -522,7 +522,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 2114013279}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!114 &264613633
 MonoBehaviour:
@@ -793,7 +792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &424432274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +813,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1896227935}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!114 &424432275
 MonoBehaviour:
@@ -1086,8 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -1121,7 +1118,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me to the vase if yes, stay still if no
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
@@ -1319,13 +1316,24 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh! Oh dear! Mittens, watch out my darling!
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 424432273}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 424432274}
         m_MethodName: onFunctionCall
         m_Mode: 1
@@ -1504,8 +1512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -1520,7 +1527,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Does that mean you have a job? Have your own place and stuff. I wonder
       what it\u2019s like being an adult."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1639,7 +1646,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1894240317}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!114 &978099248
 MonoBehaviour:
@@ -1951,7 +1957,7 @@ MonoBehaviour:
     Text: 'Completed quest
 
 '
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2202,7 +2208,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 650167081}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!114 &1383545482
 MonoBehaviour:
@@ -2804,7 +2809,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2874,7 +2879,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 2108313881}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!114 &1574115331
 MonoBehaviour:
@@ -3059,7 +3063,6 @@ MonoBehaviour:
   - {fileID: 242447325}
   - {fileID: 166693374}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &1596810708
 BoxCollider2D:
@@ -3343,7 +3346,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
       here my sweet!"
-  canRepeatTheDialog: 1
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3429,8 +3432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -3483,7 +3485,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s keep going."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3534,10 +3536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  - {fileID: 11400000, guid: bc1252c3f6c8407429f4fbb9a23568f5, type: 2}
-  - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -3563,7 +3562,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I feel like I should be in school, but I have no memories of it. Are you
       in school? Move me if you are.
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3671,7 +3670,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 916178720}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!114 &2025035317
 MonoBehaviour:
@@ -3817,8 +3815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -3834,7 +3831,7 @@ MonoBehaviour:
     Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
       then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
       like to have a future."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3885,8 +3882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -3927,7 +3923,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I don\u2019t know, I just\u2026 Lets keep going."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
