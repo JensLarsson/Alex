@@ -485,6 +485,107 @@ Transform:
   m_Father: {fileID: 1596810710}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &264613631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 264613634}
+  - component: {fileID: 264613633}
+  - component: {fileID: 264613632}
+  m_Layer: 0
+  m_Name: 1.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &264613632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264613631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 2114013279}
+  isInDialogueTrigger: 0
+  isActive: 0
+  StartDelay: 0
+--- !u!114 &264613633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264613631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 10
+  walkLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkRight:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  standStill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &264613634
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264613631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1763253, y: -1.0528879, z: 0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2114013280}
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &301271718
 Prefab:
   m_ObjectHideFlags: 0
@@ -676,6 +777,140 @@ MonoBehaviour:
   maxDuration: 1.45
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: a3b1dde38cffb694b85fa6eea1a24df6, type: 2}
+--- !u!1 &424432273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 424432276}
+  - component: {fileID: 424432275}
+  - component: {fileID: 424432274}
+  m_Layer: 0
+  m_Name: Dia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &424432274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424432273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1896227935}
+  isInDialogueTrigger: 0
+  isActive: 0
+  StartDelay: 0
+--- !u!114 &424432275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424432273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1574115329}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1574115330}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkRight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2025035315}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2025035316}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  standStill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &424432276
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424432273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1763253, y: -1.0528879, z: 0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1896227936}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445768881
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +1044,94 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ae80aff78b76fc4dae60b354a7d4f5f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &650167081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 650167082}
+  - component: {fileID: 650167083}
+  m_Layer: 0
+  m_Name: Continuation Dia (1 and 2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &650167082
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 650167081}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1063253, y: -0.74711204, z: -0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1383545483}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &650167083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 650167081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: " I mean, best case scenario we end up resetting the game. I go back to
+      not knowing. Even then, I don\u2019t have a future, nothing to look forward
+      to. Just a single moment, a happy one, but never anything else."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Having a future, something to imagine or dream about, that must really
+      be something. I\u2026 do you have a dream? Something you really want, for your
+      future."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Move me to the vase if yes, stay still if no
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers:
+  - {fileID: 1894240317}
+  - {fileID: 2114013279}
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &672524967
 Prefab:
   m_ObjectHideFlags: 0
@@ -999,12 +1322,21 @@ MonoBehaviour:
   canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
-  answers:
-  - {fileID: 816289626}
-  - {fileID: 990230426}
+  answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424432274}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &788382728
@@ -1020,11 +1352,6 @@ Transform:
   m_Father: {fileID: 1596810710}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &816289626 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1388063501404286, guid: acd47a38cd6b0814d98d5ed21396f932,
-    type: 2}
-  m_PrefabInternal: {fileID: 1593962271}
 --- !u!1 &898043720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1462,73 @@ MonoBehaviour:
   songs:
   - {fileID: 8300000, guid: a0f1151d68d58754d940b75900e1c187, type: 3}
   - {fileID: 8300000, guid: e776fa6df24245d498b35e9520c804ba, type: 3}
+--- !u!1 &916178720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 916178721}
+  - component: {fileID: 916178722}
+  m_Layer: 0
+  m_Name: Dia (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &916178721
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916178720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1063253, y: -0.74711204, z: -0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2025035318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &916178722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916178720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Does that mean you have a job? Have your own place and stuff. I wonder
+      what it\u2019s like being an adult."
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &928832677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,11 +1602,107 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &990230426 stripped
+--- !u!1 &978099246
 GameObject:
-  m_PrefabParentObject: {fileID: 1899737445407098, guid: 3ae80aff78b76fc4dae60b354a7d4f5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 547413188}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 978099249}
+  - component: {fileID: 978099248}
+  - component: {fileID: 978099247}
+  m_Layer: 0
+  m_Name: 1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &978099247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978099246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1894240317}
+  isInDialogueTrigger: 0
+  isActive: 0
+  StartDelay: 0
+--- !u!114 &978099248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978099246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 10
+  walkLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkRight:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  standStill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &978099249
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978099246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1763253, y: -1.0528879, z: 0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1894240318}
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053609716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +2165,107 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: Submit
+--- !u!1 &1383545480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1383545483}
+  - component: {fileID: 1383545482}
+  - component: {fileID: 1383545481}
+  m_Layer: 0
+  m_Name: Continuation of Dia1&2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1383545481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383545480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 650167081}
+  isInDialogueTrigger: 0
+  isActive: 0
+  StartDelay: 0
+--- !u!114 &1383545482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383545480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 10
+  walkLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkRight:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  standStill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1383545483
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383545480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1763253, y: -1.0528879, z: 0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 650167082}
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1427158077
 Prefab:
   m_ObjectHideFlags: 0
@@ -2246,6 +2837,118 @@ Transform:
   m_Father: {fileID: 1596810710}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1574115329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1574115332}
+  - component: {fileID: 1574115331}
+  - component: {fileID: 1574115330}
+  m_Layer: 0
+  m_Name: Dia1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1574115330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574115329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 2108313881}
+  isInDialogueTrigger: 0
+  isActive: 0
+  StartDelay: 0
+--- !u!114 &1574115331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574115329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0.01
+  walkLeft:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkRight:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  standStill:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1383545480}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1383545481}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1574115332
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574115329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1763253, y: -1.0528879, z: 0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2108313882}
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1593962271
 Prefab:
   m_ObjectHideFlags: 0
@@ -2684,6 +3387,191 @@ Transform:
   m_Father: {fileID: 1596810710}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1894240317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1894240318}
+  - component: {fileID: 1894240319}
+  m_Layer: 0
+  m_Name: 1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1894240318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894240317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1063253, y: -0.74711204, z: -0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 978099249}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894240319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894240317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I hope you get whatever it is, I really do. I don\u2019t know, something
+      about knowing someone has a future, it just makes me feel\u2026 less awful,
+      I guess. Especially since it\u2019s you."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "You \u2013 you\u2019ve been pretty great. I couldn\u2019t have gotten this
+      far without you. Even literally, like, I can\u2019t move without you letting
+      me."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "But also, you\u2019ve been there. I know I can\u2019t see you, I don\u2019t
+      even know your name, but you\u2019re there. Figuring things out for me. I mean,
+      you were only gonna play a game, I\u2019m sure you didn\u2019t exactly intend
+      to get caught up in my existential crisis."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Just, thank you, I guess.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Let\u2019s keep going."
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &1896227935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1896227936}
+  - component: {fileID: 1896227937}
+  m_Layer: 0
+  m_Name: Dia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896227936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896227935}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1063253, y: -0.74711204, z: -0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 424432276}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896227937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896227935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  - {fileID: 11400000, guid: bc1252c3f6c8407429f4fbb9a23568f5, type: 2}
+  - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "She keep saying she\u2019s a doctor, but can someone who\u2019s not real
+      have a doctorate? How can she remembers being in school if, you know, she obviously
+      hasn\u2019t? I wonder what she would say if I asked her what it was like, or
+      what school she went to."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I feel like I should be in school, but I have no memories of it. Are you
+      in school? Move me if you are.
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2024228891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,6 +3634,118 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2025035315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2025035318}
+  - component: {fileID: 2025035317}
+  - component: {fileID: 2025035316}
+  m_Layer: 0
+  m_Name: Dia2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2025035316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2025035315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 916178720}
+  isInDialogueTrigger: 0
+  isActive: 0
+  StartDelay: 0
+--- !u!114 &2025035317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2025035315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0.01
+  walkLeft:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkRight:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  walkDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  standStill:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1383545480}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1383545481}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &2025035318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2025035315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1763253, y: -1.0528879, z: 0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 916178721}
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062246032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,3 +3775,164 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2108313881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2108313882}
+  - component: {fileID: 2108313883}
+  m_Layer: 0
+  m_Name: Dia (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108313882
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108313881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1063253, y: -0.74711204, z: -0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1574115332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2108313883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108313881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
+      then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
+      like to have a future."
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &2114013279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2114013280}
+  - component: {fileID: 2114013281}
+  m_Layer: 0
+  m_Name: 1.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2114013280
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114013279}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1063253, y: -0.74711204, z: -0.1362481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 264613634}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114013281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114013279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well, at least we have something in common. Or, maybe you\u2019re already
+      living your dream, maybe your life is perfect. It is bad I kind of hope it isn\u2019t?"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: " Even if it is, don\u2019t you want something to look forward to? I feel
+      like that would be the best part about having a future, looking forward to it."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: If I had one, I would. I would make it whatever I wanted and I would always
+      find something new to want.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I don\u2019t know, I just\u2026 Lets keep going."
+  canRepeatTheDialog: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
