@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d147ef13ca3a74592e813a7bec33be, type: 3}
-  m_Name: Ash puzzle dialogue
+  m_Name: First contact
   m_EditorClassIdentifier: 
-  _name: Ash Puzzle Dialogue
-  description: Talking to Ash about gettin ghim away from his computer
+  _name: First contact with player
+  description: 'The first time Alex attempts to communicate with the player. '

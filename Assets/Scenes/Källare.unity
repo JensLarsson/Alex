@@ -2867,7 +2867,7 @@ GameObject:
   - component: {fileID: 1459883030}
   - component: {fileID: 1459883029}
   m_Layer: 0
-  m_Name: "B\xF6\xF6kshelf Diag"
+  m_Name: Bookshelf Diag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
