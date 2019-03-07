@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d147ef13ca3a74592e813a7bec33be, type: 3}
-  m_Name: Ash puzzle dialogue
+  m_Name: Part 1 done
   m_EditorClassIdentifier: 
-  _name: Ash Puzzle Dialogue
-  description: Talking to Ash about getting him away from his computer
+  _name: Part 1 done
+  description: Part 1 of this dialogue option

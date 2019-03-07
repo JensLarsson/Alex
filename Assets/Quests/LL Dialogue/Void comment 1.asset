@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Void comment 1
   m_EditorClassIdentifier: 
   _name: 
-  description: 
+  description: The comment about the void in the floor

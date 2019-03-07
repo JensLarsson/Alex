@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Main Dialogue
   m_EditorClassIdentifier: 
   _name: MD
-  description: Main dialogue for hoarder done
+  description: Main dialogue for hoarder

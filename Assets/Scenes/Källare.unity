@@ -309,7 +309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: fcca59c715eb3f947b62e236fec70b93, type: 2}
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -2867,7 +2868,7 @@ GameObject:
   - component: {fileID: 1459883030}
   - component: {fileID: 1459883029}
   m_Layer: 0
-  m_Name: "B\xF6\xF6kshelf Diag"
+  m_Name: Bookshelf Diag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2976,7 +2977,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent:
   - {fileID: 11400000, guid: bc1252c3f6c8407429f4fbb9a23568f5, type: 2}
-  instantiateDialogIfQuestsExistsInCompleted: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: fcca59c715eb3f947b62e236fec70b93, type: 2}
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: f89eece348cdaf04fb7240ffb05c2db6, type: 2}
   diffrentStartSounds: []
