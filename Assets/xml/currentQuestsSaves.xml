@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<ArrayOfQuest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfQuestSO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestSO>
+    <name>Hello</name>
+    <hideFlags>None</hideFlags>
+    <_name>Hello</_name>
+    <description>Hello World!</description>
+  </QuestSO>
+</ArrayOfQuestSO>

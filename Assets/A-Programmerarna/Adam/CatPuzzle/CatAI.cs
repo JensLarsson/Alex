@@ -89,12 +89,6 @@ public class CatAI : MonoBehaviour {
         return temp;
     }
 
-    public void MakePathRequest(Vector3 pathStart, Vector3 pathEnd, float _speed)
-    {
-        speed = _speed;
-        PathRequestManager.RequestPath(pathStart, pathEnd, OnPathFound);
-    }
-
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
     {
         if (pathSuccessful)

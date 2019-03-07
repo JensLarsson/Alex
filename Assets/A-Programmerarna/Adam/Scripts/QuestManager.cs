@@ -134,6 +134,20 @@ public class QuestManager : MonoBehaviour
         }
         return numberofRightQuests == quests.Count;
     }
+
+    public bool questsExistsInCurrentQuests(QuestSO[] quests)
+    {
+        int numberofRightQuests = 0;
+        foreach (QuestSO quest in quests)
+        {
+            if (questExistsInCurrentQuests(quest))
+            {
+                numberofRightQuests++;
+            }
+        }
+        return numberofRightQuests == quests.Length;
+    }
+
     public bool questExistsInCompletedQuests(string name)
     {
         return completedQuests.Contains(findQuestInCompletedQuests(name));
@@ -157,46 +171,29 @@ public class QuestManager : MonoBehaviour
         return numberofRightQuests == quests.Count;
     }
 
+    public bool questsExistsInCompletedQuests(QuestSO[] quests)
+    {
+        int numberofRightQuests = 0;
+        foreach (QuestSO quest in quests)
+        {
+            if (questExistsInCompletedQuests(quest))
+            {
+                numberofRightQuests++;
+            }
+        }
+        return numberofRightQuests == quests.Length;
+    }
+
     public void SaveQuests()
     {
-        List<Quest> tempCurrentQuests = new List<Quest>();
-        foreach (QuestSO questSO in currentQuests)
-        {
-            Quest quest = new Quest();
-            quest._name = questSO._name;
-            quest.description = questSO.description;
-            tempCurrentQuests.Add(quest);
-        }
-        List<Quest> tempCompletedQuests = new List<Quest>();
-        foreach (QuestSO questSO in completedQuests)
-        {
-            Quest quest = new Quest();
-            quest._name = questSO._name;
-            quest.description = questSO.description;
-            tempCompletedQuests.Add(quest);
-        }
-        XMLManger.Instance.Savequests(tempCurrentQuests, currentQuestsSaves);
-        XMLManger.Instance.Savequests(tempCompletedQuests, completedQuestsSaves);
+        XMLManger.Instance.Savequests(currentQuests, currentQuestsSaves);
+        XMLManger.Instance.Savequests(completedQuests, completedQuestsSaves);
     }
 
     public void LoadQuests()
     {
-        List<Quest> tempCurrentQuests = XMLManger.Instance.Loadquests(currentQuestsSaves);
-        foreach (Quest quest in tempCurrentQuests)
-        {
-            QuestSO questSO = new QuestSO();
-            questSO._name = quest._name;
-            questSO.description = quest.description;
-            currentQuests.Add(questSO);
-        }
-        List<Quest> tempCompletedQuests = XMLManger.Instance.Loadquests(completedQuestsSaves);
-        foreach (Quest quest in tempCompletedQuests)
-        {
-            QuestSO questSO = new QuestSO();
-            questSO._name = quest._name;
-            questSO.description = quest.description;
-            completedQuests.Add(questSO);
-        }
+        currentQuests = XMLManger.Instance.Loadquests(currentQuestsSaves);
+        completedQuests = XMLManger.Instance.Loadquests(completedQuestsSaves);
     }
 
     QuestSO findQuestInCurrentQuests(string name)
@@ -245,7 +242,7 @@ public class QuestManager : MonoBehaviour
         foreach (QuestSO forQuest in quests)
         {
             Debug.Log(forQuest._name);
-            if (forQuest._name == quest._name)
+            if (forQuest == quest)
             {
                 return quest;
             }
