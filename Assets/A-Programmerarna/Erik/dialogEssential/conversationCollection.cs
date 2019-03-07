@@ -8,6 +8,7 @@ public class conversationCollection : MonoBehaviour
     [SerializeField] List<GameObject> thisCharacterConversations = new List<GameObject>();
 
     public bool isInDialogueTrigger = false;
+    [HideInInspector] public bool isActive = false;
     public float StartDelay;
     // Use this for initialization
     void Start ()
@@ -32,30 +33,34 @@ public class conversationCollection : MonoBehaviour
 	
     void sendConversationsToDialogManager()
     {
+        isActive = true;
         for (int i = 0; i < thisCharacterConversations.Count; i++)
         {
-            bool can = true;
+            
+            bool isDialogueAcceible = true;
             ContaningDialog con = thisCharacterConversations[i].gameObject.GetComponent<ContaningDialog>();
 
-            if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted) && con.removeDialogIfQuestsHasCompleted.Count > 0)
+            if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted)
+                 && con.removeDialogIfQuestsHasCompleted.Count > 0)
             {
-                isRemoved(thisCharacterConversations[i].gameObject);
-                Destroy(thisCharacterConversations[i].gameObject);
 
+                //isRemoved(thisCharacterConversations[i].gameObject);
+                Destroy(thisCharacterConversations[i].gameObject);
                 thisCharacterConversations.Remove(thisCharacterConversations[i]);
+                return;
                 i = 0;
             }
             if (!QuestManager.Instance.questsExistsInCompletedQuests(con.instantiateDialogIfQuestsExistsInCompleted))
             {
-                can = false;
+                isDialogueAcceible = false;
             }
             if (!QuestManager.Instance.questsExistsInCurrentQuests(con.instantiateDialogIfQuestsExistsInCurrent))
             {
-                can = false;
+                isDialogueAcceible = false;
             }
 
-            Debug.Log(can);
-            if (can)
+            //Debug.Log(isDialogueAcceible);
+            if (isDialogueAcceible)
             {
                 thisCharacterConversations[i].GetComponent<ContaningDialog>().startConversation();
             }
@@ -65,19 +70,22 @@ public class conversationCollection : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (isInDialogueTrigger)
+        if (!DialogManager.Instance.isInDialogue && !isActive)
         {
-            if (Input.GetButtonDown("Submit") && activateDialogWith.onCollisionAndKeyDown)
+            if (isInDialogueTrigger)
             {
-                sendConversationsToDialogManager();
-            }
-            if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue)
-            {
-                StartDelay -= Time.deltaTime;
-                if (StartDelay < 0)
+                if (Input.GetButtonDown("Submit") && activateDialogWith.onCollisionAndKeyDown)
                 {
-                    StartDelay = activateDialogWith.delay;
                     sendConversationsToDialogManager();
+                }
+                if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue)
+                {
+                    StartDelay -= Time.deltaTime;
+                    if (StartDelay < 0)
+                    {
+                        StartDelay = activateDialogWith.delay;
+                        sendConversationsToDialogManager();
+                    }
                 }
             }
         }
