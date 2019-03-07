@@ -1054,7 +1054,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - GO: {fileID: 0}
-    ButtonTextUI: Return To Game
+    ButtonTextUI: Sound +
     newEvent:
       m_PersistentCalls:
         m_Calls:
@@ -1243,9 +1243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfAllDoors:
-  - DoorToETS1
-  - DoorToETS2
-  - DoorToETS3
+  - "HelD\xF6rrKey1"
+  - "HelD\xF6rrKey2"
+  - "HelD\xF6rrKey3"
 --- !u!114 &114340990483254128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textColour: {r: 1, g: 1, b: 1, a: 1}
-  selectionColour: {r: 1, g: 0, b: 0, a: 1}
+  selectionColour: {r: 0.19634591, g: 0.11402467, b: 0.8161765, a: 1}
   xStartPos: 0
   yStartPos: 0
   ySpacing: 20
@@ -1450,7 +1450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb1423655c7b8f4e8a1f1fc116bed90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentQuests: []
+  currentQuests:
+  - {fileID: 11400000, guid: 1a5495cd014a74844ace508005e0f08b, type: 2}
   completedQuests: []
 --- !u!114 &114750022118735002
 MonoBehaviour:
@@ -1568,7 +1569,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 97
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
