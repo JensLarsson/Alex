@@ -163,10 +163,10 @@ public class CatAI : MonoBehaviour {
         {
             anim.SetBool("hitWall", true);
         }
-        Vector3 direction = player.transform.position - transform.position;
+        /*Vector3 direction = player.transform.position - transform.position;
         direction = direction.normalized;
         //Vector3.Angle(-direction, -col.contacts[0].normal);
-        Debug.Log(Vector3.Angle(-direction, -col.contacts[0].normal));
+        Debug.Log(Vector3.Angle(-direction, -col.contacts[0].normal));*/
     }
     /*void OnCollisionStay2D(Collision2D col)
     {
