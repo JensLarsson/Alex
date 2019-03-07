@@ -189,7 +189,7 @@ MonoBehaviour:
     Text: "There\u2019s no dog. You\u2019re not God, are you? So you\u2019re a player.
       Yes, I\u2019ve decided \u2013 you\u2019re a player. So let\u2019s try to figure
       this out."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -354,7 +354,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Okay, that\u2019s\u2026 still weird, but I guess I can work with that."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -606,6 +606,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I might as well help her. Maybe it was blown down by a rogue gust of wind
       or something.
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -881,7 +882,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 785533109}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &614997799
 BoxCollider2D:
@@ -931,6 +931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622205557}
   - component: {fileID: 622205556}
+  - component: {fileID: 622205555}
   m_Layer: 0
   m_Name: Mom dialogue attic
   m_TagString: Untagged
@@ -938,6 +939,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &622205555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622205554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 8b1c3489cc371b443a13d387b769729a, type: 2}
 --- !u!114 &622205556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,7 +964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCurrent:
+  - {fileID: 11400000, guid: 8b1c3489cc371b443a13d387b769729a, type: 2}
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: d0c11910292b13b4f9879fcc5ef2a55e, type: 2}
   - {fileID: 11400000, guid: b3e204f08627780428a189db73b8f195, type: 2}
@@ -1059,12 +1074,24 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll be fine, mom."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 622205555}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &622205557
@@ -1158,7 +1185,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "So\u2026 If I\u2019m in a game, there should be a player, right? Like\u2026
       Uh\u2026 If you\u2019re out there\u2026 Maybe, like, move me somewhere?"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1402,6 +1429,7 @@ MonoBehaviour:
       with than go around knocking on doors and solving problems. Maybe I can use
       the tomato plushie to help mum remember where she put the actual tomatoes. I
       suppose I could try."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1600,6 +1628,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: " Let\u2019s keep going"
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1870,7 +1899,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &959768640
 MonoBehaviour:
@@ -2059,6 +2088,7 @@ MonoBehaviour:
       for the missing tomatoes, especially when he\u2019s glued to the screen. Hm\u2026
       Maybe I can use the tomato plushie to help mum remember where she put the actual
       tomatoes. I guess it\u2019s worth a shot."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2246,7 +2276,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "No, wait, I meant to say frock. Oh, I can\u2019t, uh\u2026 Okay, never
       mind that, this is too weird!? Are you like\u2026 God? Or just a player?"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
@@ -2374,6 +2404,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I\u2026 don\u2019t think so? I think I better pop down to the store just
       to be sure."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2634,7 +2665,6 @@ MonoBehaviour:
   - {fileID: 1163817621}
   - {fileID: 901429971}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!1 &1320915306
 GameObject:
@@ -2836,7 +2866,7 @@ MonoBehaviour:
       Maybe if we designate some places or things near me as\u2026 cues? So, If you
       move me towards the couch, you\u2019re God. If you move me to the bookshelf,
       you\u2019re a player."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
@@ -3073,7 +3103,6 @@ MonoBehaviour:
   - {fileID: 622205554}
   - {fileID: 1071243131}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &1472341669
 BoxCollider2D:
@@ -3680,7 +3709,6 @@ MonoBehaviour:
     onFunctionCall: 0
   thisCharacterConversations: []
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!4 &1768441443
 Transform:
@@ -3783,6 +3811,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I will. Thanks again, dear!
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3957,7 +3986,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Ah, NO, stop!  That\u2019s so weird, and so creepy! How long have you been
       able to do that? Since just now? Since forever?"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
