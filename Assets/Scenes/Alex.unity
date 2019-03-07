@@ -455,7 +455,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I might as well help her. Maybe it was blown down by a rogue gust of wind
       or something.
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -908,7 +907,6 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll be fine, mom."
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1165,7 +1163,6 @@ MonoBehaviour:
       with than go around knocking on doors and solving problems. Maybe I can use
       the tomato plushie to help mum remember where she put the actual tomatoes. I
       suppose I could try."
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1364,7 +1361,6 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: " Let\u2019s keep going"
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1824,7 +1820,6 @@ MonoBehaviour:
       for the missing tomatoes, especially when he\u2019s glued to the screen. Hm\u2026
       Maybe I can use the tomato plushie to help mum remember where she put the actual
       tomatoes. I guess it\u2019s worth a shot."
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1941,16 +1936,6 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82584036002157830, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82495231319989140, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2074,7 +2059,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I\u2026 don\u2019t think so? I think I better pop down to the store just
       to be sure."
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3330,7 +3314,6 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I will. Thanks again, dear!
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
