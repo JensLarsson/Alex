@@ -582,7 +582,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Thanks, dear. I just have to find the shopping list\u2026"
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -756,7 +756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583821555
 GameObject:
@@ -882,6 +882,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 785533109}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!61 &614997799
 BoxCollider2D:
@@ -1131,7 +1132,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1535,7 +1536,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd25fce5634443743bd5613ec9c5d7b3,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1551,7 +1552,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Do you need anything from the grocery store? I\u2019m just on my way out."
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1559,7 +1560,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Mom no, no you\u2019re not. You\u2019ve been on your way for- for a while."
   - NameOfTalkingNPC: Mother
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1567,7 +1568,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I\u2019m just on my way out!"
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1575,7 +1576,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: " I- Alright mom. You do that, I\u2019m just gonna\u2026"
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 5e2b641a67c97b341a9ca60be4a2409b,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1584,7 +1585,7 @@ MonoBehaviour:
     Text: "(I can\u2019t stand this. Please, is there no other way to reset the game?
       I don\u2019t want to have to talk to all of them.)"
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 5e2b641a67c97b341a9ca60be4a2409b,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1595,7 +1596,7 @@ MonoBehaviour:
       was. I don\u2019t want to see my family and realize they aren\u2019t people.
       That I\u2019m not\u2026)"
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1873,7 +1874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &959768640
 MonoBehaviour:
@@ -2338,7 +2339,7 @@ MonoBehaviour:
     Text: "Oh, Alexandra! I was just about to make a salad, but we don\u2019t have
       any tomatoes, so I was thinking of hopping on the bike to go to the store."
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -2649,6 +2650,7 @@ MonoBehaviour:
   - {fileID: 1163817621}
   - {fileID: 901429971}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!1 &1320915306
 GameObject:
@@ -2815,7 +2817,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7ac037be3ae035e4682806ea398963bf,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -2840,7 +2842,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: '....'
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -3087,6 +3089,7 @@ MonoBehaviour:
   - {fileID: 622205554}
   - {fileID: 1071243131}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!61 &1472341669
 BoxCollider2D:
@@ -3693,6 +3696,7 @@ MonoBehaviour:
     onFunctionCall: 0
   thisCharacterConversations: []
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!4 &1768441443
 Transform:
@@ -3962,7 +3966,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7ac037be3ae035e4682806ea398963bf,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
