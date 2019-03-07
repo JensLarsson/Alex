@@ -113,53 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &29698608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 29698609}
-  - component: {fileID: 29698610}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &29698609
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 29698608}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 385150189}
-  m_Father: {fileID: 2144347799}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &29698610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 29698608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c648386700eb54491d8c8187707460, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 385150188}
 --- !u!1001 &95378728
 Prefab:
   m_ObjectHideFlags: 0
@@ -539,11 +492,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114672011085372362, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: currentQuests.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -634,118 +582,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1103365627639472, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672011085372362, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: currentQuests.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e8ceec4bf94f1c4d81d51c013f206d6,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &385150188
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 385150189}
-  - component: {fileID: 385150192}
-  - component: {fileID: 385150191}
-  - component: {fileID: 385150190}
-  m_Layer: 5
-  m_Name: Elevator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &385150189
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 385150188}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 29698609}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &385150190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 385150188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995d3c3b8e0f7d144a59fe752f9bdf82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floors:
-  - floorLabel: Basement
-    SceneName: "K\xE4llare"
-  - floorLabel: 1st
-    SceneName: Vaning1
-  - floorLabel: 2nd
-    SceneName: Vaning2
-  - floorLabel: Attic
-    SceneName: Vinden
-  textPrefab: {fileID: 1009490914401330, guid: b6cd3f123905f734ea1fe00f8377c2d9, type: 2}
-  textColour: {r: 1, g: 1, b: 1, a: 1}
-  selectionColour: {r: 1, g: 0, b: 0, a: 1}
-  xStartPos: 0
-  yStartPos: 30
-  yOffset: 30
-  moveButtonClip: {fileID: 0}
-  unusableClip: {fileID: 0}
-  buttonpressForce: 0.8
-  buttonpressTime: 0.06
---- !u!114 &385150191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 385150188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.859}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &385150192
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 385150188}
 --- !u!1 &414851412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,6 +2356,7 @@ MonoBehaviour:
   - {fileID: 242447325}
   - {fileID: 166693374}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!61 &1596810708
 BoxCollider2D:
@@ -2935,8 +2775,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &2144347799 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-    type: 2}
-  m_PrefabInternal: {fileID: 301271718}
