@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cat_Lady.unity
     guid: 732f3c7123ad9114a8825046113fbfbf
   - enabled: 1
+    path: Assets/Scenes/Cat_Puzzle_room.unity
+    guid: 32a319a9a3b44fc4e81fe6a96ce21fe1
+  - enabled: 1
     path: Assets/Scenes/Emo.unity
     guid: 5612417d0876ea641a8c3ad68f04fe83
   - enabled: 1
