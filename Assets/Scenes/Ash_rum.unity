@@ -562,7 +562,7 @@ MonoBehaviour:
     Text: Nice. Just make sure you make your bed before you go, so mom can vacuum
       your room later.
   - NameOfTalkingNPC: Ash
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bc13208bd783f43418a7198bb1b237d0,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -666,7 +666,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Ugh, I thought I told him to clean this up earlier.
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -827,7 +827,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -843,7 +843,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "It\u2019s great! Gonna head out soon, it\u2019s almost two o\u2019clock."
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -904,6 +904,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 385410481}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!61 &563843322
 BoxCollider2D:
@@ -1734,7 +1735,7 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Sure, I guess.
+    Text: I just jave to save first.
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1923,6 +1924,7 @@ MonoBehaviour:
   - {fileID: 1239779658}
   - {fileID: 1749640931}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!1 &1455064200
 GameObject:
@@ -2115,6 +2117,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1158505272}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!1 &1522769718
 GameObject:
@@ -2153,6 +2156,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1117389303}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!61 &1522769720
 BoxCollider2D:

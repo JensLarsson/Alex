@@ -31,8 +31,13 @@ public class keyQuestMain : MonoBehaviour
     {
         if (currentDoor < nameOfAllDoors.Length)
         {
-            GameObject door = GameObject.Find(nameOfAllDoors[currentDoor]);
-            door.GetComponent<SceneTrigger>().unlock();
+            
+                GameObject door = GameObject.Find(nameOfAllDoors[theDoor]);
+            if (door != null)
+            {
+                door.GetComponent<SceneTrigger>().unlock();
+            }
+            
 
             if (theDoor == currentDoor)
             {
@@ -48,7 +53,6 @@ public class keyQuestMain : MonoBehaviour
         {
           
             QuestManager.Instance.addToCompletedQuests("Door");
-            Debug.Log("QuestIsDone");
         }
         
     }

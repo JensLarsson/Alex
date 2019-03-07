@@ -266,6 +266,7 @@ MonoBehaviour:
   - {fileID: 1507287533}
   - {fileID: 294084254}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!1 &95105696
 GameObject:
@@ -761,7 +762,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: '...'
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1225,7 +1226,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -1526,6 +1527,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 536706721}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!4 &837141541
 Transform:
@@ -1827,6 +1829,7 @@ MonoBehaviour:
   - {fileID: 1330439140}
   - {fileID: 1579497917}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!4 &911317454
 Transform:
@@ -2585,15 +2588,15 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I recognise those shoes of yours. Also, you\u2019re practically the only
-      one who comes down to visit. Especially without knocking.\u201D"
+      one who comes down to visit. Especially without knocking."
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Oh, um, well\u2026\u201D"
+    Text: "Oh, um, well\u2026"
   - NameOfTalkingNPC: Martin
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 2670bfd5e2644c843a56c7de439be774,
       type: 3}
@@ -2688,7 +2691,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
@@ -2894,6 +2897,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 990176115}
   isInDialogueTrigger: 0
+  isActive: 0
   StartDelay: 0
 --- !u!61 &1459883030
 BoxCollider2D:
@@ -3098,7 +3102,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue: []
