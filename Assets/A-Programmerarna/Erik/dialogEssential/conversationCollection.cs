@@ -14,7 +14,6 @@ public class conversationCollection : MonoBehaviour
     void Start ()
     {
         StartDelay = activateDialogWith.delay;
-
     }
     public void isRemoved(GameObject removedGO)
     {
@@ -34,37 +33,54 @@ public class conversationCollection : MonoBehaviour
     void sendConversationsToDialogManager()
     {
         isActive = true;
-        for (int i = 0; i < thisCharacterConversations.Count; i++)
+        List<GameObject> tempList = new List<GameObject>();
+        Debug.Log(tempList.Count);
+        //for (int i = thisCharacterConversations.Count - 1; i >= 0; i--)
+        foreach(GameObject dialogs in thisCharacterConversations)
         {
             
             bool isDialogueAcceible = true;
-            ContaningDialog con = thisCharacterConversations[i].gameObject.GetComponent<ContaningDialog>();
+            ContaningDialog con = dialogs.gameObject.GetComponent<ContaningDialog>();
 
-            if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted)
-                 && con.removeDialogIfQuestsHasCompleted.Count > 0)
-            {
-
-                //isRemoved(thisCharacterConversations[i].gameObject);
-                Destroy(thisCharacterConversations[i].gameObject);
-                thisCharacterConversations.Remove(thisCharacterConversations[i]);
-                return;
-                i = 0;
-            }
+         
             if (!QuestManager.Instance.questsExistsInCompletedQuests(con.instantiateDialogIfQuestsExistsInCompleted))
             {
                 isDialogueAcceible = false;
+                Debug.Log("Dialog is removed");
             }
             if (!QuestManager.Instance.questsExistsInCurrentQuests(con.instantiateDialogIfQuestsExistsInCurrent))
             {
                 isDialogueAcceible = false;
+                Debug.Log("Dialog is removed");
             }
+            if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted)
+              && con.removeDialogIfQuestsHasCompleted.Count > 0)
+            {
 
+                isDialogueAcceible = false;
+                //Destroy(dialogs.gameObject);
+                //isRemoved(dialogs.gameObject);
+
+                //thisCharacterConversations.Remove(thisCharacterConversations[i]);
+                //return;
+                //i--;// = 0;
+            }
             //Debug.Log(isDialogueAcceible);
             if (isDialogueAcceible)
             {
-                thisCharacterConversations[i].GetComponent<ContaningDialog>().startConversation();
+                Debug.Log("made it");
+                Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName);
+                tempList.Add(dialogs);
             }
+
         }
+        Debug.Log(tempList.Count);
+        for(int i = 0; i < tempList.Count; i++)
+        {
+            tempList[i].GetComponent<ContaningDialog>().startConversation();
+            Debug.Log(tempList[i].GetComponent<ContaningDialog>().dialogueName);
+        }
+        tempList.Clear();
     }
 
 	// Update is called once per frame
