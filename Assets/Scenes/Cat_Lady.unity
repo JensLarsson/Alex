@@ -389,7 +389,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: (Uh, use the yarn to try and lure him into the cage. If we try and grab
       him Bertha might hear, and I would like to live thank you very much.)
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -921,6 +920,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1016610939121626, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
   m_IsPrefabParent: 0
@@ -1295,7 +1298,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
       here my sweet!"
-  canRepeatTheDialog: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2071,7 +2073,6 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I can\u2019t- I haven\u2019t been able to talk to him yet. But I\u2019m
       sure he loved it."
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2221,7 +2222,6 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Mittens! Mittens!
-  canRepeatTheDialog: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2372,7 +2372,6 @@ MonoBehaviour:
   - {fileID: 1403819934}
   - {fileID: 1495928090}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &1497692799
 BoxCollider2D:
@@ -2862,7 +2861,6 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"
-  canRepeatTheDialog: 0
   hasBeenRead: 0
   siblings: []
   answers: []

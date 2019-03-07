@@ -67,7 +67,6 @@ public class DialogManager : MonoBehaviour
     [HideInInspector] public float soundDelay;
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
-    //List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
 
     //säkerställer så att det inte finns flera DialogManager
     void Start()
@@ -234,7 +233,7 @@ public class DialogManager : MonoBehaviour
                             {
                                 activeDialog.events.Invoke();
                             }
-                            activeDialog.holder.transform.parent.gameObject.GetComponent<conversationCollection>().isActive = false;
+
                             activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
                             ChoseDialogue.Instance.leaveMultyChoiceDialogue();
 
