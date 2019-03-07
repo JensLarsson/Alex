@@ -8,7 +8,6 @@ public class conversationCollection : MonoBehaviour
     [SerializeField] List<GameObject> thisCharacterConversations = new List<GameObject>();
 
     public bool isInDialogueTrigger = false;
-    [HideInInspector] public bool isActive = false;
     public float StartDelay;
     // Use this for initialization
     void Start ()
@@ -32,7 +31,6 @@ public class conversationCollection : MonoBehaviour
 	
     void sendConversationsToDialogManager()
     {
-        isActive = true;
         List<GameObject> tempList = new List<GameObject>();
         Debug.Log(tempList.Count);
         //for (int i = thisCharacterConversations.Count - 1; i >= 0; i--)
@@ -46,29 +44,19 @@ public class conversationCollection : MonoBehaviour
             if (!QuestManager.Instance.questsExistsInCompletedQuests(con.instantiateDialogIfQuestsExistsInCompleted))
             {
                 isDialogueAcceible = false;
-                Debug.Log("Dialog is removed");
             }
             if (!QuestManager.Instance.questsExistsInCurrentQuests(con.instantiateDialogIfQuestsExistsInCurrent))
             {
                 isDialogueAcceible = false;
-                Debug.Log("Dialog is removed");
             }
             if (QuestManager.Instance.questsExistsInCompletedQuests(con.removeDialogIfQuestsHasCompleted)
               && con.removeDialogIfQuestsHasCompleted.Count > 0)
             {
-
                 isDialogueAcceible = false;
-                //Destroy(dialogs.gameObject);
-                //isRemoved(dialogs.gameObject);
-
-                //thisCharacterConversations.Remove(thisCharacterConversations[i]);
-                //return;
-                //i--;// = 0;
             }
-            //Debug.Log(isDialogueAcceible);
+
             if (isDialogueAcceible)
             {
-                Debug.Log("made it");
                 Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName);
                 tempList.Add(dialogs);
             }
@@ -86,12 +74,14 @@ public class conversationCollection : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (!DialogManager.Instance.isInDialogue && !isActive)
+        
+        if (!DialogManager.Instance.isInDialogue)
         {
             if (isInDialogueTrigger)
             {
                 if (Input.GetButtonDown("Submit") && activateDialogWith.onCollisionAndKeyDown)
                 {
+                    Debug.Log("test");
                     sendConversationsToDialogManager();
                 }
                 if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue)

@@ -67,7 +67,6 @@ public class DialogManager : MonoBehaviour
     [HideInInspector] public float soundDelay;
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
-    //List<GameObject[]> alexAvailableAnswers = new List<GameObject[]>();
 
     //säkerställer så att det inte finns flera DialogManager
     void Start()
@@ -230,15 +229,9 @@ public class DialogManager : MonoBehaviour
                         //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
                         if (dialogAt >= activeDialog.dialogs.Count)
                         {
-                            if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
-                            {
-                                activeDialog.events.Invoke();
-                            }
-                            activeDialog.holder.transform.parent.gameObject.GetComponent<conversationCollection>().isActive = false;
-                            activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
-                            ChoseDialogue.Instance.leaveMultyChoiceDialogue();
+                           ChoseDialogue.Instance.leaveMultyChoiceDialogue();
 
-                            activeDialog = null;
+                         
                             dialogTextUI.enabled = false;
                             dialogNameTagUI.enabled = false;
                             dialogPortraitImageUI.enabled = false;
@@ -247,6 +240,14 @@ public class DialogManager : MonoBehaviour
 
                             quedDialogs.Clear();
                             ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = false;
+                            Debug.Log("before invoke");
+                            if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
+                            {
+                                activeDialog.events.Invoke();
+                            }
+                            activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
+                            activeDialog = null;
+                           
                         }
                     }
                 }
@@ -267,28 +268,7 @@ public class DialogManager : MonoBehaviour
                 dialogNameTagUI.enabled = false;
                 dialogPortraitImageUI.enabled = false;
                 dialogAt = 0;
-
-                //for (int i = 0; i < quedDialogs.Count; i++)
-                //{
-                //    ContaningDialog dialogIndex = quedDialogs[i].holder.GetComponent<ContaningDialog>();
-                //    if (QuestManager.Instance.questsExistsInCompletedQuests(dialogIndex.removeDialogIfQuestsHasCompleted) && dialogIndex.removeDialogIfQuestsHasCompleted.Count > 0)
-                //    {
-                //        Debug.Log("should search");
-                //        quedDialogs[i].holder.gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(quedDialogs[i].holder);
-                //        Destroy(quedDialogs[i].holder);
-                //        quedDialogs.Clear();
-                //        //quedDialogs.Remove(quedDialogs[i]);
-                //    }
-                //    if (!QuestManager.Instance.questsExistsInCompletedQuests(dialogIndex.instantiateDialogIfQuestsExistsInCompleted))
-                //    {
-                //        quedDialogs.Remove(quedDialogs[i]);
-                //    }
-                //    if (!QuestManager.Instance.questsExistsInCurrentQuests(dialogIndex.instantiateDialogIfQuestsExistsInCurrent))
-                //    {
-                //        quedDialogs.Remove(quedDialogs[i]);
-                //    }
-
-                //}
+                
                 if (quedDialogs.Count == 1)
                 {
                     //letar efter en ny dialog och ifall det finns en

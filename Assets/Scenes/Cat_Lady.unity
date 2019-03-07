@@ -391,7 +391,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: (Uh, use the yarn to try and lure him into the cage. If we try and grab
       him Bertha might hear, and I would like to live thank you very much.)
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -452,6 +452,7 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: adb49676a37d7474288366c2d867763e, type: 2}
+    getQuestsToCompleted: 0
 --- !u!1 &260093188
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +610,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Taffy! Oh, you rascal where have you been? I\u2019ve been worried sick
       you curious kitty."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
@@ -1069,6 +1070,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1016610939121626, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
   m_IsPrefabParent: 0
@@ -1230,7 +1235,7 @@ MonoBehaviour:
     Text: "Oh, hello Alex dear, have you seen Mittens? It\u2019s time for his bath,
       and I can\u2019t seem to find him anywhere. Must be hiding, he never liked the
       baths. But I always tell him a clean boy is a good boy!"
-  canRepeatTheDialog: 1
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1551,7 +1556,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
       here my sweet!"
-  canRepeatTheDialog: 1
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1612,6 +1617,7 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
+    getQuestsToCompleted: 0
 --- !u!1 &934908571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,7 +2028,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh! Oh dear! Mittens, watch out my darling!
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2460,7 +2466,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I can\u2019t- I haven\u2019t been able to talk to him yet. But I\u2019m
       sure he loved it."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2521,6 +2527,7 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: 8d81e0f45a2c01642b3610d5c980fb00, type: 2}
+    getQuestsToCompleted: 0
 --- !u!1001 &1451527790
 Prefab:
   m_ObjectHideFlags: 0
@@ -2650,7 +2657,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Mittens! Mittens!
-  canRepeatTheDialog: 1
+  canRepeat: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3110,7 +3117,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Mittens! Mittens!
-  canRepeatTheDialog: 1
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3287,7 +3294,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh! Oh dear! Mittens, watch out my darling!
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3500,7 +3507,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3537,6 +3544,7 @@ MonoBehaviour:
     completedQuestsToCheck: []
     questsToGet:
     - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
+    getQuestsToCompleted: 0
 --- !u!114 &1975055583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3878,7 +3886,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Dearie! How was the pie?
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []

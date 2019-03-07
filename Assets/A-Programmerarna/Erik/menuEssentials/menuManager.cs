@@ -15,6 +15,8 @@ class menuFunction
 
 public class menuManager : MonoBehaviour
 {
+    private static menuManager instance;
+    public static menuManager Instance { get { return instance; } }
 
     [SerializeField] Material basic;
     [SerializeField] Material selected;
@@ -25,13 +27,13 @@ public class menuManager : MonoBehaviour
 
     [SerializeField] List<menuFunction> menuButtons = new List<menuFunction>();
     [SerializeField] string activeMenuButton;
-    [HideInInspector] public  enum MenuState
+    public enum MenuState
     {
         mainMenu,
         menu,
         noMenu
     }
-    [HideInInspector] public MenuState menuState;
+    public MenuState menuState;
     bool inisiate = false;
 
   [SerializeField] public static bool IsInMenu = false;
@@ -69,8 +71,15 @@ public class menuManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        
-	}
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogError("There is too many ChoseDialogue placed on scene");
+        }
+    }
     void changeMenuState(MenuState newMenuState)
     {
         inisiate = false;

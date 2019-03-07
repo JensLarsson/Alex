@@ -39,9 +39,9 @@ public class ContaningDialog : MonoBehaviour
     [SerializeField] List<Dialogs> speechBubbles = new List<Dialogs>();
 
     [Header("Dialogue functions")]
-    public bool canRepeatTheDialog = false;
+    public bool canRepeat = false;
   // public bool canBeActivated = true;
-    [SerializeField] public bool hasBeenRead = false;
+    [HideInInspector] public bool hasBeenRead = false;
     [HideInInspector] public List<GameObject> siblings = new List<GameObject>();
     [SerializeField] GameObject[] answers;
     [SerializeField] UnityEvent doAfterDialgue;
@@ -81,9 +81,8 @@ public class ContaningDialog : MonoBehaviour
     }
     public void resetDialogue(bool wasSelected)
     {
-        if(!canRepeatTheDialog && wasSelected)
+        if(wasSelected && !canRepeat != !true)
         {
-            Debug.Log("should search");
             gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(this.gameObject);
             Destroy(this.gameObject);
         }
