@@ -711,7 +711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466896371
 GameObject:
@@ -1062,7 +1062,7 @@ Transform:
   - {fileID: 2140077883}
   - {fileID: 1133804261}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &588258357
 MonoBehaviour:
@@ -1219,76 +1219,6 @@ Prefab:
     - {fileID: 114379756518243968, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &720083901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 720083905}
-  - component: {fileID: 720083904}
-  - component: {fileID: 720083903}
-  - component: {fileID: 720083902}
-  m_Layer: 0
-  m_Name: GridManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &720083902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720083901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea1e4a0316a3d04091ffcdcfd261c66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &720083903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720083901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0f68248502b25e41994dec31341ceff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &720083904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720083901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001bf9374dd51224585de6e8bd9ba9b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayGridGizmos: 0
-  unwakableMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gridWorldSize: {x: 0, y: 0}
-  nodeRadius: 0
---- !u!4 &720083905
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720083901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816565459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1492,7 @@ Transform:
   - {fileID: 1276485154}
   - {fileID: 562187151}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1097748067
 Prefab:
@@ -2942,6 +2872,7 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   player: {fileID: 663386513}
   cage: {fileID: 588258353}
+  lightVision: {fileID: 1523577287}
   visionMask:
     serializedVersion: 2
     m_Bits: 256
@@ -3502,7 +3433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013781999
 GameObject:
