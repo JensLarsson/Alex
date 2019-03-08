@@ -45,6 +45,11 @@ public class SceneController : MonoBehaviour
         //skicka string av scen till save klassen
     }
 
+    public void resetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     IEnumerator SceneTransition(string scene, float f = 0.0f)
     {
         if (!transitioning)
