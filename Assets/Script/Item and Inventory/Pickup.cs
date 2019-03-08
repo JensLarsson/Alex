@@ -15,14 +15,18 @@ public class Pickup : MonoBehaviour
     {
         if (inside && Input.GetButtonDown(button) && PlayerMovement.canMove)
         {
-            Inventory.instance.AddItem(item);
-            if (removeOnPickup)
-            {
-                Destroy(this.gameObject);
-            }
+            pickup();
         }
     }
-   
+    public void pickup()
+    {
+        Inventory.instance.AddItem(item);
+        if (removeOnPickup)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
