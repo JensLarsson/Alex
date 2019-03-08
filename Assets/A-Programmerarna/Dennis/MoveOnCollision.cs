@@ -33,8 +33,8 @@ public class MoveOnCollision : MonoBehaviour
 
 
         //startPos = transform.position;
-        timeToLerp += Time.deltaTime;
-        transform.position = Vector2.Lerp(startPos, travelPos, timeToLerp);
+        timeToLerp += Time.deltaTime*timeToDestination;
+        transform.position = Vector2.Lerp(startPos, travelPos, timeToLerp );
         if (Vector2.Distance(transform.position, travelPos) < narmeVarde && isLerping)
         {
             isLerping = false;

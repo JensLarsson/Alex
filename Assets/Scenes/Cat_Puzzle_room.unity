@@ -962,6 +962,7 @@ GameObject:
   - component: {fileID: 588258356}
   - component: {fileID: 588258355}
   - component: {fileID: 588258354}
+  - component: {fileID: 588258357}
   m_Layer: 0
   m_Name: Cage
   m_TagString: cage
@@ -1063,6 +1064,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588258357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588258353}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  removeOnPickup: 1
+  accessOnlyThroughScript: 0
+  button: Submit
 --- !u!1 &595724236
 GameObject:
   m_ObjectHideFlags: 0

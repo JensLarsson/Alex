@@ -6,14 +6,14 @@ public class Pickup : MonoBehaviour
 {
     public Item item;
     [Tooltip("Removes the sprite from the map when picked up if 'true'")]
-    public bool removeOnPickup = false;
+    public bool removeOnPickup = false, accessOnlyThroughScript=false;
     public string button = "Submit";
     bool inside = false;
 
 
     private void Update()
     {
-        if (inside && Input.GetButtonDown(button) && PlayerMovement.canMove)
+        if (inside && Input.GetButtonDown(button) && PlayerMovement.canMove && !accessOnlyThroughScript)
         {
             pickup();
         }
