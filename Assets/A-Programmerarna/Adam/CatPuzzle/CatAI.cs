@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
@@ -26,6 +27,9 @@ public class CatAI : MonoBehaviour
     {
         return player;
     }
+
+    public UnityEvent victoryEvent;
+
 
     public GameObject GetCage()
     {
@@ -109,7 +113,11 @@ public class CatAI : MonoBehaviour
     {
         if (other.tag == "cage")
         {
+
+
             //Win
+            victoryEvent.Invoke();
+
             gameObject.SetActive(false);
         }
     }
