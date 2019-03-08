@@ -62,16 +62,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MaskPosX: 3.0700002
-    - _MaskPosY: 1.1900002
+    - _MaskPosX: 3.0050006
+    - _MaskPosY: 2.9649997
     - _Max: 1
     - _Metallic: 0
-    - _Min: 0.777
+    - _Min: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Outline: 1
     - _Parallax: 0.02
-    - _Size: 2.45
+    - _Size: 3.6
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -79,5 +79,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Colour: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineCol: {r: 0, g: 0, b: 0, a: 0.397}
+    - _OutlineCol: {r: 0, g: 0, b: 0, a: 1}
