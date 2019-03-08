@@ -15,7 +15,7 @@ public class InventoryMenu : MonoBehaviour
     public AudioClip moveButtonClip, unusableClip;
     public float buttonpressForce = 0.8f, buttonpressTime = 0.06f;
 
-    
+
     bool buttonPressed = false;
     bool previousControll;
 
@@ -111,7 +111,17 @@ public class InventoryMenu : MonoBehaviour
 
                 if (iWI != null)
                 {
-                    if (!iWI.useItem(Inventory.instance.items[menuIndex])) AudioManager.instance.playSFXClip(unusableClip);
+                    if (!iWI.useItem(Inventory.instance.items[menuIndex]))
+                    {
+                        AudioManager.instance.playSFXClip(unusableClip);
+                    }
+                    else
+                    {
+
+                        Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
+                        PlayerMovement.canMove = true;
+                        this.gameObject.SetActive(false);
+                    }
                 }
             }
         }
@@ -133,7 +143,7 @@ public class InventoryMenu : MonoBehaviour
         }
     }
 
-    
+
     IEnumerator shake(GameObject gObject)
     {
         buttonPressed = true;
