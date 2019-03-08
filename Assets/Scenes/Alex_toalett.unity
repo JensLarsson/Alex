@@ -790,6 +790,7 @@ GameObject:
   - component: {fileID: 1115464355}
   - component: {fileID: 1115464354}
   - component: {fileID: 1115464357}
+  - component: {fileID: 1115464358}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -894,6 +895,24 @@ MonoBehaviour:
     yPos: 1.15
     objectToSpawn: {fileID: 1251704447613648, guid: b3361e78da909064ea0f86a248bcaec2,
       type: 2}
+--- !u!114 &1115464358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1115464352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck: []
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1226152705
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,10 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4493475730794598}
   - component: {fileID: 212014274658186606}
-  - component: {fileID: 114261121628044554}
-  - component: {fileID: 114965647356606610}
-  - component: {fileID: 114057570595439110}
-  - component: {fileID: 114359736012078444}
   m_Layer: 0
   m_Name: potty
   m_TagString: Untagged
@@ -44,78 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114057570595439110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251704447613648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20591302a5be1c9469c53190bc47ee82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  completeTheseQuestsToAddItems:
-  - {fileID: 11400000, guid: c0af8ea7ed850c14585f4c393ca5b9a8, type: 2}
-  amountOfObjectsToSpawn:
-  - xPos: 0.78
-    yPos: 1.2
-    objectToSpawn: {fileID: 1251704447613648, guid: dd55d2966ac105943bd94a30f5c26d0c,
-      type: 2}
---- !u!114 &114261121628044554
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251704447613648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114965647356606610}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  item: {fileID: 11400000, guid: 9f478ed83ffc8e34591e1d3635b8506e, type: 2}
---- !u!114 &114359736012078444
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251704447613648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f9d06aec1ba1c74184e5c532cd7517c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  completeTheseQuestsToRemoveThisGameObject:
-  - {fileID: 11400000, guid: c0af8ea7ed850c14585f4c393ca5b9a8, type: 2}
---- !u!114 &114965647356606610
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251704447613648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 1
-  quest: {fileID: 11400000, guid: c0af8ea7ed850c14585f4c393ca5b9a8, type: 2}
 --- !u!212 &212014274658186606
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -158,5 +82,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

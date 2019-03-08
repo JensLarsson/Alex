@@ -8,7 +8,8 @@ public class addFunc
     public float xPos, yPos;
     public GameObject objectToSpawn;
 }
-public class add : MonoBehaviour {
+public class add : MonoBehaviour
+{
 
     [SerializeField] List<QuestSO> completeTheseQuestsToAddItems;
     [SerializeField] addFunc[] amountOfObjectsToSpawn;
@@ -29,4 +30,17 @@ public class add : MonoBehaviour {
             }
         }
     }
+
+    public void instantiateItem()
+    {
+        if (QuestManager.Instance.questsExistsInCompletedQuests(completeTheseQuestsToAddItems))
+        {
+            for (int i = 0; i < amountOfObjectsToSpawn.Length; i++)
+            {
+                Instantiate(amountOfObjectsToSpawn[i].objectToSpawn, new Vector3(amountOfObjectsToSpawn[i].xPos, amountOfObjectsToSpawn[i].yPos, 1), Quaternion.identity);
+            }
+            isDone = false;
+        }
+    }
+
 }
