@@ -114,6 +114,10 @@ public class InventoryMenu : MonoBehaviour
                     if (!iWI.useItem(Inventory.instance.items[menuIndex]))
                     {
                         AudioManager.instance.playSFXClip(unusableClip);
+                    }
+                    else
+                    {
+
                         Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
                         PlayerMovement.canMove = true;
                         this.gameObject.SetActive(false);
