@@ -963,8 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent:
-  - {fileID: 11400000, guid: 8b1c3489cc371b443a13d387b769729a, type: 2}
+  instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: d0c11910292b13b4f9879fcc5ef2a55e, type: 2}
   - {fileID: 11400000, guid: b3e204f08627780428a189db73b8f195, type: 2}

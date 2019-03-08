@@ -59,7 +59,7 @@ public class conversationCollection : MonoBehaviour
 
                 if (isDialogueAcceible)
                 {
-                    Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName);
+                    Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName + " is accesable");
                     tempList.Add(dialogs);
                 }
             }
