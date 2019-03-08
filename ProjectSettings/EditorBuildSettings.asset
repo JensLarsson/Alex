@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/main.unity
+    guid: 1171854717e297f40b2e40c64465c688
+  - enabled: 1
     path: Assets/Scenes/Alex.unity
     guid: 57bba486509c0014d8924a0291cf2a4a
   - enabled: 1
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/K\xE4llare.unity"
     guid: 236b982eb339642458735863865c8962
-  - enabled: 1
-    path: Assets/Scenes/main.unity
-    guid: 1171854717e297f40b2e40c64465c688
   - enabled: 1
     path: Assets/Scenes/Paret.unity
     guid: 85cb938d393fcad40ba488bf78da60c6
