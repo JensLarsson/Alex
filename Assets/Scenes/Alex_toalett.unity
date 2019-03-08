@@ -789,7 +789,6 @@ GameObject:
   - component: {fileID: 1115464356}
   - component: {fileID: 1115464355}
   - component: {fileID: 1115464354}
-  - component: {fileID: 1115464357}
   - component: {fileID: 1115464358}
   m_Layer: 0
   m_Name: GameObject
@@ -849,6 +848,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1115464358}
+        m_MethodName: checkQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 3b430d5bad37e1548bc61b8785d184b6, type: 2}
@@ -877,24 +887,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1115464357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115464352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20591302a5be1c9469c53190bc47ee82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  completeTheseQuestsToAddItems:
-  - {fileID: 11400000, guid: 1100d06c28ef0da4fbacb60947fb44df, type: 2}
-  amountOfObjectsToSpawn:
-  - xPos: -0.78
-    yPos: 1.15
-    objectToSpawn: {fileID: 1251704447613648, guid: b3361e78da909064ea0f86a248bcaec2,
-      type: 2}
 --- !u!114 &1115464358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,10 +899,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
-  completedQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 1100d06c28ef0da4fbacb60947fb44df, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1904692827}
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 937b81f4b845fe2479b6e198d2f190e0,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1226152705
