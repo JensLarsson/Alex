@@ -1346,9 +1346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfAllDoors:
-  - DoorToETS1
-  - DoorToETS2
-  - DoorToETS3
+  - "HelD\xF6rrKey1"
+  - "HelD\xF6rrKey2"
+  - "HelD\xF6rrKey3"
 --- !u!114 &114340990483254128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1595,7 +1595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: b5f8d6f709384624eb32a5fc596950aa, type: 2}
   - {fileID: 11400000, guid: b3112541c2aea3c40b2e8a17d003edf9, type: 2}
 --- !u!114 &114794161512245106
 MonoBehaviour:

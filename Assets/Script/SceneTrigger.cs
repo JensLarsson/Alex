@@ -7,7 +7,7 @@ public class SceneTrigger : MonoBehaviour
 
     public string scene;
     public bool locked = false;
-    public AudioClip clip;
+    public AudioClip unlockAudioClip;
 
     [Header("empty for no key press")]
     public string button = "Submit";
@@ -18,14 +18,14 @@ public class SceneTrigger : MonoBehaviour
     public void unlock()
     {
         locked = false;
-        AudioManager.instance.playSFXClip(clip);
+        AudioManager.instance.playSFXClip(unlockAudioClip);
     }
 
     private void Update()
     {
         if (button != "")
         {
-            if (inside && !locked && Input.GetButtonDown(button)&& PlayerMovement.canMove)
+            if (inside && !locked && Input.GetButtonDown(button) && PlayerMovement.canMove)
             {
                 SceneController.instance.loadScene(scene);
             }

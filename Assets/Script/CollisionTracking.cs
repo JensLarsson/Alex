@@ -5,11 +5,19 @@ using UnityEngine;
 public class CollisionTracking : MonoBehaviour
 {
     public static List<GameObject> collisionList;
-    
+
     private void Start()
     {
-        collisionList  = new List<GameObject>();
+        collisionList = new List<GameObject>();
     }
+
+    //private void Update()
+    //{
+    //    foreach (GameObject col in collisionList)
+    //    {
+    //        Debug.Log(col.name + " col");
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
