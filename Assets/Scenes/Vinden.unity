@@ -2514,6 +2514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 3b430d5bad37e1548bc61b8785d184b6, type: 2}
   removeOnPickup: 1
+  accessOnlyThroughScript: 0
   button: Submit
 --- !u!1 &708019094
 GameObject:
@@ -3658,6 +3659,7 @@ GameObject:
   - component: {fileID: 1024322020}
   - component: {fileID: 1024322018}
   - component: {fileID: 1024322019}
+  - component: {fileID: 1024322022}
   m_Layer: 0
   m_Name: Husanden4
   m_TagString: Untagged
@@ -3769,6 +3771,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1024322022
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024322017}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.37, y: 0.81}
+  m_EdgeRadius: 0
 --- !u!1001 &1035246261
 Prefab:
   m_ObjectHideFlags: 0
