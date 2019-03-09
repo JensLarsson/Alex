@@ -11,5 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: ShoppingList
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  description: 
+  sprite: {fileID: 21300000, guid: 8de285dd9ff7e4d4a9de070ad1ae0960, type: 3}
+  deleteOnUse: 1
+  useSound: {fileID: 0}
+  description: 'Sugar
+
+    Spice
+
+    Everything nice'

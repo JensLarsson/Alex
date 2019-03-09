@@ -16,6 +16,10 @@ public class QuestAction : MonoBehaviour
         checkQuest();
     }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        checkQuest();
+    }
     public void checkQuest()
     {
         if (QuestManager.Instance.questsExistsInCurrentQuests(currentQuestsToCheck) && QuestManager.Instance.questsExistsInCompletedQuests(completedQuestsToCheck))

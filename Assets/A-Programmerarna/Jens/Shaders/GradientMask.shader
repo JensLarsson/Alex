@@ -6,9 +6,9 @@
 		_Size("Mask Size", Range(0,10)) = 1.0
 		_Min("Min Mask Value", Range(0,1)) = 0.0
 		_Max("Max Mask Value", Range(0,1)) = 1.0
-		_Colour("Colour",  Color) =(0,0,0,1)
+		_Colour("Colour",  Color) = (1,1,1,1)
 		[Toggle(OUTLINE)] _Outline("Outline", Float) = 0
-		_OutlineCol("Outline Colour", Color) =(1,1,1,1)
+		_OutlineCol("Outline Colour", Color) = (0,0,0,1)
 		[PerRendererData] _MaskPosX("X position", Float) = 0
 		[PerRendererData] _MaskPosY("Y position", Float) = 0
 			//[MaterialToggle] PixelSnap("Pixel snap", Float) = 0
@@ -62,7 +62,7 @@
 				float2 screenPos:TEXCOORD2;
 			};
 
-			v2f vert(appdata v) 
+			v2f vert(appdata v)
 			{
 				v2f o;
 				o.pos = UnityObjectToClipPos(v.vertex);
@@ -70,7 +70,7 @@
 				o.screenPos = ComputeScreenPos(v.vertex);
 				o.worldSpacePos = mul(unity_ObjectToWorld, v.vertex);
 				return o;
-				
+
 			}
 
 
@@ -78,11 +78,11 @@
 			fixed4 frag(v2f i) : COLOR
 				{
 				fixed4 col = tex2D(_MainTex, i.uv);
-				col *=_Colour;
+				col *= _Colour;
 				float dis = distance(i.worldSpacePos, float2(_MaskPosX, _MaskPosY));
 				dis = smoothstep(_Min, _Max , dis / _Size); //dividing the distance acts as multiplying it in practice
 
-				if (dis <1 && _Outline >0) col *= _OutlineCol;
+				if (dis < 1 && _Outline >0) col *= _OutlineCol;
 
 				col.a *= dis;
 

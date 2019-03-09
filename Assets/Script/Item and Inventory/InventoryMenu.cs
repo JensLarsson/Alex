@@ -118,9 +118,16 @@ public class InventoryMenu : MonoBehaviour
                     else
                     {
 
-                        Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
                         PlayerMovement.canMove = true;
                         this.gameObject.SetActive(false);
+                        if (Inventory.instance.items[menuIndex].useSound != null) //Checks if there is a sound clip
+                        {
+                            AudioManager.instance.playSFXClip(Inventory.instance.items[menuIndex].useSound);
+                        }
+                        if (Inventory.instance.items[menuIndex].deleteOnUse) //Check if item should be deleted on use
+                        {
+                            Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
+                        }
                     }
                 }
             }
