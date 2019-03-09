@@ -10,9 +10,14 @@ public class Reset : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown(button))
+        if (button != "" && Input.GetButtonDown(button))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            resetScene();
         }
+    }
+
+    public void resetScene()
+    {
+        SceneController.instance.loadScene(SceneManager.GetActiveScene().name);
     }
 }
