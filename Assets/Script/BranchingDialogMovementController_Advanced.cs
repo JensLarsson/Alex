@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BranchingDialogMovementController : MonoBehaviour
+using UnityEngine.Events;
+public class BranchingDialogMovementController_Advanced : MonoBehaviour
 {
     [Tooltip("0 for deactivating Stand Still Action")]
     public float standStillActionTime = 0.0f;
-    public conversationCollection walkLeft, walkRight, walkUp, walkDown, anyDirectio, standStill;
+    public UnityEvent walkLeft, walkRight, walkUp, walkDown, anyDirectio, standStill;
     Timer timer = new Timer();
 
     private void Start()
@@ -33,10 +33,10 @@ public class BranchingDialogMovementController : MonoBehaviour
         if (timer.Duration > 0 && timer.expired) { invokeAction(standStill); }
     }
 
-    void invokeAction(conversationCollection even)
+    void invokeAction(UnityEvent even)
     {
-        even.gameObject.SetActive(true);
-        even.onFunctionCall();
+        even.Invoke();
         this.gameObject.SetActive(false);
     }
+
 }
