@@ -2427,6 +2427,7 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: fcca59c715eb3f947b62e236fec70b93, type: 2}
+  - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
