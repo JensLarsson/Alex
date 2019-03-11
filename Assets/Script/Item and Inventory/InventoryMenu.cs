@@ -68,6 +68,7 @@ public class InventoryMenu : MonoBehaviour
             addText(item);
         }
         moveMenu(0);
+        buttonPressed = false;
     }
     //Tar bort alla gameobjects som representerar item slots från menyn
     void clearList()
@@ -105,21 +106,19 @@ public class InventoryMenu : MonoBehaviour
         {
             StartCoroutine(shake(menuFields[MenuIndex]));
 
-            foreach (GameObject gObject in CollisionTracking.collisionList)
+            for (int i = CollisionTracking.collisionList.Count - 1; i >= 0; i--)
             {
-                InteractWithItem iWI = gObject.GetComponent<InteractWithItem>();
+                InteractWithItem iWI = CollisionTracking.collisionList[i].GetComponent<InteractWithItem>();
 
                 if (iWI != null)
                 {
-                    if (!iWI.useItem(Inventory.instance.items[menuIndex]))
+                    bool itemisUsed = iWI.useItem(Inventory.instance.items[menuIndex]);
+                    if (!itemisUsed)
                     {
                         AudioManager.instance.playSFXClip(unusableClip);
                     }
                     else
                     {
-
-                        PlayerMovement.canMove = true;
-                        this.gameObject.SetActive(false);
                         if (Inventory.instance.items[menuIndex].useSound != null) //Checks if there is a sound clip
                         {
                             AudioManager.instance.playSFXClip(Inventory.instance.items[menuIndex].useSound);
@@ -128,6 +127,8 @@ public class InventoryMenu : MonoBehaviour
                         {
                             Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
                         }
+                        PlayerMovement.canMove = true;
+                        this.gameObject.SetActive(false);
                     }
                 }
             }

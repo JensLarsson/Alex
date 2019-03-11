@@ -2019,8 +2019,10 @@ GameObject:
   m_Component:
   - component: {fileID: 884987908}
   - component: {fileID: 884987907}
+  - component: {fileID: 884987910}
   - component: {fileID: 884987906}
   - component: {fileID: 884987905}
+  - component: {fileID: 884987909}
   m_Layer: 0
   m_Name: KeyGold
   m_TagString: Untagged
@@ -2066,7 +2068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 67fbfa3244999b84984561963ac57248, type: 2}
   removeOnPickup: 1
-  accessOnlyThroughScript: 0
+  accessOnlyThroughScript: 1
   button: Submit
 --- !u!212 &884987907
 SpriteRenderer:
@@ -2125,6 +2127,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &884987909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884987904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: 1a5495cd014a74844ace508005e0f08b, type: 2}
+    getQuestsToCompleted: 0
+--- !u!114 &884987910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884987904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee25c6e366ec1a3409fefb4c9bba7914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: Submit
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 884987909}
+        m_MethodName: getQuests
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 884987906}
+        m_MethodName: pickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &911317452
 GameObject:
   m_ObjectHideFlags: 0

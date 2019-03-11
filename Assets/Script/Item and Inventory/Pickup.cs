@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Pickup : MonoBehaviour
 {
     public Item item;
     [Tooltip("Removes the sprite from the map when picked up if 'true'")]
-    public bool removeOnPickup = false, accessOnlyThroughScript=false;
+    public bool removeOnPickup = false, accessOnlyThroughScript = false;
     public string button = "Submit";
     bool inside = false;
+    public UnityEvent _event;
 
 
     private void Update()
@@ -21,6 +23,7 @@ public class Pickup : MonoBehaviour
     public void pickup()
     {
         Inventory.instance.AddItem(item);
+        if (_event != null) _event.Invoke();
         if (removeOnPickup)
         {
             Destroy(this.gameObject);
