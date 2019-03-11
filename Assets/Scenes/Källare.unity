@@ -277,7 +277,7 @@ Transform:
   - {fileID: 1507287534}
   - {fileID: 294084255}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &41975091
 BoxCollider2D:
@@ -676,7 +676,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145438378
 GameObject:
@@ -799,7 +799,7 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
@@ -1564,7 +1564,7 @@ Transform:
   - {fileID: 145438379}
   - {fileID: 229103168}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &494100933
 GameObject:
@@ -2114,7 +2114,7 @@ Transform:
   m_Children:
   - {fileID: 536706724}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867318338
 GameObject:
@@ -2241,7 +2241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869831077
 GameObject:
@@ -2425,7 +2425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: fcca59c715eb3f947b62e236fec70b93, type: 2}
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -2588,7 +2589,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &884987909
 MonoBehaviour:
@@ -2702,7 +2703,7 @@ Transform:
   - {fileID: 1330439143}
   - {fileID: 1579497920}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &911317455
 BoxCollider2D:
@@ -4306,7 +4307,7 @@ Transform:
   m_Children:
   - {fileID: 990176118}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507287533
 GameObject:
@@ -4626,7 +4627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633108837
 GameObject:
@@ -4961,6 +4962,174 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1733544968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1733544969}
+  m_Layer: 0
+  m_Name: Alex key comment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1733544969
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733544968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.074, y: 2.128, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1739447522}
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1739447521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1739447522}
+  - component: {fileID: 1739447525}
+  - component: {fileID: 1739447524}
+  - component: {fileID: 1739447523}
+  m_Layer: 0
+  m_Name: Dia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739447522
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739447521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1733544969}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1739447523
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739447521}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4050665, y: -3.2405324}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0736482, y: 1.176755}
+  m_EdgeRadius: 0
+--- !u!114 &1739447524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739447521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!114 &1739447525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739447521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'This key... I remember this key. There''s a spirit in it. To get it out
+      we need to unlock some doors in the right order. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: The notes on the table over there will tell us which doors, but I think
+      I remember.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: 'Martin, Bertha, and Dr. Oakley. Those are the doors, we need to unlock
+      them in that order. '
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: This one's easy, grab the key and let's go!
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1742409066
 GameObject:
   m_ObjectHideFlags: 0
