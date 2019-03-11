@@ -907,6 +907,181 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &354328771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 354328773}
+  - component: {fileID: 354328772}
+  m_Layer: 0
+  m_Name: SpiritDialogue2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &354328772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: SpiritDialogue2
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Well, I fixed that little mess over there. Your buddy will hopefully be
+      fine now.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yes, indeed. Well done, young miss Alexandra.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Now, what about the rest of your friends? You said we didn\u2019t have
+      too much time to complete this."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Ah. Yes, we should have until the evening before they risk phasing out of
+      existence and disappearing.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Which is bad.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yes, quite bad.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: So, how do we go about doing this? How many spirits are hanging around here?
+      Which ones do we go after first.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I believe I have a suggestion as to where you should go next, young miss.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "See, there is a spirit currently inside your brother\u2019s computer."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 05a9e2cd99da7104c8e7ddd0c1a0ab0a,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "There\u2019s what!?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "There\u2019s a spirit in your brother\u2019s computer. I thought you might
+      want to deal with that situation first."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd7f8aacf92f213498a2af4531d26ffc,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yeah, you thought right. I\u2019ll get right to that, and\u2026 I\u2019ll
+      be back when I\u2019m done, okay?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Very good, young miss Alexandra. I\u2019ll remain here."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &354328773
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024322021}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388854009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: 
+  dialogueName: SpiritDialogue1
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
@@ -1823,17 +1998,9 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "I, too, was saddened upon the discovery. Oh, there\u2019s one right now"
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
     Text: "I, too, was saddened upon the discovery. Oh, there\u2019s one right now."
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue: []
@@ -1859,6 +2026,24 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Also, when a Human is in danger, we can position an object in a helpful
       position.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Whoa\u2026 Wait! If that\u2019s the case\u2026 When I was twelve, I fell
+      from the tree just outside the building."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: At the same time, a mattress that had been hung out to dry happened to blow
+      by and I landed on it. Was that you!?
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
@@ -1866,7 +2051,82 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: "Ah yes, five years, two months and fourteen day ago. You ignored your mothers
+      advice to not climb the tree. Curious \u2013 Is that the word?"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yeah that, or stupid.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I see. "Stupid."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Uh, never mind that \u2013 You saved my life!"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Ah, yes, such is my duty.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh, who cares about duty, you saved my life! How can I ever thank you?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Thanks are not necessa-
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, whatever, of course I\u2019m going to thank you\u2026 by\u2026 Aha!
+      I\u2019ll help you help your friends."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh my, young miss Alexandra. That would be wonderful!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yeah, well, let\u2019s see how I do first. I take it your spirit buddy
+      hangs out in that weird, creepy box over there?"
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
@@ -1874,7 +2134,16 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: "You assume correctly. It does look quite strange, doesn\u2019t it? Maybe
+      it\u2019s because it\u2019s scared."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Scared of what? That thing is what\u2019s terrifying here!"
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
@@ -1882,7 +2151,17 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: Regretfully, I agree. Something must be stopping my brethren from leaving,
+      which I would assume could be rather terrifying. See, we can only spend a certain
+      amount of time away from our residences.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh. Before you\u2026 go away? Like forever?"
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
@@ -1890,7 +2169,34 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: Indeed. It is of course a rare event, which would explain their panic.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Well then, I suppose I better get going then. Any tips for my first go at
+      this whole business?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Certainly. I\u2019ve seen something like this before. Your task is to find
+      and retrieve all the toys lying around in that area over there, and put them
+      in the box where my brethren resides."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Sounds like a chore.
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
@@ -1898,7 +2204,15 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: Quite.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7aad6f8e13e681842a1ed3925e79bea2,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Alright then, no more wavering. Here I go!
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
@@ -1906,415 +2220,15 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+    Text: Good luck!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
+    Text: Thanks!
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2516,6 +2430,11 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &708019094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,6 +3630,8 @@ MonoBehaviour:
     onFunctionCall: 0
   thisCharacterConversations:
   - {fileID: 662575725}
+  - {fileID: 354328771}
+  - {fileID: 1231278122}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!212 &1024322020
@@ -3768,6 +3689,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 662575726}
+  - {fileID: 354328773}
+  - {fileID: 1231278124}
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4309,6 +4232,148 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1231278122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1231278124}
+  - component: {fileID: 1231278123}
+  m_Layer: 0
+  m_Name: SpiritDialogue3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1231278123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231278122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: SpiritDialogue3
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Right, well, that was weird.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: If you say so, young miss.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I do. Now then, what\u2019s next? How many of your buddies do we have to
+      get\u2026 well, get rid of?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well, I believe there are seven in total, and you\u2019ve helped two of
+      them."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: So, five, then?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "So it would appear. They\u2019re hiding around in each of the inhabited
+      apartments."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I see. So I just go around to every apartment with people in them and release
+      any spirits trapped there?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Indeed. It\u2019s rather straight-forward. You\u2019ve done ever so well
+      so far, so I don\u2019t expect it will take long for you."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Alright, then. Better get to it.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Terrific, young miss. Best of luck!
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1231278124
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231278122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024322021}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1245199389
 Prefab:
   m_ObjectHideFlags: 0
@@ -5172,7 +5237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Scene2
   locked: 1
-  clip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
   button: Submit
 --- !u!212 &1619720554
 SpriteRenderer:
@@ -5502,6 +5567,11 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!61 &1677362110
 BoxCollider2D:
   m_ObjectHideFlags: 0
