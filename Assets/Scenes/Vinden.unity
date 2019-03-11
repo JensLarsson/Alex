@@ -409,7 +409,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &110546461
 Prefab:
@@ -650,7 +650,7 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_RootOrder
-      value: 62
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
@@ -705,6 +705,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &198805025 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 340563120}
+--- !u!114 &198805031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198805025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 274fd38d558ad864f8eff617dcedd442, type: 2}
+--- !u!114 &198805032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198805025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 274fd38d558ad864f8eff617dcedd442, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198805025}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &247787805
 Prefab:
   m_ObjectHideFlags: 0
@@ -851,6 +899,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -904,6 +957,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 198805031}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -916,6 +994,8 @@ GameObject:
   m_Component:
   - component: {fileID: 354328773}
   - component: {fileID: 354328772}
+  - component: {fileID: 354328774}
+  - component: {fileID: 354328775}
   m_Layer: 0
   m_Name: SpiritDialogue2
   m_TagString: Untagged
@@ -936,8 +1016,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: SpiritDialogue2
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 5c938b8115a7f0849b795c658152f60f, type: 2}
+  - {fileID: 11400000, guid: 89578a24d35e6214abcd8f852f693c8b, type: 2}
+  - {fileID: 11400000, guid: 3367b4c9afcb1304da206cba84fd823f, type: 2}
+  - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
+  - {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: f9f8efc76c44c6543af595e8254d8a9c, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1066,7 +1152,29 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 354328774}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 354328775}
+        m_MethodName: pickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &354328773
@@ -1082,6 +1190,39 @@ Transform:
   m_Father: {fileID: 1024322021}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354328774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
+--- !u!114 &354328775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f, type: 2}
+  removeOnPickup: 0
+  accessOnlyThroughScript: 1
+  button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &388854009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1514,7 @@ Transform:
   m_LocalScale: {x: 18.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532742312
 GameObject:
@@ -1522,6 +1663,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1575,6 +1721,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 4b14908d78bd21b468db8309c772d463,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1467447088}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -1633,6 +1804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662575726}
   - component: {fileID: 662575727}
+  - component: {fileID: 662575728}
   m_Layer: 0
   m_Name: SpiritDialogue
   m_TagString: Untagged
@@ -1667,7 +1839,8 @@ MonoBehaviour:
   dialogueName: SpiritDialogue1
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 6608322cdcc292541a892cf5a7bc4b25, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2235,9 +2408,33 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 662575728}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &662575728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 662575725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 6608322cdcc292541a892cf5a7bc4b25, type: 2}
 --- !u!1 &668821141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,7 +2510,7 @@ Transform:
   m_Children:
   - {fileID: 1497145376}
   m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690319299
 GameObject:
@@ -2413,7 +2610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690319303
 MonoBehaviour:
@@ -2510,7 +2707,7 @@ Transform:
   m_Children:
   - {fileID: 532742314}
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &709066331
 Prefab:
@@ -2639,7 +2836,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &758452507
 GameObject:
@@ -2679,7 +2876,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &758647336
 Prefab:
@@ -2824,7 +3021,7 @@ Transform:
   m_LocalScale: {x: 18.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &775739461
 Prefab:
@@ -3511,6 +3708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943545963}
   - component: {fileID: 943545964}
+  - component: {fileID: 943545965}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3545,7 +3743,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: da2ab255eef7ce04e8157771a38cc521, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3564,9 +3763,33 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 943545965}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &943545965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 943545962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: da2ab255eef7ce04e8157771a38cc521, type: 2}
 --- !u!1 &1024322017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,7 +3915,7 @@ Transform:
   - {fileID: 354328773}
   - {fileID: 1231278124}
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1024322022
 BoxCollider2D:
@@ -3838,6 +4061,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -3868,12 +4096,37 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 61792880920043656, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2142348285}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
@@ -4133,6 +4386,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3b402601dfe3745b24c2fa3c2484f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1185452684 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 1872436111}
+--- !u!114 &1185452690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185452684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: ad461896a0c7b154390a2daa6ac88a41, type: 2}
+--- !u!114 &1185452691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185452684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: ad461896a0c7b154390a2daa6ac88a41, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1185452684}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1192300694
 Prefab:
   m_ObjectHideFlags: 0
@@ -4241,6 +4542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231278124}
   - component: {fileID: 1231278123}
+  - component: {fileID: 1231278125}
   m_Layer: 0
   m_Name: SpiritDialogue3
   m_TagString: Untagged
@@ -4261,8 +4563,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: SpiritDialogue3
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: d12d2df1917712240b260ecd5d38dde7, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 48eed4acad3c45b4a812e0f4cd8dcdb9, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -4358,7 +4662,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1231278125}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1231278124
@@ -4374,6 +4689,19 @@ Transform:
   m_Father: {fileID: 1024322021}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231278125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231278122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 48eed4acad3c45b4a812e0f4cd8dcdb9, type: 2}
 --- !u!1001 &1245199389
 Prefab:
   m_ObjectHideFlags: 0
@@ -4496,7 +4824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1324998979
 Prefab:
@@ -4791,6 +5119,102 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1433310097 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 1877605200}
+--- !u!114 &1433310103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433310097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 0ccb480542c9d0a44abc5dbab8e73cd6, type: 2}
+--- !u!114 &1433310104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433310097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 0ccb480542c9d0a44abc5dbab8e73cd6, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1433310097}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &1467447082 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 612289610}
+--- !u!114 &1467447088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467447082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 9b870d1cc928f6844ad8035d23d38170, type: 2}
+--- !u!114 &1467447089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467447082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 9b870d1cc928f6844ad8035d23d38170, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1467447082}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1489659344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4888,7 +5312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497145374
 GameObject:
@@ -4899,6 +5323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497145376}
   - component: {fileID: 1497145375}
+  - component: {fileID: 1497145377}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4920,7 +5345,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 6ed8c3cbbd3c45040bf226c395f48311, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -4940,7 +5366,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497145377}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1497145376
@@ -4956,6 +5393,19 @@ Transform:
   m_Father: {fileID: 668821144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497145377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497145374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 6ed8c3cbbd3c45040bf226c395f48311, type: 2}
 --- !u!1 &1500960441
 GameObject:
   m_ObjectHideFlags: 0
@@ -5294,7 +5744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1619720556
 MonoBehaviour:
@@ -5397,7 +5847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1634508606
 BoxCollider2D:
@@ -5545,6 +5995,8 @@ GameObject:
   - component: {fileID: 1677362111}
   - component: {fileID: 1677362110}
   - component: {fileID: 1677362109}
+  - component: {fileID: 1677362114}
+  - component: {fileID: 1677362113}
   m_Layer: 0
   m_Name: Potta
   m_TagString: Untagged
@@ -5569,7 +6021,18 @@ MonoBehaviour:
   button: Submit
   _event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677362114}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!61 &1677362110
@@ -5654,6 +6117,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677362113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677362108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 95a7e33a5e53d76408f1be7110309932, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677362108}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1677362114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677362108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 95a7e33a5e53d76408f1be7110309932, type: 2}
 --- !u!1 &1681130265
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,7 +6231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1739206584
 Prefab:
@@ -5895,7 +6401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1872436111
 Prefab:
@@ -5904,6 +6410,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -5957,6 +6468,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1185452690}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -5967,6 +6503,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -6020,6 +6561,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 32f51c59dde0a204987287c9ebed747f,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1433310103}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -6425,7 +6991,7 @@ Transform:
   m_Children:
   - {fileID: 943545963}
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2030204345
 Prefab:
@@ -6580,3 +7146,51 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2142348279 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 1096037044}
+--- !u!114 &2142348285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142348279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 62ddf2a9a6751bc48ac9b9ab3fa6ea02, type: 2}
+--- !u!114 &2142348286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142348279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 62ddf2a9a6751bc48ac9b9ab3fa6ea02, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2142348279}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

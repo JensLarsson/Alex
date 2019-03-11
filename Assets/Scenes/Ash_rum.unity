@@ -1740,6 +1740,7 @@ GameObject:
   - component: {fileID: 1239779659}
   - component: {fileID: 1239779661}
   - component: {fileID: 1239779660}
+  - component: {fileID: 1239779662}
   m_Layer: 0
   m_Name: Ash Puzzle dialogue
   m_TagString: Untagged
@@ -1862,6 +1863,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1239779662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239779658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
 --- !u!1 &1312141002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Alex
   locked: 0
-  clip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1455064204
 BoxCollider2D:
