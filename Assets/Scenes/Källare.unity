@@ -184,7 +184,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You can\u2019t? Oh well. I\u2019m making a weird face if you were wondering."
@@ -477,7 +478,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019m good for now. Just checking in, you know?"
@@ -485,7 +487,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5634c0bd3ede3c4d8c99ec10ec3e1bb,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You don\u2019t have to do that."
@@ -493,7 +496,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Right. Well, I\u2019ll maybe see you later."
@@ -718,7 +722,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.8870187, y: -0.3240533}
@@ -854,6 +858,102 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &204920114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 204920117}
+  - component: {fileID: 204920116}
+  - component: {fileID: 204920115}
+  m_Layer: 0
+  m_Name: Void comment dialogue part 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &204920115
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204920114}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.6313267, y: 0.7473564}
+      - {x: -1.4025811, y: -0.886371}
+      - {x: 0.76827884, y: -0.86574304}
+      - {x: 0.7447798, y: 1.7942144}
+--- !u!114 &204920116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204920114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: f05cdc818407b1d45bd97651bb15541e, type: 2}
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yeah, no. I\u2019ll keep my distance from whatever\u2019s going on there."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &204920117
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204920114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1899161202}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &229103167
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +994,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.8870187, y: -0.3240533}
@@ -1170,7 +1270,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: 'Hey Martin, uh, something''s happened to the toilet in my apartment. Its..
@@ -1179,7 +1280,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 51071508a545f59418b9c40c9e8b747e,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: '...'
@@ -1187,7 +1289,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "It wasn\u2019t me, I promise! Like, I\u2019d clean up my, uh\u2026 mess.
@@ -1197,7 +1300,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 51071508a545f59418b9c40c9e8b747e,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Fine, I\u2019ll get to it. Was there anything else you needed?"
@@ -1205,7 +1309,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh \u2013 no, I\u2019m good, thanks."
@@ -1420,7 +1525,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, awesome. Things always get so lost in translation when you can\u2019t
@@ -1711,7 +1817,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: 65b380d2bc7aa654c90c59d0863d29f3, type: 2}
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: d77b3efe3eb629f48a1bbc9811458911, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
@@ -1719,7 +1826,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "So comfy. I remember resting on it after I sprained my ankle climbing the
@@ -2429,7 +2537,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fcca59c715eb3f947b62e236fec70b93, type: 2}
   - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: 09c2f2d90d2212d40b721dada35fbfd9, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
@@ -2437,7 +2546,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, what does this look like to you?
@@ -2445,7 +2555,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Because, I\u2019m not sure what it looks like to me. Like, I can see what
@@ -2455,7 +2566,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Actually, what does everything look like to you? Like what style is the
@@ -3068,7 +3180,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: 15a96955201c34a4e95ec30b56d39bf4, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
@@ -3076,7 +3189,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hmmm, oh Strindberg! Nice. Though all these detective novels really aren\u2019t
@@ -3175,7 +3289,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I wonder what I look like? Is what I see what reality looks like, or is
@@ -3184,7 +3299,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You know what, I\u2019m gonna stay away from that. I\u2019ve had enough
@@ -3660,7 +3776,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "So\u2026 I\u2019m just a little pixelated blob to you. Huh, I\u2019ve kind
@@ -3669,7 +3786,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 372253dffc3791e498690d3eedc049b4,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me if you can see this!
@@ -3749,7 +3867,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 2670bfd5e2644c843a56c7de439be774,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Is that you sneaking around back there, Alexandra?
@@ -3757,7 +3876,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Uh, yeah. Sorry to disturb you, Martin. Wait, how did you know it was me?
@@ -3765,7 +3885,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 2670bfd5e2644c843a56c7de439be774,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I recognise those shoes of yours. Also, you\u2019re practically the only
@@ -3774,7 +3895,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, um, well\u2026"
@@ -3782,7 +3904,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 2670bfd5e2644c843a56c7de439be774,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Was there anything you wanted? You know you\u2019re free to borrow any
@@ -3859,7 +3982,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.8870187, y: -0.3240533}
@@ -3955,7 +4078,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: f05cdc818407b1d45bd97651bb15541e, type: 2}
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: db346f41ee23dea4584dfcd82be64887, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
@@ -3963,7 +4087,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Uh, what the frock is going on here? It\u2019s like looking into space.
@@ -4210,7 +4335,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.8870187, y: -0.3240533}
@@ -4392,7 +4517,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Actually, kind of. I know this might sound a little weird, but could we
@@ -4401,7 +4527,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 51071508a545f59418b9c40c9e8b747e,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Why on earth would we do that?
@@ -4409,7 +4536,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I know it\u2019s a strange request, but it\u2019s to\u2026 Right, it\u2019s
@@ -4418,7 +4546,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 51071508a545f59418b9c40c9e8b747e,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll take your word for it. Still the answer is no."
@@ -4426,7 +4555,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: But-
@@ -4434,7 +4564,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 2670bfd5e2644c843a56c7de439be774,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 84aa4e8426c171849abb6bc0e81c8205, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: No. Just no.
@@ -4442,7 +4573,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: We need to lure him out of the room, I remember how. We need frick up my
@@ -4451,7 +4583,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: We need to find something to use as a replacement.
@@ -4536,7 +4669,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: f05cdc818407b1d45bd97651bb15541e, type: 2}
   removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: 0675cadfb9cadbd4ea7cd19a47fa8994, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
@@ -4544,7 +4678,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, no. I\u2019ll keep my distance from whatever\u2019s going on there."
@@ -4867,7 +5002,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.8870187, y: -0.3240533}
@@ -4984,6 +5119,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1733544969}
+  - component: {fileID: 1733544970}
+  - component: {fileID: 1733544971}
   m_Layer: 0
   m_Name: Alex key comment
   m_TagString: Untagged
@@ -5005,6 +5142,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733544970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733544968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 1739447521}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!61 &1733544971
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733544968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4050665, y: -3.2405324}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0736482, y: 1.176755}
+  m_EdgeRadius: 0
 --- !u!1 &1739447521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,8 +5197,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1739447522}
   - component: {fileID: 1739447525}
-  - component: {fileID: 1739447524}
-  - component: {fileID: 1739447523}
   m_Layer: 0
   m_Name: Dia
   m_TagString: Untagged
@@ -5036,51 +5217,6 @@ Transform:
   m_Father: {fileID: 1733544969}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1739447523
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1739447521}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.4050665, y: -3.2405324}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0736482, y: 1.176755}
-  m_EdgeRadius: 0
---- !u!114 &1739447524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1739447521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
-  isInDialogueTrigger: 0
-  StartDelay: 0
 --- !u!114 &1739447525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,7 +5232,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: b90155c11f82cf14e92e76e549177c1d, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
@@ -5104,7 +5241,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: 'This key... I remember this key. There''s a spirit in it. To get it out
@@ -5113,7 +5251,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: The notes on the table over there will tell us which doors, but I think
@@ -5122,7 +5261,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: 'Martin, Bertha, and Dr. Oakley. Those are the doors, we need to unlock
@@ -5131,7 +5271,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: This one's easy, grab the key and let's go!
@@ -5289,6 +5430,143 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899161197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1899161202}
+  - component: {fileID: 1899161201}
+  - component: {fileID: 1899161200}
+  - component: {fileID: 1899161199}
+  - component: {fileID: 1899161198}
+  m_Layer: 0
+  m_Name: VoidDiag (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1899161198
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899161197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.35674834, y: 0.7907108}
+      - {x: -1.1906261, y: -0.86228526}
+      - {x: 0.76827884, y: -0.86574304}
+      - {x: 0.7110598, y: 1.4859161}
+--- !u!60 &1899161199
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899161197}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.6313267, y: 0.7473564}
+      - {x: -1.4025811, y: -0.886371}
+      - {x: 0.76827884, y: -0.86574304}
+      - {x: 0.7447798, y: 1.7942144}
+--- !u!61 &1899161200
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899161197}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8786974, y: 2.3294997}
+  m_EdgeRadius: 0
+--- !u!114 &1899161201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899161197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 2074734260}
+  - {fileID: 204920114}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!4 &1899161202
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899161197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.311, y: -1.173, z: -0.04199557}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2074734265}
+  - {fileID: 204920117}
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917975062
 GameObject:
@@ -5704,6 +5982,165 @@ MonoBehaviour:
     questsToGet:
     - {fileID: 11400000, guid: 46c8328c571c7b7429bfb85eb7edd2b1, type: 2}
     getQuestsToCompleted: 0
+--- !u!1 &2074734260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2074734265}
+  - component: {fileID: 2074734264}
+  - component: {fileID: 2074734263}
+  - component: {fileID: 2074734262}
+  - component: {fileID: 2074734261}
+  m_Layer: 0
+  m_Name: Void comment dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &2074734261
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074734260}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.7755196, y: 0.9313265}
+      - {x: -1.636273, y: -0.87145436}
+      - {x: 0.76827884, y: -0.86574304}
+      - {x: 0.7348354, y: 2.0328784}
+--- !u!114 &2074734262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074734260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: f05cdc818407b1d45bd97651bb15541e, type: 2}
+--- !u!61 &2074734263
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074734260}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.857728, y: -1.7012854}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6329021, y: 2.17803}
+  m_EdgeRadius: 0
+--- !u!114 &2074734264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074734260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: f05cdc818407b1d45bd97651bb15541e, type: 2}
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Uh, what the frock is going on here? It\u2019s like looking into space.
+      Except there are no stars. Better take a step back so I don\u2019t fall in."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2074734262}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2074734261}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &2074734265
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074734260}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1899161202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105700230
 GameObject:
   m_ObjectHideFlags: 0
