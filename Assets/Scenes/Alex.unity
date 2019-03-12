@@ -139,8 +139,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1768441443}
-  m_RootOrder: 5
+  m_Father: {fileID: 1670243889}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &20386907
 MonoBehaviour:
@@ -166,7 +166,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh.. that\u2019s pretty crazy. So you can do everything, right? Like, summon
@@ -175,7 +176,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: '...'
@@ -183,7 +185,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "There\u2019s no dog. You\u2019re not God, are you? So you\u2019re a player.
@@ -323,8 +326,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1768441443}
-  m_RootOrder: 4
+  m_Father: {fileID: 251679010}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &100436927
 MonoBehaviour:
@@ -350,7 +353,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Okay, that\u2019s\u2026 still weird, but I guess I can work with that."
@@ -363,6 +367,56 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &251679009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 251679010}
+  - component: {fileID: 251679011}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &251679010
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251679009}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 100436926}
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251679011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251679009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &358268918
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +558,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hi, mom. How are you?
@@ -512,7 +566,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, Alexandra! I\u2019m good. Just about to head down to the store. How
@@ -521,7 +576,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Very educational, but\u2026 Well, it was pretty boring, honestly."
@@ -529,7 +585,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, well. You know how it is, dear. It\u2019s not always going to be fun."
@@ -537,7 +594,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, I\u2019ve figured that part out. It\u2019s fine, though. One day
@@ -546,7 +604,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh, your father would have been so proud of you, darling.
@@ -554,7 +613,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah\u2026 I\u2019ll, uh, check up on Ash if he\u2019s still in."
@@ -562,7 +622,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yes, he\u2019s in his room."
@@ -570,7 +631,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Of course he is. Well, good luck at the store, then.
@@ -578,7 +640,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Thanks, dear. I just have to find the shopping list\u2026"
@@ -586,7 +649,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hm? I thought I left it for you on the counter?
@@ -594,7 +658,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh? Well, then I\u2019ll look again."
@@ -602,7 +667,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I might as well help her. Maybe it was blown down by a rogue gust of wind
@@ -978,7 +1044,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh, Alexandra?
@@ -986,7 +1053,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yes, mum?
@@ -994,7 +1062,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Could you do me a little favour and go up to the attic to get something
@@ -1003,7 +1072,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Sure, mum. What should I look for?
@@ -1011,7 +1081,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: One of the big glass bowls we got from your grandmother. Since the one we
@@ -1020,7 +1091,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Sorry, mom!
@@ -1028,7 +1100,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "No, no, it\u2019s fine \u2013 but we do need a new one. So, do you mind,
@@ -1037,7 +1110,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Its fine, I can go get it. Did Martin fix the lock for us?
@@ -1045,7 +1119,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh, yes, he says it should be fine now.
@@ -1053,7 +1128,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "We\u2019ll see about that. I'll be right back!"
@@ -1061,7 +1137,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "We\u2019ll see about that. Well, I\u2019m off to the attic, then. See you
@@ -1070,7 +1147,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll be fine, mom."
@@ -1116,6 +1194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637085743}
   - component: {fileID: 637085744}
+  - component: {fileID: 637085745}
   m_Layer: 0
   m_Name: Dia
   m_TagString: Untagged
@@ -1129,11 +1208,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 637085742}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1768441443}
+  m_Father: {fileID: 1482134303}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &637085744
@@ -1160,7 +1239,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "But\u2026 Like, what am I doing? Feels like I\u2019m walking in circles
@@ -1171,7 +1251,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "All the puzzles, the repeating. I- It\u2019s almost like I\u2019m in a
@@ -1180,7 +1261,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "So\u2026 If I\u2019m in a game, there should be a player, right? Like\u2026
@@ -1194,6 +1276,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!61 &637085745
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637085742}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.26995838, y: -1.7454681}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.8461695, y: 3.0504875}
+  m_EdgeRadius: 0
 --- !u!1 &663152309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,7 +1674,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019d rather stay here and get all this spirit business over and done
@@ -1720,7 +1828,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: cd25fce5634443743bd5613ec9c5d7b3,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Mom, I\u2026"
@@ -1728,7 +1837,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Do you need anything from the grocery store? I\u2019m just on my way out."
@@ -1736,7 +1846,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Mom no, no you\u2019re not. You\u2019ve been on your way for- for a while."
@@ -1744,7 +1855,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019m just on my way out!"
@@ -1752,7 +1864,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: " I- Alright mom. You do that, I\u2019m just gonna\u2026"
@@ -1760,7 +1873,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 5e2b641a67c97b341a9ca60be4a2409b,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 0}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(I can\u2019t stand this. Please, is there no other way to reset the game?
@@ -2122,7 +2236,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960328643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71, y: -2.97, z: 0.1381836}
+  m_LocalPosition: {x: 0.71, y: -3.13, z: 0.1381836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2254,7 +2368,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, no, I don\u2019t think Ash will be much help when it comes to hunting
@@ -2320,8 +2435,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1768441443}
-  m_RootOrder: 1
+  m_Father: {fileID: 1431521389}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1153036905
 MonoBehaviour:
@@ -2347,7 +2462,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: AH! Okay, what the frock!?
@@ -2355,7 +2471,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "No, wait, I meant to say frock. Oh, I can\u2019t, uh\u2026 Okay, never
@@ -2439,7 +2556,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hi, mom. What are you doing?
@@ -2447,7 +2565,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, Alexandra! I was just about to make a salad, but we don\u2019t have
@@ -2456,7 +2575,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Really? Didn\u2019t you pick some up when you went to the store earlier?"
@@ -2464,7 +2584,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That\u2019s what I thought, but I can\u2019t find them!"
@@ -2472,7 +2593,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That\u2019s odd. Did you search the bags again?"
@@ -2480,7 +2602,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Of course. It\u2019s like they\u2019ve disappeared. Or maybe I forgot them
@@ -2489,7 +2612,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "True enough. And you didn\u2019t give any away to the neighbours? That
@@ -2498,7 +2622,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2026 don\u2019t think so? I think I better pop down to the store just
@@ -3078,11 +3203,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.18
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.12
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3111,6 +3236,156 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1416057796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1416057797}
+  - component: {fileID: 1416057798}
+  m_Layer: 0
+  m_Name: Player moves again
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416057797
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1416057796}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2098570305}
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1416057798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1416057796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!1 &1428049926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1428049927}
+  - component: {fileID: 1428049928}
+  m_Layer: 0
+  m_Name: Player moves again2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1428049927
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428049926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1457896372}
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428049928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428049926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!1 &1431521388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1431521389}
+  - component: {fileID: 1431521390}
+  m_Layer: 0
+  m_Name: Player moves after dia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431521389
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431521388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1153036904}
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1431521390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431521388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &1457896371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,6 +3395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1457896372}
   - component: {fileID: 1457896373}
+  - component: {fileID: 1457896374}
   m_Layer: 0
   m_Name: Player moves again (1)
   m_TagString: Untagged
@@ -3137,8 +3413,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1768441443}
-  m_RootOrder: 3
+  m_Father: {fileID: 1428049927}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1457896373
 MonoBehaviour:
@@ -3164,7 +3440,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7ac037be3ae035e4682806ea398963bf,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Ahhh, that\u2019s still so weird. Even though I was doing it before, but
@@ -3173,7 +3450,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "So\u2026"
@@ -3181,7 +3459,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: '....'
@@ -3189,24 +3468,40 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "If this is how it is\u2026 Then, let\u2019s establish how to, like, communicate.
       Maybe if we designate some places or things near me as\u2026 cues? So, If you
-      move me towards the couch, you\u2019re God. If you move me to the bookshelf,
-      you\u2019re a player."
+      move me to the left you\u2019re God. If you move me down, you\u2019re a player."
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
-  answers:
-  - {fileID: 100436925}
-  - {fileID: 20386905}
+  answers: []
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1457896374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457896371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 1670243890}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 251679011}
+  anyDirectio: {fileID: 0}
+  standStill: {fileID: 0}
 --- !u!1 &1458715229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,6 +3771,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1482134302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1482134303}
+  - component: {fileID: 1482134304}
+  m_Layer: 0
+  m_Name: Dia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1482134303
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482134302}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 637085743}
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482134304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482134302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &1522608591
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,6 +4292,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1670243888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1670243889}
+  - component: {fileID: 1670243890}
+  m_Layer: 0
+  m_Name: God
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670243889
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670243888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 20386906}
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1670243890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670243888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations: []
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &1730044834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,12 +4442,12 @@ Transform:
   m_LocalPosition: {x: 0.39225218, y: 0.8708093, z: 0.13335162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 637085743}
-  - {fileID: 1153036904}
-  - {fileID: 2098570305}
-  - {fileID: 1457896372}
-  - {fileID: 100436926}
-  - {fileID: 20386906}
+  - {fileID: 1431521389}
+  - {fileID: 1482134303}
+  - {fileID: 1416057797}
+  - {fileID: 1428049927}
+  - {fileID: 251679010}
+  - {fileID: 1670243889}
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4124,7 +4519,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Here you go, mom.
@@ -4132,7 +4528,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Thank you, Alexandra. What would I do without you?
@@ -4140,7 +4537,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You\u2019d be fine, mom. Now, just double-check the list so you don\u2019t
@@ -4149,7 +4547,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I will. Thanks again, dear!
@@ -4407,8 +4806,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1768441443}
-  m_RootOrder: 2
+  m_Father: {fileID: 1416057797}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2098570306
 MonoBehaviour:
@@ -4434,7 +4833,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7ac037be3ae035e4682806ea398963bf,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 16a27341b32f6134fbfbe23795d613ba, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Ah, NO, stop!  That\u2019s so weird, and so creepy! How long have you been
