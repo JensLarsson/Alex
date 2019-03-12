@@ -43,6 +43,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3963264141
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Moving
+    uniqueID: 2668267371
+    locked: 0
+  - name: OnStuff
+    uniqueID: 1531267825
+    locked: 0
+  - name: Default2
+    uniqueID: 1873173341
     locked: 0
