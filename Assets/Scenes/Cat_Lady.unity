@@ -184,7 +184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &29086618
 GameObject:
@@ -562,7 +562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &54798922
 Transform:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ Transform:
   m_Children:
   - {fileID: 68407985}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &54798923
 MonoBehaviour:
@@ -590,20 +590,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 68407984}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!61 &54798924
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54798921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -631,7 +632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 68407985}
   - component: {fileID: 68407987}
-  - component: {fileID: 68407986}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -652,24 +652,6 @@ Transform:
   m_Father: {fileID: 54798922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &68407986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 68407984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
 --- !u!114 &68407987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,7 +760,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260093188
 GameObject:
@@ -925,7 +907,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &275474867
 BoxCollider2D:
@@ -968,7 +950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &307408980
 Transform:
   m_ObjectHideFlags: 0
@@ -981,7 +963,7 @@ Transform:
   m_Children:
   - {fileID: 2030271124}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &307408981
 MonoBehaviour:
@@ -996,20 +978,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 2030271123}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!61 &307408982
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 307408979}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1100,7 +1083,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &319784724
 BoxCollider2D:
@@ -1136,7 +1119,6 @@ GameObject:
   m_Component:
   - component: {fileID: 364494514}
   - component: {fileID: 364494516}
-  - component: {fileID: 364494515}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -1157,24 +1139,6 @@ Transform:
   m_Father: {fileID: 1119735334}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &364494515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 364494513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
 --- !u!114 &364494516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,7 +1192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &381489469
 Transform:
   m_ObjectHideFlags: 0
@@ -1241,7 +1205,7 @@ Transform:
   m_Children:
   - {fileID: 873030551}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &381489470
 MonoBehaviour:
@@ -1256,20 +1220,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 873030550}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!61 &381489471
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381489468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1359,7 +1324,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419159472
 GameObject:
@@ -1433,7 +1398,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &419159475
 BoxCollider2D:
@@ -1531,7 +1496,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467479371
 GameObject:
@@ -1585,110 +1550,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &500487258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 500487259}
-  - component: {fileID: 500487261}
-  - component: {fileID: 500487260}
-  m_Layer: 0
-  m_Name: Dia1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &500487259
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500487258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 657271710}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &500487260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500487258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
---- !u!114 &500487261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500487258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Okay, this is sort of weird.\r"
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Like, cats are alright, but this is kind of taking it too far. Besides,
-      I\u2019m more of a bird person myself.\r"
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "What about you, do you like cats? Or maybe something else? Uh, go to the
-      cat if you like cats, to the vase if you don\u2019t."
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &500882319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,7 +1624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &500882322
 BoxCollider2D:
@@ -1859,8 +1722,55 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &555576676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 555576677}
+  - component: {fileID: 555576678}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &555576677
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555576676}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710914435}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555576678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555576676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 2
+  walkLeft: {fileID: 0}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 0}
+  anyDirectio: {fileID: 381489470}
+  standStill: {fileID: 773169848}
 --- !u!1 &595271646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,7 +1886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &616244611
 GameObject:
@@ -2026,7 +1936,8 @@ MonoBehaviour:
     delay: 0
     onCollisionAndKeyDown: 0
     onFunctionCall: 0
-  thisCharacterConversations: []
+  thisCharacterConversations:
+  - {fileID: 1182054560}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!61 &616244614
@@ -2054,82 +1965,98 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5063572, y: 3.278065}
   m_EdgeRadius: 0
---- !u!1 &657271709
+--- !u!1 &653068408
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 657271710}
-  - component: {fileID: 657271712}
-  - component: {fileID: 657271711}
+  - component: {fileID: 653068411}
+  - component: {fileID: 653068410}
+  - component: {fileID: 653068409}
   m_Layer: 0
-  m_Name: Dia1
+  m_Name: garnnystan Skugga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &657271710
+--- !u!95 &653068409
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653068408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e00a194f94f879146acda1d1d26a34a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &653068410
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653068408}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fa7d672f58b617e4aa6be183f0f2cf0b, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.34375, y: 0.359375}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &653068411
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 657271709}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 653068408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.953, y: 1.772, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 500487259}
-  m_Father: {fileID: 2051412739}
-  m_RootOrder: 0
+  - {fileID: 1611260335}
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &657271711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 657271709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
-  isInDialogueTrigger: 0
-  StartDelay: 0
---- !u!61 &657271712
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 657271709}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.2530718, y: -1.1390325}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.5063572, y: 3.278065}
-  m_EdgeRadius: 0
 --- !u!1 &684350355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &710914434
 GameObject:
@@ -2229,10 +2156,14 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99190235, z: 1}
   m_Children:
   - {fileID: 616244612}
+  - {fileID: 905249954}
   - {fileID: 1057725617}
   - {fileID: 1043042518}
+  - {fileID: 555576677}
   - {fileID: 381489469}
+  - {fileID: 1926779813}
   - {fileID: 773169847}
+  - {fileID: 2053922683}
   - {fileID: 54798922}
   - {fileID: 1713830662}
   - {fileID: 307408980}
@@ -2312,7 +2243,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773169846
 GameObject:
@@ -2330,7 +2261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &773169847
 Transform:
   m_ObjectHideFlags: 0
@@ -2343,7 +2274,7 @@ Transform:
   m_Children:
   - {fileID: 2134540424}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &773169848
 MonoBehaviour:
@@ -2358,11 +2289,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 2134540423}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!61 &773169849
@@ -2371,7 +2303,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 773169846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2399,7 +2331,6 @@ GameObject:
   m_Component:
   - component: {fileID: 873030551}
   - component: {fileID: 873030553}
-  - component: {fileID: 873030552}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -2420,24 +2351,6 @@ Transform:
   m_Father: {fileID: 381489469}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &873030552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 873030550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 1713830663}
-  walkRight: {fileID: 54798923}
-  walkUp: {fileID: 54798923}
-  walkDown: {fileID: 54798923}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 307408981}
 --- !u!114 &873030553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,7 +2395,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1926779812}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &877835655
@@ -2557,7 +2481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &877835658
 BoxCollider2D:
@@ -2681,6 +2605,53 @@ MonoBehaviour:
   songs:
   - {fileID: 8300000, guid: 1741a559cb954fe4a864ea7d5e660202, type: 3}
   - {fileID: 8300000, guid: 0cb407ace0c2a9d49a4ef15038071af3, type: 3}
+--- !u!1 &905249953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 905249954}
+  - component: {fileID: 905249955}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &905249954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905249953}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710914435}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905249955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905249953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 2
+  walkLeft: {fileID: 0}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 0}
+  anyDirectio: {fileID: 1057725618}
+  standStill: {fileID: 1043042519}
 --- !u!1 &908385596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,7 +2749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921070873
 GameObject:
@@ -3020,7 +2991,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011859741
 GameObject:
@@ -3074,7 +3045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026065876
 GameObject:
@@ -3085,7 +3056,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1026065877}
   - component: {fileID: 1026065879}
-  - component: {fileID: 1026065878}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -3106,24 +3076,6 @@ Transform:
   m_Father: {fileID: 1043042518}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1026065878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1026065876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 381489470}
-  standStill: {fileID: 773169848}
 --- !u!114 &1026065879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3170,7 +3122,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555576676}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1043042517
@@ -3189,7 +3152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1043042518
 Transform:
   m_ObjectHideFlags: 0
@@ -3202,7 +3165,7 @@ Transform:
   m_Children:
   - {fileID: 1026065877}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1043042519
 MonoBehaviour:
@@ -3217,11 +3180,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1026065876}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!61 &1043042520
@@ -3230,7 +3194,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1043042517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3265,7 +3229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1057725617
 Transform:
   m_ObjectHideFlags: 0
@@ -3278,7 +3242,7 @@ Transform:
   m_Children:
   - {fileID: 1094799702}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1057725618
 MonoBehaviour:
@@ -3293,20 +3257,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1094799701}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!61 &1057725619
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1057725616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3397,7 +3362,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1067121605
 BoxCollider2D:
@@ -3433,7 +3398,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1094799702}
   - component: {fileID: 1094799704}
-  - component: {fileID: 1094799703}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -3454,24 +3418,6 @@ Transform:
   m_Father: {fileID: 1057725617}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1094799703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1094799701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
 --- !u!114 &1094799704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3527,7 +3473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1119735334
 Transform:
   m_ObjectHideFlags: 0
@@ -3540,7 +3486,7 @@ Transform:
   m_Children:
   - {fileID: 364494514}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1119735335
 MonoBehaviour:
@@ -3555,11 +3501,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 364494513}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!61 &1119735336
@@ -3568,7 +3515,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1119735333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3625,16 +3572,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182054560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 1057725618}
-  standStill: {fileID: 1043042519}
+  questMode: 1
+  quest: {fileID: 11400000, guid: c7e3c456378d19843bb403dacf650587, type: 2}
 --- !u!114 &1182054563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3651,7 +3593,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
   - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: c7e3c456378d19843bb403dacf650587, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3691,7 +3634,29 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1182054562}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 905249953}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1226152705
@@ -3820,7 +3785,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1254541471}
   - component: {fileID: 1254541473}
-  - component: {fileID: 1254541472}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -3841,24 +3805,6 @@ Transform:
   m_Father: {fileID: 1713830662}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1254541472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1254541470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
 --- !u!114 &1254541473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3948,7 +3894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349330914
 GameObject:
@@ -4195,7 +4141,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403819934
 GameObject:
@@ -4470,7 +4416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1451527790
 Prefab:
@@ -4589,7 +4535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482838852
 GameObject:
@@ -4663,7 +4609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1482838855
 BoxCollider2D:
@@ -5022,7 +4968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520655157
 GameObject:
@@ -5095,7 +5041,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527125903
 GameObject:
@@ -5113,7 +5059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1527125904
 Transform:
   m_ObjectHideFlags: 0
@@ -5126,7 +5072,7 @@ Transform:
   m_Children:
   - {fileID: 1623943625}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1527125905
 MonoBehaviour:
@@ -5141,20 +5087,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1623943624}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!61 &1527125906
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527125903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -5245,7 +5192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1535810326
 BoxCollider2D:
@@ -5324,7 +5271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598144561
 GameObject:
@@ -5397,7 +5344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611260333
 GameObject:
@@ -5451,7 +5398,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fa7d672f58b617e4aa6be183f0f2cf0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5468,12 +5415,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1611260333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.69, y: -0.09, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_Father: {fileID: 653068411}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1611260336
 BoxCollider2D:
@@ -5484,7 +5431,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.04253128, y: 0.06143403}
@@ -5498,7 +5445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25868744, y: 0.23650694}
+  m_Size: {x: 0.25868744, y: 0.54}
   m_EdgeRadius: 0
 --- !u!114 &1611260337
 MonoBehaviour:
@@ -5624,7 +5571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1713830662
 Transform:
   m_ObjectHideFlags: 0
@@ -5637,7 +5584,7 @@ Transform:
   m_Children:
   - {fileID: 1254541471}
   m_Father: {fileID: 710914435}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1713830663
 MonoBehaviour:
@@ -5652,20 +5599,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
+    onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1254541470}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!61 &1713830664
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713830661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -5684,6 +5632,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5063572, y: 3.278065}
   m_EdgeRadius: 0
+--- !u!1 &1926779812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1926779813}
+  - component: {fileID: 1926779814}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1926779813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926779812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710914435}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926779814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926779812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 1713830663}
+  walkRight: {fileID: 54798923}
+  walkUp: {fileID: 54798923}
+  walkDown: {fileID: 54798923}
+  anyDirectio: {fileID: 0}
+  standStill: {fileID: 307408981}
 --- !u!1 &1967120563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5736,7 +5731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1975055578
 GameObject:
@@ -6090,7 +6085,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030271123
 GameObject:
@@ -6101,7 +6096,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2030271124}
   - component: {fileID: 2030271126}
-  - component: {fileID: 2030271125}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -6122,24 +6116,6 @@ Transform:
   m_Father: {fileID: 307408980}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2030271125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2030271123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
 --- !u!114 &2030271126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6177,35 +6153,53 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &2051412738
+--- !u!1 &2053922682
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 2051412739}
+  - component: {fileID: 2053922683}
+  - component: {fileID: 2053922684}
   m_Layer: 0
-  m_Name: Branching Dialogue (1)
+  m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &2051412739
+--- !u!4 &2053922683
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2051412738}
+  m_GameObject: {fileID: 2053922682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0601103, y: 1.9262, z: 0}
-  m_LocalScale: {x: 1, y: 0.99190235, z: 1}
-  m_Children:
-  - {fileID: 657271710}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 710914435}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2053922684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053922682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 0}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 0}
+  anyDirectio: {fileID: 1527125905}
+  standStill: {fileID: 1119735335}
 --- !u!1001 &2096120723
 Prefab:
   m_ObjectHideFlags: 0
@@ -6377,7 +6371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2134540423
 GameObject:
@@ -6388,7 +6382,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2134540424}
   - component: {fileID: 2134540426}
-  - component: {fileID: 2134540425}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -6409,24 +6402,6 @@ Transform:
   m_Father: {fileID: 773169847}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2134540425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2134540423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 1527125905}
-  standStill: {fileID: 1119735335}
 --- !u!114 &2134540426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6462,7 +6437,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2053922682}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2147349845
@@ -6536,5 +6522,5 @@ Transform:
   m_LocalScale: {x: 0.6625, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
