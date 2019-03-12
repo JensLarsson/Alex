@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
     Image image;
     public Dictionary<string, Vector3> lastScenePosition = new Dictionary<string, Vector3>();
 
+
     bool transitioning = false;
     private void Awake()
     {
@@ -20,11 +21,10 @@ public class SceneController : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             image = GetComponent<Image>();
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-
+       // else
+        //{
+        //   Destroy(this.gameObject);
+        //}
     }
 
     public void loadScene(Scene scene)
@@ -50,8 +50,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    IEnumerator SceneTransition(string scene, float f = 0.0f)
+    public IEnumerator SceneTransition(string scene, float f = 0.0f)
     {
+        
         if (!transitioning)
         {
             saveScene(scene);
@@ -88,7 +89,6 @@ public class SceneController : MonoBehaviour
             }
             transitioning = false;
         }
-
-
+        
     }
 }

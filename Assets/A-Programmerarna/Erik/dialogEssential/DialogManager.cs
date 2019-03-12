@@ -311,6 +311,7 @@ public class DialogManager : MonoBehaviour
                 AudioManager.instance.playSFXRandomPitch(
                    activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random],
                    activeDialog.dialogs[dialogAt].soundPitch);
+
                 yield return new WaitForSeconds(
                     activeDialog.dialogs[dialogAt].soundTimeDelay +
                     activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random].length);
