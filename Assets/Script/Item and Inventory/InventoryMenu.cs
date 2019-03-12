@@ -125,10 +125,12 @@ public class InventoryMenu : MonoBehaviour
                         }
                         if (Inventory.instance.items[menuIndex].deleteOnUse) //Check if item should be deleted on use
                         {
+                            Debug.Log("Removing");
                             Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
                         }
                         PlayerMovement.canMove = true;
                         this.gameObject.SetActive(false);
+                        break;
                     }
                 }
             }
