@@ -194,6 +194,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 110885687}
+  - component: {fileID: 110885688}
+  - component: {fileID: 110885690}
+  - component: {fileID: 110885689}
+  - component: {fileID: 110885691}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -214,6 +218,100 @@ Transform:
   m_Father: {fileID: 838786783}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110885688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110885686}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fde9d2f19a09f34fb5fd493117e9dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 
+  locked: 0
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
+  button: Submit
+--- !u!114 &110885689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110885686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: d12d2df1917712240b260ecd5d38dde7, type: 2}
+--- !u!114 &110885690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110885686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 838786782}
+        m_MethodName: set_flipY
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 110885689}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  item: {fileID: 11400000, guid: c074afdfef78f424e8f6a1b7546a2323, type: 2}
+--- !u!61 &110885691
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110885686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.41}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &166982929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
   completedQuestsToCheck:
-  - {fileID: 11400000, guid: 8ba538b34093e0045812cc475d0d257e, type: 2}
+  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
@@ -1453,6 +1551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117389304}
   - component: {fileID: 1117389306}
+  - component: {fileID: 1117389305}
   m_Layer: 0
   m_Name: Puzzle dialogue part 2 Door
   m_TagString: Untagged
@@ -1473,6 +1572,19 @@ Transform:
   m_Father: {fileID: 1522769721}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117389305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117389303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 35cdd6f6c1d5b5449ae9de0830ce8c33, type: 2}
 --- !u!114 &1117389306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,8 +1600,9 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
-  - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 35cdd6f6c1d5b5449ae9de0830ce8c33, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1508,7 +1621,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1117389305}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1158505272
@@ -1795,7 +1919,7 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   removeDialogIfQuestsHasCompleted:
-  - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
+  - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1850,12 +1974,12 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1239779662}
+        m_MethodName: CompleteQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1888,6 +2012,7 @@ GameObject:
   - component: {fileID: 1312141003}
   - component: {fileID: 1312141007}
   - component: {fileID: 1312141006}
+  - component: {fileID: 1312141008}
   m_Layer: 0
   m_Name: sheet broA_0
   m_TagString: Untagged
@@ -2029,6 +2154,36 @@ MonoBehaviour:
   - {fileID: 1749640931}
   isInDialogueTrigger: 0
   StartDelay: 0
+--- !u!114 &1312141008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312141002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1312141002}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1455064200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Alex
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1455064204
 BoxCollider2D:
@@ -2514,6 +2671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749640932}
   - component: {fileID: 1749640934}
+  - component: {fileID: 1749640933}
   m_Layer: 0
   m_Name: Puzzle dialogue part 2 Ash
   m_TagString: Untagged
@@ -2534,6 +2692,19 @@ Transform:
   m_Father: {fileID: 1312141005}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749640933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749640931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 949a2395a3411a948a0ae38237fd8535, type: 2}
 --- !u!114 &1749640934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,7 +2721,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 949a2395a3411a948a0ae38237fd8535, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2594,7 +2766,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1749640933}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1763845136

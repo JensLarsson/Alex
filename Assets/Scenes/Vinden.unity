@@ -1023,7 +1023,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
   - {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
   removeDialogIfQuestsHasCompleted:
-  - {fileID: 11400000, guid: f9f8efc76c44c6543af595e8254d8a9c, type: 2}
+  - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -5687,7 +5687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Scene2
   locked: 1
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!212 &1619720554
 SpriteRenderer:

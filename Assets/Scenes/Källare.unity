@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: 
+  dialogueName: Good for now.
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: fcca59c715eb3f947b62e236fec70b93, type: 2}
@@ -3806,6 +3806,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 41975093}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1294188377
@@ -4155,7 +4166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: "K\xE4llar_Korridor"
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!1 &1365599387
 GameObject:
@@ -4364,7 +4377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: 
+  dialogueName: Turn off the power
   instantiateDialogIfQuestsExistsInCurrent:
   - {fileID: 11400000, guid: bc1252c3f6c8407429f4fbb9a23568f5, type: 2}
   instantiateDialogIfQuestsExistsInCompleted:
