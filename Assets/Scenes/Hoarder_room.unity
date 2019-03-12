@@ -1582,6 +1582,11 @@ MonoBehaviour:
   removeOnPickup: 0
   accessOnlyThroughScript: 1
   button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &467056242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5265,7 +5270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Vaning2
   locked: 0
-  clip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1402105311
 BoxCollider2D:
