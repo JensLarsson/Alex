@@ -133,7 +133,7 @@ public class AudioManager : MonoBehaviour
     {
         if (source == (TargetAudio)(-1))
         {
-            StartCoroutine(fadeOutC(TargetAudio.C));
+            StartCoroutine(fadeOutC(TargetAudio.D));
         }
         else
             StartCoroutine(fadeOutC(source));

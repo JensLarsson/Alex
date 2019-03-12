@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class CatAI : MonoBehaviour {
+public class CatAI : MonoBehaviour
+{
 
     public bool displayPath;
     public float speed;
@@ -13,11 +15,11 @@ public class CatAI : MonoBehaviour {
     Vector3[] path;
     int targetIndex;
     public Rigidbody2D rb2D;
-    public GameObject lightVision;
 
     Animator anim;
     public GameObject player;
     public GameObject cage;
+    public GameObject lightVision;
     public LayerMask visionMask;
 
     public Vector3 moveDirection;
@@ -26,20 +28,25 @@ public class CatAI : MonoBehaviour {
         return player;
     }
 
+    public UnityEvent victoryEvent;
+
+
     public GameObject GetCage()
     {
         return cage;
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         anim = GetComponent<Animator>();
         anim.SetInteger("moveDirectionY", 1);
         rb2D = GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         anim.SetFloat("distanceToPlayer", Vector3.Distance(player.transform.position, transform.position));
         Vector3 direction = player.transform.position - transform.position;
         direction = NormalizeDirections(direction.normalized);
@@ -47,15 +54,18 @@ public class CatAI : MonoBehaviour {
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(anim.GetInteger("moveDirectionX"), anim.GetInteger("moveDirectionY")), Mathf.Infinity, visionMask);
         Debug.DrawRay(transform.position, new Vector2(anim.GetInteger("moveDirectionX") * 20, anim.GetInteger("moveDirectionY") * 20), Color.red);
+
+
         if (anim.GetInteger("moveDirectionX") != 0)
         {
+            lightVision.transform.position = new Vector3(transform.position.x + 10 * anim.GetInteger("moveDirectionX"), transform.position.y);
             lightVision.transform.localScale = new Vector3(20, 0.5f, 1);
         }
         else if (anim.GetInteger("moveDirectionY") != 0)
         {
+            lightVision.transform.position = new Vector3(transform.position.x, transform.position.y + 10 * anim.GetInteger("moveDirectionY"));
             lightVision.transform.localScale = new Vector3(0.5f, 20, 1);
         }
-        lightVision.transform.position = new Vector3(anim.GetInteger("moveDirectionX") * 10 + transform.position.x, anim.GetInteger("moveDirectionY") * 10 + transform.position.y);
         if (hit)
         {
             Debug.Log("Hit Something");
@@ -99,71 +109,15 @@ public class CatAI : MonoBehaviour {
         return temp;
     }
 
-
-    public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
-    {
-        if (pathSuccessful)
-        {
-            onPath = true;
-            path = newPath;
-            targetIndex = 0;
-            StopCoroutine("FollowPath");
-            StartCoroutine("FollowPath");
-        }
-    }
-
-    IEnumerator FollowPath()
-    {
-        Vector3 currentWaypoint = transform.position;
-        if (path.Length > 0)
-        {
-            currentWaypoint = path[0];
-        }
-        while (true)
-        {
-            if (transform.position == currentWaypoint)
-            {
-                targetIndex++;
-                if (targetIndex >= path.Length)
-                {
-                    onPath = false;
-                    yield break;
-                }
-                currentWaypoint = path[targetIndex];
-            }
-
-            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
-            yield return null;
-
-        }
-    }
-
-    public void OnDrawGizmos()
-    {
-        if (path != null && displayPath)
-        {
-            for (int i = targetIndex; i < path.Length; i++)
-            {
-                Gizmos.color = Color.black;
-                Gizmos.DrawCube(path[i], new Vector3(0.2f, 0.2f));
-
-                if (i == targetIndex)
-                {
-                    Gizmos.DrawLine(transform.position, path[i]);
-                }
-                else
-                {
-                    Gizmos.DrawLine(path[i - 1], path[i]);
-                }
-            }
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "cage")
         {
+
+
             //Win
+            victoryEvent.Invoke();
+
             gameObject.SetActive(false);
         }
     }
@@ -174,10 +128,10 @@ public class CatAI : MonoBehaviour {
         {
             anim.SetBool("hitWall", true);
         }
-        Vector3 direction = player.transform.position - transform.position;
+        /*Vector3 direction = player.transform.position - transform.position;
         direction = direction.normalized;
         //Vector3.Angle(-direction, -col.contacts[0].normal);
-        Debug.Log(Vector3.Angle(-direction, -col.contacts[0].normal));
+        Debug.Log(Vector3.Angle(-direction, -col.contacts[0].normal));*/
     }
     /*void OnCollisionStay2D(Collision2D col)
     {

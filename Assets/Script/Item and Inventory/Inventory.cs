@@ -25,11 +25,11 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        if (!items.Contains(item)) items.Add(item);
+        if (!items.Contains(item) && item != null) items.Add(item);
     }
     public void removeItem(Item item)
     {
-        if (items.Contains(item)) items.Remove(item);
+        if (items.Contains(item) && item != null) items.Remove(item);
     }
 
     public bool hasItem(Item item)

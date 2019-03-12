@@ -238,12 +238,12 @@ GameObject:
   - component: {fileID: 224686825270251370}
   - component: {fileID: 114235702835466252}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Ignore This
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1548833986890290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floors:
   - floorLabel: Basement
-    SceneName: "K\xE4llare"
+    SceneName: "K\xE4llar_Korridor"
   - floorLabel: 1st
     SceneName: Vaning1
   - floorLabel: 2nd
@@ -1346,9 +1346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfAllDoors:
-  - DoorToETS1
-  - DoorToETS2
-  - DoorToETS3
+  - "HelD\xF6rrKey1"
+  - "HelD\xF6rrKey2"
+  - "HelD\xF6rrKey3"
 --- !u!114 &114340990483254128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1595,9 +1595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: b5f8d6f709384624eb32a5fc596950aa, type: 2}
   - {fileID: 11400000, guid: b3112541c2aea3c40b2e8a17d003edf9, type: 2}
-  - {fileID: 11400000, guid: 67fbfa3244999b84984561963ac57248, type: 2}
 --- !u!114 &114794161512245106
 MonoBehaviour:
   m_ObjectHideFlags: 1

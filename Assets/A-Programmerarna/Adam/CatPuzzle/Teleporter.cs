@@ -15,6 +15,5 @@ public class Teleporter : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         other.transform.position = outTeleporter.transform.position;
-
     }
 }

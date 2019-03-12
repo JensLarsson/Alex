@@ -68,7 +68,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
-    - _BlendDistort: 0.41
+    - _BlendDistort: 0
     - _BlendLevel: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -79,8 +79,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _Intensity: 0.133
-    - _Intensity2: 0.281
+    - _Intensity: 0.3
+    - _Intensity2: 0.3
     - _Inverse: 0
     - _Metallic: 0
     - _Mode: 0

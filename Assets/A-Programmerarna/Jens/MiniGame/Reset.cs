@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Reset : MonoBehaviour {
+public class Reset : MonoBehaviour
+{
 
-    
-	void Update () {
-        if (Input.GetButtonDown("Submit"))
+    public string button = "Submit";
+
+    void Update()
+    {
+        if (button != "" && Input.GetButtonDown(button))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }		
-	}
+            resetScene();
+        }
+    }
+
+    public void resetScene()
+    {
+        SceneController.instance.loadScene(SceneManager.GetActiveScene().name);
+    }
 }

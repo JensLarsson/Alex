@@ -186,6 +186,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &110885686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 110885687}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &110885687
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110885686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 838786783}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &166982929
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +629,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yup, see you later!
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -682,7 +710,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, whatever. It\u2019s not my mess."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -858,7 +886,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s go, I can\u2019t watch this. I just want it to stop."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -904,7 +932,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 385410481}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &563843322
 BoxCollider2D:
@@ -999,106 +1026,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &651310548
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &651365506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1162,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
@@ -1249,6 +1176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838786783}
   - component: {fileID: 838786782}
+  - component: {fileID: 838786784}
   m_Layer: 0
   m_Name: dator
   m_TagString: Untagged
@@ -1309,10 +1237,41 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.15, y: 0.6442503, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 110885687}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838786784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838786781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 8ba538b34093e0045812cc475d0d257e, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 110885686}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1060115749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1488,7 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
-  - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
+  - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -1543,7 +1502,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Well, maybe mum will cook something if I say I\u2019m hungry."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1637,7 +1596,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Fine, I\u2019ll do it for him"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1671,6 +1630,106 @@ Transform:
   m_Father: {fileID: 1483444965}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1186456201
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1239779658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239779659}
   - component: {fileID: 1239779661}
+  - component: {fileID: 1239779660}
   m_Layer: 0
   m_Name: Ash Puzzle dialogue
   m_TagString: Untagged
@@ -1700,6 +1760,24 @@ Transform:
   m_Father: {fileID: 1312141005}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239779660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239779658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
+    getQuestsToCompleted: 0
 --- !u!114 &1239779661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,7 +1793,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1735,7 +1814,7 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: I just jave to save first.
+    Text: I just have to save first.
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1763,13 +1842,24 @@ MonoBehaviour:
     Text: "(Damn. He can be glued to the screen for hours. The only thing that reliably
       gets him away from here is mum\u2019s cooking. But it\u2019s not dinner time
       yet\u2026 Maybe if I\u2026)"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1312141002
@@ -1924,7 +2014,6 @@ MonoBehaviour:
   - {fileID: 1239779658}
   - {fileID: 1749640931}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!1 &1455064200
 GameObject:
@@ -2117,7 +2206,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1158505272}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!1 &1522769718
 GameObject:
@@ -2156,7 +2244,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1117389303}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &1522769720
 BoxCollider2D:
@@ -2487,7 +2574,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Sure!
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -2537,7 +2624,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2548,7 +2635,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

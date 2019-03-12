@@ -189,7 +189,7 @@ MonoBehaviour:
     Text: "There\u2019s no dog. You\u2019re not God, are you? So you\u2019re a player.
       Yes, I\u2019ve decided \u2013 you\u2019re a player. So let\u2019s try to figure
       this out."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -270,7 +270,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &41858911
 BoxCollider2D:
@@ -354,7 +354,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Okay, that\u2019s\u2026 still weird, but I guess I can work with that."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -434,7 +434,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440210441
 GameObject:
@@ -503,7 +503,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 0}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hi, mom. How are you?
@@ -606,6 +607,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I might as well help her. Maybe it was blown down by a rogue gust of wind
       or something.
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -755,7 +757,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583821555
 GameObject:
@@ -773,7 +775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &583821556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,8 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c96caeb10770a8248b9a8de2b07d4cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: ac8607f979aec2f4ca7a71e00c1d852d, type: 2}
-  tran: {fileID: 1587409727}
+  mat: {fileID: 2100000, guid: 8be6c9e5e1440b24099b17c9876fadde, type: 2}
 --- !u!212 &583821557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -801,7 +802,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ac8607f979aec2f4ca7a71e00c1d852d, type: 2}
+  - {fileID: 2100000, guid: 8be6c9e5e1440b24099b17c9876fadde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -842,7 +843,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614997797
 GameObject:
@@ -881,7 +882,6 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 785533109}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &614997799
 BoxCollider2D:
@@ -920,7 +920,7 @@ Transform:
   m_Children:
   - {fileID: 785533112}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &622205554
 GameObject:
@@ -931,6 +931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622205557}
   - component: {fileID: 622205556}
+  - component: {fileID: 622205555}
   m_Layer: 0
   m_Name: Mom dialogue attic
   m_TagString: Untagged
@@ -938,6 +939,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &622205555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622205554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 8b1c3489cc371b443a13d387b769729a, type: 2}
 --- !u!114 &622205556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +968,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: d0c11910292b13b4f9879fcc5ef2a55e, type: 2}
   - {fileID: 11400000, guid: b3e204f08627780428a189db73b8f195, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 8b1c3489cc371b443a13d387b769729a, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1059,12 +1074,24 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll be fine, mom."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 622205555}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &622205557
@@ -1158,7 +1185,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "So\u2026 If I\u2019m in a game, there should be a player, right? Like\u2026
       Uh\u2026 If you\u2019re out there\u2026 Maybe, like, move me somewhere?"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1238,7 +1265,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &734397054
 GameObject:
@@ -1313,7 +1340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &734397057
 MonoBehaviour:
@@ -1328,7 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Ash_rum
   locked: 0
-  clip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &734397058
 BoxCollider2D:
@@ -1355,6 +1382,134 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9042225, y: 1.3104024}
   m_EdgeRadius: 0
+--- !u!1 &740833163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 740833164}
+  - component: {fileID: 740833167}
+  - component: {fileID: 740833166}
+  - component: {fileID: 740833165}
+  - component: {fileID: 740833168}
+  m_Layer: 0
+  m_Name: tomatoPuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740833164
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740833163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1239457245}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &740833165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740833163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+--- !u!114 &740833166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740833163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 740833165}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  item: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f, type: 2}
+--- !u!61 &740833167
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740833163}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &740833168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740833163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 740833163}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &785533109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785533112}
   - component: {fileID: 785533111}
+  - component: {fileID: 785533110}
   m_Layer: 0
   m_Name: Door monolog (Post tomato talk)
   m_TagString: Untagged
@@ -1371,6 +1527,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &785533110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785533109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 0e8a9004b51fb994fb8b808c342f2029, type: 2}
 --- !u!114 &785533111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,7 +1555,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 34e457bd7db485b4fb5290b44d3a2ba5, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 0e8a9004b51fb994fb8b808c342f2029, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1402,12 +1572,24 @@ MonoBehaviour:
       with than go around knocking on doors and solving problems. Maybe I can use
       the tomato plushie to help mum remember where she put the actual tomatoes. I
       suppose I could try."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 785533110}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &785533112
@@ -1494,7 +1676,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &901429971
 GameObject:
@@ -1600,6 +1782,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: " Let\u2019s keep going"
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -1694,7 +1877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &915917074
 MonoBehaviour:
@@ -1709,7 +1892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Alex_toalett
   locked: 0
-  clip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &915917075
 BoxCollider2D:
@@ -1788,7 +1971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959768635
 GameObject:
@@ -1870,7 +2053,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &959768640
 MonoBehaviour:
@@ -1939,7 +2122,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1013277465
 Prefab:
@@ -1978,7 +2161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4118951202783732, guid: d9cd29d836d36ac49acfec4e4eada596, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1079087706265452, guid: d9cd29d836d36ac49acfec4e4eada596, type: 2}
       propertyPath: m_Name
@@ -2021,6 +2204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1071243134}
   - component: {fileID: 1071243133}
+  - component: {fileID: 1071243132}
   m_Layer: 0
   m_Name: Ash Door monolog (Post tomato talk)
   m_TagString: Untagged
@@ -2028,6 +2212,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1071243132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071243131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 0e8a9004b51fb994fb8b808c342f2029, type: 2}
 --- !u!114 &1071243133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,7 +2240,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 34e457bd7db485b4fb5290b44d3a2ba5, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 0e8a9004b51fb994fb8b808c342f2029, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2059,12 +2257,24 @@ MonoBehaviour:
       for the missing tomatoes, especially when he\u2019s glued to the screen. Hm\u2026
       Maybe I can use the tomato plushie to help mum remember where she put the actual
       tomatoes. I guess it\u2019s worth a shot."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071243132}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1071243134
@@ -2080,106 +2290,6 @@ Transform:
   m_Father: {fileID: 1472341670}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1101229531
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741211736303776, guid: 85ee85005c4054740a158dde85e6b323,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 85ee85005c4054740a158dde85e6b323, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1153036903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2356,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "No, wait, I meant to say frock. Oh, I can\u2019t, uh\u2026 Okay, never
       mind that, this is too weird!? Are you like\u2026 God? Or just a player?"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
@@ -2265,6 +2375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163817622}
   - component: {fileID: 1163817624}
+  - component: {fileID: 1163817623}
   m_Layer: 0
   m_Name: Post Ash puzzle talk
   m_TagString: Untagged
@@ -2285,6 +2396,19 @@ Transform:
   m_Father: {fileID: 1239457245}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163817623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163817621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 34e457bd7db485b4fb5290b44d3a2ba5, type: 2}
 --- !u!114 &1163817624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2300,8 +2424,9 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
-  - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 34e457bd7db485b4fb5290b44d3a2ba5, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2374,12 +2499,24 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "I\u2026 don\u2019t think so? I think I better pop down to the store just
       to be sure."
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1189939551
@@ -2454,7 +2591,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1189939554
 BoxCollider2D:
@@ -2493,6 +2630,8 @@ GameObject:
   - component: {fileID: 1239457243}
   - component: {fileID: 1239457247}
   - component: {fileID: 1239457246}
+  - component: {fileID: 1239457249}
+  - component: {fileID: 1239457248}
   m_Layer: 0
   m_Name: sheet momA_0
   m_TagString: Untagged
@@ -2583,8 +2722,9 @@ Transform:
   - {fileID: 1873583749}
   - {fileID: 1163817622}
   - {fileID: 901429973}
+  - {fileID: 740833164}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1239457246
 BoxCollider2D:
@@ -2634,8 +2774,224 @@ MonoBehaviour:
   - {fileID: 1163817621}
   - {fileID: 901429971}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
+--- !u!114 &1239457248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239457242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: a1ab0c98c57b4104fb180f1d410d1a36, type: 2}
+--- !u!114 &1239457249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239457242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1239457248}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  item: {fileID: 11400000, guid: 4a9be846e98cb374c8e8b8df39e0a8c7, type: 2}
+--- !u!1 &1244072528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1244072532}
+  - component: {fileID: 1244072531}
+  - component: {fileID: 1244072530}
+  - component: {fileID: 1244072529}
+  - component: {fileID: 1244072534}
+  - component: {fileID: 1244072533}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1244072529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244072528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 4a9be846e98cb374c8e8b8df39e0a8c7, type: 2}
+  removeOnPickup: 1
+  accessOnlyThroughScript: 0
+  button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1244072533}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!61 &1244072530
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244072528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1244072531
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244072528}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8a2a49d17c4d2b041a2b51885aa49bda, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1244072532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244072528}
+  m_LocalRotation: {x: 0, y: 0, z: -0.23369987, w: 0.9723088}
+  m_LocalPosition: {x: -0.243, y: 0.131, z: 0}
+  m_LocalScale: {x: 0.37, y: -0.15, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.03}
+--- !u!114 &1244072533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244072528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: cde9e3027ec4c324db136aa17f4d3bec, type: 2}
+--- !u!114 &1244072534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244072528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: cde9e3027ec4c324db136aa17f4d3bec, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1244072528}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1320915306
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,7 +3063,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1373931201
 Prefab:
@@ -2746,7 +3102,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
@@ -2836,7 +3192,7 @@ MonoBehaviour:
       Maybe if we designate some places or things near me as\u2026 cues? So, If you
       move me towards the couch, you\u2019re God. If you move me to the bookshelf,
       you\u2019re a player."
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:
@@ -2918,7 +3274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1469047054
 GameObject:
@@ -2993,7 +3349,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1469047057
 MonoBehaviour:
@@ -3008,7 +3364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Vaning1
   locked: 0
-  clip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1469047058
 BoxCollider2D:
@@ -3073,7 +3429,6 @@ MonoBehaviour:
   - {fileID: 622205554}
   - {fileID: 1071243131}
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!61 &1472341669
 BoxCollider2D:
@@ -3098,7 +3453,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.18, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &1472341670
 Transform:
@@ -3107,13 +3462,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1472341667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.094, y: 0.856, z: 0}
+  m_LocalPosition: {x: 2.93, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 622205557}
   - {fileID: 1071243134}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522608591
 GameObject:
@@ -3167,7 +3522,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584823452
 GameObject:
@@ -3241,7 +3596,7 @@ Transform:
   m_LocalScale: {x: 1.325, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1584823455
 BoxCollider2D:
@@ -3339,7 +3694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587045702
 GameObject:
@@ -3412,13 +3767,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1587409727 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776,
-    type: 2}
-  m_PrefabInternal: {fileID: 1373931201}
 --- !u!1 &1623628260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,7 +3841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1623628263
 BoxCollider2D:
@@ -3589,7 +3939,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730044834
 GameObject:
@@ -3643,7 +3993,7 @@ Transform:
   m_LocalScale: {x: 1.06, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1768441441
 GameObject:
@@ -3680,7 +4030,6 @@ MonoBehaviour:
     onFunctionCall: 0
   thisCharacterConversations: []
   isInDialogueTrigger: 0
-  isActive: 0
   StartDelay: 0
 --- !u!4 &1768441443
 Transform:
@@ -3699,7 +4048,7 @@ Transform:
   - {fileID: 100436926}
   - {fileID: 20386906}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1873583748
 GameObject:
@@ -3783,6 +4132,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I will. Thanks again, dear!
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -3843,8 +4193,108 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2053607337
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2097018919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,7 +4347,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098570304
 GameObject:
@@ -3957,7 +4407,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Ah, NO, stop!  That\u2019s so weird, and so creepy! How long have you been
       able to do that? Since just now? Since forever?"
-  canRepeatTheDialog: 0
+  canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers:

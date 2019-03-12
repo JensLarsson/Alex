@@ -11,21 +11,10 @@ public class Idle : CatBase
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         base.OnStateEnter(animator,stateInfo,layerIndex);
         animator.SetBool("hitWall", false);
-        /*target = NewTarget();
-        catAI.MakePathRequest(cat.transform.position, target, catAI.speed);*/
     }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        /*if (Vector3.Distance(cat.transform.position, target) < 0.5f)
-        {
-            target = NewTarget();
-        }*/
-        /*if (!catAI.onPath)
-        {
-            target = NewTarget();
-            catAI.MakePathRequest(cat.transform.position, target, catAI.speed);
-        }*/
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

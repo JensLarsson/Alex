@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d147ef13ca3a74592e813a7bec33be, type: 3}
   m_Name: Talk to ash 1st
   m_EditorClassIdentifier: 
-  _name: Talking to brother for the first time
+  _name: Talk to ash 1st
   description: 

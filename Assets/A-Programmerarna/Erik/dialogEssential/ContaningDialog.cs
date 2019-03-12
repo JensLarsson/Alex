@@ -54,7 +54,7 @@ public class ContaningDialog : MonoBehaviour
 
     void Start()
     {
-       
+
     }
 
     void OnDestroy()
@@ -81,7 +81,7 @@ public class ContaningDialog : MonoBehaviour
     }
     public void resetDialogue(bool wasSelected)
     {
-        if(wasSelected && !canRepeat != !true)
+        if(wasSelected && !canRepeat)
         {
             gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(this.gameObject);
             Destroy(this.gameObject);

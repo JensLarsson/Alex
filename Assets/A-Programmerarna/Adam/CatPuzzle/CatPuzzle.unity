@@ -221,7 +221,7 @@ Animator:
   m_GameObject: {fileID: 6841778}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f47adc2c6695965448164a9be3019f56, type: 2}
+  m_Controller: {fileID: 9100000, guid: 375623d4977249d408fe491a24d93c9f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -526,6 +526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001bf9374dd51224585de6e8bd9ba9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayGridGizmos: 0
+  unwakableMask:
+    serializedVersion: 2
+    m_Bits: 512
+  gridWorldSize: {x: 18, y: 10}
+  nodeRadius: 0.2
 --- !u!1 &368908107
 GameObject:
   m_ObjectHideFlags: 0

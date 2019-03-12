@@ -11,6 +11,7 @@ public class questDoor : MonoBehaviour
         {
             if(thisDoorGO == keyQuestMain.Instance.nameOfAllDoors[i])
             {
+
                 keyQuestMain.Instance.updateKeyQuest(i);
             }
         }
