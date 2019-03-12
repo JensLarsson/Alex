@@ -1214,7 +1214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Alex
   locked: 0
-  clip: {fileID: 0}
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1452022714
 BoxCollider2D:
@@ -1364,8 +1366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Svensson
-  locked: 0
-  clip: {fileID: 0}
+  locked: 1
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1634518250
 BoxCollider2D:

@@ -1845,7 +1845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Ash_rum
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &734397058
 BoxCollider2D:
@@ -2382,7 +2384,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Alex_toalett
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &915917075
 BoxCollider2D:
@@ -3483,7 +3487,7 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
-  - {fileID: 11400000, guid: cf5645d093882fb45b782173691789e1, type: 2}
+  - {fileID: 11400000, guid: c9598f780302780419bed8c771d6bcd6, type: 2}
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: 34e457bd7db485b4fb5290b44d3a2ba5, type: 2}
   diffrentStartSounds: []
@@ -4785,7 +4789,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Vaning1
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1469047058
 BoxCollider2D:
@@ -5626,6 +5632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1873583749}
   - component: {fileID: 1873583751}
+  - component: {fileID: 1873583750}
   m_Layer: 0
   m_Name: Post finding list dialogue
   m_TagString: Untagged
@@ -5646,6 +5653,19 @@ Transform:
   m_Father: {fileID: 1239457245}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873583750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1873583748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: e484ee5acf3c0024eb9c1f05f6c92d71, type: 2}
 --- !u!114 &1873583751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5661,7 +5681,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: a1ab0c98c57b4104fb180f1d410d1a36, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: e484ee5acf3c0024eb9c1f05f6c92d71, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -5705,7 +5726,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1873583750}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2002770508
