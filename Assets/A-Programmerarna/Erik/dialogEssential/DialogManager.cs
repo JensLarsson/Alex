@@ -306,6 +306,65 @@ public class DialogManager : MonoBehaviour
             }
         }
     }
+
+    IEnumerator playSound(Characters talkingCharacter)
+    {
+        if (talkingCharacter.duringConversationSound.Length > 0)
+        {
+            while (true)
+            {
+                int random = Random.Range(0, talkingCharacter.duringConversationSound.Length);
+                Debug.Log(random);
+
+                AudioManager.instance.playSFXRandomPitch(
+                   talkingCharacter.duringConversationSound[random],
+                   activeDialog.dialogs[dialogAt].soundPitch);
+                yield return new WaitForSeconds(talkingCharacter.duringConversationSound[random].length +
+                   activeDialog.dialogs[dialogAt].soundTimeDelay);
+            }
+        }
+    }
+
+    //funktion för att ta fram bokstav för bokstav...
+    IEnumerator animateText(string TextToDisplay)
+    {
+        string displayingString = "";
+        int letterDisplayed = 0;
+        // = playSound(null);
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i].nameOfNPC == activeDialog.dialogs[dialogAt].NameOfTalkingNPC)
+            {
+                PlaySound = playSound(characters[i]);
+                StartCoroutine(PlaySound);
+            }
+        }
+
+        while (letterDisplayed < TextToDisplay.Length)
+        {
+            if (skipAnimation)
+            {
+                break;
+            }
+            displayingString += TextToDisplay[letterDisplayed++];
+
+            yield return new WaitForSeconds(activeDialog.dialogs[dialogAt].AnimationSpeed);
+            dialogTextUI.text = displayingString;
+        }
+
+        foreach (Characters Char in characters)
+        {
+            StopCoroutine(PlaySound);
+        }
+
+        dialogTextUI.text = TextToDisplay;
+        callFunctionOnce = true;
+        stopRewriteText = true;
+        skipAnimation = false;
+        yield return null;
+    }
+}
     //    IEnumerator playSound()
     //    {
     //        if (activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length > 0)
@@ -351,70 +410,3 @@ public class DialogManager : MonoBehaviour
     //        yield return null;
     //    }
     //}
-
-    IEnumerator playSound(Characters talkingCharacter)
-    {
-        if (talkingCharacter.duringConversationSound.Length > 0)
-        {
-            while (true)
-            {
-                int random = Random.Range(0, talkingCharacter.duringConversationSound.Length);
-                Debug.Log(random);
-
-                AudioManager.instance.playSFXRandomPitch(
-                   talkingCharacter.duringConversationSound[random],
-                   activeDialog.dialogs[dialogAt].soundPitch);
-                yield return new WaitForSeconds(talkingCharacter.duringConversationSound[random].length +
-                   activeDialog.dialogs[dialogAt].soundTimeDelay);
-                //int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
-
-                //AudioManager.instance.playSFXRandomPitch(
-                //   activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random],
-                //   activeDialog.dialogs[dialogAt].soundPitch);
-                //yield return new WaitForSeconds(
-                //    activeDialog.dialogs[dialogAt].soundTimeDelay +
-                //    activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random].length);
-            }
-        }
-    }
-
-    //funktion för att ta fram bokstav för bokstav...
-    IEnumerator animateText(string TextToDisplay)
-    {
-        string displayingString = "";
-        int letterDisplayed = 0;
-        // = playSound(null);
-
-        for (int i = 0; i < characters.Length; i++)
-        {
-            if (characters[i].nameOfNPC == activeDialog.dialogs[dialogAt].NameOfTalkingNPC)
-            {
-                PlaySound = playSound(characters[i]);
-                StartCoroutine(PlaySound);
-            }
-        }
-
-        while (letterDisplayed < TextToDisplay.Length)
-        {
-            if (skipAnimation)
-            {
-                break;
-            }
-            displayingString += TextToDisplay[letterDisplayed++];
-
-            yield return new WaitForSeconds(activeDialog.dialogs[dialogAt].AnimationSpeed);
-            dialogTextUI.text = displayingString;
-        }
-
-        foreach (Characters Char in characters)
-        {
-            StopCoroutine(PlaySound);
-        }
-
-        dialogTextUI.text = TextToDisplay;
-        callFunctionOnce = true;
-        stopRewriteText = true;
-        skipAnimation = false;
-        yield return null;
-    }
-}
