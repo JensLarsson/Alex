@@ -638,7 +638,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I mean, best case scenario we end up resetting the game. I go back to not
@@ -648,7 +649,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Having a future, something to imagine or dream about, that must really
@@ -658,7 +660,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me to the vase if yes, stay still if no
@@ -824,7 +827,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I hope you get whatever it is, I really do. I don\u2019t know, something
@@ -834,7 +838,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You \u2013 you\u2019ve been pretty great. I couldn\u2019t have gotten this
@@ -844,7 +849,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "But also, you\u2019ve been there. I know I can\u2019t see you, I don\u2019t
@@ -855,7 +861,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Just, thank you, I guess.
@@ -863,7 +870,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s keep going."
@@ -2526,6 +2534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720172355}
   - component: {fileID: 720172354}
+  - component: {fileID: 720172356}
   m_Layer: 0
   m_Name: "Tesla coil Avst\xE4ngd"
   m_TagString: Untagged
@@ -2590,6 +2599,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &720172356
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720172353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 103aa977fe197404a8df643dfb8ce7e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &745310383
 Prefab:
   m_ObjectHideFlags: 0
@@ -2922,7 +2948,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Eh, oops.
@@ -3192,7 +3219,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Does that mean you have a job? Have your own place and stuff. I wonder
@@ -3445,7 +3473,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Well, at least we have something in common. Or, maybe you\u2019re already
@@ -3454,7 +3483,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: " Even if it is, don\u2019t you want something to look forward to? I feel
@@ -3463,7 +3493,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: If I had one, I would. I would make it whatever I wanted and I would always
@@ -3472,7 +3503,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I don\u2019t know, I just\u2026 Lets keep going."
@@ -3541,7 +3573,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Eureka! I need an apple or something to hit myself with. I can\u2019t believe\u2026
@@ -3551,7 +3584,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yes, that\u2019s me. Uh, what\u2019s going on with the\u2026"
@@ -3559,7 +3593,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Vacuum cleaner? My greatest discovery is what\u2019s going on. At last!
@@ -3570,7 +3605,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yes, it's from...
@@ -3578,7 +3614,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I wonder what I should do first? Should I get a sample? Do ghosts even
@@ -3589,7 +3626,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That sounds really dangerous. Hey, are you alright? There\u2019s been some
@@ -3598,7 +3636,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh alright, weird like how? Like more ghosts weird? Because I\u2019m sure
@@ -3608,7 +3647,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Another vacuum cleaner?
@@ -3616,7 +3656,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "No, explosives. Now I just need to figure out how to do this without destroying
@@ -3626,7 +3667,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Are you sure blowing it up is, like, a great idea?
@@ -3634,7 +3676,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Of course it is! Besides, I have loved the fire too truly to be fearful
@@ -3654,7 +3697,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey Dr. Oakley\u2026"
@@ -3662,7 +3706,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Please! Call me Ava. Still doctor though. Dr. Ava. I didn\u2019t work on
@@ -3671,7 +3716,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alright, Dr. Ava\u2026 I was wondering about the security system here.
@@ -3680,7 +3726,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That\u2019s easy! Lasers, tons and tons of lasers. Don\u2019t go in the
@@ -3692,7 +3739,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey! What if I use another vacuum to remove the ghost from the first one?
@@ -4147,11 +4195,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 212337905559355542, guid: b148c6c86c00e3b448b5aee0bb398648,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a3b1dde38cffb694b85fa6eea1a24df6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
   m_IsPrefabParent: 0
@@ -5270,7 +5313,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Vaning2
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &1402105311
 BoxCollider2D:
@@ -5891,7 +5936,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Did that cat change colour?
@@ -6239,7 +6285,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "She keep saying she\u2019s a doctor, but can someone who\u2019s not real
@@ -6250,7 +6297,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I feel like I should be in school, but I have no memories of it. Are you
@@ -6327,7 +6375,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
@@ -6491,7 +6540,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: The ghost! Where is it? Alex, did you see where in went?
@@ -6499,7 +6549,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 1867240daba21e8408982a5e335b139f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: There was uh, this guy in a red lab coat. He walked in and, well, he walked
@@ -6508,7 +6559,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
     AnimationSpeed: 0.05
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Darn it! Oh well, I\u2019ll find another one\u2026"
@@ -6997,6 +7049,11 @@ Prefab:
       propertyPath: m_Name
       value: BuggedBlock (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114564509371544970, guid: b148c6c86c00e3b448b5aee0bb398648,
+        type: 2}
+      propertyPath: pushClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 980496f0967f7f14fbba543a51faae13, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
   m_IsPrefabParent: 0
