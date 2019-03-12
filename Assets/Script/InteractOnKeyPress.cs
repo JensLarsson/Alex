@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class InteractOnKeyPress : MonoBehaviour
 {
     public string button = "Submit";
+    public AudioClip soundClip;
     public UnityEvent unityEvent;
     bool inside = false;
 
@@ -14,6 +15,7 @@ public class InteractOnKeyPress : MonoBehaviour
     {
         if (inside && Input.GetButtonDown(button) && PlayerMovement.canMove)
         {
+            if (soundClip != null) AudioManager.instance.playSFXClip(soundClip);
             unityEvent.Invoke();
         }
     }

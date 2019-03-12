@@ -5550,7 +5550,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1623943625}
   - component: {fileID: 1623943627}
-  - component: {fileID: 1623943626}
   m_Layer: 0
   m_Name: Dia1
   m_TagString: Untagged
@@ -5571,24 +5570,6 @@ Transform:
   m_Father: {fileID: 1527125904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1623943626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1623943624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 0}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 0}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
 --- !u!114 &1623943627
 MonoBehaviour:
   m_ObjectHideFlags: 0
