@@ -650,7 +650,7 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_RootOrder
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
@@ -705,6 +705,83 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &195855350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 195855352}
+  - component: {fileID: 195855351}
+  - component: {fileID: 195855353}
+  m_Layer: 0
+  m_Name: SpiritFinalLast-leadup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &195855351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195855350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &195855352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195855350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.53, y: 1.07, z: 0}
+  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_Children:
+  - {fileID: 393424797}
+  m_Father: {fileID: 0}
+  m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &195855353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195855350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 393424796}
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &198805025 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
@@ -1371,6 +1448,81 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &393424796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 393424797}
+  - component: {fileID: 393424798}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &393424797
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393424796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 195855352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393424798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393424796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: Alex-leadup-toFinalSpiritDialogue
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well then, final stop on the farewell tour. You know, I haven\u2019t known
+      the old spirit for long, but I feel like I kinda get him now, you know."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "And just because I won\u2019t be like this, won\u2019t mean I can\u2019t
+      talk to it any longer, I guess. Ugh, let\u2019s just do this."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &421920489
 Prefab:
   m_ObjectHideFlags: 0
@@ -2510,7 +2662,7 @@ Transform:
   m_Children:
   - {fileID: 1497145376}
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690319299
 GameObject:
@@ -2610,7 +2762,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690319303
 MonoBehaviour:
@@ -2707,7 +2859,7 @@ Transform:
   m_Children:
   - {fileID: 532742314}
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &709066331
 Prefab:
@@ -2836,7 +2988,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &758452507
 GameObject:
@@ -3914,6 +4066,7 @@ Transform:
   - {fileID: 662575726}
   - {fileID: 354328773}
   - {fileID: 1231278124}
+  - {fileID: 1257971769}
   m_Father: {fileID: 0}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4753,6 +4906,227 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1257971768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1257971769}
+  - component: {fileID: 1257971770}
+  m_Layer: 0
+  m_Name: SpiritDialogue4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257971769
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257971768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024322021}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257971770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257971768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: SpiritDialogue4
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Why, hello again, young miss Alexandra. How do you fare in your attempts
+      to get the spirits out of this house?
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Hey again. I\u2019m\u2026 Well, I\u2019m done. I got them all."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Excellent, indeed, young Alexandra. Your perseverance is an inspiration
+      even to an old spirit like me.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, you flatterer. So what do we do now? I\u2019ve got all the spirits
+      back to you. Do we just open the window and let them fly free?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: More or less. They know their way back to their homes, and us spirits can
+      move mightily quickly if we so do desire. They will be fine, Alexandra. Thanks
+      to you.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, don\u2019t make me blush, Spirit."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Certainly not. I\u2019ll leave that for your human companion."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7aad6f8e13e681842a1ed3925e79bea2,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Cheeky, are we now? Seems like I\u2019m rubbing off on you."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Indeed, I\u2019ve noticed. I look forward to continuous exchanges of information
+      going forward, young miss."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "So, you\u2019re not going away or anything, now that all the problems are
+      solved?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: No, I think it might be good for everyone if I kept a closer watch on this
+      place. I do not think it would be wise of me to show myself to anyone else,
+      though. I fear the other residents lack your mental composure.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Might be for the best. I\u2019m happy you\u2019re sticking around."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I am glad to hear it.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well\u2026 Guess I\u2019ll just grab that damn glass bowl that started
+      all of this, and head back down."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh, indeed. I shall move it to the front so it will be easier to grab for
+      you, young miss.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Thanks. And here it is! So much work for a large piece of glass.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I\u2019m sure your family will appreciate your efforts."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Probably, even if they won\u2019t know what I\u2019ve done. Oh, well, I
+      guess I should be going. I\u2019ll see you later then."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yes, young miss. I\u2019ll be here."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1305304349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,7 +5198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1324998979
 Prefab:
@@ -5065,7 +5439,7 @@ Transform:
   - {fileID: 860330079}
   - {fileID: 1132632928}
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1432304175
 Prefab:
@@ -5849,7 +6223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1634508606
 BoxCollider2D:
@@ -6117,7 +6491,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1677362113
 MonoBehaviour:
@@ -6233,7 +6607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1739206584
 Prefab:
@@ -6403,7 +6777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1872436111
 Prefab:
