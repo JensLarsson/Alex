@@ -1693,6 +1693,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInDialogue: 0
+  characters:
+  - nameOfNPC: Alex
+    duringConversationSound:
+    - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
+  - nameOfNPC: Martin
+    duringConversationSound: []
   dialogTextUI: {fileID: 114824093918510024}
   dialogNameTagUI: {fileID: 114445273998899968}
   dialogPortraitImageUI: {fileID: 114750022118735002}

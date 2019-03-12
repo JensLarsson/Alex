@@ -37,6 +37,13 @@ public class CompleteConvesation
     [HideInInspector] public UnityEvent events;
     [HideInInspector] public bool hasBeenRead;
 }
+[System.Serializable]
+public class Characters
+{
+    [Tooltip("must be the same as the NPC name in the containingDialogue script")]
+    public string nameOfNPC;
+    public AudioClip[] duringConversationSound;
+}
 
 public class DialogManager : MonoBehaviour
 {
@@ -54,7 +61,9 @@ public class DialogManager : MonoBehaviour
     bool skipAnimation = false;
 
     [HideInInspector] public bool isInDialogue;
-
+    
+    [SerializeField] Characters[] characters;
+    IEnumerator PlaySound;
 
     //ui element
     [SerializeField] Text dialogTextUI;
@@ -240,7 +249,6 @@ public class DialogManager : MonoBehaviour
 
                             quedDialogs.Clear();
                             ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = false;
-                            Debug.Log("before invoke");
                             if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
                             {
                             }
@@ -298,22 +306,74 @@ public class DialogManager : MonoBehaviour
             }
         }
     }
+    //    IEnumerator playSound()
+    //    {
+    //        if (activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length > 0)
+    //        {
+    //            while (true)
+    //            {
+    //                int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
 
+    //                AudioManager.instance.playSFXRandomPitch(
+    //                   activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random],
+    //                   activeDialog.dialogs[dialogAt].soundPitch);
+    //                yield return new WaitForSeconds(
+    //                    activeDialog.dialogs[dialogAt].soundTimeDelay +
+    //                    activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random].length);
+    //            }
+    //        }
+    //    }
 
-    IEnumerator playSound()
+    //    //funktion för att ta fram bokstav för bokstav...
+    //    IEnumerator animateText(string TextToDisplay)
+    //    {
+    //        string displayingString = "";
+    //        int letterDisplayed = 0;
+    //        IEnumerator PlaySound = playSound();
+    //        StartCoroutine(PlaySound);
+    //        while (letterDisplayed < TextToDisplay.Length)
+    //        {
+    //            if (skipAnimation)
+    //            {
+    //                break;
+    //            }
+    //            displayingString += TextToDisplay[letterDisplayed++];
+
+    //            yield return new WaitForSeconds(activeDialog.dialogs[dialogAt].AnimationSpeed);
+    //            dialogTextUI.text = displayingString;
+    //        }
+    //        StopCoroutine(PlaySound);
+
+    //        dialogTextUI.text = TextToDisplay;
+    //        callFunctionOnce = true;
+    //        stopRewriteText = true;
+    //        skipAnimation = false;
+    //        yield return null;
+    //    }
+    //}
+
+    IEnumerator playSound(Characters talkingCharacter)
     {
-        if (activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length > 0)
+        if (talkingCharacter.duringConversationSound.Length > 0)
         {
             while (true)
             {
-                int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
+                int random = Random.Range(0, talkingCharacter.duringConversationSound.Length);
+                Debug.Log(random);
 
                 AudioManager.instance.playSFXRandomPitch(
-                   activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random],
+                   talkingCharacter.duringConversationSound[random],
                    activeDialog.dialogs[dialogAt].soundPitch);
-                yield return new WaitForSeconds(
-                    activeDialog.dialogs[dialogAt].soundTimeDelay +
-                    activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random].length);
+                yield return new WaitForSeconds(talkingCharacter.duringConversationSound[random].length +
+                   activeDialog.dialogs[dialogAt].soundTimeDelay);
+                //int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
+
+                //AudioManager.instance.playSFXRandomPitch(
+                //   activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random],
+                //   activeDialog.dialogs[dialogAt].soundPitch);
+                //yield return new WaitForSeconds(
+                //    activeDialog.dialogs[dialogAt].soundTimeDelay +
+                //    activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue[random].length);
             }
         }
     }
@@ -323,8 +383,17 @@ public class DialogManager : MonoBehaviour
     {
         string displayingString = "";
         int letterDisplayed = 0;
-        IEnumerator PlaySound = playSound();
-        StartCoroutine(PlaySound);
+        // = playSound(null);
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i].nameOfNPC == activeDialog.dialogs[dialogAt].NameOfTalkingNPC)
+            {
+                PlaySound = playSound(characters[i]);
+                StartCoroutine(PlaySound);
+            }
+        }
+
         while (letterDisplayed < TextToDisplay.Length)
         {
             if (skipAnimation)
@@ -336,7 +405,11 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(activeDialog.dialogs[dialogAt].AnimationSpeed);
             dialogTextUI.text = displayingString;
         }
-        StopCoroutine(PlaySound);
+
+        foreach (Characters Char in characters)
+        {
+            StopCoroutine(PlaySound);
+        }
 
         dialogTextUI.text = TextToDisplay;
         callFunctionOnce = true;

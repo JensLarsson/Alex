@@ -34,7 +34,6 @@ public class conversationCollection : MonoBehaviour
         if (PlayerMovement.canMove)
         {
             List<GameObject> tempList = new List<GameObject>();
-            Debug.Log(tempList.Count);
             //for (int i = thisCharacterConversations.Count - 1; i >= 0; i--)
             foreach (GameObject dialogs in thisCharacterConversations)
             {
@@ -59,15 +58,13 @@ public class conversationCollection : MonoBehaviour
 
                 if (isDialogueAcceible)
                 {
-                    Debug.Log(dialogs.gameObject.GetComponent<ContaningDialog>().dialogueName + " is accesable");
                     tempList.Add(dialogs);
                 }
             }
-            Debug.Log(tempList.Count);
             for (int i = 0; i < tempList.Count; i++)
             {
                 tempList[i].GetComponent<ContaningDialog>().startConversation();
-                Debug.Log(tempList[i].GetComponent<ContaningDialog>().dialogueName);
+                //Debug.Log(tempList[i].GetComponent<ContaningDialog>().dialogueName);
             }
             tempList.Clear();
         }
