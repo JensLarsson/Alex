@@ -650,7 +650,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, Ash. What are you playing?
@@ -658,7 +659,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, just some Rocket-Robo
@@ -666,7 +668,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Any plans for later?
@@ -674,7 +677,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, I\u2019m gonna go down to the park to hang out with some friends."
@@ -682,7 +686,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Nice. Just make sure you make your bed before you go, so mom can vacuum
@@ -691,7 +696,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bc13208bd783f43418a7198bb1b237d0,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, yeah.
@@ -699,7 +705,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Ash.
@@ -707,7 +714,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll do it. I will. Promise."
@@ -715,7 +723,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alright. I\u2019ll see you later then."
@@ -723,7 +732,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yup, see you later!
@@ -787,7 +797,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Ugh, I thought I told him to clean this up earlier.
@@ -804,7 +815,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, whatever. It\u2019s not my mess."
@@ -956,7 +968,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey Ash\u2026 how\u2019s- how\u2019s the episode going?"
@@ -964,7 +977,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "It\u2019s great! Gonna head out soon, it\u2019s almost two o\u2019clock."
@@ -972,7 +986,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, sure bud.
@@ -980,7 +995,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s go, I can\u2019t watch this. I just want it to stop."
@@ -1611,7 +1627,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Well, maybe mum will cook something if I say I\u2019m hungry."
@@ -1684,7 +1701,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, Ash. Are you ever going to tidy up your bed?
@@ -1692,7 +1710,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
@@ -1700,7 +1719,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: What? Just pause.
@@ -1708,7 +1728,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
@@ -1716,7 +1737,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Fine, I\u2019ll do it for him"
@@ -1928,7 +1950,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: How's the game going?
@@ -1936,7 +1959,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
@@ -1944,7 +1968,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Can I just borrow the computer for a sec? I just need to get something
@@ -1953,7 +1978,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just need to save.
@@ -1961,7 +1987,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(Damn. He can be glued to the screen for hours. The only thing that reliably
@@ -2731,7 +2758,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey, Ash, it\u2019s lunch time!"
@@ -2739,7 +2767,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Really, I can\u2019t smell anything? What time is it?"
@@ -2747,7 +2776,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 277ff961f055614458aa2433193b1f0a, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, uh\u2026 maybe she didn\u2019t start yet. I\u2019ll check on her and
@@ -2756,7 +2786,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49e795a40372d554e8065d7284d938e2, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Sure!
