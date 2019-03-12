@@ -11,5 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: doll Toy
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8730a22f591f6374bbc43e98e0ae657a, type: 3}
+  deleteOnUse: 1
+  useSound: {fileID: 0}
   description: 

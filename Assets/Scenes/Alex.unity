@@ -155,8 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 5b677ce91acabf3498146234d8a5070f, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -342,8 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 5b677ce91acabf3498146234d8a5070f, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -395,7 +393,7 @@ Transform:
   m_Children:
   - {fileID: 100436926}
   m_Father: {fileID: 1768441443}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &251679011
 MonoBehaviour:
@@ -411,13 +409,13 @@ MonoBehaviour:
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
-    delay: 0
+    delay: 1
     onCollisionAndKeyDown: 0
     onFunctionCall: 1
   thisCharacterConversations:
   - {fileID: 100436925}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!1 &358268918
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +824,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &582157089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 582157090}
+  - component: {fileID: 582157091}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &582157090
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582157089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.556, y: -0.33500004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &582157091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582157089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 0}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 0}
+  anyDirectio: {fileID: 1428049928}
+  standStill: {fileID: 0}
 --- !u!1 &583821555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1275,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: d12d2df1917712240b260ecd5d38dde7, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: da96bd69090d42e41a23f7e0451aa535, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1274,7 +1320,7 @@ MonoBehaviour:
   doAfterDialgue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1431521388}
+      - m_Target: {fileID: 1541687235}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2784,8 +2830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 5b677ce91acabf3498146234d8a5070f, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -2817,7 +2862,18 @@ MonoBehaviour:
   - {fileID: 2098570304}
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1264084943}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1163817621
@@ -3454,6 +3510,53 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1264084943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1264084944}
+  - component: {fileID: 1264084945}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1264084944
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264084943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.556, y: -0.33500004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264084945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264084943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 0}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 0}
+  anyDirectio: {fileID: 1416057798}
+  standStill: {fileID: 0}
 --- !u!1 &1320915306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,7 +3700,7 @@ Transform:
   m_Children:
   - {fileID: 2098570305}
   m_Father: {fileID: 1768441443}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1416057798
 MonoBehaviour:
@@ -3613,13 +3716,13 @@ MonoBehaviour:
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
-    delay: 0
+    delay: 1
     onCollisionAndKeyDown: 0
     onFunctionCall: 1
   thisCharacterConversations:
   - {fileID: 2098570304}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!1 &1428049926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,7 +3751,7 @@ Transform:
   m_Children:
   - {fileID: 1457896372}
   m_Father: {fileID: 1768441443}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1428049928
 MonoBehaviour:
@@ -3664,13 +3767,13 @@ MonoBehaviour:
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
-    delay: 0
+    delay: 1
     onCollisionAndKeyDown: 0
     onFunctionCall: 1
   thisCharacterConversations:
   - {fileID: 1457896371}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!1 &1431521388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,7 +3802,7 @@ Transform:
   m_Children:
   - {fileID: 1153036904}
   m_Father: {fileID: 1768441443}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1431521390
 MonoBehaviour:
@@ -3715,13 +3818,13 @@ MonoBehaviour:
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
-    delay: 0
+    delay: 1
     onCollisionAndKeyDown: 0
     onFunctionCall: 1
   thisCharacterConversations:
   - {fileID: 1153036903}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!1 &1457896371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,8 +3868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 5b677ce91acabf3498146234d8a5070f, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -3817,7 +3919,29 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2115388615}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1457896374}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1457896374
@@ -3828,16 +3952,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457896371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standStillActionTime: 0
-  walkLeft: {fileID: 1670243890}
-  walkRight: {fileID: 0}
-  walkUp: {fileID: 0}
-  walkDown: {fileID: 251679011}
-  anyDirectio: {fileID: 0}
-  standStill: {fileID: 0}
+  questMode: 1
+  quest: {fileID: 11400000, guid: da96bd69090d42e41a23f7e0451aa535, type: 2}
 --- !u!1 &1458715229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,7 +4270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
+    onCollisionStayWithDelay: 1
     delay: 0
     onCollisionAndKeyDown: 0
     onFunctionCall: 0
@@ -4168,7 +4287,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4238,6 +4357,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1541687235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1541687236}
+  - component: {fileID: 1541687237}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1541687236
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541687235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.556, y: -0.33500004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541687237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541687235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 0}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 0}
+  anyDirectio: {fileID: 1431521390}
+  standStill: {fileID: 0}
 --- !u!1 &1584823452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,7 +4849,7 @@ Transform:
   m_Children:
   - {fileID: 20386906}
   m_Father: {fileID: 1768441443}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1670243890
 MonoBehaviour:
@@ -4699,13 +4865,13 @@ MonoBehaviour:
   activateDialogWith:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
-    delay: 0
+    delay: 1
     onCollisionAndKeyDown: 0
     onFunctionCall: 1
   thisCharacterConversations:
   - {fileID: 20386905}
   isInDialogueTrigger: 0
-  StartDelay: 0
+  StartDelay: 0.3
 --- !u!1 &1730044834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,9 +4952,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1482134303}
+  - {fileID: 1541687236}
   - {fileID: 1431521389}
+  - {fileID: 1264084944}
   - {fileID: 1416057797}
+  - {fileID: 582157090}
   - {fileID: 1428049927}
+  - {fileID: 2115388616}
   - {fileID: 251679010}
   - {fileID: 1670243889}
   m_Father: {fileID: 0}
@@ -5165,8 +5335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 5b677ce91acabf3498146234d8a5070f, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -5189,6 +5358,64 @@ MonoBehaviour:
   - {fileID: 1457896371}
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 582157089}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &2115388615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2115388616}
+  - component: {fileID: 2115388617}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2115388616
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115388615}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.556, y: -0.33500004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1768441443}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115388617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115388615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119b3dd3d9edc24d82234968d68c068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standStillActionTime: 0
+  walkLeft: {fileID: 1670243890}
+  walkRight: {fileID: 0}
+  walkUp: {fileID: 0}
+  walkDown: {fileID: 251679011}
+  anyDirectio: {fileID: 0}
+  standStill: {fileID: 0}
