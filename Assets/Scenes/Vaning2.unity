@@ -164,7 +164,9 @@ Prefab:
     - target: {fileID: 114416085067455590, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
       propertyPath: speechBubbles.Array.data[0].Text
-      value: "Ingen bor h\xE4r."
+      value: 'Empty
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7cd212a519d6c1f4f9e4657089e88e98, type: 2}
@@ -751,7 +753,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.49921298}
+  m_Offset: {x: 0, y: 0.9}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -762,7 +764,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.0037002563}
+  m_Size: {x: 10, y: 0.62}
   m_EdgeRadius: 0
 --- !u!61 &522230617
 BoxCollider2D:
@@ -1178,7 +1180,9 @@ Prefab:
     - target: {fileID: 114416085067455590, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
       propertyPath: speechBubbles.Array.data[0].Text
-      value: "Ingen bor h\xE4r."
+      value: 'Empty
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7cd212a519d6c1f4f9e4657089e88e98, type: 2}
@@ -1307,7 +1311,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120048755}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
   m_Name: 
@@ -2449,7 +2453,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634518248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
   m_Name: 

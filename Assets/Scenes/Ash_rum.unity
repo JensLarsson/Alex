@@ -295,6 +295,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1399299492}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: c074afdfef78f424e8f6a1b7546a2323, type: 2}
@@ -996,7 +1007,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312141005}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &470491767
 MonoBehaviour:
@@ -1481,6 +1492,7 @@ Transform:
   m_Children:
   - {fileID: 110885687}
   - {fileID: 226596175}
+  - {fileID: 1399299493}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2331,6 +2343,7 @@ Transform:
   - {fileID: 340203410}
   - {fileID: 1239779659}
   - {fileID: 1749640932}
+  - {fileID: 1789554675}
   - {fileID: 470491766}
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -2381,6 +2394,8 @@ MonoBehaviour:
   - {fileID: 340203409}
   - {fileID: 1239779658}
   - {fileID: 1749640931}
+  - {fileID: 1789554674}
+  - {fileID: 470491765}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!114 &1312141008
@@ -2394,9 +2409,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentQuestsToCheck: []
-  completedQuestsToCheck:
-  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+  currentQuestsToCheck:
+  - {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
+  completedQuestsToCheck: []
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
@@ -2413,6 +2428,48 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1399299491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1399299493}
+  - component: {fileID: 1399299492}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1399299492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399299491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
+--- !u!4 &1399299493
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399299491}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 838786783}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455064200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,6 +3151,164 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1789554674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1789554675}
+  - component: {fileID: 1789554678}
+  - component: {fileID: 1789554677}
+  - component: {fileID: 1789554676}
+  m_Layer: 0
+  m_Name: Food's ready
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1789554675
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789554674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1312141005}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789554676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789554674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebf112dce89d1548b546959603116d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: 
+--- !u!114 &1789554677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789554674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  questChecks:
+  - currentQuestsToCheck: []
+    completedQuestsToCheck: []
+    questsToGet:
+    - {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
+    getQuestsToCompleted: 0
+--- !u!114 &1789554678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789554674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: d12d2df1917712240b260ecd5d38dde7, type: 2}
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Hey, Ash. Mom said food is ready.
+  - NameOfTalkingNPC: Ash
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5bb1e8f9dfaac94ba0cf0db38391acb,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: ff0d317b4c5923340b50d03d035745a6, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I just have to save first.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd7f8aacf92f213498a2af4531d26ffc,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: You better get going right away, or mom will get mad at you.
+  - NameOfTalkingNPC: Ash
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: bc13208bd783f43418a7198bb1b237d0,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: ff0d317b4c5923340b50d03d035745a6, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: '...'
+  - NameOfTalkingNPC: Ash
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: ff0d317b4c5923340b50d03d035745a6, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yeah, you're right.
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1789554677}
+        m_MethodName: getQuests
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1789554676}
+        m_MethodName: resetScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1895718513
 GameObject:
   m_ObjectHideFlags: 0

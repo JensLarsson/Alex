@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 1171854717e297f40b2e40c64465c688
   - enabled: 1
     path: Assets/Scenes/Alex.unity
-    guid: 57bba486509c0014d8924a0291cf2a4a
+    guid: bfd76243aa8859a4b995b874ed1de7b4
   - enabled: 1
     path: Assets/Scenes/Alex_toalett.unity
     guid: 9248f2213a5d1a8448b9c229fb522f25

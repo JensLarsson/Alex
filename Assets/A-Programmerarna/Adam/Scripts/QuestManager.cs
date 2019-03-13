@@ -56,15 +56,15 @@ public class QuestManager : MonoBehaviour
 
     public void addToCurrentQuests(QuestSO quest)
     {
-        if (questExistsInCurrentQuests(quest))
-        {
-            Debug.Log(quest._name + " already exist in current quests");
-        }
-        else if (questExistsInCompletedQuests(quest._name))
-        {
-            Debug.Log(quest._name + " already exsist in completed quests");
-        }
-        else
+        //if (questExistsInCurrentQuests(quest))
+        //{
+        //    Debug.Log(quest._name + " already exist in current quests");
+        //}
+        //else if (questExistsInCompletedQuests(quest._name))
+        //{
+        //    Debug.Log(quest._name + " already exsist in completed quests");
+        //}
+        //else
         {
             Debug.Log("Added " + quest._name + " to current quests");
             currentQuests.Add(quest);
@@ -241,7 +241,7 @@ public class QuestManager : MonoBehaviour
         }
         foreach (QuestSO forQuest in quests)
         {
-            Debug.Log(forQuest._name);
+            //Debug.Log(forQuest._name);
             if (forQuest == quest)
             {
                 return quest;

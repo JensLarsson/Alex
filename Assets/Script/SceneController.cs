@@ -35,6 +35,10 @@ public class SceneController : MonoBehaviour
     {
         StartCoroutine(SceneTransition(scene));
     }
+    public void loadScene(string scene, bool instant)
+    {
+        SceneManager.LoadScene(scene);
+    }
     public void loadScene(string scene, float time)
     {
         StartCoroutine(SceneTransition(scene, time));
