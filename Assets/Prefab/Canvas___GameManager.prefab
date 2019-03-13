@@ -1697,6 +1697,9 @@ MonoBehaviour:
   - nameOfNPC: Alex
     duringConversationSound:
     - {fileID: 8300000, guid: c0f25705afeae6e47931619215735201, type: 3}
+  - nameOfNPC: Mother
+    duringConversationSound:
+    - {fileID: 8300000, guid: 76af95169c2445145b4a36f1cab1bcf8, type: 3}
   dialogTextUI: {fileID: 114824093918510024}
   dialogNameTagUI: {fileID: 114445273998899968}
   dialogPortraitImageUI: {fileID: 114750022118735002}

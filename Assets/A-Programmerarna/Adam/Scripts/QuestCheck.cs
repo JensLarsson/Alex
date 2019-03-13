@@ -44,7 +44,6 @@ public class QuestCheck {
         }
         return false;
     }
-
     public void getQuestsByQuests()
     {
         if (checkCurrentQuests() && checkCompletedQuests())

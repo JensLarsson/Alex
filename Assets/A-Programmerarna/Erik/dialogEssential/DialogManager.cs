@@ -77,6 +77,20 @@ public class DialogManager : MonoBehaviour
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
 
+    public void dialogCompleteReset()
+    {
+        quedDialogs.Clear();
+        activeDialog = null;
+
+        dialogTextUI.enabled = false;
+        dialogNameTagUI.enabled = false;
+        dialogPortraitImageUI.enabled = false;
+        isInDialogue = false;
+        PlayerMovement.canMove = true;
+
+        ChoseDialogue.Instance.leaveMultyChoiceDialogue();
+    }
+
     //säkerställer så att det inte finns flera DialogManager
     void Start()
     {
@@ -199,7 +213,7 @@ public class DialogManager : MonoBehaviour
             {
                 //aktiverar alla ui-eliment
                 dialogTextUI.enabled = true;
-                dialogNameTagUI.enabled = true;
+                    dialogNameTagUI.enabled = true;
                 dialogPortraitImageUI.enabled = true;
 
                 if (soundDelay < 0)
@@ -212,7 +226,10 @@ public class DialogManager : MonoBehaviour
                 //ändrar profilen till hon/han som pratar
                 dialogPortraitImageUI.sprite = activeDialog.dialogs[dialogAt].PortraitOfTalkingNPC;
                 dialogNameTagUI.text = activeDialog.dialogs[dialogAt].NameOfTalkingNPC;
-
+                if (dialogPortraitImageUI.sprite == null)
+                {
+                    dialogPortraitImageUI.enabled = false;
+                }
                 createAnswers();
             }
 
