@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Hoarder_room
-  locked: 0
+  locked: 1
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
   openAudioClip: {fileID: 0}

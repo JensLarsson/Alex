@@ -614,6 +614,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Alright, this is it. One more step, the game is done. And we\u2019ll see
       if this was all for nothing or\u2026"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -624,6 +625,7 @@ MonoBehaviour:
     Text: "I just want to say, thank you. This has been, well it\u2019s been pretty
       awful actually. But it\u2019s been just a little less awful thanks to you. I
       might not, you know, be real. But you\u2019ve been a friend I really needed."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -636,6 +638,7 @@ MonoBehaviour:
       I guess. A mind. It\u2019s strange, and I don\u2019t want to lose it. Though
       I won\u2019t, not really. If things go our way, I won\u2019t remember any of
       this."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -646,6 +649,7 @@ MonoBehaviour:
     Text: "I guess ignorance will have to become my bliss. If I can even feel without
       this. Again, I\u2019m not sure. And I feel like this is too big for me to understand,
       too big for me to want to understand."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -654,6 +658,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I just have to\u2026 let go."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -662,6 +667,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: '...'
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -670,6 +676,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alright I\u2019m ready. When you are too, move me through the door. "
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -678,6 +685,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Thank you, and goodbye.
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2276,7 +2284,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634518248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fde9d2f19a09f34fb5fd493117e9dc2, type: 3}
   m_Name: 

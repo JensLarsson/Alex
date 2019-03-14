@@ -194,7 +194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1589152340}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &34390723
 BoxCollider2D:
@@ -283,7 +283,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  item: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f, type: 2}
+  item: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4, type: 2}
+  numberOfItemsNeeded: 5
 --- !u!114 &34390726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +352,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4703839868526254, guid: 339bd2ec23541f34cab3525cb06944a6, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1056381909664724, guid: 339bd2ec23541f34cab3525cb06944a6, type: 2}
       propertyPath: m_IsActive
@@ -1357,11 +1358,7 @@ MonoBehaviour:
   dialogueName: SpiritDialogue2
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 5c938b8115a7f0849b795c658152f60f, type: 2}
-  - {fileID: 11400000, guid: 89578a24d35e6214abcd8f852f693c8b, type: 2}
-  - {fileID: 11400000, guid: 3367b4c9afcb1304da206cba84fd823f, type: 2}
   - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
-  - {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
   removeDialogIfQuestsHasCompleted:
   - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
   diffrentStartSounds: []
@@ -1571,114 +1568,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMode: 1
   quest: {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
---- !u!1 &388854009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 388854010}
-  - component: {fileID: 388854013}
-  - component: {fileID: 388854012}
-  - component: {fileID: 388854011}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &388854010
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 388854009}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1589152340}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &388854011
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 388854009}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.15005267, y: -0.049155116}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3001053, y: 1.0983102}
-  m_EdgeRadius: 0
---- !u!114 &388854012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 388854009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 1
-  quest: {fileID: 11400000, guid: 5c938b8115a7f0849b795c658152f60f, type: 2}
---- !u!114 &388854013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 388854009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 388854012}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 929394091}
-        m_MethodName: checkQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  item: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4, type: 2}
 --- !u!1001 &389854018
 Prefab:
   m_ObjectHideFlags: 0
@@ -2186,7 +2075,7 @@ Prefab:
         type: 2}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 4b14908d78bd21b468db8309c772d463,
+      objectReference: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4,
         type: 2}
     - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}
@@ -3713,114 +3602,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &785912776
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 785912777}
-  - component: {fileID: 785912780}
-  - component: {fileID: 785912779}
-  - component: {fileID: 785912778}
-  m_Layer: 0
-  m_Name: GameObject (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &785912777
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 785912776}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1589152340}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &785912778
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 785912776}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.15005267, y: -0.049155116}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3001053, y: 1.0983102}
-  m_EdgeRadius: 0
---- !u!114 &785912779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 785912776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 1
-  quest: {fileID: 11400000, guid: 3367b4c9afcb1304da206cba84fd823f, type: 2}
---- !u!114 &785912780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 785912776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 785912779}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 929394091}
-        m_MethodName: checkQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  item: {fileID: 11400000, guid: 9186693a6ffd75e4d8ab2893088cc474, type: 2}
 --- !u!1001 &790380024
 Prefab:
   m_ObjectHideFlags: 0
@@ -3929,114 +3710,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &852639373
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 852639374}
-  - component: {fileID: 852639377}
-  - component: {fileID: 852639376}
-  - component: {fileID: 852639375}
-  m_Layer: 0
-  m_Name: GameObject (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &852639374
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 852639373}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1589152340}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &852639375
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 852639373}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.15005267, y: -0.049155116}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3001053, y: 1.0983102}
-  m_EdgeRadius: 0
---- !u!114 &852639376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 852639373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 1
-  quest: {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
---- !u!114 &852639377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 852639373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 852639376}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 929394091}
-        m_MethodName: checkQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  item: {fileID: 11400000, guid: 4b14908d78bd21b468db8309c772d463, type: 2}
 --- !u!1 &860330078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,114 +3790,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &875038375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 875038376}
-  - component: {fileID: 875038379}
-  - component: {fileID: 875038378}
-  - component: {fileID: 875038377}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &875038376
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 875038375}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1589152340}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &875038377
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 875038375}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.15005267, y: -0.049155116}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3001053, y: 1.0983102}
-  m_EdgeRadius: 0
---- !u!114 &875038378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 875038375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 1
-  quest: {fileID: 11400000, guid: 89578a24d35e6214abcd8f852f693c8b, type: 2}
---- !u!114 &875038379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 875038375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51429bf6b81794d4588d23daa2362880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 875038378}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 929394091}
-        m_MethodName: checkQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  item: {fileID: 11400000, guid: 32f51c59dde0a204987287c9ebed747f, type: 2}
 --- !u!1001 &902864431
 Prefab:
   m_ObjectHideFlags: 0
@@ -4427,11 +3992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
   completedQuestsToCheck:
-  - {fileID: 11400000, guid: 5c938b8115a7f0849b795c658152f60f, type: 2}
-  - {fileID: 11400000, guid: 89578a24d35e6214abcd8f852f693c8b, type: 2}
-  - {fileID: 11400000, guid: 3367b4c9afcb1304da206cba84fd823f, type: 2}
   - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
-  - {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
@@ -4921,6 +4482,12 @@ Prefab:
       propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -6333,7 +5900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
       propertyPath: m_LocalScale.y
@@ -6428,7 +5995,8 @@ MonoBehaviour:
   dialogueName: PuzzleHintDialogue
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 9f8a5bd1da488034ab4e1aa8f28b4ebc, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -6456,7 +6024,7 @@ MonoBehaviour:
       (Press "I" to open the inventory and then select the objects that need to be
       put in the toy box.)'
     dialogueTree: 0
-  canRepeat: 0
+  canRepeat: 1
   hasBeenRead: 0
   siblings: []
   answers: []
@@ -7139,6 +6707,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: b3112541c2aea3c40b2e8a17d003edf9, type: 2}
+  numberOfItemsNeeded: 0
 --- !u!1 &1634508603
 GameObject:
   m_ObjectHideFlags: 0
@@ -7836,7 +7405,7 @@ Prefab:
         type: 2}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f,
+      objectReference: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4,
         type: 2}
     - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}
@@ -7929,7 +7498,7 @@ Prefab:
         type: 2}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 32f51c59dde0a204987287c9ebed747f,
+      objectReference: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4,
         type: 2}
     - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}

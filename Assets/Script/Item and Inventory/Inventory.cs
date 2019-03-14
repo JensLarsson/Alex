@@ -15,14 +15,8 @@ public class itemContainer
         }
         set
         {
-            if (value <= 0)
-            {
-                Inventory.instance.removeItem(item);
-            }
-            else
-            {
-                amount = value;
-            }
+            amount = value;
+            Debug.Log(amount + " " + item.name + " in Inventory");
         }
     }
 }
@@ -66,13 +60,18 @@ public class Inventory : MonoBehaviour
             items.Add(_item);
         }
     }
-    public bool removeItem(Item item)
+    public bool removeItem(Item item, int i = 1)
     {
         foreach (itemContainer it in items)
         {
             if (it.item == item)
             {
-                it.Amount--;
+                it.Amount -= i;
+
+                if (it.Amount <= 0)
+                {
+                    items.Remove(it);
+                }
                 return true;
             }
         }

@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InteractWithItem : MonoBehaviour {
+public class InteractWithItem : MonoBehaviour
+{
 
     public UnityEvent _event;
     public Item item;
+    public int numberOfItemsNeeded;
 
-    public bool useItem(Item i)
+    public int useItem(itemContainer items)
     {
-        if (item == i)
+        if (items.item == item && items.Amount == numberOfItemsNeeded)
         {
             _event.Invoke();
-            return true;
+            return numberOfItemsNeeded;
         }
-        return false;
+        return 0;
     }
 }
