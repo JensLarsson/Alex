@@ -25,6 +25,7 @@ public class Dialogs
     public float soundTimeDelay;
     [TextArea(5, 20)]
     public string Text;
+    public bool dialogueTree = false;
 }
 public class CompleteConvesation
 {
@@ -68,11 +69,11 @@ public class DialogManager : MonoBehaviour
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
 
+    /*[HideInInspector]*/ public bool isInDialogBranch = false;
+
     //säkerställer så att det inte finns flera DialogManager
     void Start()
     {
-
-
         if (instance == null)
         {
             instance = this;
@@ -115,7 +116,6 @@ public class DialogManager : MonoBehaviour
         newConversation.holder = holder;
         newConversation.hasBeenRead = hasBeenRead;
         quedDialogs.Add(newConversation);
-
     }
 
     public void createAnswers()
@@ -175,7 +175,6 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (soundDelay >= 0)
         {
             soundDelay -= Time.deltaTime;
@@ -222,6 +221,7 @@ public class DialogManager : MonoBehaviour
                     {
                         //om man inte är i en...
                         dialogAt++;
+                        //isInDialogBranch = activeDialog.dialogs[dialogAt].dialogueTree;
                         stopRewriteText = false;
                         dialogTextUI.text = "";
                         dialogNameTagUI.text = "";
@@ -231,7 +231,6 @@ public class DialogManager : MonoBehaviour
                         {
                            ChoseDialogue.Instance.leaveMultyChoiceDialogue();
 
-                         
                             dialogTextUI.enabled = false;
                             dialogNameTagUI.enabled = false;
                             dialogPortraitImageUI.enabled = false;
@@ -244,10 +243,12 @@ public class DialogManager : MonoBehaviour
                             if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
                             {
                             }
+                           // Debug.Log("in" + isInDialogBranch);
+                            //Debug.Log("out" + activeDialog.dialogs[dialogAt - 1].dialogueTree);
+                            isInDialogBranch = activeDialog.dialogs[dialogAt - 1].dialogueTree;
                            activeDialog.events.Invoke();
                             activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
                             activeDialog = null;
-                           
                         }
                     }
                 }
@@ -255,11 +256,8 @@ public class DialogManager : MonoBehaviour
         }
         if (activeDialog == null)
         {
-
             if (!isInDialogue)
             {
-
-
                 //nollställer systemet ifall det inte finns någon dialog i kön
                 //obs körs varje frame, oödigt; förbätring?
                 dialogTextUI.text = "";
