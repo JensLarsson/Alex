@@ -63,9 +63,9 @@ public class InventoryMenu : MonoBehaviour
     void settupMenu()
     {
         clearList();
-        foreach (Item item in Inventory.instance.items)
+        foreach (itemContainer it in Inventory.instance.items)
         {
-            addText(item);
+            addText(it);
         }
         moveMenu(0);
         buttonPressed = false;
@@ -83,10 +83,10 @@ public class InventoryMenu : MonoBehaviour
 
 
     //Skapar en ny rad i listan av interaktivbara texter
-    void addText(Item item)
+    void addText(itemContainer item)
     {
         GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
-        newText.GetComponent<Text>().text = item.name;
+        newText.GetComponent<Text>().text = item.item.name + " x" + item.Amount;
         menuFields.Add(newText);
         newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
     }
@@ -112,21 +112,21 @@ public class InventoryMenu : MonoBehaviour
 
                 if (iWI != null)
                 {
-                    bool itemisUsed = iWI.useItem(Inventory.instance.items[menuIndex]);
+                    bool itemisUsed = iWI.useItem(Inventory.instance.items[menuIndex].item);
                     if (!itemisUsed)
                     {
                         AudioManager.instance.playSFXClip(unusableClip);
                     }
                     else
                     {
-                        if (Inventory.instance.items[menuIndex].useSound != null) //Checks if there is a sound clip
+                        if (Inventory.instance.items[menuIndex].item.useSound != null) //Checks if there is a sound clip
                         {
-                            AudioManager.instance.playSFXClip(Inventory.instance.items[menuIndex].useSound);
+                            AudioManager.instance.playSFXClip(Inventory.instance.items[menuIndex].item.useSound);
                         }
-                        if (Inventory.instance.items[menuIndex].deleteOnUse) //Check if item should be deleted on use
+                        if (Inventory.instance.items[menuIndex].item.deleteOnUse) //Check if item should be deleted on use
                         {
                             Debug.Log("Removing");
-                            Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
+                            Inventory.instance.removeItem(Inventory.instance.items[menuIndex].item);
                         }
                         PlayerMovement.canMove = true;
                         this.gameObject.SetActive(false);
@@ -145,10 +145,10 @@ public class InventoryMenu : MonoBehaviour
         menuFields[MenuIndex].GetComponent<Text>().color = textColour;
         MenuIndex += i;
         menuFields[MenuIndex].GetComponent<Text>().color = selectionColour;
-        ItemDescriptionArea.text = Inventory.instance.items[menuIndex].description;
-        if (Inventory.instance.items[menuIndex].sprite != null)
+        ItemDescriptionArea.text = Inventory.instance.items[menuIndex].item.description;
+        if (Inventory.instance.items[menuIndex].item.sprite != null)
         {
-            image.sprite = Inventory.instance.items[menuIndex].sprite;
+            image.sprite = Inventory.instance.items[menuIndex].item.sprite;
             image.color = Color.white;
         }
         else

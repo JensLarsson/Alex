@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class itemContainer
 {
     public Item item;
     int amount;
-    int Amount
+    public int Amount
     {
         get
         {
@@ -14,7 +15,14 @@ public class itemContainer
         }
         set
         {
-
+            if (value <= 0)
+            {
+                Inventory.instance.removeItem(item);
+            }
+            else
+            {
+                amount = value;
+            }
         }
     }
 }
@@ -24,7 +32,7 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory instance = null;
 
-    public List<Item> items;
+    public List<itemContainer> items;
     void Awake()
     {
         if (instance == null)
@@ -41,30 +49,40 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        if (!items.Contains(item) && item != null)
+        bool exist = false;
+        foreach (itemContainer it in items)
         {
-            items.Add(item);
-            //item.amount++;
+            if (it.item == item)
+            {
+                it.Amount++;
+                exist = true;
+            }
         }
-        else
+        if (!exist)
         {
-            // item.amount++;
+            itemContainer _item = new itemContainer();
+            _item.item = item;
+            _item.Amount++;
         }
     }
-    public void removeItem(Item item)
+    public bool removeItem(Item item)
     {
-        if (items.Contains(item) && item != null)
+        foreach (itemContainer it in items)
         {
-            items.Remove(item);
-            //item.amount--;
+            if (it.item == item)
+            {
+                it.Amount--;
+                return true;
+            }
         }
+        return false;
     }
 
     public bool hasItem(Item item)
     {
-        foreach (Item i in items)
+        foreach (itemContainer it in items)
         {
-            if (i == item)
+            if (it.item == item)
             {
                 return true;
             }

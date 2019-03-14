@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
 
 /// <summary>
 /// Inherit from this base class to create a singleton.
