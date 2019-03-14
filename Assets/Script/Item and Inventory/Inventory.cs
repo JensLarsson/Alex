@@ -63,6 +63,7 @@ public class Inventory : MonoBehaviour
             itemContainer _item = new itemContainer();
             _item.item = item;
             _item.Amount++;
+            items.Add(_item);
         }
     }
     public bool removeItem(Item item)

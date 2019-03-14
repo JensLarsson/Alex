@@ -86,7 +86,8 @@ public class InventoryMenu : MonoBehaviour
     void addText(itemContainer item)
     {
         GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
-        newText.GetComponent<Text>().text = item.item.name + " x" + item.Amount;
+        newText.GetComponent<Text>().text = item.item.name;
+        if (item.Amount > 1) newText.GetComponent<Text>().text += " x" + item.Amount;
         menuFields.Add(newText);
         newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
     }
