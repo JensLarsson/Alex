@@ -2,26 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mainMenuScript : MonoBehaviour {
-    [SerializeField] GameObject test;
+public class mainMenuScript : MonoBehaviour
+{
+  //  static public mainMenuScript instance = null;
 
+    public List<GameObject> Buttons = new List<GameObject>();
 
-    
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    void Awake()
     {
-        if(Input.GetButtonDown("Submit"))
-        {
-            SceneController.instance.loadScene("Alex");
-
-            //StartCoroutine(SceneController.instance.SceneTransition("Alex"));
-            Instantiate(test);
-        }
-	}
+       // menuManager.Instance.menuState = menuManager.MenuState.mainMenu;
+        ////Sätter Singleton instance
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //}
+        //else if (instance != this)
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
 }

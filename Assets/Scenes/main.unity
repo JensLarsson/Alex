@@ -286,7 +286,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &459519517
 MonoBehaviour:
@@ -315,6 +315,12 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &463018009 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+    type: 2}
+  m_PrefabInternal: {fileID: 1217231054}
+  m_Script: {fileID: 11500000, guid: 7c20d69eeb6af6846af15f20ae1aa9cf, type: 3}
 --- !u!1 &618644476
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669988077}
   - component: {fileID: 669988076}
+  - component: {fileID: 669988078}
   m_Layer: 0
   m_Name: menyv1_utantext
   m_TagString: Untagged
@@ -469,6 +476,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669988078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669988075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0d914130e463042b0d295f8af47ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Buttons:
+  - {fileID: 358750125}
+  - {fileID: 1190700233}
+  - {fileID: 459519514}
 --- !u!1 &1190700233
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +563,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1190700236
 MonoBehaviour:
@@ -566,6 +588,71 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -664,6 +751,484 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].ButtonTextUI
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[2].newEventSec.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].ButtonTextUI
+      value: reset room
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: reloadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[3].newEventSec.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].ButtonTextUI
+      value: main menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[4].newEventSec.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[1].newEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: audioSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuButtons.Array.data[1].ButtonTextUI
+      value: audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].newEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].newEventSec.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].newEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].newEventSec.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].ButtonTextUI
+      value: sfx volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].ButtonTextUI
+      value: music volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: decSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[0].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: decSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[1].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: musicChange
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: exitMenuKey
+      value: Cancel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].ButtonTextUI
+      value: music volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].primeEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: decSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[2].secEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].ButtonTextUI
+      value: music volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].primeEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 463018009}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: decSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: music
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: soundButtons.Array.data[3].secEvent.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}

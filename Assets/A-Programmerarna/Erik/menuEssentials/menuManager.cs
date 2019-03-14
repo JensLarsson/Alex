@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+// main menu, reset room
 
 [System.Serializable]
 class menuFunction
@@ -12,6 +13,15 @@ class menuFunction
     public UnityEvent newEvent;
     public UnityEvent newEventSec;
 }
+[System.Serializable]
+class soundFunc
+{
+    [HideInInspector] public GameObject GO;
+    public string ButtonTextUI;
+    public float value;
+    public UnityEvent primeEvent;
+    public UnityEvent secEvent;
+}
 
 public class menuManager : MonoBehaviour
 {
@@ -20,20 +30,33 @@ public class menuManager : MonoBehaviour
 
     [SerializeField] Material basic;
     [SerializeField] Material selected;
-    GameObject Play;
-    GameObject Developers;
-    GameObject Exit;
-    List<GameObject> Buttons = new List<GameObject>();
+    //GameObject Play;
+    //GameObject Developers;
+    //GameObject Exit;
+    [SerializeField] List<GameObject> Buttons = new List<GameObject>();
 
     [SerializeField] List<menuFunction> menuButtons = new List<menuFunction>();
-    [SerializeField] string activeMenuButton;
+    [SerializeField] List<soundFunc> soundButtons = new List<soundFunc>();
+    [SerializeField] [Range(0, 1)] float sfxChange = 0.05f;
+    [SerializeField] [Range(0, 1)] float musicChange = 0.05f;
+   public int soundIndex = 0;
+
+    [SerializeField] string exitMenuKey;
     public enum MenuState
     {
         mainMenu,
         menu,
-        noMenu
+        noMenu,
+        soundMenu
     }
     public MenuState menuState;
+
+    [HideInInspector] public enum sound
+    {
+        sfx,
+        music
+    }
+    
     bool inisiate = false;
 
   [SerializeField] public static bool IsInMenu = false;
@@ -85,12 +108,70 @@ public class menuManager : MonoBehaviour
         inisiate = false;
         menuState = newMenuState;        
     }
+    #region menu options
     public void returnToGame()
     {
         removeUI();
         changeMenuState(MenuState.noMenu);
         PlayerMovement.canMove = true;
     }
+    public void audioSelect()
+    {
+        removeUI();
+        addSoundUI();
+
+    }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
+    public void IncSound(string soundType)
+    {
+        if(soundType == "sfx")
+        {
+            AudioManager.instance.sfxVolume += sfxChange;
+           
+        }
+        else if(soundType == "music")
+        {
+            AudioManager.instance.musicVolume += musicChange;
+            AudioManager.instance.setMusicVolume();
+        }
+        else
+        {
+            Debug.LogError(soundType + " not found, only sfx and music are allowed");
+        }
+        soundDisplayUpdate();
+    }
+    public void decSound(string soundType)
+    {
+        if (soundType == "sfx")
+        {
+            AudioManager.instance.sfxVolume -= sfxChange;
+        }
+        else if (soundType == "music")
+        {
+            AudioManager.instance.musicVolume -= musicChange;
+            AudioManager.instance.setMusicVolume();
+            
+        }
+        else
+        {
+            Debug.LogError(soundType + " not found, only sfx and music are allowed");
+        }
+        soundDisplayUpdate();
+    }
+
+    void soundDisplayUpdate()
+    {
+        soundButtons[0].value = AudioManager.instance.sfxVolume;
+        soundButtons[1].value = AudioManager.instance.musicVolume;
+        removesoundUI();
+        addSoundUI();
+    }
+    #endregion
+
     public void nothing()
     {
         changeMenuState(MenuState.noMenu);
@@ -108,6 +189,37 @@ public class menuManager : MonoBehaviour
         }
         gameObject.GetComponent<Image>().enabled = true;
         moveMenu(0);
+    }
+    void addSoundUI()
+    {
+        IsInMenu = true;
+        menuState = MenuState.soundMenu;
+
+        soundButtons[0].value = AudioManager.instance.sfxVolume;
+        soundButtons[1].value = AudioManager.instance.musicVolume;
+
+        choseUI.Clear();
+        for (int x = 0; x < soundButtons.Count; x++)
+        {
+            int extraSpacing = 5;
+            GameObject newText = Instantiate(textUIBase, textUIBase.transform.position, new Quaternion(), transform);
+            newText.GetComponent<Text>().text = soundButtons[x].ButtonTextUI + System.Environment.NewLine + soundButtons[x].value;
+            newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + ((extraSpacing + ySpacing) * x));
+            menuButtons[x].GO = newText.gameObject;
+            choseUI.Add(newText);
+        }
+        gameObject.GetComponent<Image>().enabled = true;
+        moveSoundMenu(0);
+        
+    }
+    void removesoundUI()
+    {
+        foreach(GameObject sf in choseUI)
+        {
+            Destroy(sf);
+        }
+        choseUI.Clear();
+        gameObject.GetComponent<Image>().enabled = false;
     }
     void removeUI()
     {
@@ -128,8 +240,32 @@ public class menuManager : MonoBehaviour
             choseUI[MenuIndex].GetComponent<Text>().color = Color.red;
         }
     }
+    void moveSoundMenu(int a)
+    {
+        soundIndex += a;
+        if(soundIndex >= soundButtons.Count)
+        {
+            soundIndex = 0;
+        }
+        if (soundIndex < 0)
+        {
+            soundIndex = soundButtons.Count - 1;
+        }
+        foreach(GameObject go in choseUI)
+        {
+            if(go == choseUI[soundIndex])
+            {
+                go.GetComponent<Text>().color = Color.red;
+            }
+            else
+            {
+                go.GetComponent<Text>().color = Color.black;
+            }
+        }
+    }
     void moveMainMenu()
     {
+        Debug.LogWarning("hmmm");
         if(menuIndex > Buttons.Count - 1)
         {
             menuIndex = Buttons.Count - 1;
@@ -143,16 +279,27 @@ public class menuManager : MonoBehaviour
             if (index == menuIndex)
             {
                 Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = selected;
-                //Buttons[index].gameObject.active = true;
             }
             else
             {
                 Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = basic;
-               // Buttons[index].gameObject.active = false;
             }
         }
     }
-
+    public void goToMenu()
+    {
+        SceneController.instance.loadScene("main", true);
+        inisiate = false;
+        removeUI();
+        menuState = MenuState.mainMenu;
+        
+    }
+    public void reloadScene()
+    {
+        menuState = MenuState.noMenu;
+        SceneController.instance.resetScene();
+        PlayerMovement.canMove = true;
+    }
 
     void selectAChoice()
     {
@@ -171,7 +318,7 @@ public class menuManager : MonoBehaviour
                 {
                     inisiate = true;
                 }
-                if (Input.GetButtonDown(activeMenuButton) && PlayerMovement.canMove == true)
+                if (Input.GetButtonDown(exitMenuKey) && PlayerMovement.canMove == true)
                 {
                     changeMenuState(MenuState.menu);
                     return;
@@ -187,7 +334,7 @@ public class menuManager : MonoBehaviour
                     addUI();
                 }
                 PlayerMovement.canMove = false;
-                if (Input.GetButtonDown(activeMenuButton))
+                if (Input.GetButtonDown(exitMenuKey))
                 {
                     returnToGame();
                     return;
@@ -208,45 +355,77 @@ public class menuManager : MonoBehaviour
                 break;
             #endregion
 
+            #region sound
+            case MenuState.soundMenu:
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    soundButtons[soundIndex].primeEvent.Invoke();
+                }
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    soundButtons[soundIndex].secEvent.Invoke();
+                }
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    moveSoundMenu(1);
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    moveSoundMenu(-1);
+                }
+                if (Input.GetButtonDown(exitMenuKey))
+                {
+
+                    removesoundUI();
+                    menuState = MenuState.menu;
+                    inisiate = false;
+                    return;
+                }
+
+                break;
+            #endregion
+
             #region mainMenu
             case MenuState.mainMenu:
-               
                 if (!inisiate)
                 {
 
-                    for (int i = 0; i < transform.parent.transform.childCount; i++)
-                    {
-                        GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
-                        if (!child == this.gameObject)
-                        {
-                            child.SetActive(false);
-                        }
-                    }
-                    menuState = MenuState.mainMenu;
+                    //for (int i = 0; i < transform.parent.transform.childCount; i++)
+                    //{
+                    //    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
+                    //    if (!child == this.gameObject)
+                    //    {
+                    //        child.SetActive(false);
+                    //    }
+                    //}
+                   // menuState = MenuState.mainMenu;
 
-                    Play = GameObject.Find("play");
-                    Developers = GameObject.Find("developers");
-                    Exit = GameObject.Find("exit");
+                    Buttons.Clear();
 
-                    Buttons.Add(Play);
-                    Buttons.Add(Developers);
-                    Buttons.Add(Exit);
+                    //Play = GameObject.Find("play");
+                    //Developers = GameObject.Find("developers");
+                    //Exit = GameObject.Find("exit");
+
+                    //Buttons.Add(Play);
+                    //Buttons.Add(Developers);
+                    //Buttons.Add(Exit);
+
                     
-
-                   
                     MenuIndex = 0;
+                    Buttons.Clear();
+                    Buttons = GameObject.Find("menyv1_utantext").gameObject.GetComponent<mainMenuScript>().Buttons;
+                   // Debug.Log(mainMenuScript.instance.Buttons.Count);
                     moveMainMenu();
-
                     inisiate = true;
                 }
-                for (int i = 0; i < transform.parent.transform.childCount; i++)
-                {
-                    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
-                    if (!child == this.gameObject)
-                    {
-                        child.SetActive(false);
-                    }
-                }
+                //for (int i = 0; i < transform.parent.transform.childCount; i++)
+                //{
+                //    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
+                //    if (!child == this.gameObject)
+                //    {
+                //        child.SetActive(false);
+                //    }
+                //}
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     menuIndex--;
