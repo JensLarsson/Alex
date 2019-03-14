@@ -35,8 +35,8 @@ public class AudioManager : MonoBehaviour
     [Tooltip("volume change per .01sec")]
     [Range(0.001f, 1.0f)]
     public float fadeInIncrememnt = 0.1f;
-    float musicVolume = 0.25f;
-    float sfxVolume = 1.0f;
+    public float musicVolume = 0.25f;
+    public float sfxVolume = 1.0f;
 
     void Awake()
     {
@@ -60,6 +60,14 @@ public class AudioManager : MonoBehaviour
         sfxSource.volume = sfxVolume;
         sfxSourcePitch.volume = sfxVolume;
     }
+    public void setMusicVolume()
+    {
+        for (int i = 0; i < musicSource.Length; i++)
+        {
+            musicSource[i].volume = musicVolume;
+        }
+    }
+
 
 
 
