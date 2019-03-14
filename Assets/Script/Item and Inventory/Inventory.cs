@@ -2,13 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class itemContainer
+{
+    public Item item;
+    int amount;
+    int Amount
+    {
+        get
+        {
+            return amount;
+        }
+        set
+        {
+
+        }
+    }
+}
+
+
 public class Inventory : MonoBehaviour
 {
-
     public static Inventory instance = null;
 
     public List<Item> items;
-
     void Awake()
     {
         if (instance == null)
