@@ -1129,7 +1129,7 @@ MonoBehaviour:
   locked: 0
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
-  openAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &1226152707
 BoxCollider2D:
@@ -1610,7 +1610,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

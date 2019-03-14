@@ -6,28 +6,25 @@ using UnityEngine.UI;
 public class Floor
 {
     public string floorLabel, SceneName;
+    public Image floorLight;
 }
 //Återanvänder menu skriptet för jag var för lat för att göra en klass som hanterar menuer
 
-public class Elevator : MonoBehaviour {
+public class Elevator : MonoBehaviour
+{
 
     public static Elevator Instance = null;
 
     public List<Floor> floors = new List<Floor>();
-
-    [Header("Menu Text List")]
-    public GameObject textPrefab;
-    public Color textColour = Color.white, selectionColour = Color.red;
-    public float xStartPos, yStartPos, yOffset;
-    List<GameObject> menuFields = new List<GameObject>();
-    public AudioClip moveButtonClip, unusableClip;
-    public float buttonpressForce = 0.8f, buttonpressTime = 0.06f;
-
+    
+    public Sprite selectionLight, nonSelectedLight;
+    public AudioClip moveButtonClip, unusableClip, travelSound;
+    public float travelTime;
 
     bool buttonPressed = false;
     bool previousControll;
 
-    int menuIndex = 0;
+    int menuIndex = 1;
     int MenuIndex
     {
         get
@@ -36,15 +33,15 @@ public class Elevator : MonoBehaviour {
         }
         set
         {
-            if (value >= menuFields.Count)
+            if (value >= floors.Count)
             {
                 menuIndex = value;
-                menuIndex -= menuFields.Count;
+                menuIndex -= floors.Count;
             }
             else if (value < 0)
             {
                 menuIndex = value;
-                menuIndex += menuFields.Count;
+                menuIndex += floors.Count;
             }
             else
             {
@@ -52,10 +49,9 @@ public class Elevator : MonoBehaviour {
             }
         }
     }
-
     private void OnEnable()
     {
-        settupMenu();
+        //settupMenu();
         PlayerMovement.canMove = false;
         menuManager.IsInMenu = true;
     }
@@ -69,35 +65,35 @@ public class Elevator : MonoBehaviour {
 
 
     //Skapar en ny lista av items som fins i Inventory klassen
-    void settupMenu()
-    {
-        clearList();
-        foreach (Floor floor in floors)
-        {
-            addText(floor);
-        }
-        moveMenu(0);
-    }
+    //void settupMenu()
+    //{
+    //    clearList();
+    //    foreach (Floor floor in floors)
+    //    {
+    //        addText(floor);
+    //    }
+    //    moveMenu(0);
+    //}
     //Tar bort alla gameobjects som representerar item slots från menyn
-    void clearList()
-    {
-        for (int i = menuFields.Count - 1; i >= 0; i--)
-        {
+    //void clearList()
+    //{
+    //    for (int i = menuFields.Count - 1; i >= 0; i--)
+    //    {
 
-            Destroy(menuFields[i]);
-        }
-        menuFields = new List<GameObject>();
-    }
+    //        Destroy(menuFields[i]);
+    //    }
+    //    menuFields = new List<GameObject>();
+    //}
 
 
     //Lägger till items i listan av objekt
-    void addText(Floor floor)
-    {
-        GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
-        newText.GetComponent<Text>().text = floor.floorLabel;
-        menuFields.Add(newText);
-        newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
-    }
+    //void addText(Floor floor)
+    //{
+    //    GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
+    //    newText.GetComponent<Text>().text = floor.floorLabel;
+    //    menuFields.Add(newText);
+    //    newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
+    //}
 
     private void Update()
     {
@@ -122,9 +118,9 @@ public class Elevator : MonoBehaviour {
     //Bläddrar även genom items listan i Inventory.instance för information för valt item.
     void moveMenu(int i)
     {
-        menuFields[MenuIndex].GetComponent<Text>().color = textColour;
+        floors[menuIndex].floorLight.sprite = nonSelectedLight;
         MenuIndex += i;
-        menuFields[MenuIndex].GetComponent<Text>().color = selectionColour;
+        floors[menuIndex].floorLight.sprite = selectionLight;
         if (i != 0 && moveButtonClip != null)
         {
             AudioManager.instance.playSFXClip(moveButtonClip, true);

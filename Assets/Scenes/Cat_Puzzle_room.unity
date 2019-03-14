@@ -921,6 +921,11 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &663386513 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1092889690248178, guid: e5fc137eeab416449ae08890eddd5776,
@@ -2864,7 +2869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Cat_Lady
   locked: 0
-  clip: {fileID: 0}
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &2013782003
 BoxCollider2D:
