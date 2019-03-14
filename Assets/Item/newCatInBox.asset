@@ -11,5 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: newCatInBox
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ddf96deb3e671674a9fe520e6c4b1e92, type: 3}
+  deleteOnUse: 1
+  useSound: {fileID: 0}
   description: 

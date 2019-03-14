@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 42
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 34390725}
   - component: {fileID: 34390724}
   - component: {fileID: 34390723}
+  - component: {fileID: 34390726}
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
@@ -258,9 +259,61 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 929394091}
+        m_MethodName: checkQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2140194218}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f, type: 2}
+--- !u!114 &34390726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 34390721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2140194218}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &97377202
 Prefab:
   m_ObjectHideFlags: 0
@@ -298,7 +351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -448,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 47
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 212644358228150524, guid: 1f19d71b89084624c84ee95db3c7e1e6,
         type: 2}
@@ -495,7 +548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 44
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -612,6 +665,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114762859935912782, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: items.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -650,7 +708,7 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_RootOrder
-      value: 62
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
@@ -702,9 +760,146 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114762859935912782, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: c074afdfef78f424e8f6a1b7546a2323,
+        type: 2}
+    - target: {fileID: 114762859935912782, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c074afdfef78f424e8f6a1b7546a2323,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &195855350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 195855352}
+  - component: {fileID: 195855351}
+  - component: {fileID: 195855353}
+  m_Layer: 0
+  m_Name: SpiritFinalLast-leadup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!61 &195855351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195855350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &195855352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195855350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.53, y: 1.07, z: 0}
+  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_Children:
+  - {fileID: 393424797}
+  m_Father: {fileID: 0}
+  m_RootOrder: 61
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &195855353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195855350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 1
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 393424796}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!1 &198805025 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 340563120}
+--- !u!114 &198805031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198805025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 274fd38d558ad864f8eff617dcedd442, type: 2}
+--- !u!114 &198805032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198805025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 274fd38d558ad864f8eff617dcedd442, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198805025}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &247787805
 Prefab:
   m_ObjectHideFlags: 0
@@ -742,7 +937,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -755,6 +950,108 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &256349783
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_RootOrder
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_Name
+      value: Bugged Toy
+      objectReference: {fileID: 0}
+    - target: {fileID: 212029477590431074, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d90fa601788d17046aa7e99a4d377498,
+        type: 3}
+    - target: {fileID: 61792880920043656, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 283c20aae8039174ca8107b6085f4881,
+        type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2140194220}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 212029477590431074, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+    - target: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &276133346
 Prefab:
@@ -793,7 +1090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
@@ -835,7 +1132,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -851,6 +1148,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -881,7 +1183,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_Name
@@ -904,9 +1206,286 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 198805031}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &354328771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 354328773}
+  - component: {fileID: 354328772}
+  - component: {fileID: 354328774}
+  - component: {fileID: 354328775}
+  m_Layer: 0
+  m_Name: SpiritDialogue2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &354328772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: SpiritDialogue2
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 5c938b8115a7f0849b795c658152f60f, type: 2}
+  - {fileID: 11400000, guid: 89578a24d35e6214abcd8f852f693c8b, type: 2}
+  - {fileID: 11400000, guid: 3367b4c9afcb1304da206cba84fd823f, type: 2}
+  - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
+  - {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Well, I fixed that little mess over there. Your buddy will hopefully be
+      fine now.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yes, indeed. Well done, young miss Alexandra.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Now, what about the rest of your friends? You said we didn\u2019t have
+      too much time to complete this."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Ah. Yes, we should have until the evening before they risk phasing out of
+      existence and disappearing.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Which is bad.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yes, quite bad.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: So, how do we go about doing this? How many spirits are hanging around here?
+      Which ones do we go after first.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I believe I have a suggestion as to where you should go next, young miss.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "See, there is a spirit currently inside your brother\u2019s computer."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 05a9e2cd99da7104c8e7ddd0c1a0ab0a,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "There\u2019s what!?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "There\u2019s a spirit in your brother\u2019s computer. I thought you might
+      want to deal with that situation first."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd7f8aacf92f213498a2af4531d26ffc,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yeah, you thought right. I\u2019ll get right to that, and\u2026 I\u2019ll
+      be back when I\u2019m done, okay?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Very good, young miss Alexandra. I\u2019ll remain here."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 354328774}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 354328775}
+        m_MethodName: pickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &354328773
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024322021}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354328774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: b916a316fd9c57d479c51a196f708d85, type: 2}
+--- !u!114 &354328775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354328771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f, type: 2}
+  removeOnPickup: 0
+  accessOnlyThroughScript: 1
+  button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &388854009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1580,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 929394091}
+        m_MethodName: checkQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: e398637af7945dc418f8553d1d68afa4, type: 2}
@@ -1041,7 +1631,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -1055,6 +1645,82 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &393424796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 393424797}
+  - component: {fileID: 393424798}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &393424797
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393424796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 195855352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393424798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393424796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: Alex-leadup-toFinalSpiritDialogue
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well then, final stop on the farewell tour. You know, I haven\u2019t known
+      the old spirit for long, but I feel like I kinda get him now, you know."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "And just because I won\u2019t be like this, won\u2019t mean I can\u2019t
+      talk to it any longer, I guess. Ugh, let\u2019s just do this."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &421920489
 Prefab:
   m_ObjectHideFlags: 0
@@ -1092,7 +1758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -1209,6 +1875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532742314}
   - component: {fileID: 532742313}
+  - component: {fileID: 532742315}
   m_Layer: 0
   m_Name: Dia
   m_TagString: Untagged
@@ -1231,7 +1898,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 0db1bf8b192c0234dae83c9f5b279f71, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1240,7 +1908,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: This is insane. Why did they- Why did they make me like this? What was the
@@ -1273,7 +1942,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 532742315}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &532742314
@@ -1289,6 +1969,19 @@ Transform:
   m_Father: {fileID: 708019098}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &532742315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 532742312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 0db1bf8b192c0234dae83c9f5b279f71, type: 2}
 --- !u!1001 &601880900
 Prefab:
   m_ObjectHideFlags: 0
@@ -1326,7 +2019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -1347,6 +2040,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1377,7 +2075,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_Name
@@ -1400,6 +2098,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 4b14908d78bd21b468db8309c772d463,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1467447088}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -1440,7 +2163,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -1458,6 +2181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662575726}
   - component: {fileID: 662575727}
+  - component: {fileID: 662575728}
   m_Layer: 0
   m_Name: SpiritDialogue
   m_TagString: Untagged
@@ -1489,10 +2213,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: 
+  dialogueName: SpiritDialogue1
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 6608322cdcc292541a892cf5a7bc4b25, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1501,7 +2226,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Did it just look at me?
@@ -1509,7 +2235,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: c16a84891ee61f646b03c711bb3e4f10,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh, my god, it did! Ah!
@@ -1517,7 +2244,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh, dear!
@@ -1525,7 +2253,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Wha- What are you!? Shoo- Uh, cat! Go away!
@@ -1533,7 +2262,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I am most certainly not a cat, young one!
@@ -1541,7 +2271,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Holy shirt, it speaks!
@@ -1549,7 +2280,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Of course I do! Haven\u2019t you- Oh, my\u2026 Have you perchance ever
@@ -1558,7 +2290,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: A spirit? No! How could I have - they don't exist!
@@ -1566,7 +2299,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Young one, we do exist. In fact, I\u2019ve been residing upon this plot
@@ -1575,7 +2309,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Okay? How? I mean, what?
@@ -1583,7 +2318,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh dear, my brethren warned me of this\u2026 I am what is called a house
@@ -1592,7 +2328,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Huh, so you\u2019re, like, a personification of the house?"
@@ -1600,7 +2337,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Not exactly, but you are not far off, young one. I am merely a spirit that
@@ -1609,7 +2347,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Like Martin?
@@ -1617,7 +2356,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Who is that?
@@ -1625,7 +2365,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "The Landlord. Shouldn\u2019t you know who everyone is if you\u2019ve lived
@@ -1634,7 +2375,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Might this\u2026Martin? Be the Human who is in charge of the building\u2019s
@@ -1643,7 +2385,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, that's him.
@@ -1651,7 +2394,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I see. Your names are very confusing to me. Why not just call everyone
@@ -1660,7 +2404,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: I... No?
@@ -1668,7 +2413,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh. I\u2019ll take your word for it, young\u2026 Oh dear, I was informed
@@ -1678,7 +2424,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: We-
@@ -1686,7 +2433,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh yes, apologies, I have it now! You are a young miss, as proven by your
@@ -1695,7 +2443,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, I am. Wait, my what? My hair?
@@ -1703,7 +2452,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh, yes of course, that is what it is called! Is it not? My humble apologies
@@ -1712,7 +2462,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Well, yes. Can I ask you something now?
@@ -1720,7 +2471,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Why, of course, young miss! An information exchange is a wonderful idea!
@@ -1729,7 +2481,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Well\u2026 have you always been able to see us?"
@@ -1737,7 +2490,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Naturally. I must know the location of everyone who is currently in this
@@ -1746,7 +2500,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 6b7f271470bf2874184de558d202d2a3,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Whoa, wait! You can see us when we shower?
@@ -1754,7 +2509,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: When you douse yourselves in water? Certainly.
@@ -1762,7 +2518,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 70c90058076966c40be847466a96a447,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That\u2019s so creepy!"
@@ -1770,7 +2527,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Is it\u2026 creepy? I don\u2019t recognise this concept."
@@ -1778,7 +2536,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2026 ugh, let\u2019s just drop it. Why are you here? I\u2019ve never
@@ -1787,7 +2546,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Well, at the moment I am searching for a way to help my brethren, young
@@ -1796,7 +2556,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alexandra. So, what\u2019s wrong with your \u2018brethren?\u2019"
@@ -1804,7 +2565,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Well, they appear to be trapped in this very building.
@@ -1812,7 +2574,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh. Well, I\u2019m sorry to hear that."
@@ -1820,23 +2583,17 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "I, too, was saddened upon the discovery. Oh, there\u2019s one right now"
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I, too, was saddened upon the discovery. Oh, there\u2019s one right now."
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh. So that's what's going on over there with all the boxes?
@@ -1844,7 +2601,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: 'Well, you see, when a spirit suspects that a Human needs help, we can temporarily
@@ -1854,476 +2612,272 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Also, when a Human is in danger, we can position an object in a helpful
       position.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Whoa\u2026 Wait! If that\u2019s the case\u2026 When I was twelve, I fell
+      from the tree just outside the building."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: At the same time, a mattress that had been hung out to dry happened to blow
+      by and I landed on it. Was that you!?
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: "Ah yes, five years, two months and fourteen day ago. You ignored your mothers
+      advice to not climb the tree. Curious \u2013 Is that the word?"
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Yeah that, or stupid.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I see. "Stupid."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Uh, never mind that \u2013 You saved my life!"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Ah, yes, such is my duty.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh, who cares about duty, you saved my life! How can I ever thank you?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Thanks are not necessa-
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, whatever, of course I\u2019m going to thank you\u2026 by\u2026 Aha!
+      I\u2019ll help you help your friends."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh my, young miss Alexandra. That would be wonderful!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yeah, well, let\u2019s see how I do first. I take it your spirit buddy
+      hangs out in that weird, creepy box over there?"
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: "You assume correctly. It does look quite strange, doesn\u2019t it? Maybe
+      it\u2019s because it\u2019s scared."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Scared of what? That thing is what\u2019s terrifying here!"
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: Regretfully, I agree. Something must be stopping my brethren from leaving,
+      which I would assume could be rather terrifying. See, we can only spend a certain
+      amount of time away from our residences.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh. Before you\u2026 go away? Like forever?"
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: Indeed. It is of course a rare event, which would explain their panic.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Well then, I suppose I better get going then. Any tips for my first go at
+      this whole business?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Certainly. I\u2019ve seen something like this before. Your task is to find
+      and retrieve all the toys lying around in that area over there, and put them
+      in the box where my brethren resides."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Sounds like a chore.
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
+    Text: Quite.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7aad6f8e13e681842a1ed3925e79bea2,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Alright then, no more wavering. Here I go!
   - NameOfTalkingNPC: Spirit
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+    Text: Good luck!
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
-  - NameOfTalkingNPC: Spirit
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: 
+    Text: Thanks!
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 662575728}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &662575728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 662575725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 6608322cdcc292541a892cf5a7bc4b25, type: 2}
 --- !u!1 &668821141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2953,7 @@ Transform:
   m_Children:
   - {fileID: 1497145376}
   m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690319299
 GameObject:
@@ -2499,7 +3053,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690319303
 MonoBehaviour:
@@ -2516,6 +3070,11 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &708019094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +3104,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.378235, y: -0.36545205}
+  m_Offset: {x: -4.24, y: -0.36545205}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2556,7 +3115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0841713, y: 1.6090875}
+  m_Size: {x: 2.0841713, y: 2.37}
   m_EdgeRadius: 0
 --- !u!114 &708019097
 MonoBehaviour:
@@ -2591,7 +3150,7 @@ Transform:
   m_Children:
   - {fileID: 532742314}
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &709066331
 Prefab:
@@ -2630,7 +3189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 31
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2720,7 +3279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &758452507
 GameObject:
@@ -2799,7 +3358,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -2944,7 +3503,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -3053,6 +3612,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 929394091}
+        m_MethodName: checkQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 9186693a6ffd75e4d8ab2893088cc474, type: 2}
@@ -3093,7 +3663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -3145,7 +3715,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3258,6 +3828,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 929394091}
+        m_MethodName: checkQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 4b14908d78bd21b468db8309c772d463, type: 2}
@@ -3314,7 +3895,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "What\u2019s the rush, I don\u2019t get it. "
@@ -3432,6 +4014,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 929394091}
+        m_MethodName: checkQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 32f51c59dde0a204987287c9ebed747f, type: 2}
@@ -3472,7 +4065,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3523,12 +4116,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
-      value: MovingBlock (12)
+      value: ToyBox
       objectReference: {fileID: 0}
+    - target: {fileID: 114835717742527404, guid: fabf8d1e335203b4eab5bad219aa13ea,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a636c2d198faaac4f86f58a12a8aeb88,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
@@ -3569,7 +4173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3583,6 +4187,62 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &929394090 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 905126241}
+--- !u!114 &929394091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929394090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 5c938b8115a7f0849b795c658152f60f, type: 2}
+  - {fileID: 11400000, guid: 89578a24d35e6214abcd8f852f693c8b, type: 2}
+  - {fileID: 11400000, guid: 3367b4c9afcb1304da206cba84fd823f, type: 2}
+  - {fileID: 11400000, guid: 3dcc059c2ce4b8d42b165ae715f4706e, type: 2}
+  - {fileID: 11400000, guid: cfee89af89f40b74ea92da8b00649df8, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 929394097}
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 12300fd162e977543a6b95c8cebfaca0,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1817208879}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!212 &929394097 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 905126241}
 --- !u!1 &943545962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3592,6 +4252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943545963}
   - component: {fileID: 943545964}
+  - component: {fileID: 943545965}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3626,7 +4287,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: da2ab255eef7ce04e8157771a38cc521, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3635,7 +4297,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: d5e73bb0fabebc4449527493db74458a,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Uh, what the hell is that!? Oh, a trash bag. Damn, that scared me\u2026"
@@ -3645,9 +4308,33 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 943545965}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &943545965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 943545962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: da2ab255eef7ce04e8157771a38cc521, type: 2}
 --- !u!1 &1024322017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,6 +4398,8 @@ MonoBehaviour:
     onFunctionCall: 0
   thisCharacterConversations:
   - {fileID: 662575725}
+  - {fileID: 354328771}
+  - {fileID: 1231278122}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!212 &1024322020
@@ -3768,8 +4457,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 662575726}
+  - {fileID: 354328773}
+  - {fileID: 1231278124}
+  - {fileID: 1257971769}
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1024322022
 BoxCollider2D:
@@ -3833,7 +4525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3889,7 +4581,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3915,6 +4607,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -3945,12 +4642,37 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 61792880920043656, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2142348285}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
@@ -3992,7 +4714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4043,7 +4765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4115,7 +4837,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I don\u2019t want to go out there yet."
@@ -4168,7 +4891,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Fine!
@@ -4210,6 +4934,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3b402601dfe3745b24c2fa3c2484f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1185452684 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 1872436111}
+--- !u!114 &1185452690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185452684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: ad461896a0c7b154390a2daa6ac88a41, type: 2}
+--- !u!114 &1185452691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185452684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: ad461896a0c7b154390a2daa6ac88a41, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1185452684}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1192300694
 Prefab:
   m_ObjectHideFlags: 0
@@ -4247,7 +5019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4298,7 +5070,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 48
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
         type: 2}
@@ -4309,6 +5081,185 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1231278122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1231278124}
+  - component: {fileID: 1231278123}
+  - component: {fileID: 1231278125}
+  m_Layer: 0
+  m_Name: SpiritDialogue3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1231278123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231278122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: SpiritDialogue3
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: d12d2df1917712240b260ecd5d38dde7, type: 2}
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 48eed4acad3c45b4a812e0f4cd8dcdb9, type: 2}
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Right, well, that was weird.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: If you say so, young miss.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I do. Now then, what\u2019s next? How many of your buddies do we have to
+      get\u2026 well, get rid of?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well, I believe there are seven in total, and you\u2019ve helped two of
+      them."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: So, five, then?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "So it would appear. They\u2019re hiding around in each of the inhabited
+      apartments."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I see. So I just go around to every apartment with people in them and release
+      any spirits trapped there?
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Indeed. It\u2019s rather straight-forward. You\u2019ve done ever so well
+      so far, so I don\u2019t expect it will take long for you."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Alright, then. Better get to it.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Terrific, young miss. Best of luck!
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1231278125}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1231278124
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231278122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024322021}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231278125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231278122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 48eed4acad3c45b4a812e0f4cd8dcdb9, type: 2}
 --- !u!1001 &1245199389
 Prefab:
   m_ObjectHideFlags: 0
@@ -4346,7 +5297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4360,6 +5311,247 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1257971768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1257971769}
+  - component: {fileID: 1257971770}
+  m_Layer: 0
+  m_Name: SpiritDialogue4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1257971769
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257971768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1024322021}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257971770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257971768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: SpiritDialogue4
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 0}
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Why, hello again, young miss Alexandra. How do you fare in your attempts
+      to get the spirits out of this house?
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Hey again. I\u2019m\u2026 Well, I\u2019m done. I got them all."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Excellent, indeed, young Alexandra. Your perseverance is an inspiration
+      even to an old spirit like me.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, you flatterer. So what do we do now? I\u2019ve got all the spirits
+      back to you. Do we just open the window and let them fly free?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: More or less. They know their way back to their homes, and us spirits can
+      move mightily quickly if we so do desire. They will be fine, Alexandra. Thanks
+      to you.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Oh, don\u2019t make me blush, Spirit."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Certainly not. I\u2019ll leave that for your human companion."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 7aad6f8e13e681842a1ed3925e79bea2,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Cheeky, are we now? Seems like I\u2019m rubbing off on you."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Indeed, I\u2019ve noticed. I look forward to continuous exchanges of information
+      going forward, young miss."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "So, you\u2019re not going away or anything, now that all the problems are
+      solved?"
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: No, I think it might be good for everyone if I kept a closer watch on this
+      place. I do not think it would be wise of me to show myself to anyone else,
+      though. I fear the other residents lack your mental composure.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Might be for the best. I\u2019m happy you\u2019re sticking around."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: I am glad to hear it.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Well\u2026 Guess I\u2019ll just grab that damn glass bowl that started
+      all of this, and head back down."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Oh, indeed. I shall move it to the front so it will be easier to grab for
+      you, young miss.
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Thanks. And here it is! So much work for a large piece of glass.
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 71a38b0086b4c1b47ad86c52c2afba3b,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I\u2019m sure your family will appreciate your efforts."
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Probably, even if they won\u2019t know what I\u2019ve done. Oh, well, I
+      guess I should be going. I\u2019ll see you later then."
+  - NameOfTalkingNPC: Spirit
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 64d76d63926eac144b8aefb881b5ddd7,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 3849f2c4bd605524eac7b3975cabf259, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "Yes, young miss. I\u2019ll be here."
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1305304349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,7 +5623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1324998979
 Prefab:
@@ -4470,7 +5662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 43
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4521,7 +5713,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4530,6 +5722,62 @@ Prefab:
     - target: {fileID: 212644358228150524, guid: 1f19d71b89084624c84ee95db3c7e1e6,
         type: 2}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1339792838
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_RootOrder
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
+      propertyPath: m_Name
+      value: Wall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212644358228150524, guid: 1f19d71b89084624c84ee95db3c7e1e6,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 60787418344493130, guid: 1f19d71b89084624c84ee95db3c7e1e6,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4572,7 +5820,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4607,7 +5855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1412157286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4672,8 +5920,50 @@ Transform:
   - {fileID: 860330079}
   - {fileID: 1132632928}
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1428477097
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.067111
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.0887413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1432304175
 Prefab:
   m_ObjectHideFlags: 0
@@ -4711,7 +6001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -4726,6 +6016,102 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1433310097 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 1877605200}
+--- !u!114 &1433310103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433310097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 0ccb480542c9d0a44abc5dbab8e73cd6, type: 2}
+--- !u!114 &1433310104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433310097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 0ccb480542c9d0a44abc5dbab8e73cd6, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1433310097}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &1467447082 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 612289610}
+--- !u!114 &1467447088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467447082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 9b870d1cc928f6844ad8035d23d38170, type: 2}
+--- !u!114 &1467447089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467447082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 9b870d1cc928f6844ad8035d23d38170, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1467447082}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1489659344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,6 +6220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497145376}
   - component: {fileID: 1497145375}
+  - component: {fileID: 1497145377}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4855,7 +6242,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 6ed8c3cbbd3c45040bf226c395f48311, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -4864,7 +6252,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: d5e73bb0fabebc4449527493db74458a,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Okay, that is not a trash bag. Trash bags don\u2019t have eyes. Nor fur.
@@ -4875,7 +6264,18 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497145377}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1497145376
@@ -4891,6 +6291,19 @@ Transform:
   m_Father: {fileID: 668821144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497145377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497145374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 6ed8c3cbbd3c45040bf226c395f48311, type: 2}
 --- !u!1 &1500960441
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,7 +6357,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: No! Just, give me a minute.
@@ -4994,7 +6408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 39
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5050,7 +6464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5101,7 +6515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5172,7 +6586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Scene2
   locked: 1
-  clip: {fileID: 0}
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!212 &1619720554
 SpriteRenderer:
@@ -5229,7 +6645,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1619720556
 MonoBehaviour:
@@ -5332,7 +6748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1634508606
 BoxCollider2D:
@@ -5408,7 +6824,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -5454,7 +6870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -5480,6 +6896,8 @@ GameObject:
   - component: {fileID: 1677362111}
   - component: {fileID: 1677362110}
   - component: {fileID: 1677362109}
+  - component: {fileID: 1677362114}
+  - component: {fileID: 1677362113}
   m_Layer: 0
   m_Name: Potta
   m_TagString: Untagged
@@ -5502,6 +6920,22 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677362114}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!61 &1677362110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5518,7 +6952,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5582,8 +7016,51 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677362113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677362108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 95a7e33a5e53d76408f1be7110309932, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677362108}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1677362114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677362108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 95a7e33a5e53d76408f1be7110309932, type: 2}
 --- !u!1 &1681130265
 GameObject:
   m_ObjectHideFlags: 0
@@ -5655,7 +7132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1739206584
 Prefab:
@@ -5694,7 +7171,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -5740,7 +7217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5825,8 +7302,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1817208879 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1997005737951312, guid: 306890f05a276de4e9c5ee167f24d68b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1428477097}
 --- !u!1001 &1872436111
 Prefab:
   m_ObjectHideFlags: 0
@@ -5834,6 +7316,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -5864,7 +7351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_Name
@@ -5887,6 +7374,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: abcf156124d13034dad7e22fdbfd710f,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1185452690}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -5897,6 +7409,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5927,7 +7444,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479535634002804, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
       propertyPath: m_Name
@@ -5950,6 +7467,31 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 32f51c59dde0a204987287c9ebed747f,
         type: 2}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1433310103}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -6013,7 +7555,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1885410972
 Prefab:
@@ -6052,7 +7594,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6103,7 +7645,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6159,7 +7701,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -6205,7 +7747,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6261,7 +7803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6341,7 +7883,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 5.24}
   m_EdgeRadius: 0
 --- !u!4 &2018151470
 Transform:
@@ -6350,12 +7892,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2018151467}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.96, y: 1.94, z: 0}
+  m_LocalPosition: {x: -2.857, y: 1.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 943545963}
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2030204345
 Prefab:
@@ -6394,7 +7936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6445,7 +7987,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6496,7 +8038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6510,3 +8052,116 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2140194218 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 256349783}
+--- !u!114 &2140194219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140194218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 81b00e1b84848e44d980e73387326b50, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2140194218}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2140194220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140194218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 81b00e1b84848e44d980e73387326b50, type: 2}
+--- !u!114 &2140194226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140194218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWait: 0.1
+  maxWait: 1
+  minDuration: 0.1
+  maxDuration: 0.3
+  baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+--- !u!1 &2142348279 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1745186560299790, guid: 7b9fbc248ff28044288e8210812ab349,
+    type: 2}
+  m_PrefabInternal: {fileID: 1096037044}
+--- !u!114 &2142348285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142348279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 62ddf2a9a6751bc48ac9b9ab3fa6ea02, type: 2}
+--- !u!114 &2142348286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142348279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 62ddf2a9a6751bc48ac9b9ab3fa6ea02, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2142348279}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

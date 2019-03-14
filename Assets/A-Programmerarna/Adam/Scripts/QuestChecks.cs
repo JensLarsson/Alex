@@ -21,8 +21,10 @@ public class QuestChecks : MonoBehaviour {
 
     public void getQuests()
     {
+        Debug.Log("Derp1");
         foreach (QuestCheck questCheck in questChecks)
         {
+            Debug.Log("Derp2");
             questCheck.onTrigger();
         }
     }

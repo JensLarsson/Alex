@@ -42,10 +42,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 22, y: 25, z: 23, w: 23}
   spritePixelsToUnits: 64
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -99,7 +99,12 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -90, y: 44.5}
+      - {x: -90, y: -40.5}
+      - {x: -83, y: -41.5}
+      - {x: 86, y: -41.5}
+      - {x: 86, y: 44.5}
     physicsShape: []
   spritePackingTag: 
   userData: 

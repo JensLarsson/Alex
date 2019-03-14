@@ -26,6 +26,12 @@ public class conversationCollection : MonoBehaviour
     }
     public void onFunctionCall()
     {
+        StartCoroutine(sendConversation());
+    }
+
+    IEnumerator sendConversation()
+    {
+        yield return new WaitForSeconds(StartDelay);
         sendConversationsToDialogManager();
     }
 

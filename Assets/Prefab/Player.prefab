@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 95455618025104266}
   - component: {fileID: 114807486082234826}
   - component: {fileID: 114842389416322544}
+  - component: {fileID: 114054322551707030}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -117,6 +118,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114054322551707030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092889690248178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb1ff2b8c4d28b41a7cb37c42c60b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footSteps:
+  - {fileID: 8300000, guid: d5d9603cf7cf67841940a28bfbe05353, type: 3}
+  - {fileID: 8300000, guid: 417454adcc3a7fc48b1d4e8567359da7, type: 3}
+  - {fileID: 8300000, guid: b30ef097d4001004e9edf483d666853e, type: 3}
+  - {fileID: 8300000, guid: 72d5d9891f40ae6459faa331cb4895c8, type: 3}
+  - {fileID: 8300000, guid: f08bfbe725392bb468fd2d812c6e38e0, type: 3}
+  - {fileID: 8300000, guid: 1d94b4d3265575543a73ca5cf30221d5, type: 3}
+  - {fileID: 8300000, guid: eabdd099755670f429690ad3fcaed46e, type: 3}
 --- !u!114 &114246021486499424
 MonoBehaviour:
   m_ObjectHideFlags: 1

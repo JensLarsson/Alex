@@ -7,6 +7,7 @@ public class Reset : MonoBehaviour
 {
 
     public string button = "Submit";
+    public string instantbutton = "";
 
     void Update()
     {
@@ -14,10 +15,18 @@ public class Reset : MonoBehaviour
         {
             resetScene();
         }
+        if (instantbutton != "" && Input.GetButtonDown(instantbutton))
+        {
+            instantReset();
+        }
     }
 
     public void resetScene()
     {
         SceneController.instance.loadScene(SceneManager.GetActiveScene().name);
+    }
+    public void instantReset()
+    {
+        SceneController.instance.loadScene(SceneManager.GetActiveScene().name, true);
     }
 }

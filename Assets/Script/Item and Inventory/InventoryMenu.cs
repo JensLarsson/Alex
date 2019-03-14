@@ -125,10 +125,12 @@ public class InventoryMenu : MonoBehaviour
                         }
                         if (Inventory.instance.items[menuIndex].deleteOnUse) //Check if item should be deleted on use
                         {
+                            Debug.Log("Removing");
                             Inventory.instance.removeItem(Inventory.instance.items[menuIndex]);
                         }
                         PlayerMovement.canMove = true;
                         this.gameObject.SetActive(false);
+                        break;
                     }
                 }
             }
@@ -144,8 +146,19 @@ public class InventoryMenu : MonoBehaviour
         MenuIndex += i;
         menuFields[MenuIndex].GetComponent<Text>().color = selectionColour;
         ItemDescriptionArea.text = Inventory.instance.items[menuIndex].description;
-        image.sprite = Inventory.instance.items[menuIndex].sprite;
+        if (Inventory.instance.items[menuIndex].sprite != null)
+        {
+            image.sprite = Inventory.instance.items[menuIndex].sprite;
+            image.color = Color.white;
+        }
+        else
+        {
+            image.sprite = null;
+            image.color = new Color(0, 0, 0, 0);
+
+        }
         if (i != 0 && moveButtonClip != null)
+
         {
             AudioManager.instance.playSFXClip(moveButtonClip, true);
         }
