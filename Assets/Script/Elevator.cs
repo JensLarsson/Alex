@@ -16,7 +16,7 @@ public class Elevator : MonoBehaviour
     public static Elevator Instance = null;
 
     public List<Floor> floors = new List<Floor>();
-    
+
     public Sprite selectionLight, nonSelectedLight;
     public AudioClip moveButtonClip, unusableClip, travelSound;
     public float travelTime;
@@ -51,8 +51,8 @@ public class Elevator : MonoBehaviour
     }
     private void OnEnable()
     {
-        //settupMenu();
         PlayerMovement.canMove = false;
+        moveMenu(0);
         menuManager.IsInMenu = true;
     }
 

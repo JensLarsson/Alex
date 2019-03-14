@@ -240,282 +240,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &166693374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 166693377}
-  - component: {fileID: 166693376}
-  - component: {fileID: 166693375}
-  m_Layer: 0
-  m_Name: Loop 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &166693375
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 166693374}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &166693376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 166693374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 3
-  instantiateDialogIfQuestsExistsInCurrent:
-  - {fileID: 11400000, guid: 8d81e0f45a2c01642b3610d5c980fb00, type: 2}
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: Mittens! Mittens!
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114030764271053476, guid: ce61ccb6f3b988d4cbb0c4c8f86c2f7c,
-          type: 2}
-        m_MethodName: completeQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &166693377
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 166693374}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1596810710}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &242447325
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 242447330}
-  - component: {fileID: 242447329}
-  - component: {fileID: 242447328}
-  - component: {fileID: 242447327}
-  - component: {fileID: 242447326}
-  m_Layer: 0
-  m_Name: Loop 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &242447326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242447325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 0
-  quest: {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
---- !u!114 &242447327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242447325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrigger: 0
-  questChecks:
-  - currentQuestsToCheck: []
-    completedQuestsToCheck: []
-    questsToGet:
-    - {fileID: 11400000, guid: 8d81e0f45a2c01642b3610d5c980fb00, type: 2}
-    getQuestsToCompleted: 0
---- !u!61 &242447328
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242447325}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &242447329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242447325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 2
-  instantiateDialogIfQuestsExistsInCurrent:
-  - {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: Dearie! How was the pie?
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: It was great, thank you Bertha.
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: And your brother, did he enjoy it as well?
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "I can\u2019t- I haven\u2019t been able to talk to him yet. But I\u2019m
-      sure he loved it."
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 242447327}
-        m_MethodName: getQuests
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 242447326}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &242447330
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242447325}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1596810710}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264613631
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +723,7 @@ MonoBehaviour:
     Text: " I mean, best case scenario we end up resetting the game. I go back to
       not knowing. Even then, I don\u2019t have a future, nothing to look forward
       to. Just a single moment, a happy one, but never anything else."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1009,6 +734,7 @@ MonoBehaviour:
     Text: "Having a future, something to imagine or dream about, that must really
       be something. I\u2026 do you have a dream? Something you really want, for your
       future."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1017,6 +743,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me to the vase if yes, stay still if no
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -1157,10 +884,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: main
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted:
-  - {fileID: 11400000, guid: a0cfc1e80fcdd74419fb9a0d51b5a9b3, type: 2}
+  instantiateDialogIfQuestsExistsInCurrent:
+  - {fileID: 11400000, guid: 5b677ce91acabf3498146234d8a5070f, type: 2}
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: 0db1bf8b192c0234dae83c9f5b279f71, type: 2}
+  removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -1173,6 +901,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh! Oh dear! Mittens, watch out my darling!
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -1384,6 +1113,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Does that mean you have a job? Have your own place and stuff. I wonder
       what it\u2019s like being an adult."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -1684,7 +1414,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: JensTestScen2
   locked: 0
+  lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!1 &1071081945
 GameObject:
@@ -1819,6 +1551,7 @@ MonoBehaviour:
     Text: 'Completed quest
 
 '
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2520,195 +2253,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1529353953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1529353958}
-  - component: {fileID: 1529353957}
-  - component: {fileID: 1529353956}
-  - component: {fileID: 1529353955}
-  - component: {fileID: 1529353954}
-  m_Layer: 0
-  m_Name: Puzzle done dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1529353954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529353953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 0
-  quest: {fileID: 0}
---- !u!114 &1529353955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529353953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrigger: 0
-  questChecks:
-  - currentQuestsToCheck: []
-    completedQuestsToCheck: []
-    questsToGet:
-    - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
-    getQuestsToCompleted: 0
---- !u!61 &1529353956
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529353953}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1529353957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529353953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: puzzle
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 4c5e9e95c0ec26e4fa43a2695c9022f9, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Taffy! Oh, you rascal where have you been? I\u2019ve been worried sick
-      you curious kitty."
-  - NameOfTalkingNPC: Taffy
-    PortraitOfTalkingNPC: {fileID: 0}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: Meow
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Oh, you know I can\u2019t be mad at you. Such a little sweet. Now! would
-      you look at that. Alex dearie, the bird is gone! Well done, you really are such
-      a sweetheart."
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "It wasn\u2019t a\u2026 never mind. It was no problem Bertha."
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Here you go, I didn\u2019t have everything so I made a blueberry pie instead.
-      Make sure to share some with your brother! He needs to put on some weight, plus
-      a boy that age is always running around. Some sugar will keep him going. And
-      give my best to your mother!"
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: I will.
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1529353955}
-        m_MethodName: getQuests
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &1529353958
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529353953}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1596810710}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574115329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,10 +2432,6 @@ MonoBehaviour:
     onFunctionCall: 0
   thisCharacterConversations:
   - {fileID: 788382723}
-  - {fileID: 1529353953}
-  - {fileID: 1864365374}
-  - {fileID: 242447325}
-  - {fileID: 166693374}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!61 &1596810708
@@ -2974,10 +2514,6 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99190235, z: 1}
   m_Children:
   - {fileID: 788382728}
-  - {fileID: 1529353958}
-  - {fileID: 1864365379}
-  - {fileID: 242447330}
-  - {fileID: 166693377}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3054,172 +2590,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1864365374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1864365379}
-  - component: {fileID: 1864365378}
-  - component: {fileID: 1864365377}
-  - component: {fileID: 1864365376}
-  - component: {fileID: 1864365375}
-  m_Layer: 0
-  m_Name: Loop 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1864365375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864365374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 0
-  quest: {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
---- !u!114 &1864365376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864365374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8191684e77366a448a89ca3ff9fcac3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrigger: 0
-  questChecks:
-  - currentQuestsToCheck: []
-    completedQuestsToCheck: []
-    questsToGet:
-    - {fileID: 11400000, guid: df0ce341d7a50154d939ea76dbfb124d, type: 2}
-    getQuestsToCompleted: 0
---- !u!61 &1864365377
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864365374}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1864365378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864365374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 1
-  instantiateDialogIfQuestsExistsInCurrent:
-  - {fileID: 11400000, guid: 114bc34133e4a024cb7babbab676c202, type: 2}
-  instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Oh, hello Alex dear, have you seen Mittens? It\u2019s time for his bath,
-      and I can\u2019t seem to find him anywhere. Must be hiding, he never liked the
-      baths. But I always tell him a clean boy is a good boy!"
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "I\u2026uh, I haven\u2019t seen him. Sorry Bertha."
-  - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
-      here my sweet!"
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1864365376}
-        m_MethodName: getQuests
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1864365375}
-        m_MethodName: CompleteQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &1864365379
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864365374}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.9999977, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1596810710}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894240317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,6 +2648,7 @@ MonoBehaviour:
     Text: "I hope you get whatever it is, I really do. I don\u2019t know, something
       about knowing someone has a future, it just makes me feel\u2026 less awful,
       I guess. Especially since it\u2019s you."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3288,6 +2659,7 @@ MonoBehaviour:
     Text: "You \u2013 you\u2019ve been pretty great. I couldn\u2019t have gotten this
       far without you. Even literally, like, I can\u2019t move without you letting
       me."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3299,6 +2671,7 @@ MonoBehaviour:
       even know your name, but you\u2019re there. Figuring things out for me. I mean,
       you were only gonna play a game, I\u2019m sure you didn\u2019t exactly intend
       to get caught up in my existential crisis."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3307,6 +2680,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Just, thank you, I guess.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3315,6 +2689,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s keep going."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3383,6 +2758,7 @@ MonoBehaviour:
       have a doctorate? How can she remembers being in school if, you know, she obviously
       hasn\u2019t? I wonder what she would say if I asked her what it was like, or
       what school she went to."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3392,6 +2768,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I feel like I should be in school, but I have no memories of it. Are you
       in school? Move me if you are.
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3800,6 +3177,7 @@ MonoBehaviour:
     Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
       then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
       like to have a future."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3866,6 +3244,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Well, at least we have something in common. Or, maybe you\u2019re already
       living your dream, maybe your life is perfect. It is bad I kind of hope it isn\u2019t?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3875,6 +3254,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: " Even if it is, don\u2019t you want something to look forward to? I feel
       like that would be the best part about having a future, looking forward to it."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3884,6 +3264,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: If I had one, I would. I would make it whatever I wanted and I would always
       find something new to want.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3892,6 +3273,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I don\u2019t know, I just\u2026 Lets keep going."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []

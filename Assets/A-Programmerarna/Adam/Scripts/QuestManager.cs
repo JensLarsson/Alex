@@ -56,17 +56,17 @@ public class QuestManager : MonoBehaviour
 
     public void addToCurrentQuests(QuestSO quest)
     {
-        //if (questExistsInCurrentQuests(quest))
-        //{
-        //    Debug.Log(quest._name + " already exist in current quests");
-        //}
-        //else if (questExistsInCompletedQuests(quest._name))
-        //{
-        //    Debug.Log(quest._name + " already exsist in completed quests");
-        //}
-        //else
+        if (questExistsInCurrentQuests(quest))
         {
-            Debug.Log("Added " + quest._name + " to current quests");
+            Debug.Log(quest.name + " already exist in current quests");
+        }
+        else if (questExistsInCompletedQuests(quest))
+        {
+            Debug.Log(quest.name + " already exsist in completed quests");
+        }
+        else
+        {
+            Debug.Log("Added " + quest.name + " to current quests");
             currentQuests.Add(quest);
         }
     }
@@ -96,7 +96,7 @@ public class QuestManager : MonoBehaviour
     {
         if (questExistsInCompletedQuests(quest))
         {
-            Debug.Log(quest._name + " already exsist in completed quests");
+            Debug.Log(quest.name + " already exsist in completed quests");
         }
         else
         {
@@ -107,7 +107,7 @@ public class QuestManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(quest._name + " dosen't exist in current quests");
+                Debug.Log(quest.name + " dosen't exist in current quests");
             }
         }
     }
@@ -224,7 +224,7 @@ public class QuestManager : MonoBehaviour
         }
         foreach (QuestSO quest in quests)
         {
-            if (quest._name == name)
+            if (quest.name == name)
             {
                 return quest;
             }
@@ -247,7 +247,7 @@ public class QuestManager : MonoBehaviour
                 return quest;
             }
         }
-        Debug.Log("Couldn't find a quest with the name '" + quest._name);
+        Debug.Log("Couldn't find a quest with the name '" + quest.name);
         return null;
     }
 }

@@ -9,4 +9,6 @@ public class Item : ScriptableObject
     public bool deleteOnUse = true;
     public AudioClip useSound;
     [TextArea] public string description = "";
+
+
 }
