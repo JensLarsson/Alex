@@ -57,7 +57,7 @@ public class SceneController : MonoBehaviour
     public IEnumerator SceneTransition(string scene, float f = 0.0f)
     {
         
-        if (!transitioning)
+        if (!transitioning && !DialogManager.Instance.isInDialogBranch)
         {
             saveScene(scene);
             transitioning = true;

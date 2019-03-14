@@ -219,6 +219,7 @@ public class DialogManager : MonoBehaviour
                     }
                     else
                     {
+                        isInDialogBranch = activeDialog.dialogs[dialogAt].dialogueTree;
                         //om man inte är i en...
                         dialogAt++;
                         //isInDialogBranch = activeDialog.dialogs[dialogAt].dialogueTree;
@@ -245,7 +246,7 @@ public class DialogManager : MonoBehaviour
                             }
                            // Debug.Log("in" + isInDialogBranch);
                             //Debug.Log("out" + activeDialog.dialogs[dialogAt - 1].dialogueTree);
-                            isInDialogBranch = activeDialog.dialogs[dialogAt - 1].dialogueTree;
+                            
                            activeDialog.events.Invoke();
                             activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
                             activeDialog = null;
@@ -302,7 +303,7 @@ public class DialogManager : MonoBehaviour
     {
         if (activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length > 0)
         {
-            while (true)
+            while (true && PlayerMovement.canMove)
             {
                 int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
 
