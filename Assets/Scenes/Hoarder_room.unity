@@ -437,6 +437,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Well, at least we have something in common. Or, maybe you\u2019re already
       living your dream, maybe your life is perfect. It is bad I kind of hope it isn\u2019t?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -447,6 +448,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: " Even if it is, don\u2019t you want something to look forward to? I feel
       like that would be the best part about having a future, looking forward to it."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -457,6 +459,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: If I had one, I would. I would make it whatever I wanted and I would always
       find something new to want.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -466,6 +469,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I don\u2019t know, I just\u2026 Lets keep going."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -649,6 +653,7 @@ MonoBehaviour:
     Text: "I mean, best case scenario we end up resetting the game. I go back to not
       knowing. Even then, I don\u2019t have a future, nothing to look forward to.
       Just a single moment, a happy one, but never anything else."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -660,6 +665,7 @@ MonoBehaviour:
     Text: "Having a future, something to imagine or dream about, that must really
       be something. I\u2026 do you have a dream? Something you really want, for your
       future."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -669,6 +675,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me to the vase if yes, stay still if no
+    dialogueTree: 1
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -838,6 +845,7 @@ MonoBehaviour:
     Text: "I hope you get whatever it is, I really do. I don\u2019t know, something
       about knowing someone has a future, it just makes me feel\u2026 less awful,
       I guess. Especially since it\u2019s you."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -849,6 +857,7 @@ MonoBehaviour:
     Text: "You \u2013 you\u2019ve been pretty great. I couldn\u2019t have gotten this
       far without you. Even literally, like, I can\u2019t move without you letting
       me."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -861,6 +870,7 @@ MonoBehaviour:
       even know your name, but you\u2019re there. Figuring things out for me. I mean,
       you were only gonna play a game, I\u2019m sure you didn\u2019t exactly intend
       to get caught up in my existential crisis."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -870,6 +880,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Just, thank you, I guess.
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -879,6 +890,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s keep going."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -947,6 +959,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Does that mean you have a job? Have your own place and stuff. I wonder
       what it\u2019s like being an adult."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2334,6 +2347,7 @@ MonoBehaviour:
     Text: " I mean, best case scenario we end up resetting the game. I go back to
       not knowing. Even then, I don\u2019t have a future, nothing to look forward
       to. Just a single moment, a happy one, but never anything else."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -2345,6 +2359,7 @@ MonoBehaviour:
     Text: "Having a future, something to imagine or dream about, that must really
       be something. I\u2026 do you have a dream? Something you really want, for your
       future."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -2354,6 +2369,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me to the vase if yes, stay still if no
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2965,6 +2981,7 @@ MonoBehaviour:
     Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
       then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
       like to have a future."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3059,6 +3076,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Eh, oops.
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3331,6 +3349,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Does that mean you have a job? Have your own place and stuff. I wonder
       what it\u2019s like being an adult."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3585,6 +3604,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Well, at least we have something in common. Or, maybe you\u2019re already
       living your dream, maybe your life is perfect. It is bad I kind of hope it isn\u2019t?"
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3595,6 +3615,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: " Even if it is, don\u2019t you want something to look forward to? I feel
       like that would be the best part about having a future, looking forward to it."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3605,6 +3626,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: If I had one, I would. I would make it whatever I wanted and I would always
       find something new to want.
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3614,6 +3636,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I don\u2019t know, I just\u2026 Lets keep going."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3686,6 +3709,7 @@ MonoBehaviour:
     Text: "Eureka! I need an apple or something to hit myself with. I can\u2019t believe\u2026
       hi! Who are \u2013 no wait I know you? You, uh- yes you live on the ground floor
       correct? Alex is it not?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3695,6 +3719,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yes, that\u2019s me. Uh, what\u2019s going on with the\u2026"
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3707,6 +3732,7 @@ MonoBehaviour:
       Maybe I\u2019ll get a Nobel Price, oh who am I kidding OF COURSE I\u2019ll get
       a Nobel Price. I can prove ghosts exist. And I captured one! In my vacuum cleaner!
       I don\u2019t know why, I feel like I\u2019ve seen it in a movie somewhere."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3716,6 +3742,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yes, it's from...
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3728,6 +3755,7 @@ MonoBehaviour:
       have matter? I should\u2026 you know if they don\u2019t have matter, I wonder
       how they would react to something else that doesn\u2019t have matter. Like say,
       fire. Or force. Perhaps I could try, hm, I do have some explosives here somewhere\u2026 "
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3738,6 +3766,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "That sounds really dangerous. Hey, are you alright? There\u2019s been some
       weird stuff happening in the building."
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3749,6 +3778,7 @@ MonoBehaviour:
     Text: "Oh alright, weird like how? Like more ghosts weird? Because I\u2019m sure
       I have another vacuum cleaner here somewhere I just have to\u2026 aha! Found
       it!"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3758,6 +3788,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Another vacuum cleaner?
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3769,6 +3800,7 @@ MonoBehaviour:
     Text: "No, explosives. Now I just need to figure out how to do this without destroying
       the container. Don\u2019t want the ghost escaping. Plus, that\u2019s my favourite
       vacuum cleaner! It has a great nozzle, gets in all the little corners."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3778,6 +3810,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Are you sure blowing it up is, like, a great idea?
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3788,6 +3821,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Of course it is! Besides, I have loved the fire too truly to be fearful
       of the explosions, or whatever.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3799,6 +3833,7 @@ MonoBehaviour:
       before she blows up the building. Jeez, is no one who lives here normal? Just
       watch out, she has a security system of some kind. I just can\u2019t remember
       what it was\u2026 hey, let\u2019s ask her)"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3808,6 +3843,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey Dr. Oakley\u2026"
+    dialogueTree: 0
   - NameOfTalkingNPC: 'Dr. Oakley '
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3818,6 +3854,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Please! Call me Ava. Still doctor though. Dr. Ava. I didn\u2019t work on
       that doctorate for a godforsaken number of years to just be called Ava!"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3828,6 +3865,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Alright, Dr. Ava\u2026 I was wondering about the security system here.
       I mean how to you keep people from, uh, stealing you research?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Ava
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3841,6 +3879,7 @@ MonoBehaviour:
       in a password only I know, it\u2019s a hundred symbols long, then scan my fingerprints.
       Research theft is the scourge of the scientific community Alex, it\u2019s one
       of the great dangers of being\u2026 "
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Ava
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -3852,6 +3891,7 @@ MonoBehaviour:
     Text: "Hey! What if I use another vacuum to remove the ghost from the first one?
       I don\u2019t mind sacrificing my second vacuum. Or maybe its my third? Either
       way, as long as the good nozzle is intact. Hm\u2026"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3863,6 +3903,7 @@ MonoBehaviour:
       again\u2026 we need to turn it off but its somewhere else. Oh! Now I remember!
       We need to turn the power off in the whole building. We need to get to the landlord,
       in the basement. Let\u2019s go!)"
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -5749,6 +5790,7 @@ MonoBehaviour:
       have a doctorate? How can she remembers being in school if, you know, she obviously
       hasn\u2019t? I wonder what she would say if I asked her what it was like, or
       what school she went to."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -5759,6 +5801,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I feel like I should be in school, but I have no memories of it. Are you
       in school? Move me if you are.
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -6100,6 +6143,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Did that cat change colour?
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -6182,6 +6226,7 @@ MonoBehaviour:
     Text: "I hope you get whatever it is, I really do. I don\u2019t know, something
       about knowing someone has a future, it just makes me feel\u2026 less awful,
       I guess. Especially since it\u2019s you."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -6193,6 +6238,7 @@ MonoBehaviour:
     Text: "You \u2013 you\u2019ve been pretty great. I couldn\u2019t have gotten this
       far without you. Even literally, like, I can\u2019t move without you letting
       me."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -6205,6 +6251,7 @@ MonoBehaviour:
       even know your name, but you\u2019re there. Figuring things out for me. I mean,
       you were only gonna play a game, I\u2019m sure you didn\u2019t exactly intend
       to get caught up in my existential crisis."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -6214,6 +6261,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Just, thank you, I guess.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -6223,6 +6271,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s keep going."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -6457,6 +6506,7 @@ MonoBehaviour:
       have a doctorate? How can she remembers being in school if, you know, she obviously
       hasn\u2019t? I wonder what she would say if I asked her what it was like, or
       what school she went to."
+    dialogueTree: 1
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -6467,6 +6517,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: I feel like I should be in school, but I have no memories of it. Are you
       in school? Move me if you are.
+    dialogueTree: 1
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -6546,6 +6597,7 @@ MonoBehaviour:
     Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
       then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
       like to have a future."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -6709,6 +6761,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: The ghost! Where is it? Alex, did you see where in went?
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -6719,6 +6772,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: There was uh, this guy in a red lab coat. He walked in and, well, he walked
       in and he knew your password. Just took the ghost.
+    dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
       type: 3}
@@ -6728,6 +6782,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Darn it! Oh well, I\u2019ll find another one\u2026"
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -6908,10 +6963,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
+    onCollisionStayWithDelay: 1
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 1
+    onFunctionCall: 0
   thisCharacterConversations:
   - {fileID: 1660460021}
   isInDialogueTrigger: 0
@@ -6922,7 +6977,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809807658}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb56417f4118d444a8c1b0380c1e77ed, type: 3}
   m_Name: 
@@ -7011,7 +7066,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.55191946, y: -0.93}
