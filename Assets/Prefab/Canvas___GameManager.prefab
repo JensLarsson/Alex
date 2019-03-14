@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1049122729522848
 GameObject:
   m_ObjectHideFlags: 1
@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 114053812616461678}
   - component: {fileID: 222103049164696306}
   - component: {fileID: 114512596030946374}
+  - component: {fileID: 114980396751434876}
   m_Layer: 5
   m_Name: Canvas___GameManager
   m_TagString: Untagged
@@ -1086,7 +1087,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016610939121626}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c20d69eeb6af6846af15f20ae1aa9cf, type: 3}
   m_Name: 
@@ -1697,6 +1698,17 @@ MonoBehaviour:
   dialogNameTagUI: {fileID: 114445273998899968}
   dialogPortraitImageUI: {fileID: 114750022118735002}
   soundDelay: 0
+--- !u!114 &114980396751434876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c5891d736f4684f9988d31dff23796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222010865589109726
 CanvasRenderer:
   m_ObjectHideFlags: 1
