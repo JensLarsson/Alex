@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
-  m_Name: skeleton key
+  m_Name: Master Key
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6b68fee69efc8b64a8107b36421aadad, type: 3}
   deleteOnUse: 0
   useSound: {fileID: 0}
-  description: a master key that should open any appartment
+  description: "This key is supposed to unlock all the doors in the building, but
+    something seems to be wrong with it. Why isn\u2019t it working?"

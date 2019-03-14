@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
-  m_Name: ball Toy
+  m_Name: Toys
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6b38aecea4a13c34f84cacba6d3c3f59, type: 3}
+  sprite: {fileID: 21300000, guid: 64c72e1efba428a45b5b14691c3f24cb, type: 3}
   deleteOnUse: 1
   useSound: {fileID: 0}
-  description: 
+  description: "That\u2019s a lot of toys. Wonder where these belong?"

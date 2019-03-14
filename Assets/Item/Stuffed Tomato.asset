@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
-  m_Name: Weird Tomato Toy
+  m_Name: Stuffed Tomato
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: d90fa601788d17046aa7e99a4d377498, type: 3}
   deleteOnUse: 1
   useSound: {fileID: 0}
-  description: There is something wrong with this one.
+  description: "It\u2019s really softadfsdfs! +++?////))n. Agjhfdgjhnd who doesn\u2019\u2019\u2019\u2019\u2019\u2019\u2019t
+    like tomatoes!"
