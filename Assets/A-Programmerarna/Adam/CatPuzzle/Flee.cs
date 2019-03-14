@@ -23,16 +23,16 @@ public class Flee : CatBase
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         time += Time.deltaTime;
 
-        if (time > 0.1f)
+        if (time > 0.3f)
         {
-            if (Vector3.Distance(oldCatPosition, cat.transform.position) < 0.1f)
+            if (Vector3.Distance(oldCatPosition, cat.transform.position) < 0.03f)
             {
                 animator.SetBool("hitWall", true);
             }
             oldCatPosition = cat.transform.position;
             time = 0;
         }
-        if (animator.GetFloat("distanceToPlayer") < 1)
+        if (animator.GetFloat("distanceToPlayer") < 0.8f)
         {
             direction = catAI.moveDirection;
             animator.SetInteger("moveDirectionX", (int)direction.x);
