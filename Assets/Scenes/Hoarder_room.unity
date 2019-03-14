@@ -184,7 +184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 78
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39251900
 GameObject:
@@ -257,7 +257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &46179252
 GameObject:
@@ -330,7 +330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 86
+  m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &53582751
 Prefab:
@@ -369,7 +369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -378,107 +378,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &75820792
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 75820793}
-  - component: {fileID: 75820794}
-  m_Layer: 0
-  m_Name: 1.2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &75820793
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75820792}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1984671259}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &75820794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75820792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Well, at least we have something in common. Or, maybe you\u2019re already
-      living your dream, maybe your life is perfect. It is bad I kind of hope it isn\u2019t?"
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: " Even if it is, don\u2019t you want something to look forward to? I feel
-      like that would be the best part about having a future, looking forward to it."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: If I had one, I would. I would make it whatever I wanted and I would always
-      find something new to want.
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "I don\u2019t know, I just\u2026 Lets keep going."
-    dialogueTree: 0
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &96353454
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 85
+  m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &102031547
 Prefab:
@@ -589,7 +488,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
@@ -900,75 +799,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &231766923
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 231766924}
-  - component: {fileID: 231766925}
-  m_Layer: 0
-  m_Name: Dia (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &231766924
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 231766923}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1984671259}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &231766925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 231766923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Does that mean you have a job? Have your own place and stuff. I wonder
-      what it\u2019s like being an adult."
-    dialogueTree: 0
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &238502033
 Prefab:
   m_ObjectHideFlags: 0
@@ -1006,7 +836,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -1097,7 +927,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &258808457
 Prefab:
@@ -1136,7 +966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -1384,7 +1214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 80
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443592814
 GameObject:
@@ -1457,7 +1287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &445615880
 Prefab:
@@ -1496,7 +1326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -1530,6 +1360,7 @@ GameObject:
   - component: {fileID: 467056241}
   - component: {fileID: 467056244}
   - component: {fileID: 467056245}
+  - component: {fileID: 467056246}
   m_Layer: 0
   m_Name: Pussel Katt Science
   m_TagString: Untagged
@@ -1592,7 +1423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &467056241
 MonoBehaviour:
@@ -1665,6 +1496,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 04a12f777c8477f43bff4f1e7a9aa1ad, type: 2}
+  numberOfItemsNeeded: 0
 --- !u!61 &467056243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1715,7 +1547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
-  completedQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 79cb0415f4bc90e4e90b188782a85fed, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
@@ -1726,6 +1559,35 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 21300000, guid: a4dfca0d75ab5d346b328d3291e66dce,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &467056246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467056238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee25c6e366ec1a3409fefb4c9bba7914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: Submit
+  soundClip: {fileID: 8300000, guid: 7310bc50b15aa1b4a8583dab210d9893, type: 3}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1804,7 +1666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &474798756
 Prefab:
@@ -1843,7 +1705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -1923,7 +1785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 74
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &561045549
 Prefab:
@@ -1962,7 +1824,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2058,7 +1920,7 @@ Transform:
   m_Children:
   - {fileID: 260139317}
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &594184210
 MonoBehaviour:
@@ -2278,7 +2140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2287,100 +2149,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &650129964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 650129965}
-  - component: {fileID: 650129966}
-  m_Layer: 0
-  m_Name: Continuation Dia (1 and 2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &650129965
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 650129964}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1984671259}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &650129966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 650129964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: " I mean, best case scenario we end up resetting the game. I go back to
-      not knowing. Even then, I don\u2019t have a future, nothing to look forward
-      to. Just a single moment, a happy one, but never anything else."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Having a future, something to imagine or dream about, that must really
-      be something. I\u2026 do you have a dream? Something you really want, for your
-      future."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: Move me to the vase if yes, stay still if no
-    dialogueTree: 0
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers:
-  - {fileID: 1545898893}
-  - {fileID: 75820792}
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &652298296
 Prefab:
   m_ObjectHideFlags: 0
@@ -2418,7 +2186,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2464,7 +2232,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2637,7 +2405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -2718,7 +2486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 72
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &720172356
 Animator:
@@ -2774,7 +2542,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2820,7 +2588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -2866,7 +2634,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2912,7 +2680,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 56
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -2921,76 +2689,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &780187623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 780187624}
-  - component: {fileID: 780187625}
-  m_Layer: 0
-  m_Name: Dia (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &780187624
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 780187623}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1984671259}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &780187625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 780187623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
-      then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
-      like to have a future."
-    dialogueTree: 0
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &790816085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,7 +2821,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
@@ -3271,7 +2969,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3452,7 +3150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &871571916
 Prefab:
@@ -3491,7 +3189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 61
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -3537,7 +3235,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4028,7 +3726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4074,7 +3772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4131,7 +3829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 62
+      value: 61
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
@@ -4208,7 +3906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4305,7 +4003,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 60
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4352,7 +4050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1147342364
 Prefab:
@@ -4391,7 +4089,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4544764176421540, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
@@ -4433,7 +4131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 69
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4505,7 +4203,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4551,7 +4249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4675,7 +4373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4732,7 +4430,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4823,7 +4521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 82
+  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1225047245
 Prefab:
@@ -4862,7 +4560,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4908,7 +4606,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -4954,7 +4652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5011,7 +4709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5068,7 +4766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 57
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5114,7 +4812,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5205,7 +4903,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1355364605
 Prefab:
@@ -5244,7 +4942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 54
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5331,7 +5029,7 @@ Transform:
   - {fileID: 1542144327}
   - {fileID: 790816086}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1374869748
 BoxCollider2D:
@@ -5478,7 +5176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 84
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402105309
 GameObject:
@@ -5595,7 +5293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434326022
 GameObject:
@@ -5668,7 +5366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 79
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1437625425
 Prefab:
@@ -5707,7 +5405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -5727,92 +5425,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1451239769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1451239770}
-  - component: {fileID: 1451239771}
-  m_Layer: 0
-  m_Name: Dia
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1451239770
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451239769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1984671259}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1451239771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451239769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  - {fileID: 11400000, guid: bc1252c3f6c8407429f4fbb9a23568f5, type: 2}
-  - {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "She keep saying she\u2019s a doctor, but can someone who\u2019s not real
-      have a doctorate? How can she remembers being in school if, you know, she obviously
-      hasn\u2019t? I wonder what she would say if I asked her what it was like, or
-      what school she went to."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: I feel like I should be in school, but I have no memories of it. Are you
-      in school? Move me if you are.
-    dialogueTree: 0
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers:
-  - {fileID: 780187623}
-  - {fileID: 231766923}
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1460043212
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,7 +5547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 73
+  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1475385613
 Prefab:
@@ -5974,7 +5586,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6054,7 +5666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542144326
 GameObject:
@@ -6166,121 +5778,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMode: 1
   quest: {fileID: 11400000, guid: d297fa7aae810884dbc2259f3d9c6643, type: 2}
---- !u!1 &1545898893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1545898894}
-  - component: {fileID: 1545898895}
-  m_Layer: 0
-  m_Name: 1.1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1545898894
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545898893}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1984671259}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1545898895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545898893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueName: 
-  instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
-  removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
-  startSoundPitchRange: 0
-  canPlaySound: 1
-  speechBubbles:
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "I hope you get whatever it is, I really do. I don\u2019t know, something
-      about knowing someone has a future, it just makes me feel\u2026 less awful,
-      I guess. Especially since it\u2019s you."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "You \u2013 you\u2019ve been pretty great. I couldn\u2019t have gotten this
-      far without you. Even literally, like, I can\u2019t move without you letting
-      me."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "But also, you\u2019ve been there. I know I can\u2019t see you, I don\u2019t
-      even know your name, but you\u2019re there. Figuring things out for me. I mean,
-      you were only gonna play a game, I\u2019m sure you didn\u2019t exactly intend
-      to get caught up in my existential crisis."
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: Just, thank you, I guess.
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "Let\u2019s keep going."
-    dialogueTree: 0
-  canRepeat: 0
-  hasBeenRead: 0
-  siblings: []
-  answers: []
-  doAfterDialgue:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1549762046
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,7 +5849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1555202792
 Prefab:
@@ -6391,7 +5888,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6437,7 +5934,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6488,7 +5985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
-  instantiateDialogIfQuestsExistsInCompleted: []
+  instantiateDialogIfQuestsExistsInCompleted:
+  - {fileID: 11400000, guid: a888c596233f41846a07fc2bd91cbd30, type: 2}
   removeDialogIfQuestsHasCompleted: []
   diffrentStartSounds: []
   startSoundPitchRange: 0
@@ -6666,7 +6164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 59
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6824,7 +6322,7 @@ Transform:
   - {fileID: 206178626}
   - {fileID: 598752805}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1742423987
 Prefab:
@@ -6863,7 +6361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -6909,7 +6407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7119,7 +6617,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 55
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7165,7 +6663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7309,7 +6807,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4544764176421540, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1720269626658840, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
       propertyPath: m_Name
@@ -7360,7 +6858,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7369,67 +6867,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1984671257
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1984671259}
-  - component: {fileID: 1984671258}
-  m_Layer: 0
-  m_Name: Alex/Player Dialogue Hoarder room
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1984671258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984671257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateDialogWith:
-    onCollisionEnter: 0
-    onCollisionStayWithDelay: 1
-    delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations:
-  - {fileID: 1451239769}
-  - {fileID: 780187623}
-  - {fileID: 231766923}
-  - {fileID: 650129964}
-  - {fileID: 1545898893}
-  - {fileID: 75820792}
-  isInDialogueTrigger: 0
-  StartDelay: 0
---- !u!4 &1984671259
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984671257}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.07, y: -1.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1451239770}
-  - {fileID: 780187624}
-  - {fileID: 231766924}
-  - {fileID: 650129965}
-  - {fileID: 1545898894}
-  - {fileID: 75820793}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995544700
 GameObject:
   m_ObjectHideFlags: 0
@@ -7501,7 +6938,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 81
+  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1997786001
 Prefab:
@@ -7540,7 +6977,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7597,7 +7034,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7688,7 +7125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2052149230
 Prefab:
@@ -7727,7 +7164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7773,7 +7210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7835,7 +7272,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7892,7 +7329,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7938,7 +7375,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
@@ -7989,7 +7426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name

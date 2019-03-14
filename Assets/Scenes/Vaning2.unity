@@ -384,6 +384,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 67fbfa3244999b84984561963ac57248, type: 2}
+  numberOfItemsNeeded: 0
 --- !u!114 &100826630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,6 +2117,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: 67fbfa3244999b84984561963ac57248, type: 2}
+  numberOfItemsNeeded: 0
 --- !u!114 &1452022716
 MonoBehaviour:
   m_ObjectHideFlags: 0
