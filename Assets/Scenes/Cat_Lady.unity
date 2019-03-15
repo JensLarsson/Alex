@@ -349,7 +349,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: '(I remember this. The toy, it belongs to one of her cats but he''s not
-      here. He''s in apartment 5. We just have to get him, and he''ll get it down.) '
+      here. He''s next door. We just have to get him, and he''ll get it down.) '
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -372,8 +372,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: 'Oh! yes, that''s Taffy''s. He keeps losing his toys. I haven''t seen him
       in a bit, he might have gone looking for it. You know, Taffy is such an adventurous
-      one. No regard for his old mothers'' poor heart, always getting into all kinds
-      of trouble. '
+      one, always getting into all kinds of trouble. '
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -418,9 +417,8 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hopefully? Pah! You go get that net, a growing girl like you should never
-      go hungry. I'm going to see what I can find in the kitchen. Perhaps a pie? and
-      I'm sure I have what I need for some blueberry muffins. Unless Spot has gotten
-      into the pantry again!
+      go hungry. I should have something in the kitchen. Unless Spot has gotten into
+      the pantry again!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -441,8 +439,8 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Oh yes, the doctor says he's the biggest cat he's ever seen. Spot is a robust
-      man, he knows good food when he sees it. See, I have a picture of him here.
-      He eats only the best, what mother would deny her sweet baby what he needs!
+      man, he knows good food when he sees it. He eats only the best, what mother
+      would deny her sweet baby what he needs!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -472,7 +470,7 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: (I almost feel bad. Alright, go pick up that cage.)
+    Text: (I almost feel bad.)
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -481,10 +479,8 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "(We need to get Mittens into this. Dr. Oakley will realize the cat is gone
-      if we just take Taffy. She is using Taffy to experiment on. No, like, don\u2019t
-      even ask. I don\u2019t know what she is doing and I really don\u2019t want to.
-      So, we need to replace Taffy with Mittens.)"
+    Text: (Dr.Oakley next door is using Taffy to experiment on, and she'll realize
+      the cat is gone if we just take him. So, we need to replace Taffy with Mittens.)
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -503,8 +499,7 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: (Uh, use the yarn to try and lure him into the cage. If we try and grab
-      him Bertha might hear, and I would like to live thank you very much.)
+    Text: (We need to chase him into the cage in the other room)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -6318,10 +6313,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 76af95169c2445145b4a36f1cab1bcf8, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Here you go, I didn\u2019t have everything so I made a blueberry pie instead.
-      Make sure to share some with your brother! He needs to put on some weight, plus
-      a boy that age is always running around. Some sugar will keep him going. And
-      give my best to your mother!"
+    Text: Here you go, I made a blueberry pie. Make sure to share some with your brother!
+      He needs to put on some weight, plus a boy that age is always running around.
+      Some sugar will keep him going. And give my best to your mother!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,

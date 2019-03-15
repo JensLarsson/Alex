@@ -3433,8 +3433,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Vacuum cleaner? My greatest discovery is what\u2019s going on. At last!
       Maybe I\u2019ll get a Nobel Price, oh who am I kidding OF COURSE I\u2019ll get
-      a Nobel Price. I can prove ghosts exist. And I captured one! In my vacuum cleaner!
-      I don\u2019t know why, I feel like I\u2019ve seen it in a movie somewhere."
+      a Nobel Price. I captured a ghost! In my vacuum cleaner! "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -3444,7 +3443,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Yes, it's from...
+    Text: '...'
     dialogueTree: 0
   - NameOfTalkingNPC: Dr. Oakley
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
@@ -3533,9 +3532,9 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(Alright, we need to get that spirit out of her vacuum cleaner, preferably
-      before she blows up the building. Jeez, is no one who lives here normal? Just
-      watch out, she has a security system of some kind. I just can\u2019t remember
-      what it was\u2026 hey, let\u2019s ask her)"
+      before she blows up the building. Just watch out, she has a security system
+      of some kind. I just can\u2019t remember what it was\u2026 hey, let\u2019s ask
+      her)"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -3578,13 +3577,22 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That\u2019s easy! Lasers, tons and tons of lasers. Don\u2019t go in the
-      back unless you want to be cut into a million pieces. I turn them off by putting
-      in a password only I know, it\u2019s a hundred symbols long, then scan my fingerprints.
-      Research theft is the scourge of the scientific community Alex, it\u2019s one
-      of the great dangers of being\u2026 "
+      back unless you want to be cut into a million pieces. "
     dialogueTree: 0
   - NameOfTalkingNPC: Dr. Ava
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
+      type: 3}
+    AnimationSpeed: 0.05
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: a5abf397e812aae43abd6c464395674f, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I turn them off by putting in a password only I know, it\u2019s a hundred
+      symbols long, then scan my fingerprints. Research theft is the scourge of the
+      scientific community Alex, it\u2019s one of the great dangers of being\u2026 "
+    dialogueTree: 0
+  - NameOfTalkingNPC: Dr. Ava
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 8a371013e50c3a44a955da4f16197c67,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -3602,10 +3610,18 @@ MonoBehaviour:
     soundThatPlayDuringDialogue: []
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "(Alex: We can\u2019t figure out that password. We need to, what was is
-      again\u2026 we need to turn it off but its somewhere else. Oh! Now I remember!
-      We need to turn the power off in the whole building. We need to get to the landlord,
-      in the basement. Let\u2019s go!)"
+    Text: (We won't be able to figure out that password. We need to.. what was it
+      again. We need to turn it off but it's somewhere else.)
+    dialogueTree: 0
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue: []
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: (Oh! Now I remember. We need to turn the power off in the whole building.
+      We need to talk to the landlord, in the basement. Let's go!)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
