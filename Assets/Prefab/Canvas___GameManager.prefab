@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 222103049164696306}
   - component: {fileID: 114512596030946374}
   - component: {fileID: 114980396751434876}
+  - component: {fileID: 114549732939925556}
   m_Layer: 5
   m_Name: Canvas___GameManager
   m_TagString: Untagged
@@ -1166,6 +1167,8 @@ MonoBehaviour:
   sfxSource: {fileID: 82569321176473918}
   sfxSourcePitch: {fileID: 82926640111188872}
   fadeInIncrememnt: 0.05
+  musicVolume: 0.25
+  sfxVolume: 1
 --- !u!114 &114041087433893092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1354,13 +1357,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016610939121626}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c20d69eeb6af6846af15f20ae1aa9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   basic: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   selected: {fileID: 2100000, guid: 5ca083bb4714e19438d73ca25da3cf36, type: 2}
+  Buttons: []
   menuButtons:
   - GO: {fileID: 0}
     ButtonTextUI: Return To Game
@@ -1386,12 +1390,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - GO: {fileID: 0}
-    ButtonTextUI: Return To Game
+    ButtonTextUI: audio
     newEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114169574523356938}
-          m_MethodName: returnToGame
+          m_MethodName: audioSelect
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1409,12 +1413,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - GO: {fileID: 0}
-    ButtonTextUI: Return To Game
+    ButtonTextUI: Exit
     newEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114169574523356938}
-          m_MethodName: returnToGame
+          m_MethodName: exit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1432,12 +1436,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - GO: {fileID: 0}
-    ButtonTextUI: Return To Game
+    ButtonTextUI: reset room
     newEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114169574523356938}
-          m_MethodName: returnToGame
+          m_MethodName: reloadScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1455,12 +1459,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - GO: {fileID: 0}
-    ButtonTextUI: Return To Game
+    ButtonTextUI: main menu
     newEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114169574523356938}
-          m_MethodName: returnToGame
+          m_MethodName: goToMenu
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1477,7 +1481,82 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  activeMenuButton: Cancel
+  soundButtons:
+  - GO: {fileID: 0}
+    ButtonTextUI: sfx volume
+    value: 0
+    primeEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114169574523356938}
+          m_MethodName: IncSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: sfx
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    secEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114169574523356938}
+          m_MethodName: decSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: sfx
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - GO: {fileID: 0}
+    ButtonTextUI: music volume
+    value: 0
+    primeEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114169574523356938}
+          m_MethodName: IncSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: music
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    secEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114169574523356938}
+          m_MethodName: decSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: music
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  sfxChange: 0.05
+  musicChange: 0.05
+  soundIndex: 0
+  exitMenuKey: Cancel
+  objectsToRemoveWhenInMenu: []
   menuState: 0
   xStartPos: 0
   yStartPos: 6
@@ -1852,6 +1931,19 @@ MonoBehaviour:
   yStartPos: 0
   ySpacing: 20
   textUIBase: {fileID: 1009490914401330, guid: fe067c790747ddb4aacf530329f6a27c, type: 2}
+--- !u!114 &114549732939925556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebf112dce89d1548b546959603116d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: 
+  instantbutton: Reset
 --- !u!114 &114572355266668190
 MonoBehaviour:
   m_ObjectHideFlags: 1

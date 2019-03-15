@@ -3379,7 +3379,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Sure... here you go.\u201D [Hands over tomato plushie."
+    Text: "Sure... here you go.\u201D [Hands over tomato plushie]."
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
