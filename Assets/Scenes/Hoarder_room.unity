@@ -3577,10 +3577,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "That\u2019s easy! Lasers, tons and tons of lasers. Don\u2019t go in the
-      back unless you want to be cut into a million pieces. I turn them off by putting
-      in a password only I know, it\u2019s a hundred symbols long, then scan my fingerprints.
-      Research theft is the scourge of the scientific community Alex, it\u2019s one
-      of the great dangers of being\u2026 "
+      back unless you want to be cut into a million pieces. "
     dialogueTree: 0
   - NameOfTalkingNPC: Dr. Ava
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bb44019432982f441bf0c6c68ca72b4c,
