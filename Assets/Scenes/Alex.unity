@@ -3353,7 +3353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1079087706265452, guid: d9cd29d836d36ac49acfec4e4eada596, type: 2}
       propertyPath: m_Name
-      value: Fotolj2 (3)
+      value: Fotolj2 (3)Viktig, ta ej bort
       objectReference: {fileID: 0}
     - target: {fileID: 212335857367548666, guid: d9cd29d836d36ac49acfec4e4eada596,
         type: 2}
@@ -3388,6 +3388,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9cd29d836d36ac49acfec4e4eada596, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1013277466 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1079087706265452, guid: d9cd29d836d36ac49acfec4e4eada596,
+    type: 2}
+  m_PrefabInternal: {fileID: 1013277465}
+--- !u!114 &1013277467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013277466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: c6aa701129e4feb43a65ad031a2a9b15, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1013277468}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1013277468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013277466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
 --- !u!1 &1047921768
 GameObject:
   m_ObjectHideFlags: 0

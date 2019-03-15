@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMode: 1
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: c6aa701129e4feb43a65ad031a2a9b15, type: 2}
 --- !u!114 &1313752461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,22 +2679,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1313752460}
-        m_MethodName: 
+        m_MethodName: CompleteQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1313752463}
-        m_MethodName: 
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2726,7 +2726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fde9d2f19a09f34fb5fd493117e9dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
+  scene: Ash_rum
   locked: 0
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}

@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 110885688}
   - component: {fileID: 110885689}
   - component: {fileID: 110885691}
+  - component: {fileID: 110885690}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fde9d2f19a09f34fb5fd493117e9dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
+  scene: TheGame
   locked: 0
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
@@ -247,6 +248,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMode: 1
   quest: {fileID: 11400000, guid: d12d2df1917712240b260ecd5d38dde7, type: 2}
+--- !u!114 &110885690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110885686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: c6aa701129e4feb43a65ad031a2a9b15, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 110885689}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 226596174}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1818209274}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!61 &110885691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1448,7 +1501,6 @@ Transform:
   - {fileID: 1818209275}
   - {fileID: 110885687}
   - {fileID: 226596175}
-  - {fileID: 1399299493}
   - {fileID: 1317731608}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1464,9 +1516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentQuestsToCheck: []
-  completedQuestsToCheck:
-  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+  currentQuestsToCheck:
+  - {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
+  completedQuestsToCheck: []
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
@@ -2434,7 +2486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
       propertyPath: m_LocalScale.y
@@ -2510,48 +2562,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1399299491
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1399299493}
-  - component: {fileID: 1399299492}
-  m_Layer: 0
-  m_Name: GameObject (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1399299492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1399299491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questMode: 1
-  quest: {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
---- !u!4 &1399299493
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1399299491}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 838786783}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455064200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +3493,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339bd2ec23541f34cab3525cb06944a6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1818209274 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1056381909664724, guid: 339bd2ec23541f34cab3525cb06944a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1818209273}
 --- !u!4 &1818209275 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4703839868526254, guid: 339bd2ec23541f34cab3525cb06944a6,

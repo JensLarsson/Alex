@@ -39,6 +39,12 @@ public class SceneTrigger : MonoBehaviour
         }
     }
 
+    public void LoadScene()
+    {
+        AudioManager.instance.playSFXClip(openAudioClip);
+        SceneController.instance.loadScene(scene);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
