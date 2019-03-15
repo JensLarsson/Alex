@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TailManager : MonoBehaviour
 {
@@ -13,18 +14,11 @@ public class TailManager : MonoBehaviour
     public static List<GameObject> positionOccupation = new List<GameObject>();
     public int tailParsRemoved = 1;
 
+    public int applesToeat;
+    int applesEaten = 0;
     public List<GameObject> tailPart = new List<GameObject>();
-    //[SerializeField] Vector2 startDirection = Vector2.up; //For automaticMovement
-    //Vector3 dir;                                          //For automaticMovement
 
-    private void Start()
-    {
-        //lineRenderer = GetComponent<LineRenderer>();
-        //dir = startDirection; //For automaticMovement
-        //StartCoroutine(tick());//For automaticMovement
-    }
-
-
+    public UnityEvent victryEvent;
     // Update is called once per frame
     void Update()
     {
@@ -50,14 +44,6 @@ public class TailManager : MonoBehaviour
         }
     }
 
-    //IEnumerator tick()//For automaticMovement
-    //{
-    //    while (tailPart.Count > 0)
-    //    {
-    //        yield return new WaitForSeconds(tickTimer);
-    //        move(dir);
-    //    }
-    //}
 
 
     void move(Vector3 vec)
@@ -88,14 +74,6 @@ public class TailManager : MonoBehaviour
                     {
                         moveState = MoveState.move;
                     }
-
-                    //for (int y = tailPart.Count - 1; y >= 0; y--)
-                    //{
-                    //    Destroy(tailPart[y]);
-                    //}
-                    //tailPart = new List<GameObject>();
-                    //Debug.Log("Death");
-                    //break;
                 }
             }
         }
@@ -113,11 +91,16 @@ public class TailManager : MonoBehaviour
             case MoveState.apple:
                 GameObject Tail = Instantiate(blockPrefab, pos, Quaternion.identity);
                 tailPart.Insert(0, Tail);
+                applesEaten++;
+                if (applesEaten >= applesToeat)
+                {
+                    victryEvent.Invoke();
+                }
                 break;
 
 
             case MoveState.bugApple:
-                int temp = tailPart.Count - 1-tailParsRemoved;
+                int temp = tailPart.Count - 1 - tailParsRemoved;
                 for (int y = tailPart.Count - 1; y > temp; y--)
                 {
                     if (y > 0) tailPart.RemoveAt(y);
@@ -125,14 +108,6 @@ public class TailManager : MonoBehaviour
                 moveForwardLastBlock(pos);
                 break;
         }
-        //List<Vector3> tempList= new List<Vector3>();
-        //foreach(GameObject gObject in tailPart)
-        //{
-        //    tempList.Add(gObject.transform.position);
-        //}
-        //lineRenderer.positionCount = tempList.Count;
-        //lineRenderer.SetPositions(tempList.ToArray());
-
     }
 
     void moveForwardLastBlock(Vector3 pos)

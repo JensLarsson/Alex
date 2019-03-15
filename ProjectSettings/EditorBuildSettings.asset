@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Emo.unity
     guid: 5612417d0876ea641a8c3ad68f04fe83
   - enabled: 1
+    path: Assets/Scenes/TheGame.unity
+    guid: fb81ddff0b1583a48b370a3ec1488ee3
+  - enabled: 1
     path: Assets/Scenes/Hoarder_room.unity
     guid: 9a361ec98a22ddb429b868ad31aad122
   - enabled: 1
