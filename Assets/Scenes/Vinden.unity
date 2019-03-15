@@ -6612,8 +6612,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1634508605}
   - component: {fileID: 1634508604}
-  - component: {fileID: 1634508607}
   - component: {fileID: 1634508606}
+  - component: {fileID: 1634508607}
   m_Layer: 0
   m_Name: "HelD\xF6rrInneLjus"
   m_TagString: Untagged
@@ -6711,9 +6711,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634508603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9434e4c47658110418c3cfe566c69511, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fde9d2f19a09f34fb5fd493117e9dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: Vind_hall
+  locked: 0
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: fafb0569ac396a04fb425f850242fd62, type: 3}
   button: Submit
 --- !u!1001 &1664828635
 Prefab:

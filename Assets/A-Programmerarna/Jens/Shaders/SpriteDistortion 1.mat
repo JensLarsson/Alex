@@ -80,7 +80,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _Intensity: 0.3
-    - _Intensity2: 0.047
+    - _Intensity2: 0.3
     - _Inverse: 1
     - _Metallic: 0
     - _Mode: 0
