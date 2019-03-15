@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dontDestroy : MonoBehaviour {
-
-    public static dontDestroy instance = null;
+public class dontDestroy : MonoBehaviour
+{
+    public static List<GameObject> instances = new List<GameObject>();
 
     private void Awake()
     {
-        if (instance == null)
+        if (!instances.Contains(this.gameObject))
         {
-            instance = this;
+            instances.Add(this.gameObject);
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -21,12 +21,14 @@ public class dontDestroy : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

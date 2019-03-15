@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   deleteOnUse: 1
-  useSound: {fileID: 0}
+  useSound: {fileID: 8300000, guid: 4035395e22205014091d303ffce93d99, type: 3}
   description: Computer Debugging Tool

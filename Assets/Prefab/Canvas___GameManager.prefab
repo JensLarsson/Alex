@@ -312,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1525712732267768
 GameObject:
   m_ObjectHideFlags: 1
@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 222103049164696306}
   - component: {fileID: 114512596030946374}
   - component: {fileID: 114980396751434876}
+  - component: {fileID: 114148644958252172}
   m_Layer: 5
   m_Name: Canvas___GameManager
   m_TagString: Untagged
@@ -1166,6 +1167,8 @@ MonoBehaviour:
   sfxSource: {fileID: 82569321176473918}
   sfxSourcePitch: {fileID: 82926640111188872}
   fadeInIncrememnt: 0.05
+  musicVolume: 0.25
+  sfxVolume: 1
 --- !u!114 &114041087433893092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1318,6 +1321,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114148644958252172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1571975471943084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebf112dce89d1548b546959603116d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: 
+  instantbutton: Reset
 --- !u!114 &114163548467395768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1354,13 +1370,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016610939121626}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c20d69eeb6af6846af15f20ae1aa9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   basic: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   selected: {fileID: 2100000, guid: 5ca083bb4714e19438d73ca25da3cf36, type: 2}
+  Buttons: []
   menuButtons:
   - GO: {fileID: 0}
     ButtonTextUI: Return To Game
@@ -1477,8 +1494,12 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  activeMenuButton: Cancel
-  menuState: 0
+  soundButtons: []
+  sfxChange: 0.05
+  musicChange: 0.05
+  soundIndex: 0
+  exitMenuKey: Cancel
+  menuState: 2
   xStartPos: 0
   yStartPos: 6
   ySpacing: 20
@@ -2273,7 +2294,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &224057380490674526
 RectTransform:
@@ -2482,7 +2503,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515377485851516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224741211736303776}
