@@ -22,6 +22,7 @@ public class Pickup : MonoBehaviour
     }
     public void pickup()
     {
+        Debug.Log("Grabbed " + item.name);
         Inventory.instance.AddItem(item);
         if (_event != null) _event.Invoke();
         if (removeOnPickup)

@@ -362,7 +362,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.13725491, g: 0.14117648, b: 0.13725491, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 669988077}
   - component: {fileID: 669988076}
   - component: {fileID: 669988078}
+  - component: {fileID: 669988079}
   m_Layer: 0
   m_Name: menyv1_utantext
   m_TagString: Untagged
@@ -470,7 +471,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669988075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -0.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -491,6 +492,23 @@ MonoBehaviour:
   - {fileID: 358750125}
   - {fileID: 1190700233}
   - {fileID: 459519514}
+--- !u!114 &669988079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669988075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWait: 10
+  maxWait: 30
+  minDuration: 0.1
+  maxDuration: 0.5
+  baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  effectMat: {fileID: 2100000, guid: d8ed453231b0fb046adab5c8541ac216, type: 2}
 --- !u!1 &1190700233
 GameObject:
   m_ObjectHideFlags: 0

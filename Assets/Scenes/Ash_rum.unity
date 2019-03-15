@@ -331,6 +331,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: c074afdfef78f424e8f6a1b7546a2323, type: 2}
+  numberOfItemsNeeded: 1
 --- !u!61 &110885691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -741,6 +742,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, Ash. What are you playing?
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -750,6 +752,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, just some Rocket-Robo
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -759,6 +762,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Any plans for later?
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
       type: 3}
@@ -768,6 +772,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, I\u2019m gonna go down to the park to hang out with some friends."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -778,6 +783,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: Nice. Just make sure you make your bed before you go, so mom can vacuum
       your room later.
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bc13208bd783f43418a7198bb1b237d0,
       type: 3}
@@ -787,6 +793,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, yeah.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -796,6 +803,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Ash.
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -805,6 +813,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll do it. I will. Promise."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -814,6 +823,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alright. I\u2019ll see you later then."
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -823,6 +833,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yup, see you later!
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -888,6 +899,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Ugh, I thought I told him to clean this up earlier.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
@@ -898,6 +910,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Ugh, I told him to clean thi\u2026 Huh, I already thought that, didn\u2019t
       I"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -907,6 +920,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, whatever. It\u2019s not my mess."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -1060,6 +1074,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey Ash\u2026 how\u2019s- how\u2019s the episode going?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -1069,6 +1084,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "It\u2019s great! Gonna head out soon, it\u2019s almost two o\u2019clock."
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
@@ -1078,6 +1094,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, sure bud.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1087,6 +1104,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Let\u2019s go, I can\u2019t watch this. I just want it to stop."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -1869,6 +1887,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Well, maybe mum will cook something if I say I\u2019m hungry."
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -1935,6 +1954,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: (Seriously? Does he want spiders under the covers? Because this is how you
       get spiders under the covers.)
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1944,6 +1964,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, Ash. Are you ever going to tidy up your bed?
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -1953,6 +1974,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1962,6 +1984,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: What? Just pause.
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -1971,6 +1994,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -1980,6 +2004,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Fine, I\u2019ll do it for him"
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2193,6 +2218,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: How's the game going?
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -2202,6 +2228,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -2212,6 +2239,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Can I just borrow the computer for a sec? I just need to get something
       done. You\u2019ll have it back right away, promise."
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -2221,6 +2249,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just need to save.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -2232,6 +2261,7 @@ MonoBehaviour:
     Text: "(Damn. He can be glued to the screen for hours. The only thing that reliably
       gets him away from here is mum\u2019s cooking. But it\u2019s not dinner time
       yet\u2026 Maybe if I\u2026)"
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -2498,6 +2528,11 @@ Prefab:
     - target: {fileID: 4511706823385564, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.20000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 199809958198878172, guid: 306890f05a276de4e9c5ee167f24d68b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 306890f05a276de4e9c5ee167f24d68b, type: 2}
@@ -3154,6 +3189,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hey, Ash, it\u2019s lunch time!"
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 7eb46c79d1db3b74f82418469b5c1e71,
       type: 3}
@@ -3163,6 +3199,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Really, I can\u2019t smell anything? What time is it?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -3173,6 +3210,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Oh, uh\u2026 maybe she didn\u2019t start yet. I\u2019ll check on her and
       tell you when it\u2019s ready, okay?"
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
       type: 3}
@@ -3182,6 +3220,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Sure!
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3375,6 +3414,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, Ash. Mom said food is ready.
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5bb1e8f9dfaac94ba0cf0db38391acb,
       type: 3}
@@ -3384,6 +3424,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: I just have to save first.
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: cd7f8aacf92f213498a2af4531d26ffc,
       type: 3}
@@ -3393,6 +3434,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: You better get going right away, or mom will get mad at you.
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bc13208bd783f43418a7198bb1b237d0,
       type: 3}
@@ -3402,6 +3444,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: '...'
+    dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 116c6a3c6ba9bb043a76598e23f2ca15,
       type: 3}
@@ -3411,6 +3454,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Yeah, you're right.
+    dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -3484,6 +3528,11 @@ Prefab:
     - target: {fileID: 1056381909664724, guid: 339bd2ec23541f34cab3525cb06944a6, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199586574525089376, guid: 339bd2ec23541f34cab3525cb06944a6,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339bd2ec23541f34cab3525cb06944a6, type: 2}

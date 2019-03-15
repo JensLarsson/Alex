@@ -12,7 +12,7 @@ public class InteractWithItem : MonoBehaviour
 
     public int useItem(itemContainer items)
     {
-        if (items.item == item && items.Amount == numberOfItemsNeeded)
+        if (items.item == item && items.Amount >= numberOfItemsNeeded)
         {
             _event.Invoke();
             return numberOfItemsNeeded;
