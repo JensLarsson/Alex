@@ -208,7 +208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistBehaviour: 0
   songs:
-  - {fileID: 8300000, guid: fb0f2b9fdbb0faa4f9b20df8a9147ff9, type: 3}
+  - {fileID: 8300000, guid: a0f1151d68d58754d940b75900e1c187, type: 3}
+  - {fileID: 8300000, guid: e776fa6df24245d498b35e9520c804ba, type: 3}
 --- !u!1001 &154040640
 Prefab:
   m_ObjectHideFlags: 0
@@ -828,8 +829,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3, y: 1.703125}
+  m_DrawMode: 1
+  m_Size: {x: 9.88, y: 1.703125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -842,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 744149946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.13778, y: 0.1, z: 0}
-  m_LocalScale: {x: 3.532187, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21

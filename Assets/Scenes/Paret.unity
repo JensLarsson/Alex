@@ -1125,7 +1125,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1136,7 +1136,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.09
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1159,7 +1159,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 902128509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.69, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1581,7 +1581,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Vaning2
   locked: 0
-  clip: {fileID: 0}
+  lockedAudioClip: {fileID: 0}
+  unlockAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
   button: Submit
 --- !u!61 &1226152707
 BoxCollider2D:
