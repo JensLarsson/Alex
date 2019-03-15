@@ -1681,7 +1681,7 @@ MonoBehaviour:
     Text: Oh, Alexandra?
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -1720,17 +1720,17 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: One of the big glass bowls we got from your grandmother. Since the one we
-      were using broke last week
+      were using broke last week.
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c16a84891ee61f646b03c711bb3e4f10,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Sorry, mom!
+    Text: Sorry about that, mom!
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
@@ -1781,8 +1781,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "We\u2019ll see about that. Well, I\u2019m off to the attic, then. See you
-      later."
+    Text: "Of course. Just be careful, dear. It gets so dark up there sometimes, so
+      don\u2019t trip and hurt yourself."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
