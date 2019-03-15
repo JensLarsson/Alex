@@ -2764,6 +2764,7 @@ GameObject:
   - component: {fileID: 1483444965}
   - component: {fileID: 1483444964}
   - component: {fileID: 1483444966}
+  - component: {fileID: 1483444967}
   m_Layer: 0
   m_Name: "S\xE4ng Diag"
   m_TagString: Untagged
@@ -2831,6 +2832,36 @@ MonoBehaviour:
   - {fileID: 1158505272}
   isInDialogueTrigger: 0
   StartDelay: 0
+--- !u!114 &1483444967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483444963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck:
+  - {fileID: 11400000, guid: 81e30bbf27a3e2f4799b28ef63e08e3a, type: 2}
+  completedQuestsToCheck: []
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1483444963}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1522769718
 GameObject:
   m_ObjectHideFlags: 0
