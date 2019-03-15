@@ -48,12 +48,7 @@ public class menuManager : MonoBehaviour
         soundMenu
     }
     public MenuState menuState;
-
-    [HideInInspector] public enum sound
-    {
-        sfx,
-        music
-    }
+    
 
     [HideInInspector] public bool inisiate = false;
 
@@ -398,42 +393,14 @@ public class menuManager : MonoBehaviour
                         go.gameObject.SetActive(false);
                     }
 
-                    //for (int i = 0; i < transform.parent.transform.childCount; i++)
-                    //{
-                    //    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
-                    //    if (!child == this.gameObject)
-                    //    {
-                    //        child.SetActive(false);
-                    //    }
-                    //}
-                   // menuState = MenuState.mainMenu;
-
                     Buttons.Clear();
-
-                    //Play = GameObject.Find("play");
-                    //Developers = GameObject.Find("developers");
-                    //Exit = GameObject.Find("exit");
-
-                    //Buttons.Add(Play);
-                    //Buttons.Add(Developers);
-                    //Buttons.Add(Exit);
-
                     
                     MenuIndex = 0;
                     Buttons.Clear();
                     Buttons = GameObject.Find("MenuH").gameObject.GetComponent<mainMenuScript>().Buttons;
-                   // Debug.Log(mainMenuScript.instance.Buttons.Count);
                     moveMainMenu();
                     inisiate = true;
                 }
-                //for (int i = 0; i < transform.parent.transform.childCount; i++)
-                //{
-                //    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
-                //    if (!child == this.gameObject)
-                //    {
-                //        child.SetActive(false);
-                //    }
-                //}
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     menuIndex--;
