@@ -40,7 +40,7 @@ public class conversationCollection : MonoBehaviour
         if (PlayerMovement.canMove)
         {
             List<GameObject> tempList = new List<GameObject>();
-            Debug.Log(tempList.Count);
+
             //for (int i = thisCharacterConversations.Count - 1; i >= 0; i--)
             foreach (GameObject dialogs in thisCharacterConversations)
             {

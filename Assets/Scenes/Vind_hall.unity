@@ -379,6 +379,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114235301492670606, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: floors.Array.data[3].SceneName
+      value: Vind_hall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
   m_IsPrefabParent: 0
@@ -497,7 +502,7 @@ MonoBehaviour:
   locked: 0
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
-  openAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: fafb0569ac396a04fb425f850242fd62, type: 3}
   button: Submit
 --- !u!1 &326125484
 GameObject:
