@@ -655,6 +655,11 @@ Prefab:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114379756518243968, guid: 1f19d71b89084624c84ee95db3c7e1e6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
   m_IsPrefabParent: 0
@@ -1546,6 +1551,11 @@ Prefab:
     - target: {fileID: 1216266818006198, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_Name
       value: Wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114379756518243968, guid: 1f19d71b89084624c84ee95db3c7e1e6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
@@ -2722,7 +2732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayPath: 1
-  speed: 10
+  speed: 5
   walkingRadius: 5
   onPath: 0
   rb2D: {fileID: 0}
@@ -2733,6 +2743,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   moveDirection: {x: 0, y: 0, z: 0}
+  moveSprite: {fileID: 21300000, guid: 0fa8c2aa54bca8b40b348517248109b0, type: 3}
   victoryEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2810,7 +2821,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8098949c14f37ea4982329ac2fe883e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2995,6 +3006,11 @@ Prefab:
     - target: {fileID: 4016448178989852, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114379756518243968, guid: 1f19d71b89084624c84ee95db3c7e1e6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f19d71b89084624c84ee95db3c7e1e6, type: 2}

@@ -1439,7 +1439,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: e99130eab48af5d42865002c9560d702, type: 2}
   removeOnPickup: 0
   accessOnlyThroughScript: 1
-  button: Submit
+  button: 
   _event:
     m_PersistentCalls:
       m_Calls: []
@@ -1459,17 +1459,6 @@ MonoBehaviour:
   _event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 467056238}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 467056241}
         m_MethodName: pickup
         m_Mode: 1
@@ -1488,6 +1477,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 21300000, guid: a4dfca0d75ab5d346b328d3291e66dce,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 467056244}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2429,6 +2429,7 @@ GameObject:
   - component: {fileID: 720172355}
   - component: {fileID: 720172354}
   - component: {fileID: 720172356}
+  - component: {fileID: 720172357}
   m_Layer: 0
   m_Name: "Tesla coil Avst\xE4ngd"
   m_TagString: Untagged
@@ -2510,6 +2511,36 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!60 &720172357
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720172353}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 2}
+    newSize: {x: 4, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.027404785, y: -1.1885726}
+      - {x: 1.0788056, y: -0.39038113}
+      - {x: 1.0532941, y: 0.8290788}
+      - {x: 0.0038989708, y: 0.8489747}
+      - {x: -1.0365787, y: 0.88795793}
+      - {x: -1.151525, y: -0.37763277}
 --- !u!1001 &745310383
 Prefab:
   m_ObjectHideFlags: 0

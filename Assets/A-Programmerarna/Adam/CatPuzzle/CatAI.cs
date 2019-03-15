@@ -15,6 +15,7 @@ public class CatAI : MonoBehaviour
     Vector3[] path;
     int targetIndex;
     public Rigidbody2D rb2D;
+    SpriteRenderer sR;
 
     Animator anim;
     public GameObject player;
@@ -28,6 +29,8 @@ public class CatAI : MonoBehaviour
         return player;
     }
 
+    public Sprite moveSprite;
+    Sprite stopSprite;
     public UnityEvent victoryEvent;
 
 
@@ -42,11 +45,26 @@ public class CatAI : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetInteger("moveDirectionY", 1);
         rb2D = GetComponent<Rigidbody2D>();
+        sR = GetComponent<SpriteRenderer>();
+        stopSprite = sR.sprite;
+    }
+
+    private void LateUpdate()
+    {
+        if (rb2D.velocity != Vector2.zero)
+        {
+            sR.sprite = moveSprite;
+        }
+        else
+        {
+            sR.sprite = stopSprite;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
         anim.SetFloat("distanceToPlayer", Vector3.Distance(player.transform.position, transform.position));
         Vector3 direction = player.transform.position - transform.position;
         direction = NormalizeDirections(direction.normalized);
@@ -73,6 +91,7 @@ public class CatAI : MonoBehaviour
             anim.SetInteger("moveDirectionY", (int)moveDirection.y);
             anim.SetBool("rayHit", true);
         }
+
     }
 
     Vector3 NormalizeDirections(Vector3 _direction)
@@ -121,12 +140,13 @@ public class CatAI : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
+    
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Wall")
         {
             anim.SetBool("hitWall", true);
+
         }
         /*Vector3 direction = player.transform.position - transform.position;
         direction = direction.normalized;
