@@ -30,18 +30,16 @@ public class menuManager : MonoBehaviour
 
     [SerializeField] Material basic;
     [SerializeField] Material selected;
-    //GameObject Play;
-    //GameObject Developers;
-    //GameObject Exit;
     [SerializeField] List<GameObject> Buttons = new List<GameObject>();
 
     [SerializeField] List<menuFunction> menuButtons = new List<menuFunction>();
     [SerializeField] List<soundFunc> soundButtons = new List<soundFunc>();
     [SerializeField] [Range(0, 1)] float sfxChange = 0.05f;
     [SerializeField] [Range(0, 1)] float musicChange = 0.05f;
-   public int soundIndex = 0;
+    public int soundIndex = 0;
 
     [SerializeField] string exitMenuKey;
+    [SerializeField] GameObject[] objectsToRemoveWhenInMenu;
     public enum MenuState
     {
         mainMenu,
@@ -50,14 +48,9 @@ public class menuManager : MonoBehaviour
         soundMenu
     }
     public MenuState menuState;
-
-    [HideInInspector] public enum sound
-    {
-        sfx,
-        music
-    }
     
-    bool inisiate = false;
+
+    [HideInInspector] public bool inisiate = false;
 
   [SerializeField] public static bool IsInMenu = false;
 
@@ -316,6 +309,12 @@ public class menuManager : MonoBehaviour
             case MenuState.noMenu:
                 if(!inisiate)
                 {
+                    foreach (GameObject go in objectsToRemoveWhenInMenu)
+                    {
+                        go.gameObject.SetActive(true);
+                        Debug.Log("should exist now");
+                    }
+
                     inisiate = true;
                 }
                 if (Input.GetButtonDown(exitMenuKey) && PlayerMovement.canMove == true)
@@ -389,43 +388,19 @@ public class menuManager : MonoBehaviour
             case MenuState.mainMenu:
                 if (!inisiate)
                 {
-
-                    //for (int i = 0; i < transform.parent.transform.childCount; i++)
-                    //{
-                    //    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
-                    //    if (!child == this.gameObject)
-                    //    {
-                    //        child.SetActive(false);
-                    //    }
-                    //}
-                   // menuState = MenuState.mainMenu;
+                    foreach(GameObject go in objectsToRemoveWhenInMenu)
+                    {
+                        go.gameObject.SetActive(false);
+                    }
 
                     Buttons.Clear();
-
-                    //Play = GameObject.Find("play");
-                    //Developers = GameObject.Find("developers");
-                    //Exit = GameObject.Find("exit");
-
-                    //Buttons.Add(Play);
-                    //Buttons.Add(Developers);
-                    //Buttons.Add(Exit);
-
                     
                     MenuIndex = 0;
                     Buttons.Clear();
-                    Buttons = GameObject.Find("menyv1_utantext").gameObject.GetComponent<mainMenuScript>().Buttons;
-                   // Debug.Log(mainMenuScript.instance.Buttons.Count);
+                    Buttons = GameObject.Find("MenuH").gameObject.GetComponent<mainMenuScript>().Buttons;
                     moveMainMenu();
                     inisiate = true;
                 }
-                //for (int i = 0; i < transform.parent.transform.childCount; i++)
-                //{
-                //    GameObject child = this.gameObject.transform.parent.transform.GetChild(i).gameObject;
-                //    if (!child == this.gameObject)
-                //    {
-                //        child.SetActive(false);
-                //    }
-                //}
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     menuIndex--;
