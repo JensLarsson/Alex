@@ -524,6 +524,21 @@ Prefab:
       propertyPath: m_Name
       value: Apple (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
   m_IsPrefabParent: 0
@@ -570,6 +585,21 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
@@ -1077,6 +1107,21 @@ Prefab:
       propertyPath: m_Name
       value: Apple (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
   m_IsPrefabParent: 0
@@ -1579,6 +1624,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc95242c2ddff844d90846765577e279, type: 2}
   m_IsPrefabParent: 0
@@ -1808,6 +1868,21 @@ Prefab:
     - target: {fileID: 1626673824848232, guid: 724e0c3ddd3dac449ba5ce16c8748d9a, type: 2}
       propertyPath: m_Name
       value: Tail (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212228280972338964, guid: 724e0c3ddd3dac449ba5ce16c8748d9a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 212228280972338964, guid: 724e0c3ddd3dac449ba5ce16c8748d9a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 212228280972338964, guid: 724e0c3ddd3dac449ba5ce16c8748d9a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.6745098
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 724e0c3ddd3dac449ba5ce16c8748d9a, type: 2}
@@ -2284,6 +2359,21 @@ Prefab:
       propertyPath: m_Name
       value: Apple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
   m_IsPrefabParent: 0
@@ -2375,6 +2465,21 @@ Prefab:
     - target: {fileID: 1364519983016226, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
       propertyPath: m_Name
       value: Apple (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
@@ -2513,6 +2618,21 @@ Prefab:
     - target: {fileID: 1364519983016226, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
       propertyPath: m_Name
       value: Apple (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
@@ -2665,6 +2785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efb41c74ada9d54ca196baf4f885683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontColour: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
   blockPrefab: {fileID: 1626673824848232, guid: 724e0c3ddd3dac449ba5ce16c8748d9a,
     type: 2}
   tickTimer: 0.44
@@ -2955,6 +3076,21 @@ Prefab:
       propertyPath: m_Name
       value: Apple (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
   m_IsPrefabParent: 0
@@ -3000,6 +3136,21 @@ Prefab:
     - target: {fileID: 1364519983016226, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
       propertyPath: m_Name
       value: Apple (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
@@ -3466,6 +3617,21 @@ Prefab:
       propertyPath: m_Name
       value: BugApple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc95242c2ddff844d90846765577e279, type: 2}
   m_IsPrefabParent: 0
@@ -3650,6 +3816,21 @@ Prefab:
       propertyPath: m_Name
       value: Apple (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212005734384673140, guid: a74279d5a3973574cb2ac832b4891009,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74279d5a3973574cb2ac832b4891009, type: 2}
   m_IsPrefabParent: 0
@@ -3811,7 +3992,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.85, b: 0.50344825, a: 1}
+  m_BackGroundColor: {r: 0, g: 0.8509804, b: 0.5019608, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3893,6 +4074,21 @@ Prefab:
     - target: {fileID: 1459822845971774, guid: cc95242c2ddff844d90846765577e279, type: 2}
       propertyPath: m_Name
       value: BugApple (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212712575023712764, guid: cc95242c2ddff844d90846765577e279,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc95242c2ddff844d90846765577e279, type: 2}

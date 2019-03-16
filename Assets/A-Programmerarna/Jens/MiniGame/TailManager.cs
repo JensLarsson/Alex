@@ -8,6 +8,7 @@ public class TailManager : MonoBehaviour
     enum MoveState { move, wall, apple, bugApple };
 
     //LineRenderer lineRenderer;
+    public Color frontColour = Color.black;
 
     public GameObject blockPrefab;
     public float tickTimer = 1.0f;
@@ -112,9 +113,21 @@ public class TailManager : MonoBehaviour
 
     void moveForwardLastBlock(Vector3 pos)
     {
+        tailPart[0].GetComponent<SpriteRenderer>().color = Color.white;
         tailPart[tailPart.Count - 1].transform.position = pos;
         tailPart.Insert(0, tailPart[tailPart.Count - 1]);
         tailPart.RemoveAt(tailPart.Count - 1);
+        tailPart[0].GetComponent<SpriteRenderer>().color = frontColour;
+    }
+
+
+    private void Start()
+    {
+        dontDestroy.instance.image.color = new Color(0, 0, 0, 0);
+    }
+    private void OnDisable()
+    {
+        dontDestroy.instance.image.color = Color.white;
     }
 
 }

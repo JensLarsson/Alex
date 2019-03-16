@@ -160,10 +160,8 @@ public class InventoryMenu : MonoBehaviour
         {
             image.sprite = null;
             image.color = new Color(0, 0, 0, 0);
-
         }
         if (i != 0 && moveButtonClip != null)
-
         {
             AudioManager.instance.playSFXClip(moveButtonClip, true);
         }
