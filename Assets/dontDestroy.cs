@@ -1,34 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class dontDestroy : MonoBehaviour
 {
-    public static List<GameObject> instances = new List<GameObject>();
+    public static dontDestroy instance;
+    public Image image;
 
     private void Awake()
     {
-        if (!instances.Contains(this.gameObject))
+        if (instance == null)
         {
-            instances.Add(this.gameObject);
-            DontDestroyOnLoad(this.gameObject);
+            instance = this;
         }
         else
         {
             Destroy(this.gameObject);
-            Debug.Log("whut");
         }
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
