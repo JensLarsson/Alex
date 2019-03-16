@@ -125,7 +125,8 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: Home, sweet home.
-  canRepeat: 0
+    dialogueTree: 0
+  canRepeat: 1
   hasBeenRead: 0
   siblings: []
   answers: []

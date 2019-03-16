@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
-  m_Name: potty
+  m_Name: Potty
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 937b81f4b845fe2479b6e198d2f190e0, type: 3}
   deleteOnUse: 1

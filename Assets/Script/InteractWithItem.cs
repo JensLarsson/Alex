@@ -8,7 +8,7 @@ public class InteractWithItem : MonoBehaviour
 
     public UnityEvent _event;
     public Item item;
-    public int numberOfItemsNeeded;
+    public int numberOfItemsNeeded = 1;
 
     public int useItem(itemContainer items)
     {

@@ -9,9 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
-  m_Name: Fishing Rod
+  m_Name: Ring
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   deleteOnUse: 1
   useSound: {fileID: 0}
-  description: Feska
+  description: "ring ring ring ring ring ring banana phone\r\nDing dong ding dong
+    ding dong ding donana phone\r\nIt grows in bunches, I've got my hunches\r\nIt's
+    the best! Beats the rest\r\nCellular, modular, interactivodular"

@@ -614,7 +614,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 68407984}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.2
 --- !u!61 &54798924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 2030271123}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.2
 --- !u!61 &307408982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 873030550}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.2
 --- !u!61 &381489471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3765,7 +3765,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1094799701}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.2
 --- !u!61 &1057725619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5719,7 +5719,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1623943624}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.2
 --- !u!61 &1527125906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6407,7 +6407,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1254541470}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.2
 --- !u!61 &1713830664
 BoxCollider2D:
   m_ObjectHideFlags: 0
