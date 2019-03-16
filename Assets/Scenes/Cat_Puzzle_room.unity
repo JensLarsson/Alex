@@ -3237,7 +3237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
-  completedQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: b02237085d8ff3e409811c9d43919415, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
