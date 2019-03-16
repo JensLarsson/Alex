@@ -1501,7 +1501,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1374869749}
+      - m_Target: {fileID: 641372747}
         m_MethodName: onFunctionCall
         m_Mode: 1
         m_Arguments:
@@ -2137,7 +2137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &641372747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,8 +2154,9 @@ MonoBehaviour:
     onCollisionStayWithDelay: 0
     delay: 0
     onCollisionAndKeyDown: 0
-    onFunctionCall: 0
-  thisCharacterConversations: []
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 1542144326}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!4 &641372748
@@ -2167,7 +2168,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1542144327}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2821,7 +2823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1374869747}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &790816087
 BoxCollider2D:
@@ -3151,7 +3153,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Does that mean you have a job? Have your own place and stuff. I wonder
       what it\u2019s like being an adult."
-    dialogueTree: 0
+    dialogueTree: 1
   canRepeat: 0
   hasBeenRead: 0
   siblings: []
@@ -5227,7 +5229,6 @@ Transform:
   m_Children:
   - {fileID: 930296905}
   - {fileID: 1701936899}
-  - {fileID: 1542144327}
   - {fileID: 790816086}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -5278,7 +5279,6 @@ MonoBehaviour:
   - {fileID: 930296904}
   - {fileID: 1701936898}
   - {fileID: 790816085}
-  - {fileID: 1542144326}
   isInDialogueTrigger: 0
   StartDelay: 0
 --- !u!61 &1374869750
@@ -5897,8 +5897,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1374869747}
-  m_RootOrder: 2
+  m_Father: {fileID: 641372748}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1542144328
 BoxCollider2D:
@@ -6296,7 +6296,7 @@ MonoBehaviour:
     Text: "What is that like? Or no, I don\u2019t want to know. Like, if I don\u2019t,
       then I won\u2019t care as much maybe. It\u2019s just, I wonder what it\u2019s
       like to have a future."
-    dialogueTree: 0
+    dialogueTree: 1
   canRepeat: 0
   hasBeenRead: 0
   siblings: []

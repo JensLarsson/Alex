@@ -383,7 +383,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91063005e2b29ef44aca8f2e70480488, type: 3}
-  m_Color: {r: 0.781, g: 0.67, b: 0.834, a: 1}
+  m_Color: {r: 0.9044118, g: 0.6051579, b: 0.8525269, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
   completedQuestsToCheck:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 72b8d34d5be90774283a0b87008f363b, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMode: 1
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 72b8d34d5be90774283a0b87008f363b, type: 2}
 --- !u!1 &594423320
 GameObject:
   m_ObjectHideFlags: 0

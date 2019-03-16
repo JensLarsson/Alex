@@ -1520,7 +1520,7 @@ MonoBehaviour:
   textPrefab: {fileID: 1009490914401330, guid: b9371618965664844819460ab594b665, type: 2}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   selectionColour: {r: 1, g: 0, b: 0, a: 1}
-  xStartPos: -50
+  xStartPos: -90
   yStartPos: -25
   yOffset: -20
   moveButtonClip: {fileID: 0}
@@ -1603,7 +1603,7 @@ MonoBehaviour:
     SceneName: Vaning2
     floorLight: {fileID: 114295362005539720}
   - floorLabel: Attic
-    SceneName: Vinden
+    SceneName: Vind_hall
     floorLight: {fileID: 114041087433893092}
   selectionLight: {fileID: 21300000, guid: 84dc063a2d142af4f854094ae6a7335d, type: 3}
   nonSelectedLight: {fileID: 21300000, guid: 2e8487830c4a95045a805decf750916a, type: 3}
@@ -2331,8 +2331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 80}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: -262.54, y: 80}
+  m_SizeDelta: {x: 434.93, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224191541587939036
 RectTransform:
