@@ -303,7 +303,7 @@ public class DialogManager : MonoBehaviour
     {
         if (activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length > 0)
         {
-            while (true && PlayerMovement.canMove)
+            while (true && !PlayerMovement.canMove)
             {
                 int random = Random.Range(0, activeDialog.dialogs[dialogAt].soundThatPlayDuringDialogue.Length);
 
