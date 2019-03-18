@@ -20,7 +20,7 @@ public class Playlist : MonoBehaviour
 
     void Start()
     {
-        if (playlistWithCondition == null)
+        if (playlistWithCondition.completedQuest == null)
         {
             if (songs.Count == 1)
             {
