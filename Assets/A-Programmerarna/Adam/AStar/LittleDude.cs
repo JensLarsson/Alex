@@ -39,6 +39,7 @@ public class LittleDude : MonoBehaviour {
             {
                 target = doors[Random.Range(0, doors.Length)].transform.position;
                 PathRequestManager.RequestPath(transform.position, target, OnPathFound);
+				onPath = true;
             }
         }
         else
@@ -47,6 +48,7 @@ public class LittleDude : MonoBehaviour {
             {
                 target = NewTarget();
                 PathRequestManager.RequestPath(transform.position, target, OnPathFound);
+				onPath = true;
             }
         }
     }
@@ -78,12 +80,13 @@ public class LittleDude : MonoBehaviour {
     {
         if (pathSuccessful)
         {
-            onPath = true;
             path = newPath;
             targetIndex = 0;
             StopCoroutine("FollowPath");
             StartCoroutine("FollowPath");
-        }
+        } else {
+			onPath = false;
+		}
     }
 
     IEnumerator FollowPath()

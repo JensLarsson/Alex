@@ -443,7 +443,7 @@ MonoBehaviour:
   displayPath: 1
   speed: 5
   walkingRadius: 5
-  timeCheck: 8
+  timeCheck: 5
   doorNoGoRadius: 2.5
 --- !u!212 &694551317
 SpriteRenderer:
