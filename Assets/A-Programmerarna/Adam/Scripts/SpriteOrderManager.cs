@@ -34,7 +34,7 @@ public class SpriteOrderManager : MonoBehaviour {
             }
             if (sprite.tag == "Door")
             {
-                sprite.sortingOrder += (int)((sprite.transform.position.y - 0.4f) * -100f);
+                sprite.sortingOrder += (int)((sprite.transform.position.y - 0.5f) * -100f);
             }
             else
             {

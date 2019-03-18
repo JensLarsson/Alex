@@ -69,11 +69,10 @@ public class conversationCollection : MonoBehaviour
                     tempList.Add(dialogs);
                 }
             }
-            Debug.Log(tempList.Count);
+
             for (int i = 0; i < tempList.Count; i++)
             {
                 tempList[i].GetComponent<ContaningDialog>().startConversation();
-                Debug.Log(tempList[i].GetComponent<ContaningDialog>().dialogueName);
             }
             tempList.Clear();
         }
