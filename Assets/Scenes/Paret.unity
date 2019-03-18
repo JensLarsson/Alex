@@ -1260,7 +1260,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.8563204, y: -1.310992}
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDialogWith:
     onCollisionEnter: 0
-    onCollisionStayWithDelay: 0
+    onCollisionStayWithDelay: 1
     delay: 0
     onCollisionAndKeyDown: 0
     onFunctionCall: 0
@@ -2041,6 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823996994}
   - component: {fileID: 823996995}
+  - component: {fileID: 823996996}
   m_Layer: 0
   m_Name: Main Dialogue
   m_TagString: Untagged
@@ -2075,7 +2076,8 @@ MonoBehaviour:
   dialogueName: 
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 96ecff159ea76834e8c23c6b57d4a3d7, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -2244,9 +2246,33 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823996996}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &823996996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823996993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 96ecff159ea76834e8c23c6b57d4a3d7, type: 2}
 --- !u!1 &831527954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494018823}
   - component: {fileID: 1494018824}
+  - component: {fileID: 1494018825}
   m_Layer: 0
   m_Name: Dia after get ring
   m_TagString: Untagged
@@ -3885,7 +3912,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 3af6f87ecc7f0e144904e6116835ae4e, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 56295d2b702f3734a961d4be1a18d2d8, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -3957,9 +3985,33 @@ MonoBehaviour:
   answers: []
   doAfterDialgue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1494018825}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1494018825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494018822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 56295d2b702f3734a961d4be1a18d2d8, type: 2}
 --- !u!1 &1586481869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,7 +4926,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.2, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4885,7 +4937,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.375, y: 1}
+  m_Size: {x: 0.75, y: 1}
   m_EdgeRadius: 0
 --- !u!61 &2007925443
 BoxCollider2D:
@@ -4910,7 +4962,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8156695, y: 1}
+  m_Size: {x: 1.18, y: 1.46}
   m_EdgeRadius: 0
 --- !u!114 &2007925444
 MonoBehaviour:
