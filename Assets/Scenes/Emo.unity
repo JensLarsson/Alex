@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 652317444}
   - component: {fileID: 652317443}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: EmoDIalogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: 
+  dialogueName: EmoDialogue
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
