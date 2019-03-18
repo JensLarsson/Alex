@@ -1514,6 +1514,9 @@ MonoBehaviour:
   playlistBehaviour: 0
   songs:
   - {fileID: 8300000, guid: fb0f2b9fdbb0faa4f9b20df8a9147ff9, type: 3}
+  playlistWithCondition:
+    completedQuest: {fileID: 0}
+    songs: []
 --- !u!1 &350636038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,7 +4212,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Was there anything you wanted? You know you\u2019re free to borrow any
       tool you need, as long as you put it back soon after. Oh and if you talk to
-      (Emo name here), remind him to return the screwdriver he borrowed"
+      Sam, remind him to return the screwdriver he borrowed"
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
