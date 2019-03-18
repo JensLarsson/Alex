@@ -8,10 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
-  m_Name: potty
+  m_Script: {fileID: 11500000, guid: 66d147ef13ca3a74592e813a7bec33be, type: 3}
+  m_Name: Couple all dia done
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 937b81f4b845fe2479b6e198d2f190e0, type: 3}
-  deleteOnUse: 1
-  useSound: {fileID: 0}
-  description: "Who\u2019s even is this?"
+  description: 
