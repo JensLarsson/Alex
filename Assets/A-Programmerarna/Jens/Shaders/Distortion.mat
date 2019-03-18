@@ -69,11 +69,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 0.07
+    - _Frequency: 3.89
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensity: -2.84
+    - _Intensity: -0.03
     - _Intensity2: 1
     - _Inverse: 0
     - _Metallic: 0
@@ -82,7 +82,7 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: -1.69
+    - _Speed: 1.78
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
