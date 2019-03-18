@@ -92,6 +92,7 @@ public class LittleDude : MonoBehaviour {
         if (path.Length != 0)
         {
             currentWaypoint = path[0];
+			LookTowardsWaypoint (currentWaypoint);
         }
         while (true)
         {
@@ -104,13 +105,20 @@ public class LittleDude : MonoBehaviour {
                     yield break;
                 }
                 currentWaypoint = path[targetIndex];
+				LookTowardsWaypoint (currentWaypoint);
             }
 
             transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
             yield return null;
-
         }
     }
+
+	void LookTowardsWaypoint(Vector3 targetPosition)
+	{
+		Vector3 lookDirection = targetPosition - transform.position;
+		float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg + 90;
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+	}
 
     public void OnDrawGizmos()
     {
