@@ -7018,6 +7018,7 @@ GameObject:
   - component: {fileID: 1868135826}
   - component: {fileID: 1868135828}
   - component: {fileID: 1868135827}
+  - component: {fileID: 1868135829}
   m_Layer: 0
   m_Name: bathtub horizontalwith goo
   m_TagString: Untagged
@@ -7170,10 +7171,41 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1868135829}
+        m_MethodName: pickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   item: {fileID: 11400000, guid: e2c15ba5fc181bd46a52544e7e2ae0e0, type: 2}
   numberOfItemsNeeded: 1
+--- !u!114 &1868135829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868135822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 33843eb20947a0047bac56fe7d6f85bb, type: 2}
+  removeOnPickup: 0
+  accessOnlyThroughScript: 1
+  button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1877234382
 Prefab:
   m_ObjectHideFlags: 0
