@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class mainMenuScript : MonoBehaviour
 {
-  //  static public mainMenuScript instance = null;
-
     public List<GameObject> Buttons = new List<GameObject>();
 
-    void Awake()
+
+    void Start()
     {
-       // menuManager.Instance.menuState = menuManager.MenuState.mainMenu;
-        ////Sätter Singleton instance
-        //if (instance == null)
-        //{
-        //    instance = this;
-        //}
-        //else if (instance != this)
-        //{
-        //    Destroy(gameObject);
-        //}
+        menuManager.Instance.menuState = menuManager.MenuState.mainMenu;
+        menuManager.Instance.inisiate = false;
     }
 }
+//return, reset, music, sfx, main menu, exit game

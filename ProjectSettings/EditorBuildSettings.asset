@@ -56,3 +56,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vinden.unity
     guid: 9e33fbf45913f004dbfd73b0e4d0b7ec
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 732b6efa4586dd04bb8f2f03ed735c1f

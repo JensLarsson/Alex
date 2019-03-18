@@ -11,7 +11,6 @@ class menuFunction
     [HideInInspector] public GameObject GO;
     public string ButtonTextUI;
     public UnityEvent newEvent;
-    public UnityEvent newEventSec;
 }
 [System.Serializable]
 class soundFunc
@@ -45,7 +44,8 @@ public class menuManager : MonoBehaviour
         mainMenu,
         menu,
         noMenu,
-        soundMenu
+        soundMenu,
+        disabled
     }
     public MenuState menuState;
     
@@ -85,7 +85,7 @@ public class menuManager : MonoBehaviour
         }
     }
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
         if (instance == null)
         {
@@ -93,7 +93,8 @@ public class menuManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("There is too many ChoseDialogue placed on scene");
+            Destroy(this.gameObject);
+           // Debug.LogError("There is too many menuManager placed on scene");
         }
     }
     void changeMenuState(MenuState newMenuState)
@@ -228,7 +229,7 @@ public class menuManager : MonoBehaviour
     {
         if (choseUI.Count > 0)
         {
-            choseUI[MenuIndex].GetComponent<Text>().color = Color.black;
+            choseUI[MenuIndex].GetComponent<Text>().color = Color.white;
             MenuIndex += i;
             choseUI[MenuIndex].GetComponent<Text>().color = Color.red;
         }
@@ -252,13 +253,12 @@ public class menuManager : MonoBehaviour
             }
             else
             {
-                go.GetComponent<Text>().color = Color.black;
+                go.GetComponent<Text>().color = Color.white;
             }
         }
     }
     void moveMainMenu()
     {
-        Debug.LogWarning("hmmm");
         if(menuIndex > Buttons.Count - 1)
         {
             menuIndex = Buttons.Count - 1;
@@ -269,7 +269,7 @@ public class menuManager : MonoBehaviour
         }
         for (int index = 0; index < Buttons.Count; index++)
         {
-            if (index == menuIndex)
+            if (index != menuIndex)
             {
                 Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = selected;
             }
