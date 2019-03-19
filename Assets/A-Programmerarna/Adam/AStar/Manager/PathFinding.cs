@@ -27,8 +27,12 @@ public class PathFinding : MonoBehaviour {
         Node startNode = grid.NodeFromeWorldPoint(startPosition);
         Node targetNode = grid.NodeFromeWorldPoint(targetPosition);
 
-        if (targetNode.walkable)
+		if (startNode.walkable && targetNode.walkable)
         {
+			/*if (!startNode.walkable) {
+				startNode = FindNearestWakableNode (startNode);
+			}*/
+
             Heap<Node> openSet = new Heap<Node>(grid.MaxSize);
             HashSet<Node> closedSet = new HashSet<Node>();
             openSet.Add(startNode);
@@ -77,6 +81,19 @@ public class PathFinding : MonoBehaviour {
         }
         pathRequestManager.FinishedProcessingPath(wayPoints, pathSuccess);
     }
+
+	Node FindNearestWakableNode(Node node)
+	{
+		Node temp = node;
+		foreach (Node neighbour in grid.GetNeighbours(node)) {
+			if (neighbour.walkable) {
+				Debug.Log ("What");
+				temp = neighbour;
+				break;
+			}
+		}
+		return temp;
+	}
 
     Vector3[] RetracePath(Node startNode, Node endNode)
     {
