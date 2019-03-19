@@ -84,7 +84,7 @@ public class ContaningDialog : MonoBehaviour
         if(wasSelected && !canRepeat)
         {
             gameObject.transform.parent.GetComponent<conversationCollection>().isRemoved(this.gameObject);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }
