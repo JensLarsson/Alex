@@ -241,7 +241,7 @@ public class QuestManager : MonoBehaviour
         }
         foreach (QuestSO forQuest in quests)
         {
-            //Debug.Log(forQuest._name);
+            //Debug.Log("comparing " + forQuest.name + " with " + quest.name);
             if (forQuest == quest)
             {
                 return quest;
