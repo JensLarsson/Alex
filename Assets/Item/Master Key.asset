@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6b68fee69efc8b64a8107b36421aadad, type: 3}
   deleteOnUse: 0
-  useSound: {fileID: 8300000, guid: 4035395e22205014091d303ffce93d99, type: 3}
+  useSound: {fileID: 0}
   description: "This key is supposed to unlock all the doors in the building, but
     something seems to be wrong with it. Why isn\u2019t it working?"

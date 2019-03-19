@@ -32,7 +32,7 @@ public class Idle : CatBase
 	//
 	//}
 
-    Vector3 NewTarget()
+    /*Vector3 NewTarget()
     {
         Vector3 temp = new Vector3(Random.Range(cat.transform.position.x - catAI.walkingRadius, cat.transform.position.x + catAI.walkingRadius), Random.Range(cat.transform.position.y - catAI.walkingRadius, cat.transform.position.y + catAI.walkingRadius));
         while (Vector3.Distance(temp, cage.transform.position) < 2.5f)
@@ -41,5 +41,5 @@ public class Idle : CatBase
         }
             //Debug.Log(Vector3.Distance(temp, cage.transform.position));
         return temp;
-    }
+    }*/
 }
