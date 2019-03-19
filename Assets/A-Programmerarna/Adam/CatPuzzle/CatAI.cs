@@ -8,13 +8,8 @@ using UnityEngine.Events;
 public class CatAI : MonoBehaviour
 {
 
-    public bool displayPath;
     public float speed;
-    public float walkingRadius;
-    [HideInInspector] public bool onPath = false;
-    Vector3[] path;
-    int targetIndex;
-    public Rigidbody2D rb2D;
+    Rigidbody2D rb2D;
     SpriteRenderer sR;
 
     Animator anim;
