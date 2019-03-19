@@ -54,6 +54,11 @@ public class creditsScript : MonoBehaviour {
                 exitColor.a = (Mathf.Sin(Time.time * exitAlphaChangeSpeed) / 2) + 0.5f;
                 exitText.GetComponent<TextMesh>().color = exitColor;
 
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    credtisIsDone();
+                }
+
                 break;
 
             case false:
