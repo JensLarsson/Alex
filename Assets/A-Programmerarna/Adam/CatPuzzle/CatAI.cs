@@ -9,7 +9,8 @@ public class CatAI : MonoBehaviour
 {
 
     public float speed;
-    Rigidbody2D rb2D;
+
+	internal Rigidbody2D rb2D;
     SpriteRenderer sR;
 
     Animator anim;
