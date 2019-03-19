@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public struct QuestDoorAction
+{
+    public AudioClip clip;
+    public UnityEvent _event;
+}
+
 public class questDoor : MonoBehaviour
 {
-    public UnityEvent rightDoor, wrongDoor;
+    public QuestDoorAction rightDoor, wrongDoor;
 
     public void unlockDoor()
     {
