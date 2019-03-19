@@ -6,6 +6,8 @@ public class PuzzelController : MonoBehaviour
 {
     [SerializeField]
     private GameObject Puzzel;
+    [SerializeField] bool isInCollider;
+    bool gotAllNotes = false;
     // Use this for initialization
     void Start()
     {
@@ -15,25 +17,49 @@ public class PuzzelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+        if (isInCollider)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!Puzzel.activeSelf)
-                {
-                    Puzzel.SetActive(true);
-                    PlayerMovement.canMove = false;
-                }
-                else if (Puzzel.activeSelf)
-                {
-                    Puzzel.SetActive(false);
-                    PlayerMovement.canMove = true;
-                }
+                updateChanges();
             }
+        }
+    }
+    public void setGotAllNotesToTrue()
+    {
+        gotAllNotes = true;
+    }
+    public void updateChanges()
+    {
+        if (gotAllNotes)
+        {
+            if (!Puzzel.activeSelf)
+            {
+                Puzzel.SetActive(true);
+                PlayerMovement.canMove = false;
+            }
+            else if (Puzzel.activeSelf)
+            {
+                Puzzel.SetActive(false);
+                PlayerMovement.canMove = true;
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+
+            isInCollider = true;
+
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            isInCollider = false;
+
         }
     }
 }

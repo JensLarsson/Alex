@@ -137,7 +137,6 @@ public class menuManager : MonoBehaviour
                 AudioManager.instance.sfxVolume = 1;
                 AudioManager.instance.setSFXVolume();
             }
-
         }
         else if(soundType == "music" && AudioManager.instance.sfxVolume <= 1)
         {
