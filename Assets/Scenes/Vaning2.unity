@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c5891d736f4684f9988d31dff23796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
 --- !u!114 &453263861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,7 +1320,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120048755}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fde9d2f19a09f34fb5fd493117e9dc2, type: 3}
   m_Name: 
@@ -1336,7 +1337,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120048755}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1418,7 +1419,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1120048755}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
   m_Name: 
@@ -1738,6 +1739,11 @@ MonoBehaviour:
   songs:
   - {fileID: 8300000, guid: a0f1151d68d58754d940b75900e1c187, type: 3}
   - {fileID: 8300000, guid: e776fa6df24245d498b35e9520c804ba, type: 3}
+  playlistWithCondition:
+    completedQuest: {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
+    songs:
+    - {fileID: 8300000, guid: ed74947b634133f4daaa34392899de0a, type: 3}
+    - {fileID: 8300000, guid: 84dcce70f51c7124aa1865f73e887ea1, type: 3}
 --- !u!81 &1299300186
 AudioListener:
   m_ObjectHideFlags: 0

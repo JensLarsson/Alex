@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   deleteOnUse: 1
-  useSound: {fileID: 0}
+  useSound: {fileID: 8300000, guid: be72bf4c951714143a151cefec3b2ff6, type: 3}
   description: Feska

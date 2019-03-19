@@ -20,7 +20,8 @@ public class Playlist : MonoBehaviour
 
     void Start()
     {
-        if (playlistWithCondition == null)
+        if (playlistWithCondition.completedQuest == null ||
+            !QuestManager.Instance.questExistsInCompletedQuests(playlistWithCondition.completedQuest))
         {
             if (songs.Count == 1)
             {
@@ -29,6 +30,22 @@ public class Playlist : MonoBehaviour
             else if (songs.Count > 0)
             {
                 AudioManager.instance.playSongs(songs, playlistBehaviour);
+            }
+            else
+            {
+                Debug.LogError("No songs in playlist");
+            }
+        }
+        else if (playlistWithCondition.songs.Count > 0 &&
+            QuestManager.Instance.questExistsInCompletedQuests(playlistWithCondition.completedQuest))
+        {
+            if (songs.Count == 1)
+            {
+                AudioManager.instance.changeSong(playlistWithCondition.songs[0]);
+            }
+            else if (songs.Count > 0)
+            {
+                AudioManager.instance.playSongs(playlistWithCondition.songs, playlistBehaviour);
             }
             else
             {

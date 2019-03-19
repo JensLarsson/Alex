@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4760652396728980}
   - component: {fileID: 212654024751920304}
+  - component: {fileID: 114883142887974310}
   m_Layer: 0
   m_Name: table from side_1
   m_TagString: Untagged
@@ -40,6 +41,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &114883142887974310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1478128128818114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWait: 0.1
+  maxWait: 1
+  minDuration: 0.1
+  maxDuration: 0.3
+  baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  effectMat: {fileID: 2100000, guid: d8ed453231b0fb046adab5c8541ac216, type: 2}
 --- !u!212 &212654024751920304
 SpriteRenderer:
   m_ObjectHideFlags: 1

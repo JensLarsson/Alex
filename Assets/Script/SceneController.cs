@@ -21,7 +21,7 @@ public class SceneController : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             image = GetComponent<Image>();
         }
-       // else
+        // else
         //{
         //   Destroy(this.gameObject);
         //}
@@ -56,11 +56,12 @@ public class SceneController : MonoBehaviour
 
     public IEnumerator SceneTransition(string scene, float f = 0.0f)
     {
-        
+
         if (!transitioning && !DialogManager.Instance.isInDialogBranch)
         {
             saveScene(scene);
             transitioning = true;
+            PlayerMovement.canMove = false;
             string id = SceneManager.GetActiveScene().name;
             if (PlayerTracker.Instance != null)
             {
@@ -92,7 +93,8 @@ public class SceneController : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             transitioning = false;
+            PlayerMovement.canMove = true;
         }
-        
+
     }
 }
