@@ -6392,7 +6392,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
   - {fileID: 11400000, guid: 4f2311a1e6402694aa6f54df8d94cf55, type: 2}
-  removeDialogIfQuestsHasCompleted: []
+  removeDialogIfQuestsHasCompleted:
+  - {fileID: 11400000, guid: 79dedc79a3101f7428f0847687773c22, type: 2}
   diffrentStartSounds: []
   startSoundPitchRange: 0
   canPlaySound: 1
@@ -6520,8 +6521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questMode: 0
-  quest: {fileID: 0}
+  questMode: 1
+  quest: {fileID: 11400000, guid: 79dedc79a3101f7428f0847687773c22, type: 2}
 --- !u!1 &2010172430
 GameObject:
   m_ObjectHideFlags: 0

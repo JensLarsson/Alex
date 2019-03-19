@@ -249,11 +249,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.50072676
+      value: 3.091
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.8596779
+      value: 1.242
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1490,6 +1490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065246782}
   - component: {fileID: 2065246783}
+  - component: {fileID: 2065246784}
   m_Layer: 0
   m_Name: GameObject (4)
   m_TagString: Untagged
@@ -1527,6 +1528,36 @@ MonoBehaviour:
   children:
   - {fileID: 423620573}
   - {fileID: 2146225733}
+--- !u!114 &2065246784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065246781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: b1fb9b5c77cbfe045a0a884c4407d913, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2065246781}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2146225733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1570,8 @@ GameObject:
   - component: {fileID: 2146225734}
   - component: {fileID: 2146225737}
   - component: {fileID: 2146225738}
+  - component: {fileID: 2146225740}
+  - component: {fileID: 2146225739}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -1664,3 +1697,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.52}
   m_EdgeRadius: 0
+--- !u!114 &2146225739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146225733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: b1fb9b5c77cbfe045a0a884c4407d913, type: 2}
+--- !u!114 &2146225740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146225733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f454bfb43ead045a83a56780a15357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 23ef70f52fcb1644fa531ee2540181c0, type: 2}
+  removeOnPickup: 1
+  accessOnlyThroughScript: 0
+  button: Submit
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2146225739}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

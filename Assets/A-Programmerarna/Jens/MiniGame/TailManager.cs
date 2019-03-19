@@ -90,9 +90,11 @@ public class TailManager : MonoBehaviour
 
 
             case MoveState.apple:
+                tailPart[0].GetComponent<SpriteRenderer>().color = Color.white;
                 GameObject Tail = Instantiate(blockPrefab, pos, Quaternion.identity);
                 tailPart.Insert(0, Tail);
                 applesEaten++;
+                tailPart[0].GetComponent<SpriteRenderer>().color = frontColour;
                 if (applesEaten >= applesToeat)
                 {
                     victryEvent.Invoke();

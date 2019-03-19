@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 [System.Serializable]
 public class Floor
 {
@@ -62,39 +64,6 @@ public class Elevator : MonoBehaviour
         menuManager.IsInMenu = false;
     }
 
-
-
-    //Skapar en ny lista av items som fins i Inventory klassen
-    //void settupMenu()
-    //{
-    //    clearList();
-    //    foreach (Floor floor in floors)
-    //    {
-    //        addText(floor);
-    //    }
-    //    moveMenu(0);
-    //}
-    //Tar bort alla gameobjects som representerar item slots från menyn
-    //void clearList()
-    //{
-    //    for (int i = menuFields.Count - 1; i >= 0; i--)
-    //    {
-
-    //        Destroy(menuFields[i]);
-    //    }
-    //    menuFields = new List<GameObject>();
-    //}
-
-
-    //Lägger till items i listan av objekt
-    //void addText(Floor floor)
-    //{
-    //    GameObject newText = Instantiate(textPrefab, textPrefab.transform.position, new Quaternion(), transform);
-    //    newText.GetComponent<Text>().text = floor.floorLabel;
-    //    menuFields.Add(newText);
-    //    newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(xStartPos, yStartPos + yOffset * menuFields.Count);
-    //}
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
@@ -108,8 +77,11 @@ public class Elevator : MonoBehaviour
 
         if (Input.GetButtonDown("Submit") && !buttonPressed)
         {
-            SceneController.instance.loadScene(floors[MenuIndex].SceneName);
-            this.gameObject.SetActive(false);
+            if (floors[MenuIndex].SceneName != SceneManager.GetActiveScene().name)
+            {
+                SceneController.instance.loadScene(floors[MenuIndex].SceneName);
+                this.gameObject.SetActive(false);
+            }
         }
     }
 

@@ -572,11 +572,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.01
+      value: -2.486
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.09
+      value: -1.747
       objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3255,11 +3255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323ce24c2f0b87f47a54aeb026ad4f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayPath: 1
   speed: 5
-  walkingRadius: 5
-  onPath: 0
-  rb2D: {fileID: 0}
   player: {fileID: 1657442555}
   cage: {fileID: 588258353}
   lightVision: {fileID: 1523577287}

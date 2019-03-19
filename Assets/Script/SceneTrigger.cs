@@ -21,6 +21,11 @@ public class SceneTrigger : MonoBehaviour
         AudioManager.instance.playSFXClip(unlockAudioClip);
 
     }
+    public void Lock()
+    {
+        locked = true;
+
+    }
 
     private void Update()
     {

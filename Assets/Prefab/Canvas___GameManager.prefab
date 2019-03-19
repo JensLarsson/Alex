@@ -1984,6 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851876a6bc427c145b9da91f9526ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDoor: 0
   nameOfAllDoors:
   - "HelD\xF6rrKey1"
   - "HelD\xF6rrKey2"
@@ -3102,7 +3103,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 105, y: -25.9}
-  m_SizeDelta: {x: 325.67, y: 138.61}
+  m_SizeDelta: {x: 337.9, y: 138.61}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224357359915534936
 RectTransform:
