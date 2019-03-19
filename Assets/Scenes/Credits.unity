@@ -210,7 +210,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 157926333}
-  m_Text: (Press space too exit)
+  m_Text: (Press space to exit)
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 881431671}
   - component: {fileID: 881431670}
   - component: {fileID: 881431674}
+  - component: {fileID: 881431675}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -511,6 +512,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: da5a4ca0e77a7da47839603547420e2d, type: 2}
+--- !u!114 &881431675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881431669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80f0ad7241792d4db611c6f043f2c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playlistBehaviour: 0
+  songs:
+  - {fileID: 8300000, guid: ed74947b634133f4daaa34392899de0a, type: 3}
+  - {fileID: 8300000, guid: 84dcce70f51c7124aa1865f73e887ea1, type: 3}
+  playlistWithCondition:
+    completedQuest: {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
+    songs:
+    - {fileID: 8300000, guid: ed74947b634133f4daaa34392899de0a, type: 3}
+    - {fileID: 8300000, guid: 84dcce70f51c7124aa1865f73e887ea1, type: 3}
 --- !u!1 &940366801
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,11 +573,11 @@ MonoBehaviour:
     Fuchs \r\nErik Gustafsson \r\nAdam Karlsson\r\n\r\nLead Artist:\r\nMalin Alexandersson
     \r\n\r\nArtists:\r\nJesper Karlsson  \r\nMirjana Mrdjen\r\nSofie Norgren \r\n\r\nLead
     Music:\r\nJohan H\xE4rnvi \r\n\r\nMusic:\r\nJohan Wetterin \r\n\r\nLead Sound:\r\nKevin
-    Samuelsson\r\n\r\nSound:\r\nErik Larsson \r\n\nVoice Acters:\nKristina Larsson
-    --- Alex Mother\nAlex Bode ---------- Ash\nSilia Hahne --------- Alex\nFrans  Alexandersson
-    - Couple 1\nErik Larsson ------------ Couple 2\nTove Backenroth ------- the Emo
-    & Bertha\nKevin Samuelsson\r ------ hyresv\xE4den, \n\n\r\nSpecial Thanks:\nVilma
-    Nygren\r\nErik Strand\r\nJesper Wiking"
+    Samuelsson\r\n\r\nSound:\r\nErik Larsson \r\n\nVoice Acters:\nFrans  Alexandersson
+    ------ Couple 1\nTove Backenroth - the Sam & Bertha\nAlex Bode --------------------------
+    Ash\nSilia Hahne ------------------------ Alex\nErik Larsson -----------------
+    Couple 2\nKristina Larsson --------- Alex Mother\nKevin Samuelsson\r ---- Martin
+    & Spirit \n\n\r\nSpecial Thanks:\nVilma Nygren\r\nErik Strand\r\nJesper Wiking"
 --- !u!102 &940366803
 TextMesh:
   serializedVersion: 3
@@ -564,17 +585,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940366801}
-  m_Text: "Project Leader & Lead Writer:\r\nEmma Quennerstedt \r\n\r\nVice Project
-    Leader & Lead Designer: \r\nAlbin Grundstr\xF6m \r\n\r\nDesign & Concept:\r\nIris
-    Svensson \r\n\r\nWriter:\r\nLevi Gustafsson \r\n\r\nLead Programmer:\r\nJens Larsson\r\n\r\nProgrammers:\r\nDennis
-    Fuchs \r\nErik Gustafsson \r\nAdam Karlsson\r\n\r\nLead Artist:\r\nMalin Alexandersson
-    \r\n\r\nArtists:\r\nJesper Karlsson  \r\nMirjana Mrdjen\r\nSofie Norgren \r\n\r\nLead
-    Music:\r\nJohan H\xE4rnvi \r\n\r\nMusic:\r\nJohan Wetterin \r\n\r\nLead Sound:\r\nKevin
-    Samuelsson\r\n\r\nSound:\r\nErik Larsson \r\n\nVoice Acters:\nKristina Larsson
-    --- Alex Mother\nAlex Bode ---------- Ash\nSilia Hahne --------- Alex\nFrans  Alexandersson
-    - Couple 1\nErik Larsson ------------ Couple 2\nTove Backenroth ------- the Emo
-    & Bertha\nKevin Samuelsson\r ------ hyresv\xE4den, \n\n\r\nSpecial Thanks:\nVilma
-    Nygren\r\nJesper [last name]\r\nErik [last name]"
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
