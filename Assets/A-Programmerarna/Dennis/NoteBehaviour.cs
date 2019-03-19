@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class NoteBehaviour : MonoBehaviour
 {
-
+    [SerializeField] UnityEvent afterQuestIsDone;
     List<GameObject> pianoNotes = new List<GameObject>();
     private List<int> playerNoteOrder = new List<int>();
     public List<int> correctNoteOrder = new List<int>();
@@ -41,6 +42,7 @@ public class NoteBehaviour : MonoBehaviour
             {
                 Debug.Log("Correct Order!");
                 puzzelController.updateChanges();
+                afterQuestIsDone.Invoke();
             }
             else if (!CheckIfCorrectOrder())
             {
