@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         canMove = true;
-        
+
     }
 
     private void FixedUpdate()
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AddVelocity(-speed * Time.deltaTime, 0f);
         }
-        
+
     }
 
     public void SetVelocityRight()
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AddVelocity(speed * Time.deltaTime, 0f);
         }
-        
+
     }
 
     public void SetVelocityUp()
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AddVelocity(0f, speed * Time.deltaTime);
         }
-        
+
     }
 
     public void SetVelocityDown()
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AddVelocity(0f, -speed * Time.deltaTime);
         }
-        
+
     }
 
     void AddVelocity(float x, float y)

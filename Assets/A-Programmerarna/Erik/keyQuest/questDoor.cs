@@ -17,13 +17,16 @@ public class questDoor : MonoBehaviour
     public void unlockDoor()
     {
         string thisDoorGO = gameObject.name;
-        for (int i = 0; i < keyQuestMain.Instance.nameOfAllDoors.Length; i++)
+        if (thisDoorGO == keyQuestMain.Instance.nameOfAllDoors[keyQuestMain.Instance.currentDoor])
         {
-            if (thisDoorGO == keyQuestMain.Instance.nameOfAllDoors[i])
-            {
-
-                keyQuestMain.Instance.updateKeyQuest(i);
-            }
+            rightDoor._event.Invoke();
+            keyQuestMain.Instance.currentDoor++;
+            //keyQuestMain.Instance.updateKeyQuest(i);
+        }
+        else
+        {
+            keyQuestMain.Instance.currentDoor = 0;
+            wrongDoor._event.Invoke();
         }
     }
 }

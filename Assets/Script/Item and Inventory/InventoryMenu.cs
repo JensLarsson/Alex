@@ -113,6 +113,7 @@ public class InventoryMenu : MonoBehaviour
 
                 if (iWI != null)
                 {
+                    Item it = Inventory.instance.items[menuIndex].item;
                     int itemsUsed = iWI.useItem(Inventory.instance.items[menuIndex]);
                     if (itemsUsed == 0)
                     {
@@ -120,11 +121,11 @@ public class InventoryMenu : MonoBehaviour
                     }
                     else
                     {
-                        if (Inventory.instance.items[menuIndex].item.useSound != null) //Checks if there is a sound clip
+                        if (it.useSound != null) //Checks if there is a sound clip
                         {
                             AudioManager.instance.playSFXClip(Inventory.instance.items[menuIndex].item.useSound);
                         }
-                        if (Inventory.instance.items[menuIndex].item.deleteOnUse) //Check if item should be deleted on use
+                        if (it.deleteOnUse) //Check if item should be deleted on use
                         {
                             Debug.Log("Removing");
                             Inventory.instance.removeItem(Inventory.instance.items[menuIndex].item, itemsUsed);
@@ -133,8 +134,8 @@ public class InventoryMenu : MonoBehaviour
 
                             //}
                         }
-                        PlayerMovement.canMove = true;
                         this.gameObject.SetActive(false);
+                        PlayerMovement.canMove = true;
                         break;
                     }
                 }

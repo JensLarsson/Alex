@@ -69,7 +69,8 @@ public class DialogManager : MonoBehaviour
     public CompleteConvesation activeDialog;
     public List<CompleteConvesation> quedDialogs = new List<CompleteConvesation>();
 
-    /*[HideInInspector]*/ public bool isInDialogBranch = false;
+    /*[HideInInspector]*/
+    public bool isInDialogBranch = false;
 
     //säkerställer så att det inte finns flera DialogManager
     void Start()
@@ -230,13 +231,12 @@ public class DialogManager : MonoBehaviour
                         //nollställer dialogManager efter en dialog, samt tar bort dialogen ur listan
                         if (dialogAt >= activeDialog.dialogs.Count)
                         {
-                           ChoseDialogue.Instance.leaveMultyChoiceDialogue();
+                            ChoseDialogue.Instance.leaveMultyChoiceDialogue();
 
                             dialogTextUI.enabled = false;
                             dialogNameTagUI.enabled = false;
                             dialogPortraitImageUI.enabled = false;
                             isInDialogue = false;
-                            PlayerMovement.canMove = true;
 
                             quedDialogs.Clear();
                             ChoseDialogue.Instance.gameObject.GetComponent<Image>().enabled = false;
@@ -244,12 +244,13 @@ public class DialogManager : MonoBehaviour
                             if (!activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead)
                             {
                             }
-                           // Debug.Log("in" + isInDialogBranch);
+                            // Debug.Log("in" + isInDialogBranch);
                             //Debug.Log("out" + activeDialog.dialogs[dialogAt - 1].dialogueTree);
-                            
-                           activeDialog.events.Invoke();
+                            activeDialog.events.Invoke();
                             activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
                             activeDialog = null;
+                            Invoke("changeMoveState", 0.1f);
+
                         }
                     }
                 }
@@ -267,7 +268,7 @@ public class DialogManager : MonoBehaviour
                 dialogNameTagUI.enabled = false;
                 dialogPortraitImageUI.enabled = false;
                 dialogAt = 0;
-                
+
                 if (quedDialogs.Count == 1)
                 {
                     //letar efter en ny dialog och ifall det finns en
@@ -343,5 +344,11 @@ public class DialogManager : MonoBehaviour
         stopRewriteText = true;
         skipAnimation = false;
         yield return null;
+    }
+
+    //Jens var här, gjorde en hacky solution
+    void changeMoveState()
+    {
+        PlayerMovement.canMove = true;
     }
 }

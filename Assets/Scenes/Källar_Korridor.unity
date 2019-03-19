@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
-  glitchTime: 0.5
+  glitchTime: 0.2
 --- !u!1001 &154040640
 Prefab:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class CameraGlitchout : MonoBehaviour
     public float glitchTime = 1.0f;
     Timer timer = new Timer();
 
-    private void Start()
+    private void OnEnable()
     {
         timer.Duration = glitchTime;
     }
