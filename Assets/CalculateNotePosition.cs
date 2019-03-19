@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CalculateNotePosition : MonoBehaviour {
 
-    [SerializeField] private List<GameObject> pianoNotes = new List<GameObject>();
+    [SerializeField] public List<GameObject> pianoNotes = new List<GameObject>();
     [SerializeField] private float offset;
     [SerializeField] private float position;
     [SerializeField] private int wichNoteIsBoss;
@@ -17,9 +17,11 @@ public class CalculateNotePosition : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+
 	void Update () {
-		for(int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
+            
             if (!pianoNotes.Contains(transform.GetChild(i).gameObject))
             {
                 pianoNotes.Add(transform.GetChild(i).gameObject);
@@ -59,7 +61,6 @@ public class CalculateNotePosition : MonoBehaviour {
 
                 pianoNotes[i].transform.localPosition = new Vector2(destination, 0f);
             }
-
         }
     }
 

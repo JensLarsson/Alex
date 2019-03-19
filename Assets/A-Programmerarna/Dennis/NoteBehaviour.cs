@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class NoteBehaviour : MonoBehaviour
 {
-
+    [SerializeField] UnityEvent afterQuestIsDone;
     List<GameObject> pianoNotes = new List<GameObject>();
     private List<int> playerNoteOrder = new List<int>();
     public List<int> correctNoteOrder = new List<int>();
+    [SerializeField] PuzzelController puzzelController;
     int currentNote;
 
     public event System.Action playAudio;
@@ -39,10 +41,13 @@ public class NoteBehaviour : MonoBehaviour
             if (CheckIfCorrectOrder())
             {
                 Debug.Log("Correct Order!");
+                puzzelController.updateChanges();
+                afterQuestIsDone.Invoke();
             }
             else if (!CheckIfCorrectOrder())
             {
                 Debug.Log("GO AGAIN!!!!!!");
+                playerNoteOrder.Clear();
             }
 
         }
@@ -77,7 +82,7 @@ public class NoteBehaviour : MonoBehaviour
             if (playerNoteOrder.Count < (correctNoteOrder.Count))
             {
                 playerNoteOrder.Add(currentNote);
-                playAudio();
+                gameObject.GetComponent<CalculateNotePosition>().pianoNotes[currentNote].gameObject.GetComponent<playNoteAudio>().PlayNoteAudio();
             }
         }
     }
@@ -87,7 +92,7 @@ public class NoteBehaviour : MonoBehaviour
         {
             if (playerNoteOrder[i] != correctNoteOrder[i])
             {
-                playerNoteOrder.Clear();
+                //playerNoteOrder.Clear();
                 return false;
             }
         }

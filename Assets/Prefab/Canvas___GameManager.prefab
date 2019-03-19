@@ -1763,8 +1763,8 @@ MonoBehaviour:
   musicChange: 0.05
   volumeSFXSliders: {fileID: 114898601015656300}
   volumeMusicSliders: {fileID: 114597121449419268}
-  selectedSlider: {fileID: 21300000, guid: 2e8487830c4a95045a805decf750916a, type: 3}
-  notSelectedSlider: {fileID: 21300000, guid: 84dc063a2d142af4f854094ae6a7335d, type: 3}
+  selectedSlider: {fileID: 21300000, guid: 84dc063a2d142af4f854094ae6a7335d, type: 3}
+  notSelectedSlider: {fileID: 21300000, guid: 2e8487830c4a95045a805decf750916a, type: 3}
   exitMenuKey: Cancel
   objectsToRemoveWhenInMenu: []
   menuState: 0
