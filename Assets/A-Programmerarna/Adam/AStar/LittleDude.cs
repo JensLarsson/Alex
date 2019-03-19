@@ -28,6 +28,7 @@ public class LittleDude : MonoBehaviour {
     void Update()
     {
         timer.Time += Time.deltaTime;
+		Debug.Log ("On Path: " + onPath);
         if (timer.expired)
         {
             if (!check)
@@ -53,9 +54,9 @@ public class LittleDude : MonoBehaviour {
         }
     }
 
-    Vector3 NewTarget()
+    Vector2 NewTarget()
     {
-        Vector3 temp = new Vector3(Random.Range(transform.position.x - walkingRadius, transform.position.x + walkingRadius), Random.Range(transform.position.y - walkingRadius, transform.position.y + walkingRadius));
+		Vector2 temp = new Vector2(transform.position.x, transform.position.y) + Random.insideUnitCircle * walkingRadius;
         int tempInt = 0;
         while (true)
         {
@@ -64,7 +65,7 @@ public class LittleDude : MonoBehaviour {
             {
                 if (Vector3.Distance(temp, doors[i].transform.position) < doorNoGoRadius)
                 {
-                    temp = new Vector3(Random.Range(transform.position.x - walkingRadius, transform.position.x + walkingRadius), Random.Range(transform.position.y - walkingRadius, transform.position.y + walkingRadius));
+					temp = new Vector2(transform.position.x, transform.position.y) + Random.insideUnitCircle * walkingRadius;
                     tempInt++;
                 }
             }

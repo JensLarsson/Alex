@@ -8,6 +8,9 @@ public class PathFinding : MonoBehaviour {
     PathRequestManager pathRequestManager;
     Grid grid;
 
+	List<Vector3> targetPositionFails = new List<Vector3>();
+	List<Vector3> targetPositionSuccess = new List<Vector3>();
+
     void Awake()
     {
         pathRequestManager = GetComponent<PathRequestManager>();
@@ -26,9 +29,13 @@ public class PathFinding : MonoBehaviour {
 
         Node startNode = grid.NodeFromeWorldPoint(startPosition);
         Node targetNode = grid.NodeFromeWorldPoint(targetPosition);
+		if (!targetNode.walkable) {
+			targetPositionFails.Add (targetPosition);
+		}
 
-		if (startNode.walkable && targetNode.walkable)
+		if (targetNode.walkable)
         {
+			targetPositionSuccess.Add (targetPosition);
 			/*if (!startNode.walkable) {
 				startNode = FindNearestWakableNode (startNode);
 			}*/
@@ -43,7 +50,8 @@ public class PathFinding : MonoBehaviour {
                 closedSet.Add(currentNode);
 
                 if (currentNode == targetNode)
-                {
+				{
+					Debug.Log ("wtf");
                     pathSuccess = true;
                     break;
                 }
@@ -87,7 +95,6 @@ public class PathFinding : MonoBehaviour {
 		Node temp = node;
 		foreach (Node neighbour in grid.GetNeighbours(node)) {
 			if (neighbour.walkable) {
-				Debug.Log ("What");
 				temp = neighbour;
 				break;
 			}
@@ -138,4 +145,23 @@ public class PathFinding : MonoBehaviour {
         }
         return 14 * distanceX + 10 * (distanceY - distanceX);
     }
+
+	/*public void OnDrawGizmos()
+	{
+		if (targetPositionFails != null)
+		{
+			for (int i = 0; i < targetPositionFails.Count; i++)
+			{
+				Gizmos.color = Color.red;
+				Gizmos.DrawCube(targetPositionFails[i], new Vector3(0.1f, 0.1f));
+			}
+		}
+		if (targetPositionSuccess != null) {
+			for (int i = 0; i < targetPositionSuccess.Count; i++)
+			{
+				Gizmos.color = Color.black;
+				Gizmos.DrawCube(targetPositionSuccess[i], new Vector3(0.1f, 0.1f));
+			}
+		}
+	}*/
 }
