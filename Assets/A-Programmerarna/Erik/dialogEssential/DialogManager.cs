@@ -249,6 +249,7 @@ public class DialogManager : MonoBehaviour
                             activeDialog.events.Invoke();
                             activeDialog.holder.GetComponent<ContaningDialog>().hasBeenRead = true;
                             activeDialog = null;
+                            //PlayerMovement.canMove = true;
                             Invoke("changeMoveState", 0.1f);
 
                         }
@@ -349,6 +350,6 @@ public class DialogManager : MonoBehaviour
     //Jens var här, gjorde en hacky solution
     void changeMoveState()
     {
-        PlayerMovement.canMove = true;
+        if (activeDialog == null) PlayerMovement.canMove = true;
     }
 }

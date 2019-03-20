@@ -642,7 +642,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 100436925}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.1
 --- !u!1 &256445647
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,7 +5248,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 2098570304}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.1
 --- !u!1 &1428049926
 GameObject:
   m_ObjectHideFlags: 0
@@ -5299,7 +5299,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1457896371}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.1
 --- !u!1 &1431521388
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,7 +5350,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 1153036903}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.1
 --- !u!1 &1457896371
 GameObject:
   m_ObjectHideFlags: 0
@@ -6817,7 +6817,7 @@ MonoBehaviour:
   thisCharacterConversations:
   - {fileID: 20386905}
   isInDialogueTrigger: 0
-  StartDelay: 0.3
+  StartDelay: 0.1
 --- !u!1 &1720541309
 GameObject:
   m_ObjectHideFlags: 0

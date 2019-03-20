@@ -2075,7 +2075,7 @@ MonoBehaviour:
   dialogueName: Alex-leadup-toFinalSpiritDialogue
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted:
-  - {fileID: 11400000, guid: 79dedc79a3101f7428f0847687773c22, type: 2}
+  - {fileID: 11400000, guid: 4f2311a1e6402694aa6f54df8d94cf55, type: 2}
   - {fileID: 11400000, guid: 1eab3f8d5512f3543ba9e6b66f7fa48d, type: 2}
   - {fileID: 11400000, guid: f15a20f02758d674ca9e97112f20384c, type: 2}
   - {fileID: 11400000, guid: 1a5495cd014a74844ace508005e0f08b, type: 2}
