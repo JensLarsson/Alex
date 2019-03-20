@@ -1108,7 +1108,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ff0d317b4c5923340b50d03d035745a6, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Let\u2019s go, I can\u2019t watch this. I just want it to stop."
+    Text: "(Let\u2019s go, I can\u2019t watch this. I just want it to stop.)"
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0

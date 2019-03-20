@@ -1180,8 +1180,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: I might as well help her. Maybe it was blown down by a rogue gust of wind
-      or something.
+    Text: (I might as well help her. Maybe it was blown down by a rogue gust of wind
+      or something.)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -1286,6 +1286,7 @@ GameObject:
   - component: {fileID: 569620675}
   - component: {fileID: 569620674}
   - component: {fileID: 569620673}
+  - component: {fileID: 569620676}
   m_Layer: 0
   m_Name: tv
   m_TagString: Untagged
@@ -1367,6 +1368,36 @@ Transform:
   m_Father: {fileID: 854228712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569620676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569620672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck:
+  - {fileID: 11400000, guid: fa8c9b5046c2bb2499f24fb4a21da7c8, type: 2}
+  completedQuestsToCheck: []
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 569620673}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &576089359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,7 +2892,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: ((This is too weird.))
+    Text: (This is too weird.)
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
@@ -3207,7 +3238,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: " Let\u2019s keep going."
+    Text: "(Let\u2019s keep going.)"
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
