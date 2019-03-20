@@ -50,7 +50,8 @@ public class menuManager : MonoBehaviour
         menu,
         noMenu,
         soundMenu,
-        disabled
+        disabled,
+        inventory
     }
     public MenuState menuState;
     

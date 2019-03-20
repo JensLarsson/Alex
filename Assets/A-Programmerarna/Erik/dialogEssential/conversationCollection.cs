@@ -37,7 +37,7 @@ public class conversationCollection : MonoBehaviour
 
     void sendConversationsToDialogManager()
     {
-        if (PlayerMovement.canMove)
+        if (menuManager.Instance.menuState == menuManager.MenuState.noMenu)
         {
             List<GameObject> tempList = new List<GameObject>();
 
@@ -91,7 +91,7 @@ public class conversationCollection : MonoBehaviour
                     Debug.Log("test");
                     sendConversationsToDialogManager();
                 }
-                if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue && PlayerMovement.canMove)
+                if (activateDialogWith.onCollisionStayWithDelay && !DialogManager.Instance.isInDialogue && menuManager.Instance.menuState == menuManager.MenuState.noMenu)
                 {
                     StartDelay -= Time.deltaTime;
                     if (StartDelay < 0)
