@@ -93,7 +93,7 @@ public class SceneController : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             transitioning = false;
-            PlayerMovement.canMove = true;
+            if (!DialogManager.Instance.isInDialogue) PlayerMovement.canMove = true;
         }
 
     }
