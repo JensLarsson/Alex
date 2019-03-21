@@ -1698,7 +1698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346c4671fce28834cbbd365f63d5b9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRange: 5
+  maxRange: 4
   soundClips:
   - {fileID: 8300000, guid: eb0e668b4c3cb244aa128f1b80e04b8d, type: 3}
 --- !u!82 &838786786

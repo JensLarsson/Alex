@@ -24,6 +24,7 @@ public class ambientSource : MonoBehaviour
     private void Update()
     {
         float f = Vector2.Distance(transform.position, PlayerTracker.Instance.transform.position);
-        audioS.volume = Mathf.Lerp(0.0f, maxRange, f) * AudioManager.instance.sfxVolume;
+        Debug.Log(f);
+        audioS.volume = (1 - Mathf.Clamp(f, 0.0f, maxRange) / maxRange) * AudioManager.instance.sfxVolume;
     }
 }
