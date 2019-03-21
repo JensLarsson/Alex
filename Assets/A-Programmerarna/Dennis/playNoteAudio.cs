@@ -5,8 +5,11 @@ using UnityEngine;
 public class playNoteAudio : MonoBehaviour
 {
 
-    [SerializeField] private AudioClip NoteAudio;
-
+    public AudioClip NoteAudio;
+    public bool canBeSelected = true;
+    public bool hasBeenSelected = false;
+    
+    
     public void PlayNoteAudio()
     {
         AudioManager.instance.playSFXClip(NoteAudio);
