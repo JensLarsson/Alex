@@ -49,6 +49,7 @@ public class InventoryMenu : MonoBehaviour
     {
         MenuIndex = 0;
         settupMenu();
+        menuManager.Instance.menuState = menuManager.MenuState.inventory;
         PlayerMovement.canMove = false;
         menuManager.IsInMenu = true;
     }
@@ -57,6 +58,7 @@ public class InventoryMenu : MonoBehaviour
     {
         PlayerMovement.canMove = true;
         menuManager.IsInMenu = false;
+        menuManager.Instance.menuState = menuManager.MenuState.noMenu;
     }
 
     //Skapar en ny lista av interaktivbara textobjekt som kan användas som en meny

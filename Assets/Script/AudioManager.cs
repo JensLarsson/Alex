@@ -69,6 +69,17 @@ public class AudioManager : MonoBehaviour
     }
 
 
+    public void muteMusic()
+    {
+        foreach (AudioSource audio in musicSource)
+        {
+            audio.volume = 0;
+        }
+    }
+    public void unMuteMusic()
+    {
+        musicSource[(int)targetAudio].volume = musicVolume;
+    }
 
 
     //Replaces current song (if one is playing) with new one and fades between the two

@@ -11,9 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: Ring
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 6f18a45271eae3a47b6a7dfd4c9faa5d, type: 3}
   deleteOnUse: 1
   useSound: {fileID: 0}
-  description: "ring ring ring ring ring ring banana phone\r\nDing dong ding dong
-    ding dong ding donana phone\r\nIt grows in bunches, I've got my hunches\r\nIt's
-    the best! Beats the rest\r\nCellular, modular, interactivodular"
+  description: Jonathan and Edward's ring. I should return it to them

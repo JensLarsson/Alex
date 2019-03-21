@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114021552542597392}
   - component: {fileID: 60638055729550268}
   - component: {fileID: 61036423209119018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MovingBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886140035140896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -120,7 +120,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &114021552542597392
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDestination: 2
   narmeVarde: 0.01
-  pushClip: {fileID: 8300000, guid: 2af0b305be6917b41a43ce7228d13cfe, type: 3}
+  pushClip: {fileID: 8300000, guid: 980496f0967f7f14fbba543a51faae13, type: 3}
 --- !u!212 &212185311916492662
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -178,8 +178,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1626699925
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2122a7427dfa4f14a8caeb3f0e65f2df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

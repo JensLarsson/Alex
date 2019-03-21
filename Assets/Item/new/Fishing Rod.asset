@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: Fishing Rod
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 3ecddc98c57e51d4fa62005c1df38a2a, type: 3}
   deleteOnUse: 1
   useSound: {fileID: 8300000, guid: be72bf4c951714143a151cefec3b2ff6, type: 3}
-  description: Feska
+  description: 
