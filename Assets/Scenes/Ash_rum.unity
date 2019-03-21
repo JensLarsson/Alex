@@ -2698,7 +2698,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "(Damn. He can be glued to the screen for hours. The only thing that reliably
+    Text: "(Ugh. He can be glued to the screen for hours. The only thing that reliably
       gets him away from here is mum\u2019s cooking. But it\u2019s not dinner time
       yet\u2026 Maybe if I\u2026)"
     dialogueTree: 0
