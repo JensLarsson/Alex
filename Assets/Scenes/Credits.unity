@@ -417,6 +417,121 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &766926344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 766926345}
+  - component: {fileID: 766926346}
+  m_Layer: 0
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766926345
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766926344}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.238846, y: -149.8, z: -0.8776346}
+  m_LocalScale: {x: 6.2141047, y: 6.2141027, z: 6.2141027}
+  m_Children:
+  - {fileID: 1630397569}
+  - {fileID: 790250991}
+  m_Father: {fileID: 940366805}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &766926346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766926344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b42924a9c4999849b219de2a3235fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &790250989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 790250991}
+  - component: {fileID: 790250990}
+  m_Layer: 0
+  m_Name: walrushloggatophat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &790250990
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790250989}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 17809c9fd7e16594a9e952b412d18417, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.15, y: 4.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &790250991
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790250989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9695269, y: 0, z: 0.14123271}
+  m_LocalScale: {x: 1.578929, y: 1.5789284, z: 1.5789284}
+  m_Children: []
+  m_Father: {fileID: 766926345}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &881431669
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,8 +640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistBehaviour: 0
   songs:
-  - {fileID: 8300000, guid: ed74947b634133f4daaa34392899de0a, type: 3}
-  - {fileID: 8300000, guid: 84dcce70f51c7124aa1865f73e887ea1, type: 3}
+  - {fileID: 8300000, guid: a0f1151d68d58754d940b75900e1c187, type: 3}
+  - {fileID: 8300000, guid: e776fa6df24245d498b35e9520c804ba, type: 3}
   playlistWithCondition:
     completedQuest: {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
     songs:
@@ -561,10 +676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3466a7f3ae3b0044b926b87a7c56d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 1
+  movingSpeed: 1.5
   textOfset: 2.4
   exitDelay: 2
   exitText: {fileID: 157926333}
+  exitTextExist: 7
   exitAlphaChangeSpeed: 4.5
   canExit: 0
   credits: "Project Leader & Lead Writer:\r\nEmma Quennerstedt \r\n\r\nVice Project
@@ -574,10 +690,10 @@ MonoBehaviour:
     \r\n\r\nArtists:\r\nJesper Karlsson  \r\nMirjana Mrdjen\r\nSofie Norgren \r\n\r\nLead
     Music:\r\nJohan H\xE4rnvi \r\n\r\nMusic:\r\nJohan Wetterin \r\n\r\nLead Sound:\r\nKevin
     Samuelsson\r\n\r\nSound:\r\nErik Larsson \r\n\nVoice Acters:\nFrans  Alexandersson
-    ------ Couple 1\nTove Backenroth - the Sam & Bertha\nAlex Bode --------------------------
-    Ash\nSilia Hahne ------------------------ Alex\nErik Larsson -----------------
-    Couple 2\nKristina Larsson --------- Alex Mother\nKevin Samuelsson\r ---- Martin
-    & Spirit \n\n\r\nSpecial Thanks:\nVilma Nygren\r\nErik Strand\r\nJesper Wiking"
+    ------------- Ed\nTove Backenroth -------Sam & Bertha\nAlex Bode --------------------------
+    Ash\nSilia Hahne ------------------------ Alex\nErik Larsson ------------------------
+    Jon\nKristina Larsson ---------- Alex Mother\nKevin Samuelsson\r ---- Martin &
+    Spirit \n\n\r\nSpecial Thanks:\nVilma Nygren\r\nErik Strand\r\nJesper Wiking"
 --- !u!102 &940366803
 TextMesh:
   serializedVersion: 3
@@ -585,7 +701,17 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940366801}
-  m_Text: 
+  m_Text: "Project Leader & Lead Writer:\r\nEmma Quennerstedt \r\n\r\nVice Project
+    Leader & Lead Designer: \r\nAlbin Grundstr\xF6m \r\n\r\nDesign & Concept:\r\nIris
+    Svensson \r\n\r\nWriter:\r\nLevi Gustafsson \r\n\r\nLead Programmer:\r\nJens Larsson\r\n\r\nProgrammers:\r\nDennis
+    Fuchs \r\nErik Gustafsson \r\nAdam Karlsson\r\n\r\nLead Artist:\r\nMalin Alexandersson
+    \r\n\r\nArtists:\r\nJesper Karlsson  \r\nMirjana Mrdjen\r\nSofie Norgren \r\n\r\nLead
+    Music:\r\nJohan H\xE4rnvi \r\n\r\nMusic:\r\nJohan Wetterin \r\n\r\nLead Sound:\r\nKevin
+    Samuelsson\r\n\r\nSound:\r\nErik Larsson \r\n\nVoice Acters:\nFrans  Alexandersson
+    ------------- Ed\nTove Backenroth - the Sam & Bertha\nAlex Bode --------------------------
+    Ash\nSilia Hahne ------------------------ Alex\nErik Larsson ------------------------
+    Jon\nKristina Larsson ---------- Alex Mother\nKevin Samuelsson\r ---- Martin &
+    Spirit \n\n\r\nSpecial Thanks:\nVilma Nygren\r\nErik Strand\r\nJesper Wiking"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -640,7 +766,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940366801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -22.87, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.16092423, y: 0.16092429, z: 0.16092429}
   m_Children:
   - {fileID: 461734830}
@@ -650,6 +776,7 @@ Transform:
   - {fileID: 1594126291}
   - {fileID: 2145475845}
   - {fileID: 2123218219}
+  - {fileID: 766926345}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -726,6 +853,79 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1630397567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1630397569}
+  - component: {fileID: 1630397568}
+  m_Layer: 0
+  m_Name: Circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1630397568
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630397567}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 33df5e5ef1b76db419c4ab88eb70bf95, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1630397569
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630397567}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9695269, y: 0, z: 0.14123271}
+  m_LocalScale: {x: 7.033487, y: 7.0334888, z: 7.0334888}
+  m_Children: []
+  m_Father: {fileID: 766926345}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1728252512
 GameObject:
   m_ObjectHideFlags: 0
