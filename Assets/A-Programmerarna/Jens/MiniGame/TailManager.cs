@@ -125,11 +125,11 @@ public class TailManager : MonoBehaviour
 
     private void Start()
     {
-        dontDestroy.instance.image.color = new Color(0, 0, 0, 0);
+        bagCanvas.Instance.image.color = new Color(0, 0, 0, 0);
     }
     private void OnDisable()
     {
-        dontDestroy.instance.image.color = Color.white;
+        bagCanvas.Instance.image.color = Color.white;
     }
 
 }
