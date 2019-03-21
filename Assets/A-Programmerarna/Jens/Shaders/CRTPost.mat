@@ -76,7 +76,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GridIntencity: 0.5
+    - _GridIntencity: 0.45
     - _Hardness: 0.81
     - _HorizontalPixelCount: 160
     - _LineWidth: 0.01
