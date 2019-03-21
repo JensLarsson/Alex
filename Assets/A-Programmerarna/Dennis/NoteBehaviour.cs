@@ -77,12 +77,33 @@ public class NoteBehaviour : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+            playNoteAudio pianoNote = gameObject.GetComponent<CalculateNotePosition>().pianoNotes[currentNote].gameObject.GetComponent<playNoteAudio>();
+        if (Input.GetKeyDown(KeyCode.Space) && !pianoNote.hasBeenSelected)
         {
-            if (playerNoteOrder.Count < (correctNoteOrder.Count))
+            if (pianoNote.canBeSelected)
             {
-                playerNoteOrder.Add(currentNote);
-                gameObject.GetComponent<CalculateNotePosition>().pianoNotes[currentNote].gameObject.GetComponent<playNoteAudio>().PlayNoteAudio();
+                if (playerNoteOrder.Count < (correctNoteOrder.Count))
+                {
+                    playerNoteOrder.Add(currentNote);
+                    pianoNote.PlayNoteAudio();
+                    //pianoNote.GetComponent<Image>().material.color = selectedColor;
+                    pianoNote.hasBeenSelected = true;
+                    pianoNote.gameObject.GetComponent<Image>().color = Color.gray;
+                    if (playerNoteOrder[playerNoteOrder.Count - 1] != correctNoteOrder[playerNoteOrder.Count - 1])
+                    {
+                        for (int i = 0; i < gameObject.GetComponent<CalculateNotePosition>().pianoNotes.Count; i++)
+                        {
+                            //pianoNote.hasBeenSelected = false;
+                            gameObject.GetComponent<CalculateNotePosition>().pianoNotes[i].gameObject.GetComponent<playNoteAudio>().hasBeenSelected = false;
+                            gameObject.GetComponent<CalculateNotePosition>().pianoNotes[i].gameObject.GetComponent<Image>().color = Color.white;
+                        }
+                        playerNoteOrder.Clear();
+                    }
+                }
+            }
+            else
+            {
+                pianoNote.PlayNoteAudio();
             }
         }
     }
