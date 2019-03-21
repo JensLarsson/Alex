@@ -329,7 +329,7 @@ MonoBehaviour:
   locked: 1
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
-  openAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &100826625
 BoxCollider2D:
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   locked: 1
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
-  openAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &1120048757
 BoxCollider2D:
@@ -2675,7 +2675,7 @@ MonoBehaviour:
   locked: 1
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
-  openAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &1452022714
 BoxCollider2D:
@@ -3074,7 +3074,7 @@ MonoBehaviour:
   locked: 1
   lockedAudioClip: {fileID: 0}
   unlockAudioClip: {fileID: 0}
-  openAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 8300000, guid: 2f2b89e96c49cf84f86d416317da14b4, type: 3}
   button: Submit
 --- !u!61 &1634518250
 BoxCollider2D:

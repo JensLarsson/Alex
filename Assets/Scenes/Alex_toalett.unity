@@ -942,6 +942,8 @@ GameObject:
   - component: {fileID: 1006433186}
   - component: {fileID: 1006433188}
   - component: {fileID: 1006433187}
+  - component: {fileID: 1006433190}
+  - component: {fileID: 1006433189}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1011,6 +1013,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9355302, y: 1.7907319}
   m_EdgeRadius: 0
+--- !u!114 &1006433189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006433185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494791b0918cc3b4e91f67699b85b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMode: 1
+  quest: {fileID: 11400000, guid: 959720564133f5c40b24496ca0dec544, type: 2}
+--- !u!114 &1006433190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006433185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: f89eece348cdaf04fb7240ffb05c2db6, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1006433189}
+        m_MethodName: CompleteQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1027931631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,12 +1941,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   minWait: 0.1
   maxWait: 1
   minDuration: 0.1
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: a3b1dde38cffb694b85fa6eea1a24df6, type: 2}
+  typeOfElement: 0
 --- !u!1 &2010172430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,6 +2118,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169574523356938, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: menuState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}

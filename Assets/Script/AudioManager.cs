@@ -62,10 +62,7 @@ public class AudioManager : MonoBehaviour
     }
     public void setMusicVolume()
     {
-        for (int i = 0; i < musicSource.Length; i++)
-        {
-            musicSource[i].volume = musicVolume;
-        }
+        musicSource[(int)targetAudio].volume = musicVolume;
     }
 
 
