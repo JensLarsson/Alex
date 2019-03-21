@@ -6105,7 +6105,7 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "Was there anything you wanted? You know you\u2019re free to borrow any
       tool you need, as long as you put it back soon after. Oh and if you talk to
-      Sam, remind him to return the screwdriver he borrowed"
+      Sam, remind them to return the screwdriver they borrowed."
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -6360,8 +6360,9 @@ MonoBehaviour:
     - {fileID: 0}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Uh, what the frock is going on here? It\u2019s like looking into space.
-      Except there are no stars. Better take a step back so I don\u2019t fall in."
+    Text: "Uh, what the frock is going on here? It\u2019s like looking into some weird
+      chaotic vortex from a sci-fi film. Better take a step back so I don\u2019t fall
+      in."
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -7002,6 +7003,16 @@ MonoBehaviour:
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:
+  - NameOfTalkingNPC: Martin
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: f0b4b0af315f65841844d677b87b0fc3,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 0}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Alexandra. Anythong you need help with?
+    dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
@@ -7072,18 +7083,8 @@ MonoBehaviour:
     - {fileID: 0}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: (We need to lure him out of the room, I remember how. We need to frick up
-      my toilet, then he'll go to fix it. But its missing...)
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 0}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: )We need to find something to use as a replacement.)
+    Text: (We need to lure him out of the room, I remember how. We need to frock up
+      something in our bathroom, then he'll go to fix it.)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
