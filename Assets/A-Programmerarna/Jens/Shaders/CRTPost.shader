@@ -57,21 +57,21 @@
 				pos.x = i.uv.x * _ScreenParams.x;
 				pos.y = i.uv.y * _ScreenParams.y;
 
-				int x = (int)(pos.x % 7);
+				int x = (int)(pos.x % 4);
 
-				if (x == 1 || x == 2) color = half4(color.r, 0, 0, 1);
-				else if (x == 3 || x == 4) color = half4(0, color.g, 0, 1);
-				else if (x == 5 || x == 6) color = half4(0, 0, color.b, 1);
+				if (x == 1 ) color = half4(color.r, 0, 0, 1);
+				else if (x == 2 ) color = half4(0, color.g, 0, 1);
+				else if (x ==3) color = half4(0, 0, color.b, 1);
 
-				float f = _GridIntencity;
+				float f = 1-_GridIntencity;
 
 				if (x == 0) color *= half4(f, f, f, 1);
 
-				x = (int)(pos.x % 14);
+				x = (int)(pos.x % 8);
 
 				int y = (int)(pos.y % 10);
-				if (y == 0 && x >= 1 && x <= 6) color *= half4(f, f, f, 1);
-				if (y == 5 && x >= 8 && x <= 13) color *= half4(f, f, f, 1);
+				if (y == 0 && x >= 0 && x <= 3) color *= half4(f, f, f, 1);
+				if (y == 5 && x >= 4 && x <= 7) color *= half4(f, f, f, 1);
 
 
 				return color;
