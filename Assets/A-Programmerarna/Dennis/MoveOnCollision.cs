@@ -45,7 +45,7 @@ public class MoveOnCollision : MonoBehaviour
         }
     }
 
-    void move(Collision2D collision)
+    void move(Collider2D collision)
     {
         if (!isLerping && buttonDown)
         {
@@ -78,7 +78,7 @@ public class MoveOnCollision : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         move(collision);
     }
