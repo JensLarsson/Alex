@@ -2161,7 +2161,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "But\u2026 Like, what am I doing? Feels like I\u2019m walking in circles
+    Text: "Hang on. Like, what am I doing? Feels like I\u2019m walking in circles
       to fix things. Nobody else seems to be lifting a finger. Haha, it\u2019s almost
       like I\u2019m some sort of Chosen One, like in a novel. Or\u2026 No way\u2026
       Can it be? Am I actually in a\u2026"
@@ -2175,7 +2175,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "All the puzzles, the repeating. I- It\u2019s almost like I\u2019m in a
-      game? But that\u2019s crazy, and weird. Hmmm. "
+      game? But that\u2019s crazy, and weird. Hmmm."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -2279,7 +2279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663152309
 GameObject:
@@ -2906,10 +2906,19 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "I\u2019d rather stay here and get all this spirit business over and done
-      with than go around knocking on doors and solving problems. Maybe I can use
-      the tomato plushie to help mum remember where she put the actual tomatoes. I
-      suppose I could try."
+    Text: "(I\u2019d rather stay here and get all this spirit business over and done
+      with than go around knocking on doors and solving problems.) "
+    dialogueTree: 0
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: (Maybe I can use the tomato plushie to help mum remember where she put the
+      actual tomatoes. I suppose I could try.)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -3004,7 +3013,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839815152
 GameObject:
@@ -4646,29 +4655,18 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Of course. It\u2019s like they\u2019ve disappeared. Or maybe I forgot them
-      at the counter in the store."
+      at the counter in the store. Oh, maybe I should go back there to have a look."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "True enough. And you didn\u2019t give any away to the neighbours? That
-      Svensson man always comes by to ask for sugar, so\u2026"
-    dialogueTree: 0
-  - NameOfTalkingNPC: Mother
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
-      type: 3}
-    AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 69fee1b82b1316146b2eb11207349c6e, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "I\u2026 don\u2019t think so? I think I better pop down to the store just
-      to be sure."
+    Text: No, mum, just hold on. I'll have a look around to see if I can find them.
+      Just... stay here and relax.
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -5236,6 +5234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1320915308}
   - component: {fileID: 1320915307}
+  - component: {fileID: 1320915309}
   m_Layer: 0
   m_Name: "Helt k\xF6k_3"
   m_TagString: Untagged
@@ -5296,10 +5295,41 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4849706, y: 1.648, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1614789549}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320915309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320915306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d70f0dc2183030499297d71382b390c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 4891aeb3998dff640b444863fcae6f07, type: 2}
+  doIfQuestsExists:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1614789547}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1373931201
 Prefab:
   m_ObjectHideFlags: 0
@@ -5563,7 +5593,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Ahhh, that\u2019s still so weird. Even though I was doing it before, but
-      not its- Okay, just stop. "
+      not its- Okay, just stop."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -5595,7 +5625,8 @@ MonoBehaviour:
     soundTimeDelay: 0
     Text: "If this is how it is\u2026 Then, let\u2019s establish how to, like, communicate.
       Maybe if we designate some places or things near me as\u2026 cues? So, If you
-      move me to the left you\u2019re God. If you move me down, you\u2019re a player."
+      move me towards mum, you\u2019re God. If you move me towards the furniture,
+      you\u2019re a player."
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -5859,7 +5890,7 @@ Transform:
   m_LocalScale: {x: 0.9125, y: 1.0875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1468830799
 GameObject:
@@ -6403,7 +6434,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522608591
 GameObject:
@@ -6916,7 +6947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1614789548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6967,12 +6998,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614789547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.242, y: 1.2430886, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.62, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_Father: {fileID: 1320915308}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1614789550
 MonoBehaviour:
@@ -7558,7 +7589,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1857928266
 BoxCollider2D:
@@ -7781,7 +7812,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978748755
 GameObject:
