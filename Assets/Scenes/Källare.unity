@@ -1129,7 +1129,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, no. I\u2019ll keep my distance from whatever\u2019s going on there."
@@ -2828,7 +2828,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "So comfy. I remember resting on it after I sprained my ankle climbing the
@@ -4875,7 +4875,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Hmmm, oh Strindberg! Nice. Though all these detective novels really aren\u2019t
@@ -6357,7 +6357,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Uh, what the frock is going on here? It\u2019s like looking into some weird
@@ -7497,7 +7497,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Yeah, no. I\u2019ll keep my distance from whatever\u2019s going on there."
@@ -9625,7 +9625,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Uh, what the frock is going on here? It\u2019s like looking into some weird
