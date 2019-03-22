@@ -1032,7 +1032,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Hi, mom. How are you?
+    Text: Hi, mum. How are you?
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
@@ -2068,7 +2068,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "I\u2019ll be fine, mom."
+    Text: "I\u2019ll be fine, mum."
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -2441,6 +2441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 2
+  volume: 1
   soundClips:
   - {fileID: 8300000, guid: 47825c5cdbdf89d45a8c80f11cf9ce8f, type: 3}
 --- !u!82 &668466203
@@ -3392,7 +3393,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Mom, I\u2026"
+    Text: "Mum, I\u2026"
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
@@ -3412,7 +3413,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Mom no, no you\u2019re not. You\u2019ve been on your way for- for a while."
+    Text: "Mum no, no you\u2019re not. You\u2019ve been on your way for- for a while."
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bef289aa61c46be4f91b4de456b3e3c6,
@@ -3432,7 +3433,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: " I- Alright mom. You do that, I\u2019m just gonna\u2026"
+    Text: " I- Alright mum. You do that, I\u2019m just gonna\u2026"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 5e2b641a67c97b341a9ca60be4a2409b,
@@ -4258,10 +4259,11 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: ((This is too weird.))
+    Text: (This is too weird.)
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
@@ -4603,7 +4605,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Hi, mom. What are you doing?
+    Text: Hi, mum. What are you doing?
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 879d9412f59bd3a468622199f11ac16b,
@@ -4974,6 +4976,7 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls:
@@ -6984,6 +6987,8 @@ GameObject:
   - component: {fileID: 1614789549}
   - component: {fileID: 1614789548}
   - component: {fileID: 1614789550}
+  - component: {fileID: 1614789552}
+  - component: {fileID: 1614789551}
   m_Layer: 0
   m_Name: "Sk\xE4rbr\xE4da"
   m_TagString: Untagged
@@ -7044,7 +7049,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.62, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1638136006}
   m_Father: {fileID: 1320915308}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7066,7 +7072,54 @@ MonoBehaviour:
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: a3b1dde38cffb694b85fa6eea1a24df6, type: 2}
+  clip: []
   typeOfElement: 0
+--- !u!114 &1614789551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614789547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
+  thisCharacterConversations:
+  - {fileID: 1638136004}
+  isInDialogueTrigger: 0
+  StartDelay: 0
+--- !u!61 &1614789552
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614789547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027336419, y: -0.14351678}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5899519, y: 1.2870336}
+  m_EdgeRadius: 0
 --- !u!1 &1623628260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,6 +7299,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1638136004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1638136006}
+  - component: {fileID: 1638136005}
+  m_Layer: 0
+  m_Name: BuggedTomatoesDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1638136005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638136004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: Uh, okay. That looks really frocked up. Great, not eating that, then.
+    dialogueTree: 0
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1638136006
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638136004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1614789549}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670243888
 GameObject:
@@ -7733,7 +7853,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Here you go, mom.
+    Text: Here you go, mum.
     dialogueTree: 0
   - NameOfTalkingNPC: Mother
     PortraitOfTalkingNPC: {fileID: 21300000, guid: f2881dcb1a7bccb489990db767158706,
@@ -7753,7 +7873,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "You\u2019d be fine, mom. Now, just double-check the list so you don\u2019t
+    Text: "You\u2019d be fine, mum. Now, just double-check the list so you don\u2019t
       miss anything."
     dialogueTree: 0
   - NameOfTalkingNPC: Mother

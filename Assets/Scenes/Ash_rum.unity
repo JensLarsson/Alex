@@ -792,7 +792,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Nice. Just make sure you make your bed before you go, so mom can vacuum
+    Text: Nice. Just make sure you make your bed before you go, so mum can vacuum
       your room later.
     dialogueTree: 0
   - NameOfTalkingNPC: Ash
@@ -1753,6 +1753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 4
+  volume: 1
   soundClips:
   - {fileID: 8300000, guid: eb0e668b4c3cb244aa128f1b80e04b8d, type: 3}
 --- !u!82 &838786786
@@ -3734,7 +3735,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "Oh, uh\u2026 maybe she didn\u2019t start yet. I\u2019ll check on her and
+    Text: "Oh, uh\u2026 maybe mum didn\u2019t start yet. I\u2019ll check on her and
       tell you when it\u2019s ready, okay?"
     dialogueTree: 0
   - NameOfTalkingNPC: Ash
@@ -3960,7 +3961,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Hey, Ash. Mom said food is ready.
+    Text: Hey, Ash. Mum said food is ready.
     dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5bb1e8f9dfaac94ba0cf0db38391acb,
@@ -3980,7 +3981,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: You better get going right away, or mom will get mad at you.
+    Text: You better get going right away, or mum will get mad at you.
     dialogueTree: 0
   - NameOfTalkingNPC: Ash
     PortraitOfTalkingNPC: {fileID: 21300000, guid: bc13208bd783f43418a7198bb1b237d0,

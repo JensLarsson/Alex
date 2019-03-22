@@ -250,7 +250,7 @@ MonoBehaviour:
     Text: Oh! Oh dear! Mittens, watch out my darling!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -271,7 +271,7 @@ MonoBehaviour:
       all around, it's upsetting my darlings!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -349,15 +349,15 @@ MonoBehaviour:
       one, always getting into all kinds of trouble. '
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 'Yeah that''s... alright. Uh, Bertha I think I know how to get the flying
-      thing down. I''m gonna go... look for a net. '
+    Text: Yeah that's... alright. Uh, Bertha I think I know how to get the flying
+      thing down. I'm gonna go... look for a net.
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
@@ -372,7 +372,7 @@ MonoBehaviour:
       sure no one leaves her home hungry.)
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -395,7 +395,7 @@ MonoBehaviour:
       the pantry again!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -417,7 +417,7 @@ MonoBehaviour:
       would deny her sweet baby what he needs!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -427,7 +427,7 @@ MonoBehaviour:
     Text: Yeah, alright - Thank you Bertha!
     dialogueTree: 0
   - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -441,7 +441,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: (I almost feel bad.)
@@ -450,7 +451,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: (Dr.Oakley next door is using Taffy to experiment on, and she'll realize
@@ -460,7 +462,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(He seems weird anyways, probably wouldn\u2019t mind being used as a lab
@@ -470,7 +473,8 @@ MonoBehaviour:
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: (We need to chase him into the cage in the other room)
@@ -3350,7 +3354,7 @@ MonoBehaviour:
       baths. But I always tell him a clean boy is a good boy!"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -3368,7 +3372,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, don\u2019t you worry, I\u2019ll find him soon enough. Mittens! Come
-      here my sweet!"
+      here, my sweet!"
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -4755,7 +4759,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: dace152068a99934eaaf62abb480c766,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -6523,7 +6527,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: b1a82badb1d4f74449b1dc6031fcb0fd,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -6544,7 +6548,7 @@ MonoBehaviour:
     Text: Meow
     dialogueTree: 0
   - NameOfTalkingNPC: Bertha
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: dace152068a99934eaaf62abb480c766,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -6552,18 +6556,18 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, you know I can\u2019t be mad at you. Such a little sweet. Now! would
-      you look at that. Alex dearie, the bird is gone! Well done, you really are such
-      a sweetheart."
+      you look at that. Alex, dearie, the bird is gone! Well done, you really are
+      such a sweetheart."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
     - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "It wasn\u2019t a\u2026 never mind. It was no problem Bertha."
+    Text: "It wasn\u2019t a\u2026 never mind. It was no problem, Bertha."
     dialogueTree: 0
   - NameOfTalkingNPC: Bertha
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 56d070d311e5acf45836539b49cd6133,
@@ -6578,7 +6582,7 @@ MonoBehaviour:
       Some sugar will keep him going. And give my best to your mother!
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c6083b8001230ba41905349c2c38a3b1,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -6588,10 +6592,11 @@ MonoBehaviour:
     Text: I will.
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "(You know, when they aren\u2019t stuck in a loop anymore.)"

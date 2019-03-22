@@ -1814,7 +1814,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -1824,7 +1824,7 @@ MonoBehaviour:
     Text: "Okay, what the heck.\r\n"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -1834,7 +1834,7 @@ MonoBehaviour:
     Text: "How did this even happen!?\r\n\r\n"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -4574,6 +4574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRange: 4
+  volume: 1
   soundClips:
   - {fileID: 8300000, guid: d5b1d365fbf987f47bd6cf66ebe326ee, type: 3}
 --- !u!82 &1625019524
@@ -5211,6 +5212,7 @@ MonoBehaviour:
   removeOnPickup: 0
   accessOnlyThroughScript: 1
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls: []
