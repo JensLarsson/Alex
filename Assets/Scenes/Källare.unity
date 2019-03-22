@@ -166,7 +166,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You can\u2019t? Oh well. I\u2019m making a weird face if you were wondering."
@@ -576,7 +576,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019m good for now. Just checking in, you know?"
@@ -586,7 +586,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You don\u2019t have to do that."
@@ -596,7 +596,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Right. Well, I\u2019ll maybe see you later."
@@ -1716,7 +1716,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: 'Hey Martin, uh, something''s happened to the toilet in my apartment. Its..
@@ -1727,7 +1727,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: '...'
@@ -1737,7 +1737,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "It wasn\u2019t me, I promise! Like, I\u2019d clean up my, uh\u2026 mess.
@@ -1749,7 +1749,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Fine, I\u2019ll get to it. Was there anything else you needed?"
@@ -1759,7 +1759,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh \u2013 no, I\u2019m good, thanks."
@@ -2195,7 +2195,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, awesome. Things always get so lost in translation when you can\u2019t
@@ -3905,7 +3905,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Hey, what does this look like to you?
@@ -4040,6 +4040,7 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 1
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls: []
@@ -4975,7 +4976,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I wonder what I look like? Is what I see what reality looks like, or is
@@ -4986,7 +4987,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "You know what, I\u2019m gonna stay away from that. I\u2019ve had enough
@@ -5889,7 +5890,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "So\u2026 I\u2019m just a little pixelated blob to you. Huh, I\u2019ve kind
@@ -5900,7 +5901,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Move me if you can see this!
@@ -6066,7 +6067,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Is that you sneaking around back there, Alexandra?
@@ -6076,7 +6077,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Uh, yeah. Sorry to disturb you, Martin. Wait, how did you know it was me?
@@ -6086,7 +6087,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I recognise those shoes of yours. Also, you\u2019re practically the only
@@ -6097,7 +6098,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Oh, um, well\u2026"
@@ -6107,7 +6108,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Was there anything you wanted? You know you\u2019re free to borrow any
@@ -7015,7 +7016,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Alexandra. Anythong you need help with?
@@ -7025,7 +7026,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Actually, kind of. I know this might sound a little weird, but could we
@@ -7036,7 +7037,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Why on earth would we do that?
@@ -7046,7 +7047,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I know it\u2019s a strange request, but it\u2019s to\u2026 Right, it\u2019s
@@ -7057,7 +7058,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I\u2019ll take your word for it. Still the answer is no."
@@ -7067,7 +7068,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: But-
@@ -7077,7 +7078,7 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: d435d626c0ae69e4ca6b0fc6d602e22b, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: No. Just no.
@@ -7087,11 +7088,11 @@ MonoBehaviour:
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: (We need to lure him out of the room, I remember how. We need to frock up
-      something in our bathroom, then he'll go to fix it.)
+    Text: (We need to lure him out of the room. I know! We need to frock up something
+      in my bathroom, then he'll go to fix it.)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -8315,7 +8316,7 @@ MonoBehaviour:
     - {fileID: 0}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 'This key... I remember this key. There''s a spirit in it. To get it out
+    Text: 'This key... I know what to do. There''s a spirit in it, and to get it out
       we need to unlock some doors in the right order. '
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
@@ -8327,7 +8328,7 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: The notes on the table over there will tell us which doors, but I think
-      I remember.
+      I know.
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
