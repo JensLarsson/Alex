@@ -6,6 +6,8 @@ using UnityEngine;
 public class ambientSource : MonoBehaviour
 {
     public float maxRange = 5.0f;
+    [Range(0.0f, 1.0f)]
+    public float volume = 1.0f;
     public AudioClip[] soundClips = new AudioClip[0];
 
     AudioSource audioS;
@@ -25,6 +27,6 @@ public class ambientSource : MonoBehaviour
     {
         float f = Vector2.Distance(transform.position, PlayerTracker.Instance.transform.position);
 
-        audioS.volume = (1 - Mathf.Clamp(f, 0.0f, maxRange) / maxRange) * AudioManager.instance.sfxVolume;
+        audioS.volume = (1 - Mathf.Clamp(f, 0.0f, maxRange) / maxRange) * AudioManager.instance.sfxVolume * volume;
     }
 }

@@ -117,6 +117,7 @@ public class InventoryMenu : MonoBehaviour
                 {
                     Item it = Inventory.instance.items[menuIndex].item;
                     int itemsUsed = iWI.useItem(Inventory.instance.items[menuIndex]);
+                    Debug.Log(itemsUsed);
                     if (itemsUsed == 0)
                     {
                         AudioManager.instance.playSFXClip(unusableClip);
@@ -140,6 +141,10 @@ public class InventoryMenu : MonoBehaviour
                         PlayerMovement.canMove = true;
                         break;
                     }
+                }
+                else
+                {
+                    AudioManager.instance.playSFXClip(Inventory.instance.items[menuIndex].item.useSound);
                 }
             }
         }
