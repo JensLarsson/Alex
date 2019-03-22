@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ItemDisstortionEffect : MonoBehaviour
 {
-
-
     SpriteRenderer sr;
     [SerializeField] Image image;
     public float minWait = 0.1f, maxWait = 1.0f, minDuration = 0.1f, maxDuration = 0.3f;
@@ -19,16 +17,6 @@ public class ItemDisstortionEffect : MonoBehaviour
         Image
     }
     public TypeOfElement typeOfElement = TypeOfElement.SpriteR;
-
-
-
-    // Use this for initialization
-    //void Start()
-    //{
-    //    sr = GetComponent<SpriteRenderer>();
-    //    image = GetComponent<Image>();
-    //    startEffect();
-    //}
 
     void OnEnable()
     {
@@ -50,7 +38,10 @@ public class ItemDisstortionEffect : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(minWait, maxWait));
         if (clip.Length > 0)
         {
-            AudioManager.instance.playSFXClip(clip[Random.Range(0, clip.Length)], true);
+            int rand = Random.Range(0, clip.Length);
+            AudioManager.instance.playSFXClip(clip[rand], true);
+            maxDuration = clip[rand].length;
+            maxDuration = clip[rand].length;
         }
         if (typeOfElement == TypeOfElement.SpriteR)
         {

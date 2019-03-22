@@ -1690,6 +1690,14 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+  inMainMenuSelectSound:
+  - {fileID: 8300000, guid: 7b673278b17e4434e87a332751e07106, type: 3}
+  inMainMenuChangeChoiceSound:
+  - {fileID: 8300000, guid: 99f19dffdfa39c041997abc2db3ab6eb, type: 3}
+  inGameMenuSelectSound:
+  - {fileID: 8300000, guid: 7b673278b17e4434e87a332751e07106, type: 3}
+  inGameMenuChangeChoiceSound:
+  - {fileID: 8300000, guid: 99f19dffdfa39c041997abc2db3ab6eb, type: 3}
   soundButtons:
   - GO: {fileID: 0}
     ButtonTextUI: sfx volume
@@ -1792,8 +1800,8 @@ MonoBehaviour:
   xStartPos: -90
   yStartPos: -25
   yOffset: -20
-  moveButtonClip: {fileID: 0}
-  unusableClip: {fileID: 0}
+  moveButtonClip: {fileID: 8300000, guid: b71a2748aec270f489c0523bef19cb81, type: 3}
+  unusableClip: {fileID: 8300000, guid: 7b673278b17e4434e87a332751e07106, type: 3}
   buttonpressForce: 0.8
   buttonpressTime: 0.06
 --- !u!114 &114189604823758964

@@ -31,6 +31,11 @@ public class menuManager : MonoBehaviour
    List<GameObject> Buttons = new List<GameObject>();
 
     [SerializeField] List<menuFunction> menuButtons = new List<menuFunction>();
+    [SerializeField] AudioClip[] inMainMenuSelectSound;
+    [SerializeField] AudioClip[] inMainMenuChangeChoiceSound;
+    [SerializeField] AudioClip[] inGameMenuSelectSound;
+    [SerializeField] AudioClip[] inGameMenuChangeChoiceSound;
+    [SerializeField] AudioClip startTheGame;
     [SerializeField] List<soundFunc> soundButtons = new List<soundFunc>();
     [SerializeField] [Range(0, 1)] float sfxChange = 0.05f;
     [SerializeField] [Range(0, 1)] float musicChange = 0.05f;
@@ -41,6 +46,7 @@ public class menuManager : MonoBehaviour
     GameObject MusicHandle;
     GameObject sfxHandle;
     int soundIndex = 0;
+    bool canMoveInMenu = true;
 
     [SerializeField] string exitMenuKey;
     [SerializeField] GameObject[] objectsToRemoveWhenInMenu;
@@ -319,23 +325,33 @@ public class menuManager : MonoBehaviour
     }
     void moveMainMenu()
     {
-        if(menuIndex > Buttons.Count - 1)
+        if (canMoveInMenu)
         {
-            menuIndex = Buttons.Count - 1;
-        }
-        if (menuIndex < 0)
-        {
-            menuIndex = 0;
-        }
-        for (int index = 0; index < Buttons.Count; index++)
-        {
-            if (index != menuIndex)
+            if (menuIndex > Buttons.Count - 1)
             {
-                Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = selected;
+                menuIndex = Buttons.Count - 1;
+            }
+            else if (menuIndex < 0)
+            {
+                menuIndex = 0;
             }
             else
             {
-                Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = basic;
+                if (inisiate)
+                {
+                    playSound(inMainMenuChangeChoiceSound);
+                }
+            }
+            for (int index = 0; index < Buttons.Count; index++)
+            {
+                if (index != menuIndex)
+                {
+                    Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = selected;
+                }
+                else
+                {
+                    Buttons[index].gameObject.GetComponent<SpriteRenderer>().material = basic;
+                }
             }
         }
     }
@@ -389,6 +405,7 @@ public class menuManager : MonoBehaviour
             case MenuState.menu:
                 if (!inisiate)
                 {
+                    menuIndex = 4;
                     inisiate = true;
                     addUI();
                 }
@@ -402,19 +419,22 @@ public class menuManager : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     moveMenu(1);
+                    playSound(inGameMenuChangeChoiceSound);
                 }
                 if (Input.GetKeyDown(KeyCode.S))
                 {
                     moveMenu(-1);
+                    playSound(inGameMenuChangeChoiceSound);
                 }
                 if (Input.GetButtonDown("Submit"))
                 {
                     selectAChoice();
+                    playSound(inGameMenuSelectSound);
                 }
                 break;
             #endregion
 
-            #region sound
+            #region sound menu
             case MenuState.soundMenu:
                 if(!inisiate)
                 {
@@ -440,7 +460,6 @@ public class menuManager : MonoBehaviour
                 }
                 if (Input.GetButtonDown(exitMenuKey))
                 {
-
                     removesoundUI();
                     menuState = MenuState.menu;
                     inisiate = false;
@@ -454,6 +473,7 @@ public class menuManager : MonoBehaviour
             case MenuState.mainMenu:
                 if (!inisiate)
                 {
+                    canMoveInMenu = true;
                     foreach(GameObject go in objectsToRemoveWhenInMenu)
                     {
                         go.gameObject.SetActive(false);
@@ -471,6 +491,7 @@ public class menuManager : MonoBehaviour
                 {
                     menuIndex--;
                     moveMainMenu();
+                
                 }
                 if (Input.GetKeyDown(KeyCode.S))
                 {
@@ -479,10 +500,36 @@ public class menuManager : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Submit"))
                 {
-                    Buttons[menuIndex].gameObject.GetComponent<mainMenuSelect>().onSelect.Invoke();
+                    StartCoroutine(selectedInMainMenu());
                 }
                 break;
                 #endregion
+        }
+    }
+    void playSound(AudioClip[] soundsToPlay)
+    {
+        int random = Random.Range(0, soundsToPlay.Length - 1);
+        AudioManager.instance.playSFXClip(soundsToPlay[random]);
+    }
+    IEnumerator selectedInMainMenu()
+    {
+        int x = menuIndex;
+        AudioClip thisWillPlay = startTheGame;
+        canMoveInMenu = false;
+        if (menuIndex != 0)
+        {
+            int random = Random.Range(0, inMainMenuSelectSound.Length - 1);
+            thisWillPlay = inMainMenuSelectSound[random];
+
+        AudioManager.instance.playSFXClip(thisWillPlay);
+        yield return new WaitForSeconds(thisWillPlay.length);
+        Buttons[x].gameObject.GetComponent<mainMenuSelect>().onSelect.Invoke();
+        canMoveInMenu = true;
+        }
+        else
+        {
+        AudioManager.instance.playSFXClip(thisWillPlay);
+        Buttons[x].gameObject.GetComponent<mainMenuSelect>().onSelect.Invoke();
         }
     }
 }
