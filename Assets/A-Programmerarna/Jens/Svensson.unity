@@ -144,7 +144,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -204,7 +204,18 @@ MonoBehaviour:
   minDuration: 0.1
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  effectMat: {fileID: 2100000, guid: a3b1dde38cffb694b85fa6eea1a24df6, type: 2}
+  effectMat: {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
+  clip:
+  - {fileID: 8300000, guid: a1ca3f933b1849a449029c39bb73dae1, type: 3}
+  - {fileID: 8300000, guid: a60a3c0a09809a14f9aaab08d6cdab32, type: 3}
+  - {fileID: 8300000, guid: 2c48e67400279144b96e339d6e3348c0, type: 3}
+  - {fileID: 8300000, guid: f68a87ccc0929e54abe68e1b0cf216e6, type: 3}
+  - {fileID: 8300000, guid: bad7cc617d7ab8448af62d4411f4c182, type: 3}
+  - {fileID: 8300000, guid: 9aca9f52b0c53c9438158b37c0432dd7, type: 3}
+  - {fileID: 8300000, guid: 59c84cb0ce04ef5418d18407b0956bd5, type: 3}
+  - {fileID: 8300000, guid: 14a38ad26c090b147898cab66dbeb948, type: 3}
+  - {fileID: 8300000, guid: ebe1445af4cea7449bcb48b8261c2b61, type: 3}
+  - {fileID: 8300000, guid: bcd624c872f0f174ba826d7e9d491c9b, type: 3}
   typeOfElement: 0
 --- !u!1 &8153296
 GameObject:
@@ -362,6 +373,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &94800041
 GameObject:
@@ -401,6 +413,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &94800043
 BoxCollider2D:
@@ -676,6 +689,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &303706208
 GameObject:
@@ -715,6 +729,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &303706210
 BoxCollider2D:
@@ -990,6 +1005,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &630521580
 GameObject:
@@ -1147,6 +1163,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &959768635
 GameObject:
@@ -1161,6 +1178,7 @@ GameObject:
   - component: {fileID: 959768636}
   - component: {fileID: 959768640}
   - component: {fileID: 959768641}
+  - component: {fileID: 959768642}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1255,7 +1273,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  radius: 3
+  radius: 10
+--- !u!114 &959768642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 959768635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80f0ad7241792d4db611c6f043f2c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playlistBehaviour: 0
+  songs:
+  - {fileID: 8300000, guid: 386dd6d8f9c2aac46858cdb683c3cb4d, type: 3}
+  playlistWithCondition:
+    completedQuest: {fileID: 0}
+    songs: []
 --- !u!1 &1088338365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1329,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1088338367
 BoxCollider2D:
@@ -1451,6 +1487,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1139954207
 BoxCollider2D:
@@ -1608,6 +1645,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1186132345
 BoxCollider2D:
@@ -1883,6 +1921,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &1248609076
 GameObject:
@@ -2040,6 +2079,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1001 &1293321827
 Prefab:
@@ -2297,6 +2337,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1001 &1373931201
 Prefab:
@@ -2305,6 +2346,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4719768958738748, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.41
@@ -2342,6 +2388,41 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d5d9603cf7cf67841940a28bfbe05353, type: 3}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 417454adcc3a7fc48b1d4e8567359da7, type: 3}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b30ef097d4001004e9edf483d666853e, type: 3}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72d5d9891f40ae6459faa331cb4895c8, type: 3}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f08bfbe725392bb468fd2d812c6e38e0, type: 3}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d94b4d3265575543a73ca5cf30221d5, type: 3}
+    - target: {fileID: 114054322551707030, guid: e5fc137eeab416449ae08890eddd5776,
+        type: 2}
+      propertyPath: footSteps.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: eabdd099755670f429690ad3fcaed46e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fc137eeab416449ae08890eddd5776, type: 2}
   m_IsPrefabParent: 0
@@ -2383,6 +2464,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1456127896
 BoxCollider2D:
@@ -2657,6 +2739,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1676470181
 BoxCollider2D:
@@ -2932,6 +3015,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &1747938098
 GameObject:
@@ -3159,6 +3243,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &1771812732
 GameObject:
@@ -3316,6 +3401,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &1943824025
 GameObject:
@@ -3355,6 +3441,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1943824027
 BoxCollider2D:
@@ -3512,6 +3599,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &1957196834
 BoxCollider2D:
@@ -3669,6 +3757,7 @@ MonoBehaviour:
   maxDuration: 0.52
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!61 &2002836724
 BoxCollider2D:

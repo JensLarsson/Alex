@@ -11,6 +11,7 @@ public class ItemDisstortionEffect : MonoBehaviour
     [SerializeField] Image image;
     public float minWait = 0.1f, maxWait = 1.0f, minDuration = 0.1f, maxDuration = 0.3f;
     public Material baseMat, effectMat;
+    public AudioClip[] clip = new AudioClip[0];
 
     public enum TypeOfElement
     {
@@ -47,6 +48,10 @@ public class ItemDisstortionEffect : MonoBehaviour
     {
         Debug.LogWarning("step 1");
         yield return new WaitForSeconds(Random.Range(minWait, maxWait));
+        if (clip.Length > 0)
+        {
+            AudioManager.instance.playSFXClip(clip[Random.Range(0, clip.Length)], true);
+        }
         if (typeOfElement == TypeOfElement.SpriteR)
         {
             StartCoroutine(useEffect());

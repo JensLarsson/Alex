@@ -1578,6 +1578,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
   glitchTime: 0.2
+  clip:
+  - {fileID: 8300000, guid: a1ca3f933b1849a449029c39bb73dae1, type: 3}
+  - {fileID: 8300000, guid: a60a3c0a09809a14f9aaab08d6cdab32, type: 3}
+  - {fileID: 8300000, guid: 2c48e67400279144b96e339d6e3348c0, type: 3}
+  - {fileID: 8300000, guid: f68a87ccc0929e54abe68e1b0cf216e6, type: 3}
+  - {fileID: 8300000, guid: bad7cc617d7ab8448af62d4411f4c182, type: 3}
+  - {fileID: 8300000, guid: 9aca9f52b0c53c9438158b37c0432dd7, type: 3}
+  - {fileID: 8300000, guid: 59c84cb0ce04ef5418d18407b0956bd5, type: 3}
+  - {fileID: 8300000, guid: 14a38ad26c090b147898cab66dbeb948, type: 3}
+  - {fileID: 8300000, guid: ebe1445af4cea7449bcb48b8261c2b61, type: 3}
+  - {fileID: 8300000, guid: bcd624c872f0f174ba826d7e9d491c9b, type: 3}
 --- !u!1 &960363880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,7 +2154,8 @@ MonoBehaviour:
   instantiateDialogIfQuestsExistsInCurrent: []
   instantiateDialogIfQuestsExistsInCompleted: []
   removeDialogIfQuestsHasCompleted: []
-  diffrentStartSounds: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: 2d9c941c8859ab840a03617c1696152e, type: 3}
   startSoundPitchRange: 0
   canPlaySound: 1
   speechBubbles:

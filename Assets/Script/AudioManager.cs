@@ -115,7 +115,11 @@ public class AudioManager : MonoBehaviour
     }
     public void playSFXClip(AudioClip clip, bool stopOtherSFX)
     {
-        if (stopOtherSFX) sfxSource.Stop();
+        if (stopOtherSFX)
+        {
+            sfxSource.Stop();
+            StartCoroutine(tempMusicStop(clip.length));
+        }
         sfxSource.PlayOneShot(clip);
     }
     public void playSFXClip(AudioClip clip, float volume, bool stopOtherSFX)
@@ -123,6 +127,14 @@ public class AudioManager : MonoBehaviour
         if (stopOtherSFX) sfxSource.Stop();
         sfxSource.PlayOneShot(clip, volume);
     }
+
+    IEnumerator tempMusicStop(float f)
+    {
+        musicSource[(int)targetAudio].volume = 0;
+        yield return new WaitForSeconds(f);
+        musicSource[(int)targetAudio].volume = musicVolume;
+    }
+
 
     //
     //Ändrar pitch på en egen AudioSource innan clip spelas

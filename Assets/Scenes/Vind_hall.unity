@@ -897,6 +897,7 @@ GameObject:
   - component: {fileID: 794696586}
   - component: {fileID: 794696585}
   - component: {fileID: 794696584}
+  - component: {fileID: 794696588}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -967,6 +968,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &794696588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794696583}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497d107ef6ea81b4db55ec6c56dee5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
+  glitchTime: 0.2
+  clip:
+  - {fileID: 8300000, guid: a1ca3f933b1849a449029c39bb73dae1, type: 3}
+  - {fileID: 8300000, guid: a60a3c0a09809a14f9aaab08d6cdab32, type: 3}
+  - {fileID: 8300000, guid: 2c48e67400279144b96e339d6e3348c0, type: 3}
+  - {fileID: 8300000, guid: f68a87ccc0929e54abe68e1b0cf216e6, type: 3}
+  - {fileID: 8300000, guid: bad7cc617d7ab8448af62d4411f4c182, type: 3}
+  - {fileID: 8300000, guid: 9aca9f52b0c53c9438158b37c0432dd7, type: 3}
+  - {fileID: 8300000, guid: 59c84cb0ce04ef5418d18407b0956bd5, type: 3}
+  - {fileID: 8300000, guid: 14a38ad26c090b147898cab66dbeb948, type: 3}
+  - {fileID: 8300000, guid: ebe1445af4cea7449bcb48b8261c2b61, type: 3}
+  - {fileID: 8300000, guid: bcd624c872f0f174ba826d7e9d491c9b, type: 3}
 --- !u!1 &942754958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1763,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 794696588}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null

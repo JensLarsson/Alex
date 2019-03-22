@@ -14,20 +14,32 @@ public class Circle : MonoBehaviour
     void Start()
     {
         float pi = Mathf.PI * 2;
-
         float f = pi / outerCircePositions.Length;
         for (int i = 0; i < outerCircePositions.Length; i++)
         {
-            outerCircePositions[i].y = Mathf.Sin(f * i) * radius + 1.7f;
-            outerCircePositions[i].x = Mathf.Cos(f * i) * radius - 5.5f;
+            outerCircePositions[i].y = Mathf.Sin(f * i) * radius;
+            outerCircePositions[i].x = Mathf.Cos(f * i) * radius ;
         }
 
         f = pi / innerCirclePositions.Length;
         for (int i = 0; i < innerCirclePositions.Length; i++)
         {
-            innerCirclePositions[i].y = Mathf.Sin(f * i) * radius / 2 + 1.7f;
-            innerCirclePositions[i].x = Mathf.Cos(f * i) * radius / 2 - 5.5f;
+            innerCirclePositions[i].y = Mathf.Sin(f * i) * radius / 2 ;
+            innerCirclePositions[i].x = Mathf.Cos(f * i) * radius / 2 ;
         }
+            //float f = pi / outerCircePositions.Length;
+            //for (int i = 0; i < outerCircePositions.Length; i++)
+            //{
+            //    outerCircePositions[i].y = Mathf.Sin(f * i) * radius + 1.7f;
+            //    outerCircePositions[i].x = Mathf.Cos(f * i) * radius - 5.5f;
+            //}
+
+            //f = pi / innerCirclePositions.Length;
+            //for (int i = 0; i < innerCirclePositions.Length; i++)
+            //{
+            //    innerCirclePositions[i].y = Mathf.Sin(f * i) * radius / 2 + 1.7f;
+            //    innerCirclePositions[i].x = Mathf.Cos(f * i) * radius / 2 - 5.5f;
+        //}
     }
 
 

@@ -8776,31 +8776,6 @@ Prefab:
       propertyPath: m_Name
       value: BuggedBlock (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114564509371544970, guid: b148c6c86c00e3b448b5aee0bb398648,
-        type: 2}
-      propertyPath: pushClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 980496f0967f7f14fbba543a51faae13, type: 3}
-    - target: {fileID: 212337905559355542, guid: b148c6c86c00e3b448b5aee0bb398648,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1626699925
-      objectReference: {fileID: 0}
-    - target: {fileID: 212337905559355542, guid: b148c6c86c00e3b448b5aee0bb398648,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61569669001046724, guid: b148c6c86c00e3b448b5aee0bb398648,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 61569669001046724, guid: b148c6c86c00e3b448b5aee0bb398648,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b148c6c86c00e3b448b5aee0bb398648, type: 2}
   m_IsPrefabParent: 0

@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour
     public bool removeOnPickup = false, accessOnlyThroughScript = false;
     public string button = "Submit";
     bool inside = false;
+    public AudioClip pickupClip;
     public UnityEvent _event;
 
 
@@ -18,6 +19,7 @@ public class Pickup : MonoBehaviour
         if (inside && Input.GetButtonDown(button) && PlayerMovement.canMove && !accessOnlyThroughScript)
         {
             pickup();
+            if (pickupClip != null) AudioManager.instance.playSFXClip(pickupClip);
         }
     }
     public void pickup()

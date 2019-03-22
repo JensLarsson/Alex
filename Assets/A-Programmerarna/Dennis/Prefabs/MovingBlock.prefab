@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886140035140896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8227764, y: -2.7442205, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -146,7 +146,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 1.15, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &114021552542597392
 MonoBehaviour:
@@ -172,7 +172,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDestination: 2
   narmeVarde: 0.01
-  pushClip: {fileID: 8300000, guid: 980496f0967f7f14fbba543a51faae13, type: 3}
+  pushClip:
+  - {fileID: 8300000, guid: 448d0438908345f4d92ba4402fcec363, type: 3}
+  - {fileID: 8300000, guid: 6a7016f3aef354843825e7e6dbdc9b23, type: 3}
+  - {fileID: 8300000, guid: e06268091d589804ea576b744c5ac7ed, type: 3}
+  - {fileID: 8300000, guid: 360ab4aba4220454499cc876437c6436, type: 3}
+  - {fileID: 8300000, guid: bb2e4e2504be9cc44b24db8e3b7c215a, type: 3}
+  - {fileID: 8300000, guid: cd8307fa877b47d42a825d154227b8df, type: 3}
 --- !u!212 &212185311916492662
 SpriteRenderer:
   m_ObjectHideFlags: 1

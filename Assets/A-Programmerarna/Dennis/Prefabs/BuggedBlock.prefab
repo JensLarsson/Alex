@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720269626658840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.95, y: -2.7442205, z: 0}
+  m_LocalPosition: {x: 3, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,7 +111,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -122,7 +122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.7}
   m_EdgeRadius: 0
 --- !u!61 &61578979408844352
 BoxCollider2D:
@@ -136,7 +136,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -147,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 1.15, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &114345797193247648
 MonoBehaviour:
@@ -173,7 +173,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDestination: 2
   narmeVarde: 0.01
-  pushClip: {fileID: 8300000, guid: 523f48eb3fd10a84393c4119b499b159, type: 3}
+  pushClip:
+  - {fileID: 8300000, guid: bad7cc617d7ab8448af62d4411f4c182, type: 3}
+  - {fileID: 8300000, guid: 9aca9f52b0c53c9438158b37c0432dd7, type: 3}
+  - {fileID: 8300000, guid: 59c84cb0ce04ef5418d18407b0956bd5, type: 3}
+  - {fileID: 8300000, guid: 14a38ad26c090b147898cab66dbeb948, type: 3}
+  - {fileID: 8300000, guid: ebe1445af4cea7449bcb48b8261c2b61, type: 3}
+  - {fileID: 8300000, guid: bcd624c872f0f174ba826d7e9d491c9b, type: 3}
 --- !u!114 &114578629682300124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,12 +191,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   minWait: 0.1
   maxWait: 1
   minDuration: 0.1
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: a3b1dde38cffb694b85fa6eea1a24df6, type: 2}
+  clip: []
+  typeOfElement: 0
 --- !u!212 &212337905559355542
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -222,8 +231,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1626699925
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2122a7427dfa4f14a8caeb3f0e65f2df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

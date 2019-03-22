@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239ad5e5dc100ce41a8b9225591c728c, type: 3}
   m_Name: Mouse
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 47430a52298b30b4ea07b6827ab0dbee, type: 3}
   deleteOnUse: 1
-  useSound: {fileID: 0}
+  useSound: {fileID: 8300000, guid: 9966dd3920ddc15408ac2deeb3c42b69, type: 3}
   description: 

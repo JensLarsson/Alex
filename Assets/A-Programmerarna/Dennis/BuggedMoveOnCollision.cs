@@ -11,7 +11,7 @@ public class BuggedMoveOnCollision : MonoBehaviour
     private Vector2 travelPos;
     private bool isLerping = false, buttonDown = false;
     public float narmeVarde;
-    public AudioClip pushClip;
+    public AudioClip[] pushClip = new AudioClip[0];
 
 
     private void Start()
@@ -49,7 +49,6 @@ public class BuggedMoveOnCollision : MonoBehaviour
     {
         if (!isLerping && buttonDown)
         {
-            AudioManager.instance.playSFXClip(pushClip);
             Vector3 intendedPosition = transform.position;
             startPos = transform.position;
             timeToLerp = 0;
@@ -74,6 +73,7 @@ public class BuggedMoveOnCollision : MonoBehaviour
             if (!PositionManager.Instance.isPositionOccupied(intendedPosition + new Vector3(differenceInPos.x, differenceInPos.y, 0)))
             {
                 Debug.Log("Movint towards " + travelPos);
+                AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)], true);
                 travelPos = intendedPosition;
                 isLerping = true;
             }

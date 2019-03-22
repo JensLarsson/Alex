@@ -377,6 +377,7 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls:
@@ -390,6 +391,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 172432576}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -921,6 +933,7 @@ GameObject:
   - component: {fileID: 172432570}
   - component: {fileID: 172432574}
   - component: {fileID: 172432575}
+  - component: {fileID: 172432576}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1020,6 +1033,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSprites: []
+--- !u!114 &172432576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172432569}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497d107ef6ea81b4db55ec6c56dee5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
+  glitchTime: 0.2
+  clip:
+  - {fileID: 8300000, guid: a1ca3f933b1849a449029c39bb73dae1, type: 3}
+  - {fileID: 8300000, guid: a60a3c0a09809a14f9aaab08d6cdab32, type: 3}
+  - {fileID: 8300000, guid: 2c48e67400279144b96e339d6e3348c0, type: 3}
+  - {fileID: 8300000, guid: f68a87ccc0929e54abe68e1b0cf216e6, type: 3}
+  - {fileID: 8300000, guid: bad7cc617d7ab8448af62d4411f4c182, type: 3}
+  - {fileID: 8300000, guid: 9aca9f52b0c53c9438158b37c0432dd7, type: 3}
+  - {fileID: 8300000, guid: 59c84cb0ce04ef5418d18407b0956bd5, type: 3}
+  - {fileID: 8300000, guid: 14a38ad26c090b147898cab66dbeb948, type: 3}
+  - {fileID: 8300000, guid: ebe1445af4cea7449bcb48b8261c2b61, type: 3}
+  - {fileID: 8300000, guid: bcd624c872f0f174ba826d7e9d491c9b, type: 3}
 --- !u!1001 &179510747
 Prefab:
   m_ObjectHideFlags: 0
@@ -1420,6 +1457,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
+        type: 2}
+      propertyPath: pickupClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e31e508e19d018e498f902d53e80adb4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9fbc248ff28044288e8210812ab349, type: 2}
   m_IsPrefabParent: 0
@@ -1963,7 +2005,7 @@ MonoBehaviour:
   doIfQuestsExists:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 360801310}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2657,30 +2699,6 @@ Prefab:
     - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_Name
       value: MovingBlock (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 61036423209119018, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 61036423209119018, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1626699925
-      objectReference: {fileID: 0}
-    - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
@@ -7774,6 +7792,7 @@ MonoBehaviour:
   removeOnPickup: 1
   accessOnlyThroughScript: 0
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls:
@@ -9126,6 +9145,7 @@ MonoBehaviour:
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: 25f26f423d976e24f997ffcbf572b813, type: 2}
+  clip: []
   typeOfElement: 0
 --- !u!1 &2142348279 stripped
 GameObject:
