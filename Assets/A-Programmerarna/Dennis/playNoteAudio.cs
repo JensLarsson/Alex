@@ -12,6 +12,6 @@ public class playNoteAudio : MonoBehaviour
     
     public void PlayNoteAudio()
     {
-        AudioManager.instance.playSFXClip(NoteAudio, true);
+        AudioManager.instance.playSFXClip(NoteAudio);
     }
 }
