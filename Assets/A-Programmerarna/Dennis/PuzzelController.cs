@@ -19,7 +19,7 @@ public class PuzzelController : MonoBehaviour
     {
         if (isInCollider)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButton("Submit") && !Puzzel.activeSelf && menuManager.Instance.menuState == menuManager.MenuState.noMenu)
             {
                 updateChanges();
             }
@@ -33,16 +33,8 @@ public class PuzzelController : MonoBehaviour
     {
         if (gotAllNotes)
         {
-            if (!Puzzel.activeSelf)
-            {
-                Puzzel.SetActive(true);
-                PlayerMovement.canMove = false;
-            }
-            else if (Puzzel.activeSelf)
-            {
-                Puzzel.SetActive(false);
-                PlayerMovement.canMove = true;
-            }
+            Puzzel.SetActive(true);
+            PlayerMovement.canMove = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

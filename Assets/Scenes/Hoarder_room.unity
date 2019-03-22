@@ -1957,6 +1957,7 @@ MonoBehaviour:
   removeOnPickup: 0
   accessOnlyThroughScript: 1
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls: []
@@ -8485,6 +8486,7 @@ MonoBehaviour:
   removeOnPickup: 0
   accessOnlyThroughScript: 1
   button: Submit
+  pickupClip: {fileID: 0}
   _event:
     m_PersistentCalls:
       m_Calls: []

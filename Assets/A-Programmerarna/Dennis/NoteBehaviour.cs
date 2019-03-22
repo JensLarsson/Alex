@@ -31,9 +31,27 @@ public class NoteBehaviour : MonoBehaviour
         pianoNotes[currentNote].GetComponent<Outline>().enabled = true;
     }
 
+    private void OnEnable()
+    {
+
+    }
+
+
+    private void OnDisable()
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("Cancel"))
+        {
+            PlayerMovement.canMove = true;
+            this.gameObject.SetActive(false);
+        }
+
+
         ApplyInput();
 
         if (playerNoteOrder.Count == correctNoteOrder.Count)
@@ -77,8 +95,8 @@ public class NoteBehaviour : MonoBehaviour
             }
         }
 
-            playNoteAudio pianoNote = gameObject.GetComponent<CalculateNotePosition>().pianoNotes[currentNote].gameObject.GetComponent<playNoteAudio>();
-        if (Input.GetKeyDown(KeyCode.Space) && !pianoNote.hasBeenSelected)
+        playNoteAudio pianoNote = gameObject.GetComponent<CalculateNotePosition>().pianoNotes[currentNote].gameObject.GetComponent<playNoteAudio>();
+        if (Input.GetButton("Submit") && !pianoNote.hasBeenSelected)
         {
             if (pianoNote.canBeSelected)
             {

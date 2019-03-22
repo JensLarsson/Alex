@@ -4507,6 +4507,10 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4041106841989770, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
   m_IsPrefabParent: 0
@@ -5419,22 +5423,6 @@ Transform:
   m_Father: {fileID: 1412157289}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1170706816 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea,
-    type: 2}
-  m_PrefabInternal: {fileID: 1216540639}
---- !u!114 &1170706822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170706816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f3b402601dfe3745b24c2fa3c2484f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1177841147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,36 +5637,6 @@ Prefab:
     - target: {fileID: 4402594276431736, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
       propertyPath: m_RootOrder
       value: 49
-      objectReference: {fileID: 0}
-    - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2122a7427dfa4f14a8caeb3f0e65f2df,
-        type: 3}
-    - target: {fileID: 1886140035140896, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 61036423209119018, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 61036423209119018, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1626699925
-      objectReference: {fileID: 0}
-    - target: {fileID: 212185311916492662, guid: fabf8d1e335203b4eab5bad219aa13ea,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fabf8d1e335203b4eab5bad219aa13ea, type: 2}

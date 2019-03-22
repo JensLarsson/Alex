@@ -14,6 +14,7 @@ public class MoveOnCollision : MonoBehaviour
     public AudioClip[] pushClip = new AudioClip[0];
     public event System.Action playDustAnim;
 
+    public GameObject axel, animation;
     private void Start()
     {
         differenceInPos = transform.position;
@@ -49,7 +50,6 @@ public class MoveOnCollision : MonoBehaviour
     {
         if (!isLerping && buttonDown)
         {
-            playDustAnim();
             Vector3 intendedPosition = transform.position;
             startPos = transform.position;
             timeToLerp = 0;
@@ -60,17 +60,19 @@ public class MoveOnCollision : MonoBehaviour
                 {
                     differenceInPos.y = 0;
                     intendedPosition = new Vector2(transform.position.x + differenceInPos.x / Mathf.Abs(differenceInPos.x), transform.position.y);
-
+                    axel.transform.localScale = new Vector3(differenceInPos.x / Mathf.Abs(differenceInPos.x), 1, 1);
                 }
                 else
                 {
                     differenceInPos.x = 0;
                     intendedPosition = new Vector2(transform.position.x, transform.position.y + differenceInPos.y / Mathf.Abs(differenceInPos.y));
+
                 }
                 Debug.Log(travelPos);
             }
             if (!PositionManager.Instance.isPositionOccupied(intendedPosition))
             {
+                if (differenceInPos.x != 0) animation.SetActive(true);
                 Debug.Log("Movint towards " + travelPos);
                 //AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)]);
                 travelPos = intendedPosition;

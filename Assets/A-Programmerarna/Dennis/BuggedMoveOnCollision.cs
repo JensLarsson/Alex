@@ -14,6 +14,7 @@ public class BuggedMoveOnCollision : MonoBehaviour
     public AudioClip[] pushClip = new AudioClip[0];
 
 
+    public GameObject axel, animation;
     private void Start()
     {
         differenceInPos = transform.position;
@@ -60,6 +61,7 @@ public class BuggedMoveOnCollision : MonoBehaviour
                     differenceInPos.y = 0;
                     differenceInPos.x = differenceInPos.x / -Mathf.Abs(differenceInPos.x);
                     intendedPosition = new Vector2(transform.position.x + differenceInPos.x, transform.position.y);
+                    axel.transform.localScale = new Vector3(differenceInPos.x / Mathf.Abs(differenceInPos.x), 1, 1);
 
                 }
                 else
@@ -72,6 +74,7 @@ public class BuggedMoveOnCollision : MonoBehaviour
             }
             if (!PositionManager.Instance.isPositionOccupied(intendedPosition + new Vector3(differenceInPos.x, differenceInPos.y, 0)))
             {
+                if (differenceInPos.x != 0) animation.SetActive(true);
                 Debug.Log("Movint towards " + travelPos);
                 AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)], true);
                 travelPos = intendedPosition;

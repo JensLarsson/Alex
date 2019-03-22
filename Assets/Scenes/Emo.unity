@@ -2713,6 +2713,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114379804000104796, guid: 9c63421c602097846aede5ca467dd9b0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c63421c602097846aede5ca467dd9b0, type: 2}
   m_IsPrefabParent: 0
@@ -3652,6 +3657,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1061646604}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &911028034
@@ -3679,10 +3695,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestsToCheck: []
-  completedQuestsToCheck: []
+  completedQuestsToCheck:
+  - {fileID: 11400000, guid: 1c2eae8464e604944926d93229d97fbc, type: 2}
   doIfQuestsExists:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1061646604}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &929970011
@@ -7344,6 +7372,7 @@ MonoBehaviour:
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: da5a4ca0e77a7da47839603547420e2d, type: 2}
+  clip: []
   typeOfElement: 1
 --- !u!114 &1911303067
 MonoBehaviour:
@@ -7611,7 +7640,7 @@ Prefab:
     - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}
       propertyPath: removeOnPickup
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114154329573413406, guid: 7b9fbc248ff28044288e8210812ab349,
         type: 2}
