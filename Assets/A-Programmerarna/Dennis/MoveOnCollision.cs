@@ -12,7 +12,7 @@ public class MoveOnCollision : MonoBehaviour
     private bool isLerping = false, buttonDown = false;
     public float narmeVarde;
     public AudioClip[] pushClip = new AudioClip[0];
-
+    public event System.Action playDustAnim;
 
     private void Start()
     {
@@ -49,6 +49,7 @@ public class MoveOnCollision : MonoBehaviour
     {
         if (!isLerping && buttonDown)
         {
+            playDustAnim();
             Vector3 intendedPosition = transform.position;
             startPos = transform.position;
             timeToLerp = 0;
@@ -71,7 +72,7 @@ public class MoveOnCollision : MonoBehaviour
             if (!PositionManager.Instance.isPositionOccupied(intendedPosition))
             {
                 Debug.Log("Movint towards " + travelPos);
-                AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)]);
+                //AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)]);
                 travelPos = intendedPosition;
                 isLerping = true;
             }
