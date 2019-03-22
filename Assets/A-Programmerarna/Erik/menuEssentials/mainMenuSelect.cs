@@ -16,12 +16,12 @@ public class mainMenuSelect : MonoBehaviour {
     {
         menuManager.Instance.inisiate = false;
         menuManager.Instance.menuState = menuManager.MenuState.noMenu;
-        SceneController.instance.loadScene("Alex", true);
+        SceneController.instance.loadScene("Alex");
     }
     public void credtis()
     {
         menuManager.Instance.inisiate = false;
         menuManager.Instance.menuState = menuManager.MenuState.disabled;
-        SceneController.instance.loadScene("Credits", true);
+        SceneController.instance.loadScene("Credits");
     }
 }

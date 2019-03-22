@@ -410,8 +410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistBehaviour: 0
   songs:
-  - {fileID: 8300000, guid: a0f1151d68d58754d940b75900e1c187, type: 3}
-  - {fileID: 8300000, guid: e776fa6df24245d498b35e9520c804ba, type: 3}
+  - {fileID: 8300000, guid: cdb9571a934211945bba450fa083f766, type: 3}
+  - {fileID: 8300000, guid: b0ddc5074e31146438c86a93496a36ef, type: 3}
   playlistWithCondition:
     completedQuest: {fileID: 11400000, guid: 85dffb2611832f648ae8df5a9af79298, type: 2}
     songs:
@@ -518,12 +518,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minWait: 2
-  maxWait: 3
+  image: {fileID: 0}
+  minWait: 4
+  maxWait: 10
   minDuration: 0.1
   maxDuration: 0.3
   baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   effectMat: {fileID: 2100000, guid: d8ed453231b0fb046adab5c8541ac216, type: 2}
+  clip:
+  - {fileID: 8300000, guid: 9966dd3920ddc15408ac2deeb3c42b69, type: 3}
+  - {fileID: 8300000, guid: 381d26d78807eb642af36d255a2a9453, type: 3}
+  - {fileID: 8300000, guid: 2ad9b42d9fde6834daf638783e5f624d, type: 3}
+  - {fileID: 8300000, guid: 9da67a32d4b734a478a62d46e0fba5a6, type: 3}
+  - {fileID: 8300000, guid: a1ca3f933b1849a449029c39bb73dae1, type: 3}
+  - {fileID: 8300000, guid: a60a3c0a09809a14f9aaab08d6cdab32, type: 3}
+  - {fileID: 8300000, guid: 2c48e67400279144b96e339d6e3348c0, type: 3}
+  - {fileID: 8300000, guid: f68a87ccc0929e54abe68e1b0cf216e6, type: 3}
+  - {fileID: 8300000, guid: bad7cc617d7ab8448af62d4411f4c182, type: 3}
+  - {fileID: 8300000, guid: 9aca9f52b0c53c9438158b37c0432dd7, type: 3}
+  - {fileID: 8300000, guid: 59c84cb0ce04ef5418d18407b0956bd5, type: 3}
+  - {fileID: 8300000, guid: 14a38ad26c090b147898cab66dbeb948, type: 3}
+  - {fileID: 8300000, guid: ebe1445af4cea7449bcb48b8261c2b61, type: 3}
+  - {fileID: 8300000, guid: bcd624c872f0f174ba826d7e9d491c9b, type: 3}
+  - {fileID: 8300000, guid: e31e508e19d018e498f902d53e80adb4, type: 3}
+  typeOfElement: 0
 --- !u!1 &867730595
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,21 +738,6 @@ Prefab:
     - target: {fileID: 224741211736303776, guid: 4baeaba0f6929cd4cba18b941394af66,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114126310351072266, guid: 4baeaba0f6929cd4cba18b941394af66,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114126310351072266, guid: 4baeaba0f6929cd4cba18b941394af66,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114126310351072266, guid: 4baeaba0f6929cd4cba18b941394af66,
-        type: 2}
-      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
