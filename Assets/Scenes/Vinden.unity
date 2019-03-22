@@ -2428,7 +2428,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: " And I can\u2019t even- I can\u2019t even move or do anything without you
+    Text: "And I can\u2019t even- I can\u2019t even move or do anything without you
       letting me. I just want to break something, I want to kick that stupid spirit
       out the window. "
     dialogueTree: 0
@@ -4278,9 +4278,18 @@ MonoBehaviour:
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Why do you even care? It doesn\u2019t matter to you if this happens fast
-      or slow, you can just go and, I don\u2019t know, make a sandwich or something.
-      I\u2019m pretty sure if you found out that you, and everyone you\u2019ve ever
-      known, don\u2019t exist you would need a minute."
+      or slow, you can just go and, I don\u2019t know, make a sandwich or something. "
+    dialogueTree: 0
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I\u2019m pretty sure if you found out that you, and everyone you\u2019ve
+      ever known, don\u2019t exist you would need a minute."
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
