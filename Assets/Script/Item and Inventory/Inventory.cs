@@ -24,6 +24,7 @@ public class itemContainer
 
 public class Inventory : MonoBehaviour
 {
+    public AudioClip clip;
     public static Inventory instance = null;
 
     public List<itemContainer> items;
@@ -48,12 +49,14 @@ public class Inventory : MonoBehaviour
         {
             if (it.item == item)
             {
+                AudioManager.instance.playSFXClip(clip);
                 it.Amount++;
                 exist = true;
             }
         }
         if (!exist)
         {
+            AudioManager.instance.playSFXClip(clip);
             itemContainer _item = new itemContainer();
             _item.item = item;
             _item.Amount++;

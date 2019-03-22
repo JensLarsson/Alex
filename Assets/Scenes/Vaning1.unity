@@ -2983,6 +2983,7 @@ GameObject:
   - component: {fileID: 1634518249}
   - component: {fileID: 1634518254}
   - component: {fileID: 1634518253}
+  - component: {fileID: 1634518255}
   m_Layer: 0
   m_Name: "HelD\xF6rrMirror (1)"
   m_TagString: Untagged
@@ -3176,6 +3177,26 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+--- !u!114 &1634518255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634518248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e88e4c624b31b46b5dfb6c7d4b9d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  minWait: 0.1
+  maxWait: 40
+  minDuration: 0.1
+  maxDuration: 0.3
+  baseMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  effectMat: {fileID: 2100000, guid: c378b1f61a46b51409beba53813c31e2, type: 2}
+  clip: []
+  typeOfElement: 0
 --- !u!1 &1844926215
 GameObject:
   m_ObjectHideFlags: 0

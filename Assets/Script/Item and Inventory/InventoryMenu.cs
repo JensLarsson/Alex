@@ -171,7 +171,7 @@ public class InventoryMenu : MonoBehaviour
         }
         if (i != 0 && moveButtonClip != null)
         {
-            AudioManager.instance.playSFXClip(moveButtonClip, true);
+            AudioManager.instance.playSFXClip(moveButtonClip);
         }
     }
 
