@@ -1698,6 +1698,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7b673278b17e4434e87a332751e07106, type: 3}
   inGameMenuChangeChoiceSound:
   - {fileID: 8300000, guid: 99f19dffdfa39c041997abc2db3ab6eb, type: 3}
+  startTheGame: {fileID: 8300000, guid: b70592105b937474fafe0d4ae538790a, type: 3}
   soundButtons:
   - GO: {fileID: 0}
     ButtonTextUI: sfx volume
