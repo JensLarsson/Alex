@@ -778,44 +778,67 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 49bc95d9906fcfa4faa933ef0977f5fa, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alright, this is it. One more step, the game is done. And we\u2019ll see
       if this was all for nothing or\u2026"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I just want to say, thank you. This has been, well it\u2019s been pretty
-      awful actually. But it\u2019s been just a little less awful thanks to you. I
-      might not, you know, be real. But you\u2019ve been a friend I really needed."
+      awful actually. But it\u2019s been just a little less awful thanks to you. "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "I might not, you know, be real. But you\u2019ve been a friend I really
+      needed."
+    dialogueTree: 0
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd25fce5634443743bd5613ec9c5d7b3,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I have to admit, I\u2019m sort of\u2026 unsure. This \u2013 this awareness,
-      it hasn\u2019t brought me much joy but it has given me something else. An existence,
-      I guess. A mind. It\u2019s strange, and I don\u2019t want to lose it. Though
-      I won\u2019t, not really. If things go our way, I won\u2019t remember any of
-      this."
+      it hasn\u2019t brought me much joy but it has given me something else."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "An existence, I guess. A mind. It\u2019s strange, and I don\u2019t want
+      to lose it. Though I won\u2019t, not really. If things go our way, I won\u2019t
+      remember any of this."
+    dialogueTree: 0
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 109df254be9819840b004892cf2e3790,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I guess ignorance will have to become my bliss. If I can even feel without
@@ -823,37 +846,41 @@ MonoBehaviour:
       too big for me to want to understand."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "I just have to\u2026 let go."
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd25fce5634443743bd5613ec9c5d7b3,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: '...'
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: "Alright I\u2019m ready. When you are too, move me through the door. "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
       type: 3}
     AnimationSpeed: 0.04
-    soundThatPlayDuringDialogue: []
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
     Text: Thank you, and goodbye.

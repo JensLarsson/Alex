@@ -164,9 +164,7 @@ Prefab:
     - target: {fileID: 114416085067455590, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
       propertyPath: speechBubbles.Array.data[0].Text
-      value: 'Empty
-
-'
+      value: Sam's apartment.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7cd212a519d6c1f4f9e4657089e88e98, type: 2}
@@ -1534,7 +1532,8 @@ Prefab:
     - target: {fileID: 114416085067455590, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
       propertyPath: speechBubbles.Array.data[0].Text
-      value: Dr. Oakley
+      value: Dr. Oakley lives here. Somehow she hasn't gotten evicted after some of
+        her experiments keep getting the fire department called here.
       objectReference: {fileID: 0}
     - target: {fileID: 212725870397335960, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
@@ -1595,9 +1594,7 @@ Prefab:
     - target: {fileID: 114416085067455590, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
       propertyPath: speechBubbles.Array.data[0].Text
-      value: 'Empty
-
-'
+      value: Jon and Ed live here together.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7cd212a519d6c1f4f9e4657089e88e98, type: 2}
@@ -2338,7 +2335,7 @@ Prefab:
     - target: {fileID: 114416085067455590, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
       propertyPath: speechBubbles.Array.data[0].Text
-      value: Bertha
+      value: Bertha lives here with all her cats.
       objectReference: {fileID: 0}
     - target: {fileID: 212725870397335960, guid: 7cd212a519d6c1f4f9e4657089e88e98,
         type: 2}
