@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         canMove = true;
+        
 
     }
-
     private void FixedUpdate()
     {
         rb2d.velocity = new Vector2(0, 0);
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
+            
             AddVelocity(-speed * Time.deltaTime, 0f);
         }
 
