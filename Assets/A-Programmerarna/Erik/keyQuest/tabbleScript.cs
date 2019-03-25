@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public struct Cards
@@ -11,6 +12,7 @@ public struct Cards
 
 public class tabbleScript : MonoBehaviour
 {
+    [SerializeField] UnityEvent firstTimeEvent;
     [SerializeField] Material pointerMaterial;
     [SerializeField] Material defaultMaterial;
     
@@ -18,7 +20,6 @@ public class tabbleScript : MonoBehaviour
     [SerializeField] Transform cardGoTo;
 
     [SerializeField] [Range(0, 1)] float travelTimeStamp;
-
 
     [SerializeField] GameObject tabble;
     [SerializeField] GameObject[] cards;
@@ -134,24 +135,18 @@ public class tabbleScript : MonoBehaviour
                         existingCards.Add(newCards);
                     }
                     #endregion
-                    
-                    for (int i = 0; i < existingCards.Count; i++)
+
+                    if (!keyQuestMain.Instance.hasLookedAtCards)
                     {
-                        if (i == pointerAtIndex)
-                        {
-                            existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
-                        }
-                        else
-                        {
-                            existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
-                        }
+                        firstTimeEvent.Invoke();
+                        keyQuestMain.Instance.hasLookedAtCards = true;
                     }
-                    
+                    updateMaterial();
                     inisiate = false;
                 }
 
 
-                if (Input.GetButtonDown("Submit"))
+                if (Input.GetButtonDown("Submit") && !DialogManager.Instance.isInDialogue)
                 {
                     if (!aCardIsZoomedIn)
                     {
@@ -167,45 +162,25 @@ public class tabbleScript : MonoBehaviour
                 }
                 if (!aCardIsZoomedIn)
                 {
-                    if (Input.GetKeyDown(KeyCode.D))
+                    if (Input.GetKeyDown(KeyCode.D) && !DialogManager.Instance.isInDialogue)
                     {
                         pointerAtIndex++;
                         if (pointerAtIndex >= existingCards.Count - 1)
                         {
                             pointerAtIndex = existingCards.Count - 1;
                         }
-                      
-                        for(int i = 0; i < existingCards.Count; i++)
-                        {
-                            if(i == pointerAtIndex)
-                            {
-                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
-                            }
-                            else
-                            {
-                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
-                            }
-                        }
+
+                        updateMaterial();
                     }
-                    if (Input.GetKeyDown(KeyCode.A))
+                    if (Input.GetKeyDown(KeyCode.A) && !DialogManager.Instance.isInDialogue)
                     {
                         pointerAtIndex--;
                         if (pointerAtIndex <= 0)
                         {
                             pointerAtIndex = 0;
                         }
-                       
-                        for (int i = 0; i < existingCards.Count; i++)
-                        {
-                            if (i == pointerAtIndex)
-                            {
-                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
-                            }
-                            else
-                            {
-                                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
-                            }
-                        }
+
+                        updateMaterial();
                     }
                 }
 
@@ -238,6 +213,20 @@ public class tabbleScript : MonoBehaviour
         if (tabbleState == TabbleState.atTabbleAndLooking)
         {
             PlayerMovement.canMove = false;
+        }
+    }
+    void updateMaterial()
+    {
+        for (int i = 0; i < existingCards.Count; i++)
+        {
+            if (i == pointerAtIndex)
+            {
+                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = pointerMaterial;
+            }
+            else
+            {
+                existingCards[i].card.transform.GetChild(1).GetComponent<SpriteRenderer>().material = defaultMaterial;
+            }
         }
     }
     #region seeIfAlexIsNearTheTabble

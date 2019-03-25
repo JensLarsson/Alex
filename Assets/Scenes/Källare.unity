@@ -3815,6 +3815,7 @@ GameObject:
   - component: {fileID: 869831080}
   - component: {fileID: 869831079}
   - component: {fileID: 869831078}
+  - component: {fileID: 869831082}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -3848,6 +3849,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629dae76dc0455147927c135ad454289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstTimeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 869831082}
+        m_MethodName: onFunctionCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   pointerMaterial: {fileID: 2100000, guid: 7ddfd209b43e57141a287615303c3563, type: 2}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   cardGoTo: {fileID: 2021607024}
@@ -3925,6 +3942,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869831082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869831077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d73dcd54a79bc645ac6dc884b682aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDialogWith:
+    onCollisionEnter: 0
+    onCollisionStayWithDelay: 0
+    delay: 0
+    onCollisionAndKeyDown: 0
+    onFunctionCall: 1
+  thisCharacterConversations:
+  - {fileID: 2021607023}
+  isInDialogueTrigger: 0
+  StartDelay: 0
 --- !u!1 &876571392
 GameObject:
   m_ObjectHideFlags: 0
@@ -9413,6 +9451,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2021607024}
+  - component: {fileID: 2021607025}
   m_Layer: 0
   m_Name: cardsGoTo
   m_TagString: Untagged
@@ -9433,6 +9472,45 @@ Transform:
   m_Father: {fileID: 869831081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2021607025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021607023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: Table
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds:
+  - {fileID: 8300000, guid: b90155c11f82cf14e92e76e549177c1d, type: 3}
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 74520039481fb8e4a86bde75812821a1,
+      type: 3}
+    AnimationSpeed: 0.04
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: "[idk s\xE4tt n\xE5got h\xE4r]"
+    dialogueTree: 0
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2053897043
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class keyQuestMain : MonoBehaviour
     private static keyQuestMain instance;
     public static keyQuestMain Instance { get { return instance; } }
 
+    [HideInInspector] public bool hasLookedAtCards = false;
     public int currentDoor = 0;
     [Tooltip("Det är viktigt att dörrarna inte heter samma")]
     public string[] nameOfAllDoors;

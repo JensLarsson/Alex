@@ -4067,8 +4067,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistBehaviour: 0
   songs:
-  - {fileID: 8300000, guid: cdb9571a934211945bba450fa083f766, type: 3}
-  - {fileID: 8300000, guid: b0ddc5074e31146438c86a93496a36ef, type: 3}
+  - {fileID: 8300000, guid: 679850c234b7dc54695629bf685d0a27, type: 3}
+  - {fileID: 8300000, guid: 679850c234b7dc54695629bf685d0a27, type: 3}
   playlistWithCondition:
     completedQuest: {fileID: 0}
     songs: []

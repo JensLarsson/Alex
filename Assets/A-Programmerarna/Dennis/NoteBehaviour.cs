@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class NoteBehaviour : MonoBehaviour
 {
     [SerializeField] UnityEvent afterQuestIsDone;
+    [SerializeField] Sprite activeB;
+    [SerializeField] Sprite deactiveB;
     List<GameObject> pianoNotes = new List<GameObject>();
     private List<int> playerNoteOrder = new List<int>();
     public List<int> correctNoteOrder = new List<int>();
@@ -29,6 +31,7 @@ public class NoteBehaviour : MonoBehaviour
 
         currentNote = pianoNotes.Count / 2;
         pianoNotes[currentNote].GetComponent<Outline>().enabled = true;
+        pianoNotes[currentNote].GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f);
     }
 
     private void OnEnable()
@@ -79,24 +82,72 @@ public class NoteBehaviour : MonoBehaviour
             {
                 if (currentNote != 0)
                 {
-                    pianoNotes[currentNote].GetComponent<Outline>().enabled = false;
+                    if (!pianoNotes[currentNote].GetComponent<playNoteAudio>().hasBeenSelected)
+                    {
+                        pianoNotes[currentNote].GetComponent<Image>().color = Color.white;
+                    }
+                    else
+                    {
+                        pianoNotes[currentNote].GetComponent<Image>().color = Color.gray;
+                    }
+                    if (pianoNotes[currentNote].GetComponent<playNoteAudio>().canBeSelected)
+                    {
+                        pianoNotes[currentNote].GetComponent<Outline>().enabled = false;
+                    }
+                    else
+                    {
+                        pianoNotes[currentNote].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = deactiveB;
+                    }
                     currentNote -= 1;
-                    pianoNotes[currentNote].GetComponent<Outline>().enabled = true;
+                    if (pianoNotes[currentNote].GetComponent<playNoteAudio>().canBeSelected)
+                    {
+                        pianoNotes[currentNote].GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f);
+                        pianoNotes[currentNote].GetComponent<Outline>().enabled = true;
+                    }
+                    else
+                    {
+                        pianoNotes[currentNote].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = activeB;
+                    }
+              
                 }
             }
             else if (Input.GetAxis("Horizontal") > 0)
             {
                 if (currentNote != (pianoNotes.Count - 1))
                 {
-                    pianoNotes[currentNote].GetComponent<Outline>().enabled = false;
+
+                    if (!pianoNotes[currentNote].GetComponent<playNoteAudio>().hasBeenSelected)
+                    {
+                        pianoNotes[currentNote].GetComponent<Image>().color = Color.white;
+                    }
+                    else
+                    {
+                        pianoNotes[currentNote].GetComponent<Image>().color = Color.gray;
+                    }
+                    if (pianoNotes[currentNote].GetComponent<playNoteAudio>().canBeSelected)
+                    {
+                        pianoNotes[currentNote].GetComponent<Outline>().enabled = false;
+                    }
+                    else
+                    {
+                        pianoNotes[currentNote].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = deactiveB;
+                    }
                     currentNote += 1;
-                    pianoNotes[currentNote].GetComponent<Outline>().enabled = true;
+                    if (pianoNotes[currentNote].GetComponent<playNoteAudio>().canBeSelected)
+                    {
+                        pianoNotes[currentNote].GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f);
+                        pianoNotes[currentNote].GetComponent<Outline>().enabled = true;
+                    }
+                    else
+                    {
+                        pianoNotes[currentNote].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = activeB;
+                    }
                 }
             }
         }
-
         playNoteAudio pianoNote = gameObject.GetComponent<CalculateNotePosition>().pianoNotes[currentNote].gameObject.GetComponent<playNoteAudio>();
-        if (Input.GetButton("Submit") && !pianoNote.hasBeenSelected)
+
+        if (Input.GetButtonDown("Submit") && !pianoNote.hasBeenSelected)
         {
             if (pianoNote.canBeSelected)
             {
@@ -116,6 +167,7 @@ public class NoteBehaviour : MonoBehaviour
                             gameObject.GetComponent<CalculateNotePosition>().pianoNotes[i].gameObject.GetComponent<Image>().color = Color.white;
                         }
                         playerNoteOrder.Clear();
+                        pianoNote.gameObject.GetComponent<Image>().color = new Color(0.7f,0.7f,0.7f);
                     }
                 }
             }
