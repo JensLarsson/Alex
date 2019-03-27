@@ -1265,7 +1265,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   noteMarker: {r: 0.6666667, g: 0.6666667, b: 0.78431374, a: 1}
-  selectedNote: {r: 0.41176468, g: 0.41176468, b: 0.41176468, a: 1}
+  selectedNote: {r: 0.7882353, g: 0.79607844, b: 0.9137255, a: 1}
   correctNoteOrder: 0200000007000000000000000600000001000000030000000500000004000000
   puzzelController: {fileID: 1061646604}
 --- !u!114 &326207489
