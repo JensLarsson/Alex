@@ -74,7 +74,7 @@ public class MoveOnCollision : MonoBehaviour
             {
                 if (differenceInPos.x != 0) animation.SetActive(true);
                 Debug.Log("Movint towards " + travelPos);
-                //AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)]);
+                AudioManager.instance.playSFXClip(pushClip[Random.Range(0, pushClip.Length)]);
                 travelPos = intendedPosition;
                 isLerping = true;
             }
