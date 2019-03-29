@@ -2484,7 +2484,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2495,7 +2495,7 @@ MonoBehaviour:
       point!?
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 70c90058076966c40be847466a96a447,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2507,7 +2507,7 @@ MonoBehaviour:
       work anymore! "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: c71a4faf018810c47a684445e34eaac9,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2518,7 +2518,7 @@ MonoBehaviour:
       even real. I\u2019m not even real!"
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd25fce5634443743bd5613ec9c5d7b3,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2530,7 +2530,7 @@ MonoBehaviour:
       out the window. "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -4398,7 +4398,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -4408,7 +4408,7 @@ MonoBehaviour:
     Text: "What\u2019s the rush, I don\u2019t get it. "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 05a9e2cd99da7104c8e7ddd0c1a0ab0a,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -4419,7 +4419,7 @@ MonoBehaviour:
       or slow, you can just go and, I don\u2019t know, make a sandwich or something. "
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd7f8aacf92f213498a2af4531d26ffc,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -5484,7 +5484,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -5539,7 +5539,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 6b7f271470bf2874184de558d202d2a3,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -7272,7 +7272,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 70c90058076966c40be847466a96a447,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:

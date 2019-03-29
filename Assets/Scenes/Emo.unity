@@ -2262,7 +2262,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b4c67f7c3f2721245b2aa3b32c1c197c, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: On whether you stole my keys or not.
+    Text: On whether you broke my keyboard or not.
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
@@ -2272,18 +2272,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: 'Why would I steal your keys? What would I do with them? '
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "You never lock your door anyway, and I always knock \u2013 even if you
-      can\u2019t ever hear it."
+    Text: Why would I do that?
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
@@ -2293,7 +2282,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b4c67f7c3f2721245b2aa3b32c1c197c, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: No, not keys like those. I mean keys for my keyboard.
+    Text: I dunno, but it's busted. It was working yesterday, so...
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
@@ -2303,19 +2292,18 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "And now you\u2019ve lost me even more. What on earth would I be doing with
-      a couple of keyboard keys?"
+    Text: "And now you\u2019ve lost me even more. I've even asked you to help me learn
+      how to play, so why would I break it?"
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 853b111171a1b6a4da31d52d09321ffd,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
     - {fileID: 8300000, guid: b4c67f7c3f2721245b2aa3b32c1c197c, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: "I dunno. All I know is I\u2019m missing some. They fell on the floor a
-      couple days ago, and now I can\u2019t find them."
+    Text: Right, and I said no. So you broke it because you were angry or whatever?
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 333594b20ca0cb848b4d9753cc078ba9,
@@ -2325,7 +2313,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: What were they doing on the floor?
+    Text: 'I- No! '
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
@@ -2335,7 +2323,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b4c67f7c3f2721245b2aa3b32c1c197c, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: I was playing, and I was awful. I got angry, okay?
+    Text: 'Yeah, sure. '
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
     PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
@@ -2345,7 +2333,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Good stuff.
+    Text: Wow. Great talk, Sam.
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
     PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
@@ -2355,59 +2343,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b4c67f7c3f2721245b2aa3b32c1c197c, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Right. Judge me all you want. Everyone else does anyway.
+    Text: Yeah, whatever.
     dialogueTree: 0
   - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: cd25fce5634443743bd5613ec9c5d7b3,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
     - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
     soundPitch: 0
     soundTimeDelay: 0
-    Text: Sam...
-    dialogueTree: 0
-  - NameOfTalkingNPC: Sam
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: b4c67f7c3f2721245b2aa3b32c1c197c, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: What? You got my keys? No? Then get out.
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1b542c9acd6059242ba8275f4e369650,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: Yeah, cool. See you later.
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "(Okay, so let\u2019s look for those keys, shall we? I guess it\u2019d be
-      too easy if they were here on the floor.)"
-    dialogueTree: 0
-  - NameOfTalkingNPC: Alex
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1c4f4a35ff23b7c4ea6ec70ef80f399d,
-      type: 3}
-    AnimationSpeed: 0
-    soundThatPlayDuringDialogue:
-    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
-    soundPitch: 0
-    soundTimeDelay: 0
-    Text: "(I guess we could take a look around. If they\u2019re not here, they\u2019re
-      probably somewhere else in the building.)"
+    Text: (I guess we could take a look at the piano. I'm no expert, but...)
     dialogueTree: 0
   canRepeat: 0
   hasBeenRead: 0
@@ -2968,9 +2914,10 @@ MonoBehaviour:
     onCollisionEnter: 0
     onCollisionStayWithDelay: 0
     delay: 0
-    onCollisionAndKeyDown: 0
-    onFunctionCall: 1
+    onCollisionAndKeyDown: 1
+    onFunctionCall: 0
   thisCharacterConversations:
+  - {fileID: 1457441418}
   - {fileID: 1924285881}
   - {fileID: 876577673}
   isInDialogueTrigger: 0
@@ -3396,7 +3343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 769591863}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &876577675
 MonoBehaviour:
@@ -3430,7 +3377,7 @@ MonoBehaviour:
     Text: See? Told you I could do it.
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 81e2785a2551da445a1abeafe42f2a44,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
@@ -3451,7 +3398,7 @@ MonoBehaviour:
     Text: "Hah, I wouldn\u2019t go that far."
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 81e2785a2551da445a1abeafe42f2a44,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
@@ -3472,7 +3419,7 @@ MonoBehaviour:
     Text: "Sounds fair. I\u2019ll see you around, Sam."
     dialogueTree: 0
   - NameOfTalkingNPC: Sam
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 81e2785a2551da445a1abeafe42f2a44,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
@@ -3677,7 +3624,7 @@ MonoBehaviour:
   canPlaySound: 1
   speechBubbles:
   - NameOfTalkingNPC: Sam
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 853b111171a1b6a4da31d52d09321ffd,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
@@ -5824,7 +5771,7 @@ MonoBehaviour:
     Text: Ah, I can hear myself think again.
     dialogueTree: 0
   - NameOfTalkingNPC: Emo
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 853b111171a1b6a4da31d52d09321ffd,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
@@ -5844,7 +5791,7 @@ MonoBehaviour:
     Text: "I\u2019m just-"
     dialogueTree: 0
   - NameOfTalkingNPC: Emo
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 1612250158096e5499e7f100906bd773,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: 853b111171a1b6a4da31d52d09321ffd,
       type: 3}
     AnimationSpeed: 0
     soundThatPlayDuringDialogue:
@@ -6169,6 +6116,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1457441418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1457441420}
+  - component: {fileID: 1457441419}
+  m_Layer: 0
+  m_Name: BeforePuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1457441419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457441418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b002be7081f2d04d8abe3ed625318f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueName: Pianoohnoeskeysaremissing
+  instantiateDialogIfQuestsExistsInCurrent: []
+  instantiateDialogIfQuestsExistsInCompleted: []
+  removeDialogIfQuestsHasCompleted: []
+  diffrentStartSounds: []
+  startSoundPitchRange: 0
+  canPlaySound: 1
+  speechBubbles:
+  - NameOfTalkingNPC: Alex
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: e5ef3e1f076d8a04295eb32fa7d9111f,
+      type: 3}
+    AnimationSpeed: 0
+    soundThatPlayDuringDialogue:
+    - {fileID: 8300000, guid: 4dc7088c299e1b5468d180b055b27372, type: 3}
+    soundPitch: 0
+    soundTimeDelay: 0
+    Text: (Well, I don't need to be an expert to see what's wrong here. Three of the
+      keys are missing!)
+    dialogueTree: 0
+  canRepeat: 0
+  hasBeenRead: 0
+  siblings: []
+  answers: []
+  doAfterDialgue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1457441420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457441418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 769591863}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1465282927
 Prefab:
@@ -7669,7 +7684,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 769591863}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1924285883
 MonoBehaviour:
