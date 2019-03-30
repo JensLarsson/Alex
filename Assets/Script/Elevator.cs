@@ -79,7 +79,12 @@ public class Elevator : MonoBehaviour
         {
             if (floors[MenuIndex].SceneName != SceneManager.GetActiveScene().name)
             {
-                SceneController.instance.loadScene(floors[MenuIndex].SceneName);
+                if (unusableClip != null)
+                {
+                    AudioManager.instance.playSFXClip(unusableClip);
+                }
+                SceneController.instance.loadScene(floors[MenuIndex].SceneName, travelSound);
+
                 this.gameObject.SetActive(false);
             }
         }
@@ -95,7 +100,7 @@ public class Elevator : MonoBehaviour
         floors[menuIndex].floorLight.sprite = selectionLight;
         if (i != 0 && moveButtonClip != null)
         {
-            AudioManager.instance.playSFXClip(moveButtonClip, true);
+            AudioManager.instance.playSFXClip(moveButtonClip);
         }
     }
 }

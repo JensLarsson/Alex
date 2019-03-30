@@ -43,6 +43,11 @@ public class SceneController : MonoBehaviour
     {
         StartCoroutine(SceneTransition(scene, time));
     }
+    // Används bara för Hiss kontrollen
+    public void loadScene(string scene, AudioClip clip)
+    {
+        StartCoroutine(SceneTransition(scene, clip.length, clip));
+    }
 
     void saveScene(string scene)
     {
@@ -54,7 +59,7 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public IEnumerator SceneTransition(string scene, float f = 0.0f)
+    public IEnumerator SceneTransition(string scene, float f = 0.0f, AudioClip clip = null)
     {
 
         if (!transitioning && !DialogManager.Instance.isInDialogBranch)
@@ -82,6 +87,11 @@ public class SceneController : MonoBehaviour
                 image.color = colour;
                 yield return new WaitForEndOfFrame();
             }
+            if (clip != null)
+            {
+                AudioManager.instance.playSFXClip(clip, true);
+            }
+
 
             SceneManager.LoadScene(scene);
             yield return new WaitForSeconds(f);

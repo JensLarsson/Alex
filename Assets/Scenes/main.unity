@@ -745,6 +745,21 @@ Prefab:
       propertyPath: clip
       value: 
       objectReference: {fileID: 8300000, guid: 4035395e22205014091d303ffce93d99, type: 3}
+    - target: {fileID: 114235301492670606, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: moveButtonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62875bb0cacba0a4a8aad1069164bf6c, type: 3}
+    - target: {fileID: 114235301492670606, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: unusableClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7bed109f9ef4a834e93dab6ecc89be48, type: 3}
+    - target: {fileID: 114235301492670606, guid: 4baeaba0f6929cd4cba18b941394af66,
+        type: 2}
+      propertyPath: travelSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 317c233cbcd691f4a908ce84c1e1dd99, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4baeaba0f6929cd4cba18b941394af66, type: 2}
   m_IsPrefabParent: 0

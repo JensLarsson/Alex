@@ -2917,7 +2917,6 @@ MonoBehaviour:
     onCollisionAndKeyDown: 1
     onFunctionCall: 0
   thisCharacterConversations:
-  - {fileID: 1457441418}
   - {fileID: 1924285881}
   - {fileID: 876577673}
   isInDialogueTrigger: 0
@@ -7979,7 +7978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMode: 1
-  quest: {fileID: 11400000, guid: f3cf57ed49c9c924f89a7e4857088866, type: 2}
+  quest: {fileID: 11400000, guid: b7b2d0bc20b1b684ca63f8d87370fa5b, type: 2}
 --- !u!114 &1989057993
 MonoBehaviour:
   m_ObjectHideFlags: 0
