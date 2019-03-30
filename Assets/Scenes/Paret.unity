@@ -2301,7 +2301,7 @@ MonoBehaviour:
     Text: "Hi Jon, hi Ed. Have you guys seen anything\u2026 weird around here?\r\n\r"
     dialogueTree: 0
   - NameOfTalkingNPC: 'Jon '
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 08ba3075ee872a94c958678b229f4ead,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cdbbb7a604cebb34dad4819ca5e4ca40,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2313,7 +2313,7 @@ MonoBehaviour:
       it anywhere.\r"
     dialogueTree: 0
   - NameOfTalkingNPC: Ed
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 08ba3075ee872a94c958678b229f4ead,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cdbbb7a604cebb34dad4819ca5e4ca40,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2324,7 +2324,7 @@ MonoBehaviour:
       taste. He won\u2019t tell me how much it cost but it had to have been a fortune!\r"
     dialogueTree: 0
   - NameOfTalkingNPC: 'Jon '
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 08ba3075ee872a94c958678b229f4ead,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cc91c8b3f22f98444a6ece9003493fb7,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2334,7 +2334,7 @@ MonoBehaviour:
     Text: "You\u2019re worth every penny."
     dialogueTree: 0
   - NameOfTalkingNPC: Ed
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 08ba3075ee872a94c958678b229f4ead,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cc91c8b3f22f98444a6ece9003493fb7,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2365,7 +2365,7 @@ MonoBehaviour:
       to it.\r\n"
     dialogueTree: 0
   - NameOfTalkingNPC: 'Jon '
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 08ba3075ee872a94c958678b229f4ead,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cc91c8b3f22f98444a6ece9003493fb7,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
@@ -2375,7 +2375,7 @@ MonoBehaviour:
     Text: "You mean it sparkles like your eyes\u2026\r\n"
     dialogueTree: 0
   - NameOfTalkingNPC: Ed
-    PortraitOfTalkingNPC: {fileID: 21300000, guid: 08ba3075ee872a94c958678b229f4ead,
+    PortraitOfTalkingNPC: {fileID: 21300000, guid: cc91c8b3f22f98444a6ece9003493fb7,
       type: 3}
     AnimationSpeed: 0.04
     soundThatPlayDuringDialogue:
