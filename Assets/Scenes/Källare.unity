@@ -3829,13 +3829,13 @@ MonoBehaviour:
   travelTimeStamp: 0.13
   tabble: {fileID: 1478128128818114, guid: b250795f3aa4dec409884d6e53ddc7eb, type: 2}
   cards:
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
-  - {fileID: 1703323899758556, guid: d86ae75a06f03a546a90b8e3e2a5cce1, type: 2}
+  - {fileID: 1717645260366970, guid: ad22e622b9af3cd40b8fa4ef4170888b, type: 2}
+  - {fileID: 1288274937974962, guid: 0940ef38bf0480f4e927ca8595375186, type: 2}
+  - {fileID: 1250868046586814, guid: f95c61b665a01a94c8289b1d0931981b, type: 2}
+  - {fileID: 1216936097085592, guid: 682886c16b7173f4789d8d354d19db8c, type: 2}
+  - {fileID: 1782807644767582, guid: 05f7cfb4348ae4245bcdbc137b4fe789, type: 2}
+  - {fileID: 1445282610292802, guid: 18aba5e752d20f545838921c92196d02, type: 2}
+  - {fileID: 1153205408813148, guid: 8cfc75a418277a44596f08cba8e3b3a6, type: 2}
   pickUpAnimation: {fileID: 7400000, guid: 179d2f6a330ddd14ea3fcb4379d0b67c, type: 2}
   putDownAnimation: {fileID: 7400000, guid: fe24ddc4eb8ec894ebb57bb32260e0e0, type: 2}
   GOInTabbleOverlay: []
@@ -9424,7 +9424,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021607023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.13, y: 1.9, z: -4.49}
+  m_LocalPosition: {x: 3.13, y: 1.9, z: -4.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 869831081}
