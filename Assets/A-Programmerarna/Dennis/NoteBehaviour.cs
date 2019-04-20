@@ -11,7 +11,7 @@ public class NoteBehaviour : MonoBehaviour
     [SerializeField] Color selectedNote;
 
 
-    List<GameObject> pianoNotes = new List<GameObject>();
+    [HideInInspector] public List<GameObject> pianoNotes = new List<GameObject>();
     private List<int> playerNoteOrder = new List<int>();
     public List<int> correctNoteOrder = new List<int>();
     [SerializeField] PuzzelController puzzelController;

@@ -13,19 +13,22 @@ public class playNoteAudio : MonoBehaviour
     
     public void PlayNoteAudio()
     {
-        AudioManager.instance.playSFXClip(NoteAudio);
-        StartCoroutine(playAduioClipp());
         if(!canBeSelected)
         {
             if(gameObject.transform.GetChild(0).GetComponent<specialButton>() != null)
             {
-                StartCoroutine(gameObject.transform.GetChild(0).GetComponent<specialButton>().playSound(NoteAudio.length));
+                StartCoroutine(gameObject.transform.GetChild(0).GetComponent<specialButton>().playSound());
             }
             else
             {
                 Debug.LogWarning("no specialButton script was found");
             }
 
+        }
+        else
+        {
+            AudioManager.instance.playSFXClip(NoteAudio);
+            StartCoroutine(playAduioClipp());
         }
     }
     IEnumerator playAduioClipp()
