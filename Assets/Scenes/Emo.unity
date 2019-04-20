@@ -147,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.69, y: 0}
+  m_AnchoredPosition: {x: -297.69, y: 0.0000009536743}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4753244
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: 82ed3262231b34a4689c9e4f6eb0bff5, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 5ee42aead6936f746bc6e410c6a30df7, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: aeb7c540deba82e40a5027edc1e5371e, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 1b818b892c31bac47b376ab81980ef7b, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -1643,7 +1643,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 31f5d45685b1d464688cf991dbe0d5c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b3507beecca084b97b3afbe5e00e63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: e01c64848d35de540afa0f085bd9cbf8, type: 3}
+  NoteAudio: {fileID: 8300000, guid: a5dfb016c692d6f4c8140c6898d71269, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1df685d45870ea345bfee929c6a9a583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31f5d45685b1d464688cf991dbe0d5c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3191,7 +3191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: 32f4abe5809c23b4c816e19fe2f2b866, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 7afbea6d7c2e1834fb6ababb9f1d4b2e, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -4204,7 +4204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: 85a749f1687869145a44f50458fbce3f, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 6704d924f2302c54d8a125cd043a9125, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -5044,7 +5044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: a5dfb016c692d6f4c8140c6898d71269, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 82ed3262231b34a4689c9e4f6eb0bff5, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -5081,7 +5081,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c9b3507beecca084b97b3afbe5e00e63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57171cc00e77863498dad68cc3445baa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5309,8 +5309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeB: {fileID: 21300000, guid: 861c24c4a5420994f931470d82dcb0ba, type: 3}
   deactiveB: {fileID: 21300000, guid: cbbb81c40247afc49bba7aeb6a515375, type: 3}
+  timeOfset: -0.2
   correctOrderColor: {r: 0.1978806, g: 0.5788123, b: 0.89705884, a: 1}
-  soundInCorrectOrder: []
 --- !u!1 &1323989664
 GameObject:
   m_ObjectHideFlags: 0
@@ -6507,7 +6507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: 7afbea6d7c2e1834fb6ababb9f1d4b2e, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 85a749f1687869145a44f50458fbce3f, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -7485,7 +7485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6b58551edfd8a408b679980f78711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteAudio: {fileID: 8300000, guid: 1b818b892c31bac47b376ab81980ef7b, type: 3}
+  NoteAudio: {fileID: 8300000, guid: 4b33f4d71ef282246a36beb74f388fff, type: 3}
   canBeSelected: 1
   hasBeenSelected: 0
   isPlaying: 0
@@ -7522,7 +7522,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 57171cc00e77863498dad68cc3445baa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31f5d45685b1d464688cf991dbe0d5c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

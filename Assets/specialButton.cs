@@ -8,12 +8,12 @@ public class specialButton : MonoBehaviour {
     [SerializeField] Sprite deactiveB;
     NoteBehaviour thisNB;
     CalculateNotePosition thisCNP;
-
+    [SerializeField] float timeOfset = -0.2f;
     Color beforeChangeColor;
     [SerializeField] Color correctOrderColor;
 
     List<int> correctOrder;
-    [SerializeField] List<AudioClip> soundInCorrectOrder = new List<AudioClip>();
+    List<AudioClip> soundInCorrectOrder = new List<AudioClip>();
     List<GameObject> pianoNotes = new List<GameObject>();
 
 
@@ -51,7 +51,7 @@ public class specialButton : MonoBehaviour {
             currentNote.GetComponent<Image>().color = correctOrderColor;
             //AudioManager.instance.playSFXClip(thisNB.pianoNotes[correctOrder[i]].GetComponent<playNoteAudio>().NoteAudio);
              AudioManager.instance.playSFXClip(soundInCorrectOrder[i]);
-            yield return new WaitForSeconds(soundInCorrectOrder[i].length);
+            yield return new WaitForSeconds(soundInCorrectOrder[i].length + timeOfset);
             currentNote.GetComponent<Image>().color = beforeChangeColor;
 
         }
